@@ -1,15 +1,14 @@
 #-------------------------------
 # Site Settings
-title: Dann
-logo: # You can add own logo. For example "/images/logo.png".
-description: Multipurpose Jekyll Blog Theme
-
+title: R&B Staging
+# logo: "/images/logo.png"
+description: R&B Staging transforms homes into market-ready showpieces, enhancing appeal and selling potential with strategic furniture and décor placement.
 
 #-------------------------------
 # Author Global Settings
 author:
-  author__name: Dann Kanigan
-  author__bio: Hi there! I’m Dann Kanigan, a Filmmaker and Content Creator based in Toronto, Ontario, Canada. This blog is about learning, life, and inspiring you to take one step forward.
+  author__name: Lisa and her team
+  author__bio: Hi! I'm Lisa, a seasoned home staging professional, leading a talented team in the Ontario area. With years of experience and a keen eye for design, my team and I specialize in creating inviting, aesthetically pleasing environments that highlight each home's unique features. Our dedication to excellence and attention to detail ensure that every property we stage stands out in the market, helping our clients achieve faster sales at higher prices.
   author__avatar: /images/01-1.jpg
 
 
@@ -19,22 +18,23 @@ menu__settings:
   menu__items:
     - title: 'Home'
       url: '/'
-    - title: 'About'
-      url: '/about/'
-    - title: 'Pages'
-      submenu:
-      - url: '/authors/'
-        title: 'Authors'
-      - url: '/elements/'
-        title: 'Elements'
-    - title: 'Contact'
-      url: '/contact/'
+    # - title: 'About'
+    #   url: '/about/'
+    # - title: 'Pages'
+    #   submenu:
+    #   - url: '/authors/'
+    #     title: 'Authors'
+    #   - url: '/elements/'
+    #     title: 'Elements'
+    # - title: 'Contact'
+    #   url: '/contact/'
 
 
 #-------------------------------
 # Hero Settings
 hero:
-  hero__title: Hi there! I’m Dann Kanigan, a Filmmaker and Content Creator based in Toronto, Ontario, Canada. This blog is about learning, life, and inspiring you to take one step forward.
+  hero__title: Origin is a <strong>premium</strong> blog theme for Jekyll.
+  hero__subtitle: Hi there! I’m Dann Kanigan, a Filmmaker and Content Creator based in Toronto, Ontario, Canada. This blog is about learning, life, and inspiring you to take one step forward. 🏠✨
 
 
 #-------------------------------
@@ -72,14 +72,14 @@ footer__menu__settings:
   menu__items:
     - title: 'Home'
       url: '/'
-    - title: 'About'
-      url: '/about/'
-    - title: 'Contact'
-      url: '/contact/'
-    - title: 'Authors'
-      url: '/authors/'
-    - title: 'Elements'
-      url: '/elements/'
+    # - title: 'About'
+    #   url: '/about/'
+    # - title: 'Contact'
+    #   url: '/contact/'
+    # - title: 'Authors'
+    #   url: '/authors/'
+    # - title: 'Elements'
+    #   url: '/elements/'
 
 
 # Social Links

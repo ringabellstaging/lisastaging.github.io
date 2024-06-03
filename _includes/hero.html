@@ -1,10 +1,32 @@
 <!-- begin hero -->
 <section class="hero">
   <div class="container">
-    <div class="row">
+    <!-- <div class="row">
       <div class="col col-12">
         <div class="hero__inner">
           <h1 class="hero__title">{{ site.data.settings.hero.hero__title }}</h1>
+        </div>
+      </div>
+    </div> -->
+    <div class="hero-row">
+      <div class="hero-col col-md-6">
+        <div class="hero-heading">
+          <h1>{{ site.data.settings.hero.hero__title }}</h1>
+        </div>
+        <div class="hero-description">
+          <p>{{ site.data.settings.hero.hero__subtitle }}</p>
+        </div>
+        <div class="hero-social">
+          {% for social in site.data.settings.social %}
+          <a href="{{social.link}}" target="_blank" rel="noopener" aria-label="{{social.label}} link" title="{{social.name}}">
+            <i class="ion {{social.icon}}"></i>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="hero-col col-md-6">
+        <div class="hero-image">
+          <img alt="Origin is a <strong>premium</strong> blog theme for Jekyll." src="images/homepage.png">
         </div>
       </div>
     </div>
