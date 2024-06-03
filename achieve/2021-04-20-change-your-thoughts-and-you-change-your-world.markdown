@@ -3,7 +3,7 @@ layout: post
 title: Change your thoughts and you change your world
 description: Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.
 date: 2021-04-20 15:01:35 +0300
-author: ryan
+author: lisa
 image: '/images/18.jpg'
 image_caption: 'Photo by [River Fx](https://unsplash.com/photos/NaU8k9emQMI) on [Unsplash](https://unsplash.com/)'
 tags: [motivation, hobby, notes]

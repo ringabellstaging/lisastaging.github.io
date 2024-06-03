@@ -12,9 +12,9 @@
     margin-bottom: 160px;
   }
 
-  // @media (max-width: $mobile) {
-  //   margin-top: 80px;
-  // }
+  @media (max-width: $mobile) {
+    margin-top: 20px;
+  }
 }
 
 .featured__slider {
@@ -75,9 +75,12 @@
   .article {
     user-select: none;
     cursor: grab;
+    max-width: 360px;
 
     .article__image {
       background-color: var(--dark);
+      width: 100%;  /* Adjust the width as needed */
+      height: 100%;  /* Adjust the height as needed */
     }
   }
 }

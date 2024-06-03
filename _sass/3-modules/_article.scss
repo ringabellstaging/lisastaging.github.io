@@ -87,22 +87,22 @@
 
 .article__content {
   will-change: transform;
-  padding: 36px 28px 28px 28px;
+  padding: 26px 28px 28px 28px;
   background-color: var(--background-color);
 }
 
 .article__meta {
   position: absolute;
   z-index: 1;
-  left: 28px;
-  bottom: -24px;
+  left: 12px;
+  bottom: -64px;
 
   .article__author__image {
     position: relative;
     transform: translate(0);
     display: block;
-    width: 48px;
-    height: 48px;
+    width: 86px;
+    height: 86px;
     margin-right: 12px;
     border-radius: 50%;
     border: 6px solid var(--background-color);
@@ -110,13 +110,13 @@
     background-color: var(--background-alt-color);
     transition: transform .2s;
 
-    &:hover {
-      transform: scale(0.96);
+    // &:hover {
+    //   transform: scale(0.96);
 
-      img {
-        transform: translate3d(0px, 0px, 0px) scale3d(1.08, 1.08, 1);
-      }
-    }
+    //   img {
+    //     transform: translate3d(0px, 0px, 0px) scale3d(1.08, 1.08, 1);
+    //   }
+    // }
 
     img {
       position: absolute;
@@ -137,6 +137,7 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 12px;
+  margin-left: 86px;
 
   .article__tag {
     position: relative;

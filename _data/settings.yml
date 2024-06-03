@@ -1,6 +1,6 @@
 #-------------------------------
 # Site Settings
-title: R&B Staging
+title: R&B Staging #🛎️
 # logo: "/images/logo.png"
 description: R&B Staging transforms homes into market-ready showpieces, enhancing appeal and selling potential with strategic furniture and décor placement.
 
@@ -9,7 +9,7 @@ description: R&B Staging transforms homes into market-ready showpieces, enhancin
 author:
   author__name: Lisa and her team
   author__bio: Hi! I'm Lisa, a seasoned home staging professional, leading a talented team in the Ontario area. With years of experience and a keen eye for design, my team and I specialize in creating inviting, aesthetically pleasing environments that highlight each home's unique features. Our dedication to excellence and attention to detail ensure that every property we stage stands out in the market, helping our clients achieve faster sales at higher prices.
-  author__avatar: /images/01-1.jpg
+  author__avatar: /images/lisa_hero.jpg
 
 
 #-------------------------------
@@ -33,13 +33,14 @@ menu__settings:
 #-------------------------------
 # Hero Settings
 hero:
-  hero__title: Origin is a <strong>premium</strong> blog theme for Jekyll.
-  hero__subtitle: Hi there! I’m Dann Kanigan, a Filmmaker and Content Creator based in Toronto, Ontario, Canada. This blog is about learning, life, and inspiring you to take one step forward. 🏠✨
+  hero__title: First Impressions Matter
+  hero__subtitle: We transform homes into market-ready showpieces, enhancing their appeal and selling potential with strategic furniture and décor placement. 🏠✨
 
 
 #-------------------------------
 # Blog Settings
 blog:
+  enable: false
   blog__title: Blog & Resources
   blog__description: Find out how to set up a successful blog or how to make yours even better!
 
@@ -47,7 +48,7 @@ blog:
 #-------------------------------
 # Recommended Tag Settings
 tag:
-  enable: true
+  enable: false
   tag__title: Recommended
   tag__name: Motivation
 
@@ -55,7 +56,7 @@ tag:
 #-------------------------------
 # Newsletter Settings
 mailchimp:
-  enable: true
+  enable: false
   mailchimp__identifier: frnla.us6.list-manage.com/subscribe/post?u=6314d69a3f315af7ce3fb00a0&amp;id=3038727cc3 # Add your MailChimp form identifier. For example - frnla.us6.list-manage.com/subscribe/post?u=6314d69a3f315af7ce3fb00a0&amp;id=3038727cc3
   mailchimp__title: Get interesting news
   mailchimp__description: Subscribe to our newsletter and we’ll send you the emails of latest posts.
@@ -97,7 +98,7 @@ social:
 #-------------------------------
 # Contact Settings
 contact:
-  email: your@email.com # Add your email for contant form
+  email: ssgxaa@email.com # Add your email for contant form
 
 # NOTE
 # Dann theme comes with a contact form built-in. You can use this form with Formspree (https://formspree.io/) service and get up to 50 submissions for free. Also, you can easily switch to another service if you want.
@@ -106,7 +107,7 @@ contact:
 #-------------------------------
 # Comment Section (Disqus)
 disqus:
-  enable: true
+  enable: false
   disqus__identifier: anvod-studio-test # Add your shortname for Disqus Comment. For example anvod-studio-test
 
 
