@@ -196,7 +196,7 @@
     // centeredSlides: true,
     autoplay: {
       delay: 4000,
-      disableOnInteraction: false,
+      disableOnInteraction: true,
     },
     pagination: {
       el: ".swiper-pagination",
@@ -207,4 +207,17 @@
       prevEl: ".ion-ios-arrow-round-back",
     },
   });
+
+  let map;
+
+  async function initMap() {
+    const { Map } = await google.maps.importLibrary("maps");
+
+    map = new Map(document.getElementById("map"), {
+      center: { lat: -34.397, lng: 150.644 },
+      zoom: 8,
+    });
+  }
+
+  initMap();
 </script>
