@@ -149,17 +149,19 @@
 #map {
   // width: 500px;
   // height: 300px;
-  position: relative !important; // force relative
+  position: relative; // force relative
   
   border-radius: 15px; /* Adjust the value as needed for rounded corners */
-  width: 50% !important; 
-  height: 380px !important;
+  width: 50%; 
+  height: 380px;
   margin-right: 30px;
+  // margin-top: -50px
 }
 
 @media (max-width: $mobile) {
   #map {
-      width: 90% !important;
+      width: 90%;
       margin-right: 0px;
+      height: 200px;
   }
 }

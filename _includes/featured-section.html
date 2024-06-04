@@ -1,15 +1,7 @@
 <!-- slider  -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
 <!-- map  -->
-<!-- Include Leaflet -->
-<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
-<link href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" rel="stylesheet">
-<!-- Include CARTO.js -->
-<script src="https://libs.cartocdn.com/carto.js/v4.2.0/carto.min.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Montserrat:600" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-<link href="https://carto.com/developers/carto-js/examples/maps/public/style.css" rel="stylesheet">
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
 {% for post in site.posts %}
   {% if post.featured == true %}
@@ -108,13 +100,8 @@
       <!-- <div class="swiper-button-next">a</div>
       <div class="swiper-button-prev">b</div> -->
     </div> <!-- end swiper -->
-    <div id="map"> </div>
+    <div id="map"></div>
   </div>
-
-
-  
-  
-  
 
 </div>
 <!-- end featured section -->
@@ -142,31 +129,83 @@
   });
 </script>
 
+
 <script>
-  const map = L.map('map').setView([30, 0], 3);
-  map.scrollWheelZoom.disable();
-
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}.png', {
-  maxZoom: 18
-  }).addTo(map);
-
-  const client = new carto.Client({
-  apiKey: 'default_public',
-  username: 'cartojs-test'
+  (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+    key: "AIzaSyDnwyEZWfu8C4-TbZHgF61favWGA2WDVmo",
+    v: "weekly",
+    // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+    // Add other bootstrap parameters as needed, using camel case.
   });
 
-  const source = new carto.source.Dataset(`
-  ne_10m_populated_places_simple
-  `);
-  const style = new carto.style.CartoCSS(`
-  #layer {
-      marker-width: 7;
-      marker-fill: #EE4D5A;
-      marker-line-color: #FFFFFF;
-  }
-  `);
-  const layer = new carto.layer.Layer(source, style);
+  let map;
 
-  client.addLayer(layer);
-  client.getLeafletLayer().addTo(map);
+  async function initMap() {
+    // The location of Uluru
+    const positions = [
+      // { lat: -25.344, lng: 131.031 }, // Uluru
+      // { lat: -33.8688, lng: 151.2093 }, // Sydney
+      // { lat: 37.7749, lng: -122.4194 }, // San Francisco
+      // { lat: 51.5074, lng: -0.1278 }, // London
+      { lat: 43.65107, lng: -79.347015 }, // Toronto
+      { lat: 43.8561, lng: -79.337 }, // Markham
+      { lat: 43.7735, lng: -79.5019 }, // Scarborough
+      // { lat: 45.4215, lng: -75.6972 }, // Ottawa
+      { lat: 43.9706, lng: -79.2506 }, // Stouffville
+      { lat: 43.6532, lng: -79.3832 }, // Toronto
+      { lat: 43.8454, lng: -79.3689 }, // Markham
+      { lat: 43.7845, lng: -79.2318 }, // Scarborough
+      // { lat: 45.4247, lng: -75.695 }, // Ottawa
+      { lat: 43.9651, lng: -79.2443 }, // Stouffville
+      { lat: 43.6677, lng: -79.3948 }, // Toronto
+      { lat: 43.8765, lng: -79.2631 }, // Markham
+      { lat: 43.7975, lng: -79.3417 }, // Scarborough
+      // { lat: 45.417, lng: -75.6998 }, // Ottawa
+      { lat: 43.9605, lng: -79.2496 }, // Stouffville
+      { lat: 43.6535, lng: -79.3845 }, // Toronto
+      { lat: 43.8611, lng: -79.3251 }, // Markham
+      { lat: 43.7806, lng: -79.2319 }, // Scarborough
+      // { lat: 45.421, lng: -75.6903 }, // Ottawa
+      { lat: 43.9683, lng: -79.2428 } // Stouffville
+    ];
+    // Request needed libraries.
+    //@ts-ignore
+    const { Map } = await google.maps.importLibrary("maps");
+    const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+    // The map, centered at Uluru
+    map = new Map(document.getElementById("map"), {
+      zoom: 4,
+      center: positions[0],
+      mapId: "90860b38f9a3cca0",
+      disableDefaultUI: true,
+    });
+
+    //bounds start---
+    // Create a LatLngBounds object to capture all positions
+    const bounds = new google.maps.LatLngBounds();
+
+    // Loop through positions to create markers and extend bounds
+    positions.forEach(position => {
+      const marker = new AdvancedMarkerElement({
+        map: map,
+        position: position,
+        title: "Marker",
+      });
+      bounds.extend(position);
+    });
+
+    // Adjust the map to fit all markers
+    map.fitBounds(bounds);
+    //bounds end---
+
+    // // The marker, positioned at Uluru
+    // const marker = new AdvancedMarkerElement({
+    //   map: map,
+    //   position: position,
+    //   title: "Uluru",
+    // });
+  }
+
+  initMap();
 </script>
