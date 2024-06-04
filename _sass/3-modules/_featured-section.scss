@@ -1,15 +1,15 @@
 /* Featured Section */
 .featured-section {
-  margin-bottom: 226px;
+  // margin-bottom: 226px;
   margin-top: 80px;
   @media (max-width: $desktop) {
     margin-top: 80px;
-    margin-bottom: 210px;
+    // margin-bottom: 210px;
   }
 
   @media (max-width: $tablet) {
     margin-top: 40px;
-    margin-bottom: 160px;
+    // margin-bottom: 160px;
   }
 
   @media (max-width: $mobile) {
@@ -128,42 +128,38 @@
   /* font-weight: bold; */
   /* color: #fff; */
 }
-// .swiper-slide:nth-child(1n) {
-//   background-color: rgb(206, 17, 17);
+
+
+// map
+
+.hero-container{
+  display: flex;
+  flex-wrap: wrap;
+  // put center
+  justify-content: center;
+  gap: 20px; /* Adds space between the divs */
+  padding-bottom: 30px;
+}
+
+// .swiper.mySwiperMobile {
+//   padding-bottom: 30px;
+//   /* Add any additional styles you need */
 // }
 
-// .swiper-slide:nth-child(2n) {
-//   background-color: rgb(0, 140, 255);
-// }
+#map {
+  // width: 500px;
+  // height: 300px;
+  position: relative !important; // force relative
+  
+  border-radius: 15px; /* Adjust the value as needed for rounded corners */
+  width: 50% !important; 
+  height: 380px !important;
+  margin-right: 30px;
+}
 
-// .swiper-slide:nth-child(3n) {
-//   background-color: rgb(10, 184, 111);
-// }
-
-// .swiper-slide:nth-child(4n) {
-//   background-color: rgb(211, 122, 7);
-// }
-
-// .swiper-slide:nth-child(5n) {
-//   background-color: rgb(118, 163, 12);
-// }
-
-// .swiper-slide:nth-child(6n) {
-//   background-color: rgb(180, 10, 47);
-// }
-
-// .swiper-slide:nth-child(7n) {
-//   background-color: rgb(35, 99, 19);
-// }
-
-// .swiper-slide:nth-child(8n) {
-//   background-color: rgb(0, 68, 255);
-// }
-
-// .swiper-slide:nth-child(9n) {
-//   background-color: rgb(218, 12, 218);
-// }
-
-// .swiper-slide:nth-child(10n) {
-//   background-color: rgb(54, 94, 77);
-// }
+@media (max-width: $mobile) {
+  #map {
+      width: 90% !important;
+      margin-right: 0px;
+  }
+}
