@@ -118,52 +118,6 @@
   // background-color: white;
   // padding-bottom: 30px;
 }
-.swiper.mySwiperDesktop{
-  width: 100%;
-  // height: 300px;
-  // background-color: white;
-  // padding-bottom: 50px;
-}
-@media (max-width: $desktop) {
-  .swiper.mySwiperMobile {
-    display: none;
-  }
-  .swiper.mySwiperDesktop {
-    display: block;
-  }
-}
-@media (min-width: $desktop) {
-  .swiper.mySwiperMobile {
-    display: none;
-  }
-  .swiper.mySwiperDesktop {
-    display: block;
-  }
-}
-@media (max-width: $tablet) {
-  .swiper.mySwiperMobile {
-    display: none;
-  }
-  .swiper.mySwiperDesktop {
-    display: block;
-  }
-}
-@media (min-width: $tablet) {
-  .swiper.mySwiperMobile {
-    display: none;
-  }
-  .swiper.mySwiperDesktop {
-    display: block;
-  }
-}
-@media (max-width: $mobile) {
-  .swiper.mySwiperDesktop {
-    display: none;
-  }
-  .swiper.mySwiperMobile {
-    display: block;
-  }
-}
 
 .swiper-slide {
   display: flex;
