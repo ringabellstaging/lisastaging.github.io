@@ -76,12 +76,23 @@
     user-select: none;
     cursor: grab;
     max-width: 360px;
+  }
+  
+}
+.article__image {
+  background-color: var(--dark);
+  width: 100%; /* Adjust the width as needed */
+  height: 100%; /* Adjust the height as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensures that the overflowing parts of the image are hidden */
 
-    .article__image {
-      background-color: var(--dark);
-      width: 100%;  /* Adjust the width as needed */
-      height: 100%;  /* Adjust the height as needed */
-    }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container */
+    object-position: center; /* Centers the image */
   }
 }
 
@@ -96,3 +107,108 @@
 [aria-disabled="true"] {
   opacity: 0.3;
 }
+
+// phone swiper
+// .swiper {
+//   // max hight = 90px
+//   max-height: 500px;
+// }
+.swiper.mySwiperMobile{
+  width: 335px;
+  // background-color: white;
+  // padding-bottom: 30px;
+}
+.swiper.mySwiperDesktop{
+  width: 100%;
+  // background-color: white;
+  // padding-bottom: 50px;
+}
+@media (max-width: $desktop) {
+  .swiper.mySwiperMobile {
+    display: none;
+  }
+  .swiper.mySwiperDesktop {
+    display: block;
+  }
+}
+@media (min-width: $desktop) {
+  .swiper.mySwiperMobile {
+    display: none;
+  }
+  .swiper.mySwiperDesktop {
+    display: block;
+  }
+}
+@media (max-width: $tablet) {
+  .swiper.mySwiperMobile {
+    display: none;
+  }
+  .swiper.mySwiperDesktop {
+    display: block;
+  }
+}
+@media (min-width: $tablet) {
+  .swiper.mySwiperMobile {
+    display: none;
+  }
+  .swiper.mySwiperDesktop {
+    display: block;
+  }
+}
+@media (max-width: $mobile) {
+  .swiper.mySwiperDesktop {
+    display: none;
+  }
+  .swiper.mySwiperMobile {
+    display: block;
+  }
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  /* font-size: 22px; */
+  /* font-weight: bold; */
+  /* color: #fff; */
+}
+// .swiper-slide:nth-child(1n) {
+//   background-color: rgb(206, 17, 17);
+// }
+
+// .swiper-slide:nth-child(2n) {
+//   background-color: rgb(0, 140, 255);
+// }
+
+// .swiper-slide:nth-child(3n) {
+//   background-color: rgb(10, 184, 111);
+// }
+
+// .swiper-slide:nth-child(4n) {
+//   background-color: rgb(211, 122, 7);
+// }
+
+// .swiper-slide:nth-child(5n) {
+//   background-color: rgb(118, 163, 12);
+// }
+
+// .swiper-slide:nth-child(6n) {
+//   background-color: rgb(180, 10, 47);
+// }
+
+// .swiper-slide:nth-child(7n) {
+//   background-color: rgb(35, 99, 19);
+// }
+
+// .swiper-slide:nth-child(8n) {
+//   background-color: rgb(0, 68, 255);
+// }
+
+// .swiper-slide:nth-child(9n) {
+//   background-color: rgb(218, 12, 218);
+// }
+
+// .swiper-slide:nth-child(10n) {
+//   background-color: rgb(54, 94, 77);
+// }
