@@ -5,59 +5,17 @@ description: Markham Project
 date: 2021-11-06 15:01:35 +0300
 author: lisa
 image: '/images/house3/img1.jpg'
-image_caption: 'Photo by [Oliver Sjöström](https://unsplash.com/photos/m-qps7eYZl4) on [Unsplash](https://unsplash.com/)'
+image_caption: ' '
 highlight_image: '/images/house3/img2.jpg'
 tags: [Markham, SOLD🎉🎊]
 featured: true
 # video_embed: '/images/house3/00.mp4'
 ---
-
-Our recent home staging project at 901 Yang St in Markham showcases the transformative power of strategic design. This property, now sold, highlights how leveraging agile frameworks can provide a robust synopsis for high-level overviews and foster collaborative thinking to further the overall value proposition.
-
-![Living Room and Dining Area]({{site.baseurl}}/images/house3/img1.jpg){:loading="lazy"}
-
-The living room and dining area were designed to create an inviting and spacious environment. The use of neutral tones and modern furniture pieces ensures a clean and sophisticated look, appealing to a wide range of potential buyers.
-
-![Dining Area]({{site.baseurl}}/images/house3/img2.jpg){:loading="lazy"}
-
-The dining area, with its elegant setup, is perfect for family gatherings and entertaining guests. The strategically placed mirrors add depth and light to the space, making it feel even more open and welcoming.
-
-![Living Room]({{site.baseurl}}/images/house3/img3.jpg){:loading="lazy"}
-
-A cozy yet stylish living room setup, complete with a modern fireplace and tasteful decor, provides a perfect spot for relaxation. The large windows allow natural light to flood the room, enhancing its warmth and appeal.
-
-![Exterior]({{site.baseurl}}/images/house3/img4.jpg){:loading="lazy"}
-
-The exterior of the house boasts a classic brick facade with a spacious driveway and well-maintained landscaping. The curb appeal is undeniable, making a strong first impression on potential buyers.
-
-![Kitchen]({{site.baseurl}}/images/house3/img5.jpg){:loading="lazy"}
-
-The kitchen is a chef's dream, featuring state-of-the-art appliances, ample storage, and a modern design. The marble countertops and gold accents add a touch of luxury, making this space both functional and beautiful.
-
-![Living and Dining Area]({{site.baseurl}}/images/house3/img6.jpg){:loading="lazy"}
-
-Another view of the living and dining area showcases the seamless flow between spaces, enhancing the home's layout and functionality. The strategic placement of furniture and decor items creates a harmonious and inviting atmosphere.
-
-![Bathroom]({{site.baseurl}}/images/house3/img7.jpg){:loading="lazy"}
-
-The bathroom exudes elegance with its marble tiles, glass shower, and gold fixtures. It's a luxurious retreat within the home, offering a spa-like experience for the homeowners.
-
-![Master Bedroom]({{site.baseurl}}/images/house3/img8.jpg){:loading="lazy"}
-
-The master bedroom is designed to be a tranquil haven, with soft colors and plush bedding. The minimalist decor and large windows create a serene and airy space, perfect for unwinding after a long day.
-
-![Guest Bedroom]({{site.baseurl}}/images/house3/img9.jpg){:loading="lazy"}
-
-The guest bedroom continues the theme of comfort and elegance, with thoughtful touches that make it welcoming and cozy. The use of light colors and simple decor ensures a restful environment for visitors.
-
-![Breakfast Nook]({{site.baseurl}}/images/house3/img10.jpg){:loading="lazy"}
-
-The breakfast nook, with its bright and airy ambiance, is perfect for casual meals and morning coffee. The large windows and sliding doors provide a seamless connection to the outdoor space, enhancing the overall living experience.
-
-Our home staging at 901 Yang St demonstrates how thoughtful design and strategic planning can significantly enhance a property's appeal, leading to a successful sale. We are proud to have been part of this project and look forward to transforming more homes in the future.
-
-*Photo by [Oliver Sjöström](https://unsplash.com/photos/WBW1reqRl9M) on [Unsplash](https://unsplash.com/)*
-
-Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state-of-the-art customer service.
-
-Phosfluorescently engage worldwide methodologies with web-enabled technology. Interactively coordinate proactive e-commerce via process-centric “outside the box” thinking. Completely pursue scalable customer service through sustainable solutions.
+![Surfer]({{site.baseurl}}/images/house3/img3.jpg){:loading="lazy"}
+![Surfer]({{site.baseurl}}/images/house3/img4.jpg){:loading="lazy"}
+![Surfer]({{site.baseurl}}/images/house3/img5.jpg){:loading="lazy"}
+![Surfer]({{site.baseurl}}/images/house3/img6.jpg){:loading="lazy"}
+![Surfer]({{site.baseurl}}/images/house3/img7.jpg){:loading="lazy"}
+![Surfer]({{site.baseurl}}/images/house3/img8.jpg){:loading="lazy"}
+![Surfer]({{site.baseurl}}/images/house3/img9.jpg){:loading="lazy"}
+![Surfer]({{site.baseurl}}/images/house3/img10.jpg){:loading="lazy"}

@@ -5,49 +5,16 @@ description: Markham Project
 date: 2021-11-06 15:01:35 +0300
 author: lisa
 image: '/images/house11/img1.jpg'
-image_caption: 'Photo by [Oliver Sjöström](https://unsplash.com/photos/m-qps7eYZl4) on [Unsplash](https://unsplash.com/)'
+image_caption: ' '
 highlight_image: '/images/house11/img2.jpg'
 tags: [Markham, SOLD🎉🎊]
 featured: true
 # video_embed: '/images/house11/00.mp4'
 ---
 
-We are thrilled to present the results of our latest home staging project at 901 Yang St, Markham. This beautiful home was transformed to highlight its best features and attract potential buyers, leading to a successful sale. Our team leveraged agile frameworks to create a robust and visually appealing environment that fosters collaborative thinking and enhances the overall value proposition of the property.
-
-![Living Room](/images/house11/img1.jpg){:loading="lazy"}
-
-Our approach involved creating a holistic world view of disruptive innovation through strategic furniture placement and decor selection, ensuring each room exudes warmth and sophistication. The living room, with its cozy fireplace and modern furnishings, invites relaxation and conversation.
-
-![Exterior](/images/house11/img2.jpg){:loading="lazy"}
-
-The exterior of this stunning home was also given attention to ensure curb appeal. Fresh landscaping and a clean, inviting entrance set the tone for what lies within.
-
-![Open Concept Living](/images/house11/img3.jpg){:loading="lazy"}
-
-Inside, the open concept living area seamlessly connects the kitchen and dining spaces, making it perfect for entertaining. The use of neutral tones and contemporary accents creates a space that is both functional and stylish.
-
-![Kitchen](/images/house11/img4.jpg){:loading="lazy"}
-
-The kitchen is a chef's dream with modern appliances, ample counter space, and a beautiful island that serves as the centerpiece. Bright and airy, it’s a place where culinary creativity can flourish.
-
-![Dining Area](/images/house11/img5.jpg){:loading="lazy"}
-
-The dining area, adjacent to large windows, offers a perfect spot for family meals with a view. The natural light enhances the ambiance, making it a delightful space to enjoy.
-
-![Bedroom](/images/house11/img6.jpg){:loading="lazy"}
-
-Bedrooms were staged to convey comfort and tranquility. Each room was designed with a focus on creating a restful retreat, complete with plush bedding and tasteful decor.
-
-![Home Office](/images/house11/img7.jpg){:loading="lazy"}
-
-A dedicated home office space was also staged to meet the needs of today’s work-from-home lifestyle. This room is functional yet stylish, providing a productive environment.
-
-![Bathroom](/images/house11/img8.jpg){:loading="lazy"}
-
-The bathrooms were not overlooked. They were staged to reflect a spa-like atmosphere, with clean lines and modern fixtures, ensuring a luxurious experience.
-
-Our goal with every staging project is to create a space that potential buyers can envision themselves living in. At 901 Yang St, we successfully achieved this by leveraging our expertise in home staging to highlight the property's best features and create an inviting atmosphere.
-
-For more information on our home staging services and to see how we can transform your property, contact us today!
-
-*Photo by [Jeremy Bishop](https://unsplash.com/photos/_CFv3bntQlQ) on [Unsplash](https://unsplash.com/)*
+![Surfer]({{site.baseurl}}/images/house11/img3.jpg){:loading="lazy"}
+![Surfer]({{site.baseurl}}/images/house11/img4.jpg){:loading="lazy"}
+![Surfer]({{site.baseurl}}/images/house11/img5.jpg){:loading="lazy"}
+![Surfer]({{site.baseurl}}/images/house11/img6.jpg){:loading="lazy"}
+![Surfer]({{site.baseurl}}/images/house11/img7.jpg){:loading="lazy"}
+![Surfer]({{site.baseurl}}/images/house11/img8.jpg){:loading="lazy"}

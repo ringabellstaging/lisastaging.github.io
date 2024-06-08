@@ -5,89 +5,14 @@ description: Markham Project
 date: 2021-11-06 15:01:35 +0300
 author: lisa
 image: '/images/house1/img1.jpg'
-image_caption: 'Photo by [Oliver Sjöström](https://unsplash.com/photos/m-qps7eYZl4) on [Unsplash](https://unsplash.com/)'
+image_caption: ''
 highlight_image: '/images/house1/img2.jpg'
 tags: [Markham, SOLD🎉🎊]
 featured: true
 # video_embed: '/images/house1/00.mp4'
 ---
-Leverage agile frameworks to provide a robust synopsis for high-level overviews. Iterative approaches to home staging foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
-
-Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User-generated content in real-time will have multiple touchpoints for offshoring.
-
-![Living Room]({{site.baseurl}}/images/house1/img2.jpg){:loading="lazy"}
-*Photo by [Oliver Sjöström](https://unsplash.com/photos/m-qps7eYZl4) on [Unsplash](https://unsplash.com/)*
-
-Our recent project at 901 Yang St showcases our commitment to excellence in home staging. The living room, with its coffered ceiling and large windows, was transformed into a bright and inviting space perfect for both relaxation and entertainment.
-
-![Dining Area]({{site.baseurl}}/images/house1/img3.jpg){:loading="lazy"}
-*Photo by [Oliver Sjöström](https://unsplash.com/photos/m-qps7eYZl4) on [Unsplash](https://unsplash.com/)*
-
-The dining area now exudes elegance and sophistication, making it an ideal setting for family dinners and gatherings. The open floor plan seamlessly connects the dining area to the living room, enhancing the flow and functionality of the space.
-
-> The more homes I stage, the more I realize that attention to detail and thoughtful design always pay off, making the effort and care we put into each project truly worthwhile.
-
-Collaboratively administrate turnkey channels whereas virtual e-tailers. Objectively seize scalable metrics whereas proactive e-services. Seamlessly empower fully researched growth strategies and interoperable internal or “organic” sources.
-
-![Kitchen]({{site.baseurl}}/images/house1/img4.jpg){:loading="lazy"}
-*Photo by [Oliver Sjöström](https://unsplash.com/photos/m-qps7eYZl4) on [Unsplash](https://unsplash.com/)*
-
-The kitchen was designed to be the heart of the home, featuring modern appliances, ample counter space, and an inviting breakfast nook. This space is perfect for both everyday meals and entertaining guests.
-
-![Bedroom]({{site.baseurl}}/images/house1/img8.jpg){:loading="lazy"}
-*Photo by [Oliver Sjöström](https://unsplash.com/photos/m-qps7eYZl4) on [Unsplash](https://unsplash.com/)*
-
-The master bedroom was staged to create a serene and luxurious retreat. With its spacious layout and elegant decor, it provides the perfect escape from the hustle and bustle of daily life.
-
-![Bathroom]({{site.baseurl}}/images/house1/img9.jpg){:loading="lazy"}
-*Photo by [Oliver Sjöström](https://unsplash.com/photos/m-qps7eYZl4) on [Unsplash](https://unsplash.com/)*
-
-The bathroom was transformed into a spa-like oasis, featuring a freestanding tub, modern fixtures, and a calming color palette. This space is designed to offer relaxation and rejuvenation.
-
-Completely synergize resource-taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state-of-the-art customer service.
-
-Phosfluorescently engage worldwide methodologies with web-enabled technology. Interactively coordinate proactive e-commerce via process-centric “outside the box” thinking. Completely pursue scalable customer service through sustainable strategies.
-
-Our home staging at 901 Yang St has not only enhanced the aesthetic appeal of the property but also significantly increased its market value. We are proud to have played a part in transforming this house into a dream home for its new owners.
-
-If you are looking to stage your home and achieve similar results, contact us today to learn more about our services and how we can help you showcase your property in the best possible light.
-
-
-<!-- ---
-layout: post
-title: 901 yang st
-description: House
-date: 2021-11-06 15:01:35 +0300
-author: lisa
-image: '/images/house1/img1.jpg'
-image_caption: 'Photo by [Oliver Sjöström](https://unsplash.com/photos/m-qps7eYZl4) on [Unsplash](https://unsplash.com/)'
-tags: [2024, SOLD🎉🎊]
-featured: true
----
-Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
-
-Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
-
-![Surfer]({{site.baseurl}}/images/05-1.jpg){:loading="lazy"}
-*Photo by [Jeremy Bishop](https://unsplash.com/photos/_CFv3bntQlQ) on [Unsplash](https://unsplash.com/)*
-
-Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
-
-Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
-
-> The longer I live, the more I realize that I am never wrong about anything, and that all the pains I have so humbly taken to verify my notions have only wasted my time!
-
-Collaboratively administrate turnkey channels whereas virtual e-tailers. Objectively seize scalable metrics whereas proactive e-services. Seamlessly empower fully researched growth strategies and interoperable internal or “organic” sources.
-
-![Man]({{site.baseurl}}/images/05-2.jpg){:loading="lazy"}
-*Photo by [Oliver Sjöström](https://unsplash.com/photos/WBW1reqRl9M) on [Unsplash](https://unsplash.com/)*
-
-Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.
-
-Phosfluorescently engage worldwide methodologies with web-enabled technology. Interactively coordinate proactive e-commerce via process-centric “outside the box” thinking. Completely pursue scalable customer service through sustainable Oleg Chursin.
-
-![Surfer]({{site.baseurl}}/images/house1/img1.jpg){:loading="lazy"}
-![Surfer]({{site.baseurl}}/images/house1/img2.jpg){:loading="lazy"}
+<!-- ![Surfer]({{site.baseurl}}/images/house1/img1.jpg){:loading="lazy"} -->
+<!-- ![Surfer]({{site.baseurl}}/images/house1/img2.jpg){:loading="lazy"} -->
 ![Surfer]({{site.baseurl}}/images/house1/img3.jpg){:loading="lazy"}
 ![Surfer]({{site.baseurl}}/images/house1/img4.jpg){:loading="lazy"}
 ![Surfer]({{site.baseurl}}/images/house1/img5.jpg){:loading="lazy"}
@@ -104,7 +29,5 @@ Phosfluorescently engage worldwide methodologies with web-enabled technology. In
 ![Surfer]({{site.baseurl}}/images/house1/img16.jpg){:loading="lazy"}
 ![Surfer]({{site.baseurl}}/images/house1/img17.jpg){:loading="lazy"}
 ![Surfer]({{site.baseurl}}/images/house1/img18.jpg){:loading="lazy"}
-![Surfer]({{site.baseurl}}/images/house1/img19.jpg){:loading="lazy"}
-![Surfer]({{site.baseurl}}/images/house1/img20.jpg){:loading="lazy"}
-
- -->
+<!-- ![Surfer]({{site.baseurl}}/images/house1/img19.jpg){:loading="lazy"}
+![Surfer]({{site.baseurl}}/images/house1/img20.jpg){:loading="lazy"} -->

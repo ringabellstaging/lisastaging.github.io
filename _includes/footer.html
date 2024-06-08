@@ -21,6 +21,31 @@
         </div>
 
         <div class="col col-2 col-m-12">
+          <div class="widget-footer widget-contact">
+            <h3 class="widget-footer__title">Get a Quote</h3>
+            <div class="contact-info">
+              <ul class="contact-info__list list-reset">
+                <li class="contact-info__item">
+                  <span class="contact-info__text">Email: <div href="javascript:void(0);" style="color: white; cursor: pointer;">ssgxaa@gmail.com</div></span>
+                </li>
+                <li class="contact-info__item">
+                  <span class="contact-info__text">English: <div href="javascript:void(0);" style="color: white; cursor: pointer;">647-571-1788</div></span>
+                </li>
+                <li class="contact-info__item">
+                  <span class="contact-info__text">Mandarin: <div href="javascript:void(0);" style="color: white; cursor: pointer;">416-939-3962</div></span>
+                </li>
+                <li class="contact-info__item">
+                  <span class="contact-info__text">WeChat: <div href="javascript:void(0);" style="color: white; cursor: pointer;"></div></span>
+                </li>
+                <li class="contact-info__item" style="text-align: center;">
+                  <img src="/images/LisaWechatQR.jpg" alt="WeChat QR Code" style="width: 100px; height: 100px;">
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- <div class="col col-2 col-m-12">
           <div class="widget-footer widget-social">
             <h3 class="widget-footer__title">Follow</h3>
             {% if site.data.settings.social %}
@@ -36,9 +61,9 @@
             </div>
             {% endif %}
           </div>
-        </div>
+        </div> -->
 
-        <div class="col col-2 col-m-12">
+        <!-- <div class="col col-2 col-m-12">
           <div class="widget-footer widget-nav">
             <h3 class="widget-footer__title">Menu</h3>
             <ul class="widget-nav__list list-reset">
@@ -49,7 +74,7 @@
               {% endfor %}
             </ul>
           </div>
-        </div>
+        </div> -->
 
       </div>
     </div>
@@ -67,3 +92,19 @@
 
 </footer>
 <!-- end footer -->
+
+<!-- <script>
+function copyToClipboard(text) {
+  var dummy = document.createElement("textarea");
+  // to avoid breaking orgain page when copying more words
+  // cant copy when adding below this code
+  // dummy.style.display = 'none'
+  document.body.appendChild(dummy);
+  // Be careful if you use texarea. setAttribute('value', value), which works with "input" does not work with "textarea". – Eduard
+  dummy.value = text;
+  dummy.select();
+  document.execCommand("copy");
+  document.body.removeChild(dummy);
+  alert("Copied to clipboard");
+}
+</script> -->
