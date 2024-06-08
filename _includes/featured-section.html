@@ -143,69 +143,92 @@
   async function initMap() {
     // The location of Uluru
     const positions = [
-      // { lat: -25.344, lng: 131.031 }, // Uluru
-      // { lat: -33.8688, lng: 151.2093 }, // Sydney
-      // { lat: 37.7749, lng: -122.4194 }, // San Francisco
-      // { lat: 51.5074, lng: -0.1278 }, // London
-      { lat: 43.65107, lng: -79.347015 }, // Toronto
-      { lat: 43.8561, lng: -79.337 }, // Markham
-      { lat: 43.7735, lng: -79.5019 }, // Scarborough
-      // { lat: 45.4215, lng: -75.6972 }, // Ottawa
-      { lat: 43.9706, lng: -79.2506 }, // Stouffville
-      { lat: 43.6532, lng: -79.3832 }, // Toronto
-      { lat: 43.8454, lng: -79.3689 }, // Markham
-      { lat: 43.7845, lng: -79.2318 }, // Scarborough
-      // { lat: 45.4247, lng: -75.695 }, // Ottawa
-      { lat: 43.9651, lng: -79.2443 }, // Stouffville
-      { lat: 43.6677, lng: -79.3948 }, // Toronto
-      { lat: 43.8765, lng: -79.2631 }, // Markham
-      { lat: 43.7975, lng: -79.3417 }, // Scarborough
-      // { lat: 45.417, lng: -75.6998 }, // Ottawa
-      { lat: 43.9605, lng: -79.2496 }, // Stouffville
-      { lat: 43.6535, lng: -79.3845 }, // Toronto
-      { lat: 43.8611, lng: -79.3251 }, // Markham
-      { lat: 43.7806, lng: -79.2319 }, // Scarborough
-      // { lat: 45.421, lng: -75.6903 }, // Ottawa
-      { lat: 43.9683, lng: -79.2428 } // Stouffville
+      {lat: 44.406682583444, lng: -79.72708722814644}, // top padding
+      {lat: 43.927568830751916, lng: -78.84555030474665},
+      {lat: 43.901028488685085, lng: -78.88223774817386},
+      {lat: 43.920973854812026, lng: -78.96547362592808},
+      {lat: 43.9058202177951,lng:  -78.9759913032113},
+      {lat: 43.88599810109301,lng:  -78.9670917301255},
+      {lat: 44.34229402387427, lng: -79.73031111178403},
+      {lat: 44.208736516164755, lng: -79.46624271039914},
+      {lat: 44.206822367023186,lng:  -79.4626822443201},
+      {lat: 44.098061151604725, lng: -79.44363262613304},
+      {lat: 44.03371721307411, lng: -79.44726295526284},
+      {lat: 43.94669455567249, lng: -79.43096225082786},
+      {lat: 43.94379035390629, lng: -79.47896202833395},
+      {lat: 43.91561223372934, lng: -79.45355038141896},
+      {lat: 43.90486036138218, lng: -79.45556717879317},
+      {lat: 43.89875708330963, lng: -79.41200435551033},
+      {lat: 43.88306006670459, lng: -79.42370178028072},
+      {lat: 43.8714299797677,lng:  -79.4313656103027},
+      {lat: 43.864160022724846, lng: -79.43701264295048},
+      {lat: 43.85630747319168,lng:  -79.4293488129285},
+      {lat: 43.86212427585811, lng: -79.54390290378338},
+      {lat: 43.91619336068546, lng: -79.36884489170234},
+      {lat: 43.906022819600096, lng: -79.26961846089142},
+      {lat: 43.888327314588786, lng: -79.31358183186525},
+      {lat: 43.891224092922705, lng: -79.25677239215076},
+      {lat: 43.883692176209, lng: -79.29348415272098},
+      {lat: 43.88040873497232, lng: -79.31170604847846},
+      {lat: 43.871523221970335, lng: -79.33850295400416},
+      {lat: 43.84677447264089, lng: -79.28261938291588},
+      {lat: 43.82555029320998,lng:  -79.2695834551715},
+      {lat: 43.81533850536056, lng: -79.31167087903192},
+      {lat: 43.80270572010555, lng: -79.23680740827135},
+      {lat: 43.78442376964584, lng: -79.32545171693312},
+      {lat: 43.78065914441371, lng: -79.30347686730688},
+      {lat: 43.81157582745435,lng:  -79.3973355470664},
+      {lat: 43.7946408431481, lng: -79.43160141428021},
+      {lat: 43.74165444095009, lng: -79.44091279124048},
+      {lat: 43.71433065401443, lng: -79.41256898214223},
+      {lat: 43.67914034669567, lng: -79.39904892990222},
+      {lat: 43.577367486854435, lng: -79.63900043483339},
     ];
     // Request needed libraries.
     //@ts-ignore
     const { Map } = await google.maps.importLibrary("maps");
     const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
-    // The map, centered at Uluru
-    map = new Map(document.getElementById("map"), {
-      zoom: 4,
-      center: positions[0],
-      mapId: "90860b38f9a3cca0",
-      disableDefaultUI: true,
-    });
-
-    //bounds start---
-    // Create a LatLngBounds object to capture all positions
     const bounds = new google.maps.LatLngBounds();
 
-    // Loop through positions to create markers and extend bounds
+    // The map, centered at Uluru
+    map = new Map(document.getElementById("map"), {
+      // zoom: 7.7,
+      // center: positions[0],
+      mapId: "90860b38f9a3cca0",
+      disableDefaultUI: true,
+      keyboardShortcuts: false,
+    });
+
     positions.forEach(position => {
+      const pinElement = new google.maps.marker.PinElement({
+        // background: '#4285F4', // Background color of the pin
+        borderColor: '#FFFFFF', // Border color of the pin
+        glyphColor: '#FFFFFF', // Color of the glyph (icon or letter)
+        // glyph: 'A', // The glyph to display inside the pin
+        scale: 0.5, // The scale of the pin
+      });
+
       const marker = new AdvancedMarkerElement({
         map: map,
         position: position,
         title: "Marker",
+        content:pinElement.element,
       });
       bounds.extend(position);
     });
 
+    //bounds start---
+    // Create a LatLngBounds object to capture all positions
+    
+    // center the map to the bounds's center
+    map.setCenter(bounds.getCenter());
+    // change center to the bound
+
     // Adjust the map to fit all markers
-    map.fitBounds(bounds);
-    //bounds end---
+    map.fitBounds(bounds, -14);
+    // map.panBy(-500, 1000);
 
-    // // The marker, positioned at Uluru
-    // const marker = new AdvancedMarkerElement({
-    //   map: map,
-    //   position: position,
-    //   title: "Uluru",
-    // });
   }
-
   initMap();
 </script>
