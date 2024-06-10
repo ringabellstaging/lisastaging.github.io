@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 125 Maplewood Avenue
+title: anonymous4
 description: Markham Project
 date: 2021-11-06 15:01:35 +0300
 author: lisa
 image: '/images/house4/img1.jpg'
 image_caption: ' '
 highlight_image: '/images/house4/img2.jpg'
-tags: [Markham, SOLD🎉🎊]
+tags: [Thornhill]
 featured: true
 # video_embed: '/images/house4/00.mp4'
 ---
@@ -17,4 +17,4 @@ featured: true
 ![Surfer]({{site.baseurl}}/images/house4/img6.jpg){:loading="lazy"}
 ![Surfer]({{site.baseurl}}/images/house4/img7.jpg){:loading="lazy"}
 ![Surfer]({{site.baseurl}}/images/house4/img8.jpg){:loading="lazy"}
-![Surfer]({{site.baseurl}}/images/house4/img9.jpg){:loading="lazy"}
+<!-- ![Surfer]({{site.baseurl}}/images/house4/img9.jpg){:loading="lazy"} -->

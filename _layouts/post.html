@@ -10,13 +10,6 @@ layout: default
       <div class="col {% if page.video_embed %}col-12{% else %}col-6 col-d-12{% endif %}">
         <div class="post__info{{videoInfo}}">
 
-          {% if page.tags.size >= 1 %}
-          <div class="post__tags">
-            {% for tag in page.tags %}
-            <a href="{{ site.baseurl }}/tags/?tag={{ tag | downcase | url_encode }}" class="post__tag">{{ tag }}</a>
-            {% endfor %}
-          </div>
-          {% endif %}
 
           <!-- <h1 class="post__title">{{ page.title | escape }}</h1> -->
 
@@ -44,7 +37,14 @@ layout: default
               {% else %} -->
                 <a class="post__author__name" href="{{site.baseurl}}/about/">{{ site.data.settings.author.author__name }}</a>
               <!-- {% endif %} -->
-              <time class="post__date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time>
+              <!-- <time class="post__date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time> -->
+              {% if page.tags.size >= 1 %}
+              <div class="post__tags" style="margin-bottom: 0;">
+                {% for tag in page.tags %}
+                <a href="{{ site.baseurl }}/tags/?tag={{ tag | downcase | url_encode }}" class="post__tag">{{ tag }}</a>
+                {% endfor %}
+              </div>
+              {% endif %}
             </div>
           </div>
 
