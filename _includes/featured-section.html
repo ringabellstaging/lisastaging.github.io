@@ -1,8 +1,3 @@
-<!-- slider  -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-<!-- map  -->
-<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-
 {% for post in site.posts %}
   {% if post.featured == true %}
     {% assign is-featured = true %}
@@ -107,7 +102,7 @@
 <!-- end featured section -->
 {% endif %}
 
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
   var swiper = new Swiper(".mySwiperMobile", {
@@ -139,47 +134,47 @@
     crossorigin=""></script>
 <script>
   // https://leafletjs.com/examples/quick-start/
-  const positions = [
-    {lat: 44.406682583444, lng: -79.72708722814644}, // top padding
-    {lat: 43.927568830751916, lng: -78.84555030474665},
-    {lat: 43.901028488685085, lng: -78.88223774817386},
-    {lat: 43.920973854812026, lng: -78.96547362592808},
-    {lat: 43.9058202177951,lng:  -78.9759913032113},
-    {lat: 43.88599810109301,lng:  -78.9670917301255},
-    {lat: 44.34229402387427, lng: -79.73031111178403},
-    {lat: 44.208736516164755, lng: -79.46624271039914},
-    {lat: 44.206822367023186,lng:  -79.4626822443201},
-    {lat: 44.098061151604725, lng: -79.44363262613304},
-    {lat: 44.03371721307411, lng: -79.44726295526284},
-    {lat: 43.94669455567249, lng: -79.43096225082786},
-    {lat: 43.94379035390629, lng: -79.47896202833395},
-    {lat: 43.91561223372934, lng: -79.45355038141896},
-    {lat: 43.90486036138218, lng: -79.45556717879317},
-    {lat: 43.89875708330963, lng: -79.41200435551033},
-    {lat: 43.88306006670459, lng: -79.42370178028072},
-    {lat: 43.8714299797677,lng:  -79.4313656103027},
-    {lat: 43.864160022724846, lng: -79.43701264295048},
-    {lat: 43.85630747319168,lng:  -79.4293488129285},
-    {lat: 43.86212427585811, lng: -79.54390290378338},
-    {lat: 43.91619336068546, lng: -79.36884489170234},
-    {lat: 43.906022819600096, lng: -79.26961846089142},
-    {lat: 43.888327314588786, lng: -79.31358183186525},
-    {lat: 43.891224092922705, lng: -79.25677239215076},
-    {lat: 43.883692176209, lng: -79.29348415272098},
-    {lat: 43.88040873497232, lng: -79.31170604847846},
-    {lat: 43.871523221970335, lng: -79.33850295400416},
-    {lat: 43.84677447264089, lng: -79.28261938291588},
-    {lat: 43.82555029320998,lng:  -79.2695834551715},
-    {lat: 43.81533850536056, lng: -79.31167087903192},
-    {lat: 43.80270572010555, lng: -79.23680740827135},
-    {lat: 43.78442376964584, lng: -79.32545171693312},
-    {lat: 43.78065914441371, lng: -79.30347686730688},
-    {lat: 43.81157582745435,lng:  -79.3973355470664},
-    {lat: 43.7946408431481, lng: -79.43160141428021},
-    {lat: 43.74165444095009, lng: -79.44091279124048},
-    {lat: 43.71433065401443, lng: -79.41256898214223},
-    {lat: 43.67914034669567, lng: -79.39904892990222},
-    {lat: 43.577367486854435, lng: -79.63900043483339},
+  const positions = [, 
+    {id: 1, lat: 44.408022222452196, lng: -79.6579432075455, addr: "xx Corbett Dr, Barrie, ON L4M 5V3"},
+    {id: 2, lat: 43.927568830751916, lng: -78.84555030474665, addr: "xx Bennett Crescent, Oshawa, ON L1K 1T5"},
+    {id: 3, lat: 43.901028488685085, lng: -78.88223774817386, addr: "xx Madison Ave, Oshawa, ON L1J 2P6"},
+    {id: 4, lat: 43.920973854812026, lng: -78.96547362592808, addr: "xx Medland Ave, Whitby, ON L1P 1S1"},
+    {id: 5, lat: 43.9058202177951,lng:  -78.9759913032113, addr: "xx Ogston Cres, Whitby, ON L1P 0H3"},
+    {id: 6, lat: 43.88599810109301,lng:  -78.9670917301255, addr: "xx Kingfisher Way, Whitby, ON L1P 0K3"},
+    {id: 7, lat: 44.34229402387427, lng: -79.73031111178403, addr: "xx Logan Ct, Barrie, ON L4N 8G6"},
+    {id: 8, lat: 44.208736516164755, lng: -79.46624271039914, addr: "xx Bill Guy Dr, Georgina, ON L4P 2G3"},
+    {id: 9, lat: 44.206822367023186,lng:  -79.4626822443201, addr: "xx Faimira Ave, Georgina, ON L4P 0C9"},
+    {id: 10, lat: 44.098061151604725, lng: -79.44363262613304, addr: "xx Falconridge Ter, East Gwillimbury, ON L9N 0M6"},
+    {id: 11, lat: 44.03371721307411, lng: -79.44726295526284, addr: "xx Winn Pl, Aurora, ON L4G 0H1"},
+    {id: 12, lat: 43.94669455567249, lng: -79.43096225082786, addr: "xx Sandbanks Dr, Richmond Hill, ON L4E 4K7"},
+    {id: 13, lat: 43.94379035390629, lng: -79.47896202833395, addr: "xx Heron Hollow Ave, Richmond Hill, ON L4E 3N2"},
+    {id: 14, lat: 43.91561223372934, lng: -79.45355038141896, addr: "xx Greenbank Dr, Richmond Hill, ON L4E 4C7"},
+    {id: 15, lat: 43.90486036138218, lng: -79.45556717879317, addr: "xx Aztec Ct, Richmond Hill, ON L4S 2W6"},
+    {id: 16, lat: 43.89875708330963, lng: -79.41200435551033, addr: "xx Shirley Dr, Richmond Hill, ON L4S 2N6"},
+    {id: 17, lat: 43.88306006670459, lng: -79.42370178028072, addr: "xx Rockport Crescent, Richmond Hill, ON L4C 2L7"},
+    {id: 18, lat: 43.8714299797677,lng:  -79.4313656103027, addr: "xx Canterbury Ct, Richmond Hill, ON L4C 9N3"},
+    {id: 19, lat: 43.864160022724846, lng: -79.43701264295048, addr: "xx Baif Blvd, Richmond Hill, ON L4C 5L2"},
+    {id: 21, lat: 43.85630747319168,lng:  -79.4293488129285, addr: "xx Northern Heights Dr, Richmond Hill, ON L4B 4C9"},
+    {id: 22, lat: 43.86212427585811, lng: -79.54390290378338, addr: "xx Treasure Rd, Maple, ON L6A 2Z5"},
+    {id: 23, lat: 43.91619336068546, lng: -79.36884489170234, addr: "xx Isabella Peach Dr, Markham, ON L6C 0Y9"},
+    {id: 24, lat: 43.906022819600096, lng: -79.26961846089142, addr: "xx Beer Ln, Markham, ON L6E 0L1"},
+    {id: 25, lat: 43.888327314588786, lng: -79.31358183186525, addr: "xx Henry Bauer Ave, Markham, ON L6C 0W8"},
+    {id: 26, lat: 43.891224092922705, lng: -79.25677239215076, addr: "xx Bishop Crescent, Markham, ON L3P 4N5"},
+    {id: 27, lat: 43.883692176209, lng: -79.29348415272098, addr: "xx Delancey Crescent, Unionville, ON L3P 7E2"},
+    {id: 28, lat: 43.88040873497232, lng: -79.31170604847846, addr: "xx Redwood Ln, Unionville, ON L3R 3Z1"},
+    {id: 29, lat: 43.871523221970335, lng: -79.33850295400416, addr: "xx Baycliffe Rd, Markham, ON L3R 7T9"},
+    {id: 30, lat: 43.84677447264089, lng: -79.28261938291588, addr: "xx Kyla Crescent, Markham, ON L3S 3L3"},
+    {id: 31, lat: 43.82555029320998,lng:  -79.2695834551715, addr: "xx Major Oak Terrace, Scarborough, ON M1V 3E5"},
+    {id: 32, lat: 43.81533850536056, lng: -79.31167087903192, addr: "xx Lapworth Crescent, Scarborough, ON M1V 2M6"},
+    {id: 33, lat: 43.80270572010555, lng: -79.23680740827135, addr: "xx Malvern St, Toronto, ON M1B 2V4"},
+    {id: 34, lat: 43.78442376964584, lng: -79.32545171693312, addr: "xx Pindar Crescent, North York, ON M2J 3L4"},
+    {id: 35, lat: 43.78065914441371, lng: -79.30347686730688, addr: "xx Arkona Dr, Scarborough, ON M1T 1X3"},
+    {id: 36, lat: 43.81157582745435,lng:  -79.3973355470664, addr: "xx Fairfield Pl, Thornhill, ON L3T 7M7"},
+    {id: 37, lat: 43.7946408431481, lng: -79.43160141428021, addr: "xx Pleasant Ave, Toronto, ON M2R 2R2"},
+    {id: 38, lat: 43.74165444095009, lng: -79.44091279124048, addr: "xx Cadillac Ave, North York, ON M3H 1R9"},
+    {id: 39, lat: 43.71433065401443, lng: -79.41256898214223, addr: "xx Ardmore Rd, Toronto, ON M5P 1V3"},
+    {id: 40, lat: 43.67914034669567, lng: -79.39904892990222, addr: "xx Bedford Rd, Toronto, ON M5R 2J7"},
+    {id: 41, lat: 43.577367486854435, lng: -79.63900043483339, addr: "xx Parmeer Dr, Mississauga, ON L5C 2Y3"},
   ];
 
   //var map = L.map('map').setView([43.97506, -79.40506], 8); // larger smaller
@@ -195,47 +190,53 @@
   var markerBounds = [];
 
   positions.forEach(house => {
-    var marker = L.marker([house.lat, house.lng]).addTo(map);
-    // marker.bindPopup("<b>Hello </b><br>I am a popup").openPopup();
+    var marker = L.marker([house.lat, house.lng], { index: house.id }).addTo(map);
+    marker.bindPopup(`${house.addr}`).openPopup();
+    marker.on('popupopen', function (e) { // Pass the event object `e`
+        console.log(`Marker ${e.target.options.index} clicked! Triggering a function.`);
+        // map.setView(marker.getLatLng(), 15);
+        map.flyTo(marker.getLatLng(), 10, { // zoom level, #larger -> lower view
+            animate: true, // Enable animation
+            duration: 0.3 // Animation duration in seconds
+        });
+
+        swiper.slideTo(house.id%swiper.slides.length);
+    });
 
     markerBounds.push([house.lat, house.lng]);
   });
 
   if (markerBounds.length > 0) {
     map.fitBounds(markerBounds);
-    // map.once('load', function () {
-        // map.setZoom(map.getZoom() - 0.3); // Adjust zoom level slightly (fractional)
-        // map.panBy([0, -20]); // Pan the map up slightly
-    // });
 
     const currentCenter = map.getCenter();
-    // Convert a pixel offset (e.g., move up 20 pixels) to a new lat/lng
     const newCenter = map.containerPointToLatLng([
         map.getSize().x / 2 - 20, // X remains centered
         map.getSize().y / 2 - 20 // Move up by 20 pixels
     ]);
-
-    // Set the new center and slightly adjust zoom
     map.setView(newCenter, map.getZoom() - 0.3); // Adjust the zoom and set new center
+    map.options.zoomSnap = 1; // Allow fractional zoom levels
   }
-  // map.setZoom(map.getZoom() - 0.3);
-  // map.panBy([0, -20]);
-  // var circle = L.circle([51.508, -0.11], {
-  //   color: 'red',
-  //   fillColor: '#f03',
-  //   fillOpacity: 0.5,
-  //   radius: 500
-  // }).addTo(map);
-  // circle.bindPopup("I am a circle.");
-
-
-  // var polygon = L.polygon([
-  //     [51.509, -0.08],
-  //     [51.503, -0.06],
-  //     [51.51, -0.047]
-  // ]).addTo(map);
-  // polygon.bindPopup("I am a polygon.");
 </script>
+
+<!-- // icon ------------------------------------- -->
+<!-- <script>
+  L.Control.Watermark = L.Control.extend({
+    onAdd: function(map) {
+        var img = L.DomUtil.create('img');
+        img.src = '/images/logo.png';
+        img.style.width = '20px';
+        return img;
+    },
+    onRemove: function(map) {
+        // Nothing to do here
+    }
+  });
+  L.control.watermark = function(opts) {
+      return new L.Control.Watermark(opts);
+  }
+  L.control.watermark({ position: 'bottomleft' }).addTo(map);
+</script> -->
 
 
 <!-- version1: google map -->
