@@ -211,7 +211,7 @@
 // }
 
 .hero-description p {
-  font-size: 1.5rem; // Adjust font size to match
+  font-size: 24px;//1.5rem; // Adjust font size to match
   font-weight: 400; // Adjust weight if needed
   text-align: center;
   color: white;//#000; // Match text color
@@ -231,12 +231,16 @@
   // }
 
   // @media (max-width: $tablet) {
-  //   font-size: 18px;
+  //   font-size: px;
   // }
 
   // @media (max-width: $mobile) {
   //   font-size: 16px;
   // }
+  @media (max-width: $container-base-width) {
+    // font-size: 1rem;
+    font-size: 20px;
+  }
 }
 
 // Title Image

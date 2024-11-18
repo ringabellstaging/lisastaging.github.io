@@ -16,8 +16,8 @@ author:
 # Navigation Settings
 menu__settings:
   menu__items:
-    - title: 'Home'
-      url: '/'
+    # - title: 'Home'
+    #   url: '/'
     # - title: 'About'
     #   url: '/about/'
     # - title: 'Pages'
@@ -34,7 +34,7 @@ menu__settings:
 # Hero Settings
 hero:
   hero__title: GTA Staging Solutions # GTA Staging Solutions by Lisa
-  hero__subtitle: We transform homes into market-ready showpieces, enhancing their appeal and selling potential with strategic furniture and décor placement. 🏠✨
+  hero__subtitle: We transform homes into market-ready showpieces, elevating their appeal and maximizing selling potential through expert design and top-tier furniture logistics. 🏠✨ <br><br> Explore the impact we’ve made across Toronto…
 
 
 #-------------------------------
