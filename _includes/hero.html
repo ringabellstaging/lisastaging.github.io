@@ -82,10 +82,14 @@
 
 <script>
   const canvasContainer = document.getElementById('canvas-container'); // Get the container
-  const SCROLL_RESISTANCE = 2; 
+  const SCROLL_RESISTANCE = 0.5; // for cell phone
   const CAM_HEIGHT = 3;
-  const ASPECT_RATIO = 80 / 64;
   const ROTATE_SPEED = 0.002;
+
+  const OBJSIZE = 7;
+  const OBJUP = 0.6;
+
+  const _ASPECT_RATIO = 80 / 64;
   
   const calculateDimensions = () => {
       const width = canvasContainer.getBoundingClientRect().width * (80 / 85);
@@ -96,20 +100,24 @@
   const { width: containerWidth, height: containerHeight } = calculateDimensions();
   
   const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(30, ASPECT_RATIO, 1, 10);
-  camera.position.set(0, 2, 4);
+  const camera = new THREE.PerspectiveCamera(30, _ASPECT_RATIO, 0.1, 50);
+  camera.position.set(OBJSIZE, 2, 4); // first element is size?
   
   const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('canvas'), alpha: true });
   renderer.setSize(containerWidth, containerHeight);
   renderer.setPixelRatio(window.devicePixelRatio);
   
-  const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+  const ambientLight = new THREE.AmbientLight(0xffffff, 4);
   scene.add(ambientLight);
+
+  const directionalLight = new THREE.DirectionalLight(0xffffff, 2);
+  directionalLight.position.set(10, 10, 10); // Set the light's position
+  scene.add(directionalLight);
   
   let model;
   
   const loader = new THREE.GLTFLoader();
-  loader.load('images/truck.glb', (gltf) => {
+  loader.load('models/fulltruck.glb', (gltf) => {
       model = gltf.scene;
       scene.add(model);
   
@@ -131,7 +139,7 @@
   controls.autoRotate = false;
   controls.minPolarAngle = Math.PI / CAM_HEIGHT;
   controls.maxPolarAngle = Math.PI / CAM_HEIGHT;
-  controls.target.set(0, -0.2, 0);
+  controls.target.set(0, OBJUP, 0);
   
   let isDragging = false;
   controls.addEventListener('start', () => isDragging = true);
