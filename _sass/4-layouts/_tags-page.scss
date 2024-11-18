@@ -43,15 +43,15 @@
     font-weight: 700;
   }
 
-  @media (max-width: $tablet) {
-    .article:last-child {
-      margin-bottom: 0;
-    }
-  }
+  // @media (max-width: $tablet) {
+  //   .article:last-child {
+  //     margin-bottom: 0;
+  //   }
+  // }
 
-  @media (max-width: $mobile) {
-    .tag__name {
-      font-size: 32px;
-    }
-  }
+  // @media (max-width: $mobile) {
+  //   .tag__name {
+  //     font-size: 32px;
+  //   }
+  // }
 }

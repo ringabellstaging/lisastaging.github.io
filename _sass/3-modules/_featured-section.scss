@@ -1,29 +1,29 @@
-/* Featured Section */
-.featured-section {
-  // margin-bottom: 226px;
-  margin-top: 80px;
-  @media (max-width: $desktop) {
-    margin-top: 80px;
-    // margin-bottom: 210px;
-  }
+// /* Featured Section */
+// .featured-section {
+//   // margin-bottom: 226px;
+//   // margin-top: 80px;
+//   // @media (max-width: $desktop) {
+//   //   margin-top: 80px;
+//   //   // margin-bottom: 210px;
+//   // }
 
-  @media (max-width: $tablet) {
-    margin-top: 40px;
-    // margin-bottom: 160px;
-  }
+//   // @media (max-width: $tablet) {
+//   //   margin-top: 40px;
+//   //   // margin-bottom: 160px;
+//   // }
 
-  @media (max-width: $mobile) {
-    margin-top: 20px;
-  }
-}
+//   // @media (max-width: $mobile) {
+//   //   margin-top: 20px;
+//   // }
+// }
 
-.featured__slider {
-  min-height: 360px;
+// .featured__slider {
+//   min-height: 360px;
 
-  .container {
-    position: relative;
-  }
-}
+//   .container {
+//     position: relative;
+//   }
+// }
 
 .featured__head {
   display: flex;
@@ -42,9 +42,9 @@
   font-weight: normal;
   color: inherit;
 
-  @media (max-width: $tablet) {
-    font-size: 20px;
-  }
+  // @media (max-width: $tablet) {
+  //   font-size: 20px;
+  // }
 }
 
 .slider-controls {
@@ -113,11 +113,11 @@
 //   // max hight = 90px
 //   max-height: 500px;
 // }
-.swiper.mySwiperMobile{
-  width: 335px;
-  // background-color: white;
-  // padding-bottom: 30px;
-}
+// .swiper.mySwiperMobile{
+//   width: 335px;
+//   // background-color: white;
+//   // padding-bottom: 30px;
+// }
 
 .swiper-slide {
   display: flex;
@@ -132,38 +132,78 @@
 
 // map
 
-.hero-container{
-  display: flex;
-  flex-wrap: wrap;
-  // put center
-  justify-content: center;
-  gap: 20px; /* Adds space between the divs */
-  padding-bottom: 30px;
-}
+// .hero-container{
+//   display: flex;
+//   flex-wrap: wrap;
+//   // put center
+//   justify-content: center;
+//   gap: 20px; /* Adds space between the divs */
+//   // padding-bottom: 30px;
+// }
 
 // .swiper.mySwiperMobile {
 //   padding-bottom: 30px;
 //   /* Add any additional styles you need */
 // }
 
-#map {
-  // width: 500px;
-  // height: 300px;
-  position: relative; // force relative
+// #map {
+//   // width: 500px;
+//   // height: 300px;
+//   // position: relative; // force relative
   
-  border-radius: 15px; /* Adjust the value as needed for rounded corners */
-  width: 50%; 
-  height: 338px;
-  // width: 550px;
-  // margin-left: auto;
-  margin-right: auto;
-  // margin-top: -50px
-}
+//   border-radius: 15px; /* Adjust the value as needed for rounded corners */
+//   width: 50%; 
+//   height: 338px;
+//   // width: 550px;
+//   // margin-left: auto;
+//   // margin-right: auto;
+//   // margin-top: -50px
+// }
 
-@media (max-width: $mobile) {
+// @media (max-width: $mobile) {
+//   #map {
+//       width: 95%;
+//       margin-right: 0px;
+//       height: 300px;
+//   }
+// }
+
+
+.hero-container {
+  display: flex;
+  flex-wrap: wrap;
+  // justify-content: center;
+  gap: 20px; // Adjust spacing between elements
+  // padding: 18px; // Optional padding
+
+  .mySwiperMobile {
+    flex: 1 1 auto; // Allows it to shrink or grow within the container
+    max-width: 400px; // Optional, control max size of the swiper
+    // width: 335px;
+    height: auto;
+  }
+
   #map {
-      width: 95%;
-      margin-right: 0px;
-      height: 300px;
+    flex: 1 1 auto; // Allows it to shrink or grow within the container
+    min-height: 300px; // Set a default height for the map
+    height: 100%; // Ensure it stretches to available height
+    border-radius: 15px; /* Adjust the value as needed for rounded corners */
+    height: 340px;
+    // margin-left: 20px;
+  }
+
+  @media (max-width: $container-base-width) {
+    flex-direction: column; // Stack elements vertically on smaller screens
+
+    .mySwiperMobile{
+      max-width: 100%;
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+    #map {
+      max-width: 100%; // Full width for both elements
+      // padding-left: 20px;
+      // padding-right: 20px;
+    }
   }
 }

@@ -6,30 +6,12 @@
 
 {% if is-featured == true %}
 <!-- begin featured section -->
-<div class="featured-section">
-  <div class="container">
-    <div class="row">
-      <div class="col col-12">
-        <div class="featured__info">
-          <div class="featured__head">
-            <h2 class="featured__title">Explore our creations</h2>
-            <ul class="slider-controls list-reset" id="customize-controls" aria-label="Slider Navigation" tabindex="0">
-              <li class="prev" data-controls="prev" aria-controls="customize" tabindex="-1">
-                <i class="ion ion-ios-arrow-round-back"></i>
-              </li>
-              <li class="next" data-controls="next" aria-controls="customize" tabindex="-1">
-                <i class="ion ion-ios-arrow-round-forward"></i>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  
-  <div class="hero-container">
-    <!-- mobile -->
+
+<!-- <div class="featured-section"> -->
+<div class="container">
+
+  <div class="hero-container"> <!-- map and showcase thing -->
     <div class="swiper mySwiperMobile">
       <div class="swiper-wrapper">
         {% for post in site.posts %}
@@ -92,16 +74,17 @@
           {% endif %}
         {% endfor %}
       </div>
-      <!-- <div class="swiper-button-next">a</div>
-      <div class="swiper-button-prev">b</div> -->
     </div> <!-- end swiper -->
     <div id="map"></div>
   </div>
-
 </div>
+
+<!-- </div> -->
 <!-- end featured section -->
 {% endif %}
 
+
+<!-- script for the map and swiper -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
@@ -120,6 +103,7 @@
       navigation: {
       nextEl: ".ion-ios-arrow-round-forward",
       prevEl: ".ion-ios-arrow-round-back",
+      // <li class="prev" data-controls="prev" aria-controls="customize" tabindex="-1">
     },
   });
 </script>

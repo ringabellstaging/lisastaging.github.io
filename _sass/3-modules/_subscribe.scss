@@ -93,80 +93,80 @@
     }
   }
 
-  @media (max-width: $wide) {
-    padding: 96px 60px;
+  // @media (max-width: $wide) {
+  //   padding: 96px 60px;
 
-    .subscribe__content {
-      .subscribe__title {
-        font-size: 46px;
-        line-height: 1.1;
-      }
+  //   .subscribe__content {
+  //     .subscribe__title {
+  //       font-size: 46px;
+  //       line-height: 1.1;
+  //     }
 
-      .subscribe__description {
-        max-width: 380px;
-        margin-top: 16px;
-      }
-    }
+  //     .subscribe__description {
+  //       max-width: 380px;
+  //       margin-top: 16px;
+  //     }
+  //   }
 
-    .subscribe-form {
-      max-width: 420px;
-    }
-  }
+  //   .subscribe-form {
+  //     max-width: 420px;
+  //   }
+  // }
 
-  @media (max-width: $desktop) {
+  // @media (max-width: $desktop) {
 
-    .subscribe__inner {
-      flex-direction: column;
-      align-items: flex-start;
-    }
+  //   .subscribe__inner {
+  //     flex-direction: column;
+  //     align-items: flex-start;
+  //   }
 
-    .subscribe__content {
-      padding-right: 0;
-      margin-bottom: 40px;
+  //   .subscribe__content {
+  //     padding-right: 0;
+  //     margin-bottom: 40px;
 
-      .subscribe__description {
-        max-width: 100%;
-      }
-    }
+  //     .subscribe__description {
+  //       max-width: 100%;
+  //     }
+  //   }
   
-    .subscribe-form {
-      max-width: 100%;
-    }
-  }
+  //   .subscribe-form {
+  //     max-width: 100%;
+  //   }
+  // }
 
-  @media (max-width: $tablet) {
-    padding: 60px;
-  }
+  // @media (max-width: $tablet) {
+  //   padding: 60px;
+  // }
 
-  @media (max-width: $mobile) {
-    padding: 32px;
+  // @media (max-width: $mobile) {
+  //   padding: 32px;
 
-    .subscribe__content {
-      margin-bottom: 24px;
+  //   .subscribe__content {
+  //     margin-bottom: 24px;
 
-      .subscribe__title {
-        font-size: 32px;
-      }
+  //     .subscribe__title {
+  //       font-size: 32px;
+  //     }
 
-      .subscribe__description {
-        font-size: 18px;
-      }
-    }
+  //     .subscribe__description {
+  //       font-size: 18px;
+  //     }
+  //   }
 
-    .subscribe-form {
-      display: flex;
-      flex-direction: column;
-    }
+  //   .subscribe-form {
+  //     display: flex;
+  //     flex-direction: column;
+  //   }
 
-    .subscribe-email {
-      height: 62px;
-      margin-bottom: 8px;
-    }
+  //   .subscribe-email {
+  //     height: 62px;
+  //     margin-bottom: 8px;
+  //   }
 
-    .subscribe-button {
-      position: relative;
-      top: 0;
-      right: 0;
-    }
-  }
+  //   .subscribe-button {
+  //     position: relative;
+  //     top: 0;
+  //     right: 0;
+  //   }
+  // }
 }

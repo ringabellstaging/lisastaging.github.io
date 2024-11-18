@@ -1,29 +1,173 @@
+<!-- google fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Borel&family=Cookie&family=Island+Moments&family=Jim+Nightshade&display=swap" rel="stylesheet">
+
+<!-- fitty width text -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fitty/2.3.3/fitty.min.js"></script>
+
 <!-- begin hero -->
 <section class="hero">
   <div class="container">
-    <div class="hero-row">
-      <div class="hero-col col-md-6">
-        <div class="hero-heading">
-          <h1>{{ site.data.settings.hero.hero__title }}</h1>
-        </div>
-        <div class="hero-description">
-          <p>{{ site.data.settings.hero.hero__subtitle }}</p>
-        </div>
-        <!-- <div class="hero-social">
-          {% for social in site.data.settings.social %}
-          <a href="{{social.link}}" target="_blank" rel="noopener" aria-label="{{social.label}} link" title="{{social.name}}">
-            <i class="ion {{social.icon}}"></i>
-          </a>
-          {% endfor %}
-        </div> -->
-      </div>
-      <div class="hero-col col-md-6">
-        <div class="hero-image">
-          <img id="premium-blog-image" src="images/homepage.png">
-        </div>
-      </div>
+
+    <figure id="canvas-container" title="spin the truck">
+      <canvas id="canvas" width="1280" height="1024" style="width: 800px; height: 640px;"></canvas>
+      <!-- <canvas width="1280" height="1024" style="width: 800px; height: 640px;"></canvas> -->
+    </figure>
+
+    <!-- <div class="hero-row"> -->
+      <!-- <div class="hero-col col-md-6"> -->
+    <div class="hero-heading">
+      <span id="website-header">{{ site.data.settings.hero.hero__title }}</span>
+    </div>
+    <div class="hero-description">
+      <p>{{ site.data.settings.hero.hero__subtitle }}</p>
     </div>
   </div>
   {% include featured-section.html %}
 </section>
 <!-- end hero -->
+
+<!-- script for the heading -->
+<!-- https://gsap.com/text/ -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+<script>
+  // use a script tag or an external JS file
+
+  document.addEventListener("DOMContentLoaded", (event) => {
+    headerFittyInstance = fitty("#website-header", {
+      minSize: 12,
+      maxSize: 120
+    });
+
+    gsap.registerPlugin(TextPlugin)
+    
+    gsap.to("#website-header", {
+      duration: 4,
+      text: {
+        value: "Lisa Staging",
+        newClass: "websiteHeader2",
+      },
+      delay: 4,
+      onComplete: function () {
+        // Apply Fitty to the dynamically added span
+        const headerElement = document.querySelector("#website-header");
+        if (headerElement) {
+            const innerSpan = headerElement.querySelector(".websiteHeader2");
+            if (innerSpan) {
+                // Move the inner span to be a direct child of hero-heading
+                const heroHeading = document.querySelector(".hero-heading");
+                if (heroHeading) {
+                    heroHeading.appendChild(innerSpan);
+                }
+            }
+            // Remove the #website-header span
+            // headerElement.remove();
+        }
+        fitty(".websiteHeader2", {
+          minSize: 12,
+          maxSize: 320,
+        });
+        // headerFittyInstance.unsubscribe();
+      },
+    });
+  });
+</script>
+
+<!-- script for the header spenning obj -->
+<script src="https://cdn.jsdelivr.net/npm/three@latest/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@latest/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@latest/examples/js/controls/OrbitControls.js"></script>
+
+<script>
+  const canvasContainer = document.getElementById('canvas-container'); // Get the container
+  const SCROLL_RESISTANCE = 2; 
+  const CAM_HEIGHT = 3;
+  const ASPECT_RATIO = 80 / 64;
+  const ROTATE_SPEED = 0.002;
+  
+  const calculateDimensions = () => {
+      const width = canvasContainer.getBoundingClientRect().width * (80 / 85);
+      const height = width * (64 / 80);
+      return { width, height };
+  };
+  
+  const { width: containerWidth, height: containerHeight } = calculateDimensions();
+  
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(30, ASPECT_RATIO, 1, 10);
+  camera.position.set(0, 2, 4);
+  
+  const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('canvas'), alpha: true });
+  renderer.setSize(containerWidth, containerHeight);
+  renderer.setPixelRatio(window.devicePixelRatio);
+  
+  const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+  scene.add(ambientLight);
+  
+  let model;
+  
+  const loader = new THREE.GLTFLoader();
+  loader.load('images/truck.glb', (gltf) => {
+      model = gltf.scene;
+      scene.add(model);
+  
+      const animate = () => {
+          if (!isDragging && model) {
+              model.rotation.y += ROTATE_SPEED; // Auto-rotate the model
+          }
+          controls.update(); // Update OrbitControls
+          renderer.render(scene, camera); // Render the scene
+          requestAnimationFrame(animate); // Request the next frame
+      };
+      animate();
+  });
+  
+  const controls = new THREE.OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true;
+  controls.dampingFactor = 0.05;
+  controls.enableZoom = false;
+  controls.autoRotate = false;
+  controls.minPolarAngle = Math.PI / CAM_HEIGHT;
+  controls.maxPolarAngle = Math.PI / CAM_HEIGHT;
+  controls.target.set(0, -0.2, 0);
+  
+  let isDragging = false;
+  controls.addEventListener('start', () => isDragging = true);
+  controls.addEventListener('end', () => isDragging = false);
+  
+  const handleResize = () => {
+      const { width, height } = calculateDimensions();
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+      renderer.setSize(width, height);
+  };
+  window.addEventListener('resize', throttle(handleResize, 200)); // Throttle added
+  
+  const handleScroll = () => {
+      if (!model) return;
+  
+      const scrollTop = window.scrollY;
+      const maxScroll = (document.documentElement.scrollHeight - window.innerHeight) * SCROLL_RESISTANCE;
+      const scrollFraction = scrollTop / maxScroll;
+  
+      const currentAngle = CAM_HEIGHT - (CAM_HEIGHT * scrollFraction);
+      controls.minPolarAngle = Math.PI / currentAngle;
+      controls.maxPolarAngle = Math.PI / currentAngle;
+  };
+  window.addEventListener('scroll', throttle(handleScroll, 30)); // Throttle added
+  
+  function throttle(fn, limit) {
+      let inThrottle;
+      return function () {
+          const args = arguments;
+          if (!inThrottle) {
+              fn.apply(this, args);
+              inThrottle = true;
+              setTimeout(() => inThrottle = false, limit);
+          }
+      };
+  }
+  </script>
+

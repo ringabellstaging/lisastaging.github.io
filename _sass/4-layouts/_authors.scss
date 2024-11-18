@@ -60,30 +60,30 @@
     font-size: 16px;
   }
 
-  @media (max-width: $desktop) {
-    .authors__name {
-      font-size: 32px;
-    }
-  }
+  // @media (max-width: $desktop) {
+  //   .authors__name {
+  //     font-size: 32px;
+  //   }
+  // }
 
-  @media (max-width: $mobile) {
+  // @media (max-width: $mobile) {
 
-    .authors__head {
-      margin: 20px 0 40px;
-    }
+  //   .authors__head {
+  //     margin: 20px 0 40px;
+  //   }
 
-    .authors__title {
-      font-size: 32px;
-    }
+  //   .authors__title {
+  //     font-size: 32px;
+  //   }
 
-    .authors__name {
-      font-size: 28px;
-    }
+  //   .authors__name {
+  //     font-size: 28px;
+  //   }
 
-    .authors__description {
-      max-width: 100%;
-    }
-  }
+  //   .authors__description {
+  //     max-width: 100%;
+  //   }
+  // }
 }
 
 // Author Page
@@ -161,13 +161,13 @@
     }
   }
 
-  @media (max-width: $mobile) {
-    .author__name {
-      font-size: 32px;
-    }
+  // @media (max-width: $mobile) {
+  //   .author__name {
+  //     font-size: 32px;
+  //   }
 
-    .author__content p {
-      font-size: inherit;
-    }
-  }
+  //   .author__content p {
+  //     font-size: inherit;
+  //   }
+  // }
 }

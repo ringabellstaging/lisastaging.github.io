@@ -2,9 +2,9 @@
 .gallery-box {
   margin: 32px -100px 32px -100px;
 
-  @media only screen and (max-width: $desktop) {
-    margin: 32px 0;
-  }
+  // @media only screen and (max-width: $desktop) {
+  //   margin: 32px 0;
+  // }
 }
 
 .gallery {
@@ -21,14 +21,14 @@
     width: calc(100% - 24px);
   }
 
-  @media only screen and (max-width: $desktop) {
-    margin-left: -12px;
-    margin-bottom: -12px;
+  // @media only screen and (max-width: $desktop) {
+  //   margin-left: -12px;
+  //   margin-bottom: -12px;
 
-    img {
-      margin-left: 12px;
-      margin-bottom: 12px;
-      width: calc(100% - 12px);
-    }
-  }
+  //   img {
+  //     margin-left: 12px;
+  //     margin-bottom: 12px;
+  //     width: calc(100% - 12px);
+  //   }
+  // }
 }

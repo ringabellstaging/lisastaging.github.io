@@ -25,13 +25,13 @@
   transition: all .25s ease;
   will-change: transform;
 
-  @media (max-width: $desktop) {
-    margin: 80px auto 0;
-  }
+  // @media (max-width: $desktop) {
+  //   margin: 80px auto 0;
+  // }
 
-  @media (max-width: $mobile) {
-    padding: 20px;
-  }
+  // @media (max-width: $mobile) {
+  //   padding: 20px;
+  // }
 }
 
 .search__group {
@@ -94,11 +94,11 @@
     }
   }
 
-  @media (max-width: $mobile) {
-    .search__text {
-      font-size: 32px;
-    }
-  }
+  // @media (max-width: $mobile) {
+  //   .search__text {
+  //     font-size: 32px;
+  //   }
+  // }
 }
 
 .search-results-list {
@@ -173,9 +173,9 @@
 .search-suggestion {
   margin-top: 80px;
 
-  @media (max-width: $tablet) {
-    margin-top: 60px;
-  }
+  // @media (max-width: $tablet) {
+  //   margin-top: 60px;
+  // }
 }
 
 .search-recent,
@@ -260,13 +260,13 @@
     }
   }
 
-  @media (max-width: $tablet) {
-    .search-recent__item {
-      justify-content: flex-start;
-      width: 100%;
-      padding-right: 0;
-    }
-  }
+  // @media (max-width: $tablet) {
+  //   .search-recent__item {
+  //     justify-content: flex-start;
+  //     width: 100%;
+  //     padding-right: 0;
+  //   }
+  // }
 }
 
 .search-tags {

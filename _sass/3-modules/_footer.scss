@@ -1,12 +1,12 @@
 /* Footer */
 .footer {
-  margin-top: 64px;
+  // margin-top: 64px;
   color: var(--white);
   background-color: var(--dark);
 
-  @media (max-width: $mobile) {
-    margin-top: 80px;
-  }
+  // @media (max-width: $mobile) {
+  //   margin-top: 80px;
+  // }
 }
 
 .footer__inner {
@@ -20,9 +20,9 @@
     }
   }
 
-   @media (max-width: $mobile) {
-     padding: 60px 0;
-   }
+  //  @media (max-width: $mobile) {
+  //    padding: 60px 0;
+  //  }
 }
 
 .widget-footer {
@@ -33,23 +33,23 @@
     color: var(--white);
   }
 
-  @media (max-width: $desktop) {
-    &.widget-author {
-      margin-bottom: 60px;
+  // @media (max-width: $desktop) {
+  //   &.widget-author {
+  //     margin-bottom: 60px;
     
-      .widget-author__bio {
-        max-width: 100%;
-      }
-    }
+  //     .widget-author__bio {
+  //       max-width: 100%;
+  //     }
+  //   }
 
-    &.widget-nav {
-      text-align: left;
-    }
-  }
+  //   &.widget-nav {
+  //     text-align: left;
+  //   }
+  // }
 
-  @media (max-width: $mobile) {
-    margin-bottom: 60px;
-  }
+  // @media (max-width: $mobile) {
+  //   margin-bottom: 60px;
+  // }
 }
 
 /* Widget Author */
@@ -177,11 +177,11 @@
     }
   }
 
-  @media (max-width: $desktop) {
-    text-align: left;
-  }
+  // @media (max-width: $desktop) {
+  //   text-align: left;
+  // }
 
-  @media (max-width: $mobile) {
-    padding: 32px 0;
-  }
+  // @media (max-width: $mobile) {
+  //   padding: 32px 0;
+  // }
 }

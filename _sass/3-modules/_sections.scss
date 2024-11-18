@@ -18,23 +18,23 @@
     color: var(--text-alt-color);
   }
 
-  @media (max-width: $desktop) {
-    .section__title {
-      font-size: 32px;
-    }
+  // @media (max-width: $desktop) {
+  //   .section__title {
+  //     font-size: 32px;
+  //   }
 
-    .section__description {
-      margin-top: 16px;
-      font-size: 24px;
-    }
-  }
+  //   .section__description {
+  //     margin-top: 16px;
+  //     font-size: 24px;
+  //   }
+  // }
 
-  @media (max-width: $mobile) {
-    .section__description {
-      margin-top: 12px;
-      font-size: 20px;
-    }
-  }
+  // @media (max-width: $mobile) {
+  //   .section__description {
+  //     margin-top: 12px;
+  //     font-size: 20px;
+  //   }
+  // }
 }
 
 .section__head__small {

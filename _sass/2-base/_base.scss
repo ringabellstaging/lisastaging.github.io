@@ -21,9 +21,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  @media (max-width: $mobile) {
-    font-size: 16px;
-  }
+  // @media (max-width: $mobile) {
+  //   font-size: 16px;
+  // }
 }
 
 .global-wrap {
@@ -102,15 +102,15 @@ blockquote {
 
   }
 
-  @media (max-width: $desktop) {
-    margin: 80px auto 40px;
-    font-size: 24px;
-  }
+  // @media (max-width: $desktop) {
+  //   margin: 80px auto 40px;
+  //   font-size: 24px;
+  // }
 
-  @media (max-width: $mobile) {
-    margin: 60px auto 40px;
-    font-size: 21px;
-  }
+  // @media (max-width: $mobile) {
+  //   margin: 60px auto 40px;
+  //   font-size: 21px;
+  // }
 }
 
 pre {

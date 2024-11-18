@@ -17,17 +17,17 @@
     }
   }
 
-  @media (max-width: $desktop) {
-    margin-top: 80px;
-  }
+  // @media (max-width: $desktop) {
+  //   margin-top: 80px;
+  // }
 
-  @media (max-width: $mobile) {
-    .row .article:last-child {
-      margin-bottom: 0;
-    }
+  // @media (max-width: $mobile) {
+  //   .row .article:last-child {
+  //     margin-bottom: 0;
+  //   }
 
-    .article__title {
-      font-size: 22px;
-    }
-  }
+  //   .article__title {
+  //     font-size: 22px;
+  //   }
+  // }
 }
