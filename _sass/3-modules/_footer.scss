@@ -2,11 +2,12 @@
 .footer {
   // margin-top: 64px;
   color: var(--white);
-  background-color: var(--dark);
+  background-color: var(--gray);
 
   // @media (max-width: $mobile) {
   //   margin-top: 80px;
   // }
+  margin-top: 90px; /* Adjust value for smaller screens */
 }
 
 .footer__inner {
@@ -184,4 +185,23 @@
   // @media (max-width: $mobile) {
   //   padding: 32px 0;
   // }
+}
+
+
+// .footer-container {
+//   display: flex;
+//   flex-direction: column; /* Arrange children vertically */
+//   justify-content: center; // Align horizontally
+//   // align-items: center;    // Align vertically
+//   height: 100%;           // Ensure it takes up full height if necessary
+// }
+.footer-container {
+  display: flex;
+  flex-direction: column; /* Arrange children vertically */
+  align-items: center;    /* Center children horizontally */
+  height: 100%;           /* Ensure it takes up full height if necessary */
+}
+
+.contact-info__item {
+  text-align: center;
 }
