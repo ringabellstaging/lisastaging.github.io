@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
   distDir: "out",
   images: {
     loader: "custom",
-    loaderFile: './ImageLoader.js',
+    loaderFile: './imageLoader.js',
     unoptimized: true,
   },
 };
