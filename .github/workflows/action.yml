@@ -41,6 +41,7 @@ jobs:
           cache: 'pnpm'
 
       - name: Install dependencies
+        working-directory: ./next-app
         run: pnpm install
 
       - name: Setup Pages
