@@ -27,6 +27,7 @@
       transform: translateX(200px);
     }
   }
+  --color-custom-emerald: oklch(50.8% 0.118 165.612);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);

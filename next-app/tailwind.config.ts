@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        'custom-emerald': 'oklch(79.2% 0.209 151.711)',
+      },
       animation: {
         move: "move 5s linear infinite",
       },

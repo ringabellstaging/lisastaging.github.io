@@ -1,11 +1,10 @@
 
+'use client'
 import '../hero.scss'
-import React, { useEffect,useRef,useState } from 'react';
+import React, { useEffect, useRef,useState } from 'react';
 import L from 'leaflet';
-import { MapContainer, Marker, Popup,TileLayer,useMap} from 'react-leaflet';
+import { MapContainer, Marker, Popup,TileLayer} from 'react-leaflet';
 import "leaflet/dist/leaflet.css";
-import icon from 'leaflet/dist/images/marker-icon.png';
-import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 import CardDemo from '@/components/HouseCard/HouseCard';
 import {
   Carousel,
@@ -14,15 +13,15 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import { IoMdReturnLeft } from 'react-icons/io';
+import Autoplay from "embla-carousel-autoplay"
 
 let DefaultIcon = L.icon({
-    iconUrl: icon,
-    shadowUrl: iconShadow
+    iconUrl: '/images/marker-icon.png',
+    shadowUrl: '/images/marker-shadow.png',
 });
-
 L.Marker.prototype.options.icon = DefaultIcon;
-const positions = [, 
+
+const positions = [,
     {id: 1, lat: 44.408022222452196, lng: -79.6579432075455, addr: "xx Corbett Dr, Barrie, ON L4M 5V3"},
     {id: 2, lat: 43.927568830751916, lng: -78.84555030474665, addr: "xx Bennett Crescent, Oshawa, ON L1K 1T5"},
     {id: 3, lat: 43.901028488685085, lng: -78.88223774817386, addr: "xx Madison Ave, Oshawa, ON L1J 2P6"},
@@ -65,67 +64,107 @@ const positions = [,
     {id: 41, lat: 43.577367486854435, lng: -79.63900043483339, addr: "xx Parmeer Dr, Mississauga, ON L5C 2Y3"},
   ];
 
-export default function PostMap(){
-    const [api, setApi] = useState();
-    const mapRef = useRef(null);
-    const scrollTo = (index) => {
-        if (!api) return;
-        api.scrollTo(index);
-    }
-    const flyTo = (loc) => {
-        mapRef.current.flyTo(loc,10, {
-            animate:true,
-            duration:0.3
-        });
-    }
-    if (mapRef && mapRef.current && positions.length > 0){
-        const map = mapRef.current;
-        map.fitBounds(positions.map((pos)=>[pos.lat,pos.lng]));
-        const currentCenter = map.getCenter();
-        const newCenter = map.containerPointToLatLng([
-            map.getSize().x /2, // X remains centered
-            map.getSize().y / 2 // Move up by 20 pixels
-        ]);
-        map.setView(newCenter, map.getZoom() - 0.3); // Adjust the zoom and set new center
-        map.options.zoomSnap = 1; // Allow fractional zoom levels
-    }
-    return (
-        <div className="container h-fit">
-            <div className="hero-container w-full mb-10">
-                <div className='mx-auto max-w-vw w-full justify-center items-center flex mb-8'>
-                    <Carousel setApi={setApi} className="w-full max-w-xs md:min-w-[1000px]">
-                    <CarouselContent className='-ml-1'>
-                        {positions.map((position, index) => (
-            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-              <CardDemo bgImg="/file.svg" avatarImg='/file.svg' tag='a'/>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
+const contactPost = {
+  id: 'contact',
+  // image: '/images/lisa.jpg',
+  highlight_image: '/pexels-earth.jpg',
+  tags: ['Contact us'],
+  text: "Sell faster. Stage smarter.\n Impress instantly.",
+}
 
-                </div>
-                <MapContainer zoom={7} style={{ height: '400px', width: '100%' }} ref={mapRef} zoomSnap={0}>
-                    <TileLayer
-                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                        url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
-                        minZoom={7}
-                    />
-                    {positions.map((position,index) => 
-                        <Marker key={position.id} position={[position.lat,position.lng]}
-                            eventHandlers={{
-                                click: () => {
-                                    scrollTo(index);
-                                    flyTo([position.lat,position.lng])
-                                },
-                            }}
-                        >
-                            <Popup>{position.addr}</Popup>
-                        </Marker>
-                    )}
-                </MapContainer>
-            </div>
+export default function PostMap({posts}){
+  const [api, setApi] = useState();
+  const mapRef = useRef(null);
+
+  const scrollTo = (index) => {
+    if (!api) return;
+    const id = `house${positions[index]}`;
+    const postIndex = posts.findIndex(p => p.id === id);
+    if (postIndex != -1){
+      api.scrollTo(postIndex);
+    } else {
+      api.scrollTo(posts.length);
+    }
+  }
+
+  const flyTo = (pos) => {
+    mapRef.current.flyTo(pos,10, {
+      animate:true,
+      duration:0.3
+    });
+  }
+
+  const center = () => {
+    if (mapRef && mapRef.current && positions.length > 0){
+      const map = mapRef.current;
+      map.fitBounds(positions.map((pos)=>[pos.lat,pos.lng]));
+      const newCenter = map.containerPointToLatLng([
+          map.getSize().x /2, // X remains centered
+          map.getSize().y / 2 // Move up by 20 pixels
+      ]);
+      map.setView(newCenter, map.getZoom() - 0.3); // Adjust the zoom and set new center
+      map.options.zoomSnap = 1; // Allow fractional zoom levels
+    }
+  }
+
+  useEffect(()=>{
+    if (!api) return;
+    center();
+    api.on("select", () => {
+        var index = api.selectedScrollSnap();
+        if(index === posts.length) return;
+        var mapIndex = positions.findIndex((pos) => `house${pos?.id}` === posts[index].id);
+        if (mapIndex != -1){
+          flyTo([positions[mapIndex].lat,positions[mapIndex].lng]);
+        }
+    })
+  },[api]);
+  
+  return (
+    <div className="container h-fit w-full max-w-sceen">
+      <div className="w-full mb-10">
+        <div className='max-w-vw w-full justify-center items-center flex mb-8'>
+          <Carousel setApi={setApi} className="w-[300px] sm:w-[600px] lg:w-[900px] max-w-[calc(100vw-100px)] "
+            plugins={[
+              Autoplay({
+                delay: 5000,
+              }),
+            ]}
+          >
+            <CarouselContent className='-ml-1'>
+              {posts.map((post, index) => (
+                <CarouselItem key={index} className="sm:basis-1/2 lg:basis-1/3 pl-1">
+                  <CardDemo post={post}/>
+                </CarouselItem>
+              ))}
+              <CarouselItem key={-1} className="sm:basis-1/2 lg:basis-1/3 pl-1">
+                <CardDemo post={contactPost}/>
+              </CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious/>
+            <CarouselNext/>
+          </Carousel> 
         </div>
-    )
+        <MapContainer zoom={7} style={{ height: '400px', width: '100%' }} ref={mapRef} zoomSnap={0}>
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+            minZoom={7}
+          />
+          {positions.map((position,index) => 
+            <Marker key={position.id} position={[position.lat,position.lng]}
+              eventHandlers={{
+                click: () => {
+                  scrollTo(index);
+                  flyTo([position.lat,position.lng]);
+                },
+              }}
+            >
+              <Popup>{position.addr}</Popup>
+            </Marker>
+          )}
+        </MapContainer>
+      </div>
+    </div>
+  )
 }
