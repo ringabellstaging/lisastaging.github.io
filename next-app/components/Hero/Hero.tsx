@@ -69,7 +69,9 @@ function Hero(){
   return (
     <div className="relative w-full min-h-[calc(50svh+20px)] md:min-h-[calc(55svh)] h-fit overflow-hidden justify-items-center ietms-center hero "id='hero'>
       <div className="absolute pt-5 top-0 w-full h-fit object-cover justify-items-center ietms-center"
-        onMouseEnter={() => confettiRef.current?.fire({})}>
+        onMouseEnter={() => confettiRef.current?.fire({})}
+        onClick={() => confettiRef.current?.fire({})}
+      >
         <div className="container justify-items-center items-center h-full h-fit">
           <Truck/>
         </div>

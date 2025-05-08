@@ -78,7 +78,7 @@ export default function PostMap({posts}){
 
   const scrollTo = (index) => {
     if (!api) return;
-    const id = `house${positions[index]}`;
+    const id = `house${positions[index].id}`;
     const postIndex = posts.findIndex(p => p.id === id);
     if (postIndex != -1){
       api.scrollTo(postIndex);
