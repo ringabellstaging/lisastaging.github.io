@@ -31,7 +31,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased items-center justify-items-center min-h-screen min-screen w-full max-w-screen w-screen"`}
       >
-        <header className="w-full border-b shadow-sm bg-white sticky top-0 z-50">
+        <header className="w-full border-b shadow-sm bg-white sticky top-0 z-90">
           <nav className="flex items-center justify-between px-6 py-4 max-w-screen-xl mx-auto">
             <Link href="/" className="flex items-center gap-2">
               <Image src="/images/logo.png" alt="Logo" width={32} height={32} />

@@ -68,7 +68,7 @@ function Hero(){
   const confettiRef = useRef<ConfettiRef>(null);
   return (
     <div className="relative w-full min-h-[calc(50svh+20px)] md:min-h-[calc(55svh)] h-fit overflow-hidden justify-items-center ietms-center hero "id='hero'>
-      <div className="absolute pt-5 bottom-0 md:top-0 w-full h-fit object-cover justify-items-center ietms-center"
+      <div className="absolute pt-5 top-0 w-full h-fit object-cover justify-items-center ietms-center"
         onMouseEnter={() => confettiRef.current?.fire({})}>
         <div className="container justify-items-center items-center h-full h-fit">
           <Truck/>
@@ -78,10 +78,10 @@ function Hero(){
         ref={confettiRef}
         className="absolute left-0 bottom-0 z-50 size-full pointer-events-none"
       />
-      <div className="absolute inset-0 bg-black/40 z-20 pointer-events-none" />
+      <div className="absolute inset-0 bg-black/70 z-20 sm:pointer-events-none" />
       <div className="pt-10 lg:px-10 absolute z-30 flex flex-col text-white px-4 text-center pointer-events-none
-        w-full h-full items-centers justify-between " >
-        <div className='flex flex-col justify-center sm:justify-center items-center sm:text-left sm:items-start m:pl-12 pb-8 sm:pb-0 sm:pt-0'>
+        w-full h-full items-centers justify-end sm:justify-between" >
+        <div className='flex flex-col justify-center sm:justify-center items-center sm:text-left sm:items-start m:pl-12 pb-10 sm:pb-0 sm:pt-0'>
         <HeroHeader/>
         <HeroDescription/>
         </div>
