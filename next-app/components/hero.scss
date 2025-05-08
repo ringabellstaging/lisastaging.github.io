@@ -1,0 +1,270 @@
+$container-base-width: 845px;
+$base-spacing-unit: 16px;
+
+// Border radius
+$global-radius: 12px;
+
+// Transition
+$global-transition: all .2s;
+
+
+// *****************
+// Typography
+// *****************
+$base-font-size: 18px;
+$base-font-style: normal;
+$base-font-variant: normal;
+$base-font-weight: normal;
+$base-font-family: 'Mulish', Helvetica Neue, Helvetica, Arial, sans-serif;
+$base-line-height: 1.6;
+
+// Headings
+$heading-font-weight: 800;
+$heading-font-family: 'Mulish', Helvetica Neue, Helvetica, Arial, sans-serif;
+
+$font-size-h1: 36px;
+$font-size-h2: 28px;
+$font-size-h3: 24px;
+$font-size-h4: 20px;
+$font-size-h5: 18px;
+$font-size-h6: 16px;
+
+$heading-line-height: 1.4;
+$heading-letter-spacing: -.5px;
+$container-offset: $base-spacing-unit;
+
+// $wide: 845px;
+// $desktop: 845px;
+// $tablet: 768px;
+// $mobile: 845px;
+
+// $mq: ( $mobile:$columns, $tablet:$columns, $desktop:$columns );
+p {
+  font-family: janna-lt-w20-regular,sans-serif;
+}
+.container {
+  max-width: $container-base-width;
+  // padding-left: 10%;
+  // padding-right: 10%;
+  // padding-left: calc(#{$container-offset} * 2);
+  // padding-right: calc(#{$container-offset} * 2);
+  margin: 0 auto;
+  padding-left: 18px;
+  padding-right: 18px;
+
+  // @media (max-width: $mobile) {
+  //   padding-left: calc(#{$container-offset} + 4px);
+  //   padding-right: calc(#{$container-offset} + 4px);
+  // }
+}
+    
+    
+    .hero {
+      position: relative; /* Ensure positioning for pseudo-element */
+      overflow: hidden;   /* Prevent content spill if pseudo-element extends */
+    }
+    
+    
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;      
+      // https://grainy-gradients.vercel.app/
+      z-index: -1; /* Place background behind content */
+      // filter: brightness(100%);
+      background-image: linear-gradient(to left bottom, #5ec2b4, #6ad1ad, #82dea1, #a4e990, #ccf27f,#f9f871);
+      // background-image: url('/pexels-fox.jpg');
+      background-position: center;
+      background-size: cover;
+    }
+    
+    
+    .hero__inner {
+      display: flex;
+      align-items: center;
+      max-width: 1160px;
+      margin-bottom: 96px;
+    
+      // @media (max-width: $desktop) {
+      //   margin-bottom: 80px;
+      // }
+    
+      // @media (max-width: $mobile) {
+      //   margin-bottom: 48px;
+      // }
+    }
+    
+    .hero__title {
+      margin-bottom: 0;
+      font-size: 52px;
+      font-weight: 600;
+      line-height: 1.4;
+      color: var(--white);
+    
+      // @media (max-width: $desktop) {
+      //   font-size: 40px;
+      // }
+    
+      // @media (max-width: $tablet) {
+      //   font-size: 32px;
+      // }
+    
+      // @media (max-width: $mobile) {
+      //   font-size: 28px;
+      // }
+    }
+    
+    // Layout
+    .hero-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    
+    .hero-col {
+      flex: 0 0 auto;
+      width: 100%;
+    }
+    
+    
+    // Title Heading and Description
+    .hero-heading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: janna-lt-w20-regular,sans-serif;
+      line-height: normal;
+      // width: 100%;
+      font-size: clamp(40px, 5vw, 100px);
+      // padding: 18px;
+    }
+    
+    .hero-heading span {
+      font-family: janna-lt-w20-regular,sans-serif;
+      color: #fff;
+      font-weight: 900;
+      white-space: nowrap; /* Prevent text from wrapping */
+      overflow: hidden;
+      text-align: center;
+      max-width: calc(100% - 36px);
+    }
+    
+    // .hero-heading h1 {
+    //   font-family: "Century Gothic";
+    //   text-align: center;
+    //   font-size: 5.5rem; // font-size: 14.5rem;
+    //   font-weight: 900;
+    //   white-space: nowrap; /* Prevents text from wrapping to a new line */
+    //   // overflow: hidden; /* Hides overflow if the text exceeds the container */
+    //   // text-overflow: ellipsis; /* Adds ellipsis (...) if the text is truncated */
+    //   color: #fff;
+    // }
+    
+    .websiteHeader2 {
+      // font-family: "Island Moments";
+      // color: #fff;
+      font-weight: 900;
+      transition: font-size 0.8s ease-in-out;
+      line-height: 1;
+      font-size: 5vw; /* Scales font size relative to viewport width */
+      // white-space: nowrap; /* Prevent text from wrapping */
+    }
+
+    .hero-description p {
+      font-size: 20px;//1.5rem; // Adjust font size to match
+      font-weight: 400; // Adjust weight if needed
+      color: white;//#000; // Match text color
+      margin-top: 1rem; // Spacing adjustment
+      text-wrap: wrap;
+      font-family: janna-lt-w20-regular,sans-serif;
+      // font-size: 1.25rem;
+      // margin-bottom: 1.5rem;
+      // font-weight: 300;
+      // font-size: 26px;
+      // line-height: 1.32;
+      // letter-spacing: 0px;
+      // color: #d1d5db;
+      // margin-top: 30px;
+      // margin-bottom: 1rem;
+    
+      // @media (max-width: $desktop) {
+      //   font-size: 26px;
+      // }
+    
+      // @media (max-width: $tablet) {
+      //   font-size: px;
+      // }
+    
+      // @media (max-width: $mobile) {
+      //   font-size: 16px;
+      // }
+      @media (max-width: $container-base-width) {
+        // font-size: 1rem;
+        font-size: 16px;
+      }
+    }
+    
+    // Title Image
+    .hero-image img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    
+    .hero-social {
+      margin-top: 50px;
+      // display: flex;
+      align-items: center;
+      // justify-content: flex-start;
+      // flex-wrap: wrap;
+      font-size: 30px;
+      margin: 50px -8px 0 -8px;
+      // @media (max-width: $desktop) {
+      //   margin: 50px -8px 0 -8px;
+      // }
+    
+      // @media (max-width: $tablet) {
+      //   margin: 26px -8px 0 -8px;
+      // }
+      a {
+        padding: 8px;
+        color:#F4F4F5;
+        // hover
+        &:hover {
+          color: #d1d5db;
+        }
+        // display: block;
+        // text-decoration: none;
+        // font-size: 24px;
+        // i{
+        //   // font-family: "Font Awesome 6 Brands";
+        //   // font-weight: 400;
+        // }
+      }
+    }
+    
+    
+    #canvas-container {
+      // font-family: "Chrono Regular", sans-serif;
+      // line-height: 1em;
+      // color: #000;
+      // font-size: inherit;
+      // box-sizing: border-box;
+      // padding: 0;
+      // list-style: none;
+      // vertical-align: baseline;
+      // border: 0;
+      // background: transparent;
+      text-align: center;
+      // margin-bottom: -5px;
+      // -webkit-tap-highlight-color: transparent;
+      // margin: 0 auto -16vw auto;
+      // background-size: contain;
+      // opacity: 1;
+      // height: 64rem !important;
+      // width: 80rem !important;
+      margin-bottom: -1rem;
+    }
