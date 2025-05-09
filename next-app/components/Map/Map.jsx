@@ -128,6 +128,9 @@ export default function PostMap({posts}){
             plugins={[
               Autoplay({
                 delay: 5000,
+                stopOnInteraction: false,
+                stopOnMouseEnter: true,
+                stopOnFocusIn: true,
               }),
             ]}
           >
