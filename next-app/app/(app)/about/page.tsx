@@ -1,9 +1,16 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Our Home Staging Team",
+  description: "Meet Oaktime Staging, a home staging team serving Toronto and the GTA with property styling, furniture placement and design.",
+};
+
 export default function AboutPage() {
     return (
       <main className="max-w-3xl mx-auto px-6 py-20 w-full">
-        <h1 className="text-4xl font-bold mb-6">About Lisa Staging</h1>
+        <h1 className="text-4xl font-bold mb-6">About Oaktime Staging</h1>
         <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-          At Lisa Staging, we specialize in transforming homes into beautifully styled spaces that capture the hearts of potential buyers. 
+          At Oaktime Staging, we specialize in transforming homes into beautifully styled spaces that capture the hearts of potential buyers.
           With a passion for interior aesthetics and market appeal, our team brings years of experience in staging, design, and furniture logistics.
         </p>
         <p className="text-muted-foreground text-lg leading-relaxed">

@@ -1,4 +1,5 @@
-import { Mail, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
+import { contactInfo } from "@/lib/contact";
 
 const Contact = () => {
   return (
@@ -22,8 +23,8 @@ const Contact = () => {
             <p className="mb-3 text-muted-foreground">
               Our team is ready to assist.
             </p>
-            <a href="mailto:ssgxaa@gmail.com" className="font-semibold hover:underline">
-              ssgxaa@gmail.com
+            <a href={`mailto:${contactInfo.email}`} className="font-semibold hover:underline">
+              {contactInfo.email}
             </a>
           </div>
           <div>
@@ -36,13 +37,13 @@ const Contact = () => {
             </p>
             <div className="space-y-1">
               <div>Mandarin:{' '}
-                <a href="tel:+14169393962" className="font-semibold hover:underline">
-                  416-939-3962
+                <a href={contactInfo.mandarinPhoneHref} className="font-semibold hover:underline">
+                  {contactInfo.mandarinPhone}
                 </a>
               </div>
               <div> English:{' '}
-                <a href="tel:+16475711788" className="font-semibold hover:underline">
-                  647-571-1788
+                <a href={contactInfo.englishPhoneHref} className="font-semibold hover:underline">
+                  {contactInfo.englishPhone}
                 </a>
               </div>
             </div>
@@ -59,6 +60,12 @@ const Contact = () => {
               className="w-24 h-24 object-contain rounded-md border"
             />
           </div>
+        </div>
+        <div className="mt-10">
+          <p className="mb-2 flex items-center gap-2 text-lg font-semibold">
+            <MapPin className="h-5 w-5" aria-hidden="true" /> Company Address
+          </p>
+          <address className="not-italic text-muted-foreground">{contactInfo.address}</address>
         </div>
       </div>
     </section>

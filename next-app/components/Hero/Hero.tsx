@@ -7,7 +7,7 @@ import '../hero.scss'
 
 const heroSection = {
   header1: "GTA STAGING",
-  header2: "LISA STAGING",
+  header2: "OAKTIME STAGING",
   subheader1: "SOLUTION",
   subheader2: `\u{1F3E0} \u{2728}`,
   text1: "We transform homes into market-ready showpieces, elevating their appeal and maximizing selling potential through expert design and top-tier furniture logistics.",
@@ -97,4 +97,4 @@ export {
   HeroDescription,
   HeroHeader,
   Hero
-} 
+}

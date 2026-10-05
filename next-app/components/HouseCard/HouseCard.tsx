@@ -39,7 +39,7 @@ export default function HouseCard({ post }: HouseCardProps) {
             <img
               height="100"
               width="100"
-              alt="Lisa Staging"
+              alt="Oaktime Staging"
               src={post.image}
               className="h-12 w-12 rounded-full border-2 object-cover"
             />}
@@ -56,4 +56,4 @@ export default function HouseCard({ post }: HouseCardProps) {
       </Link>
     </div>
   );
-} 
+}
