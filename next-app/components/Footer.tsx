@@ -1,52 +1,55 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { contactInfo } from "@/lib/contact";
+import PhoneContacts from "./PhoneContacts";
+import { localizedPath, translator, type Locale } from "@/lib/i18n";
 
-export default function Footer() {
+export default function Footer({ locale = "en" }: { locale?: Locale }) {
+  const t = translator(locale);
+  const href = (path: string) => localizedPath(path, locale);
   return (
     <footer className="site-footer">
       <div className="wrap footer-main">
         <div>
-          <Link href="/" className="wordmark">
+          <Link href={href("/")} className="wordmark">
             oaktime<span>STAGING & STYLING</span>
           </Link>
           <p>
-            Thoughtful spaces.
+            {t("Thoughtful spaces.", "用心布置空间，")}
             <br />
-            Memorable first impressions.
+            {t("Memorable first impressions.", "留下美好印象。")}
           </p>
         </div>
         <div>
-          <p className="eyebrow">Explore</p>
-          <Link href="/#services">Our services</Link>
-          <Link href="/projects">Our work</Link>
-          <Link href="/about">Our story</Link>
-          <Link href="/contact">
-            Get in touch <ArrowUpRight size={13} />
+          <p className="eyebrow">{t("Explore", "了解更多")}</p>
+          <Link href={href("/#services")}>
+            {t("Our services", "我们的服务")}
+          </Link>
+          <Link href={href("/projects")}>{t("Our work", "案例作品")}</Link>
+          <Link href={href("/about")}>{t("Our story", "关于我们")}</Link>
+          <Link href={href("/contact")}>
+            {t("Get in touch", "联系我们")} <ArrowUpRight size={13} />
           </Link>
         </div>
         <div>
-          <p className="eyebrow">Let’s talk</p>
-          <a href={contactInfo.englishPhoneHref}>
-            {contactInfo.englishPhone} <small>English</small>
-          </a>
-          <a href={contactInfo.mandarinPhoneHref}>
-            {contactInfo.mandarinPhone} <small>中文</small>
-          </a>
+          <p className="eyebrow">{t("Let’s talk", "联系团队")}</p>
+          <PhoneContacts />
           <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
         </div>
         <div>
-          <p className="eyebrow">Based in Stouffville</p>
+          <p className="eyebrow">
+            {t("Based in Stouffville", "公司位于史托维尔")}
+          </p>
           <address>{contactInfo.address}</address>
-          <p>Serving Toronto & the GTA</p>
+          <p>{t("Serving Toronto & the GTA", "服务多伦多及大多地区")}</p>
         </div>
       </div>
       <div className="wrap footer-bottom">
         <span>
           © {new Date().getFullYear()} Oaktime Staging · Oak Time Inc.
         </span>
-        <Link href="/privacy">Privacy</Link>
-        <a href="#top">Back to top ↑</a>
+        <Link href={href("/privacy")}>{t("Privacy", "隐私说明")}</Link>
+        <a href="#top">{t("Back to top ↑", "返回顶部 ↑")}</a>
       </div>
     </footer>
   );

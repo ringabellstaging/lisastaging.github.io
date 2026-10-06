@@ -12,15 +12,24 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, List, MapPin, Map as MapIcon } from "lucide-react";
 import type { ProjectSummary } from "@/lib/projects";
+import {
+  cityLabel,
+  localizedPath,
+  photoAlt,
+  translator,
+  type Locale,
+} from "@/lib/i18n";
 
 const ProjectMap = dynamic(() => import("./ProjectMap"), {
   ssr: false,
   loading: () => (
-    <div className="map-placeholder">Loading the project map…</div>
+    <div className="map-placeholder" aria-busy="true">
+      <MapIcon size={30} />
+    </div>
   ),
 });
 class MapBoundary extends Component<
-  { children: ReactNode },
+  { children: ReactNode; locale: Locale },
   { failed: boolean }
 > {
   state = { failed: false };
@@ -30,7 +39,10 @@ class MapBoundary extends Component<
   render() {
     return this.state.failed ? (
       <div className="map-placeholder">
-        The map is unavailable. You can still explore every project in the list.
+        {translator(this.props.locale)(
+          "The map is unavailable. You can still explore every project in the list.",
+          "地图暂时不可用，您仍可通过列表浏览全部案例。",
+        )}
       </div>
     ) : (
       this.props.children
@@ -39,10 +51,14 @@ class MapBoundary extends Component<
 }
 export default function ProjectExplorer({
   projects,
+  locale = "en",
 }: {
   projects: ProjectSummary[];
+  locale?: Locale;
 }) {
   const [city, setCity] = useState("All locations");
+  const t = translator(locale);
+  const href = (path: string) => localizedPath(path, locale);
   const [selectedId, setSelectedId] = useState("");
   const [view, setView] = useState<"map" | "list">("map");
   const [ready, setReady] = useState(false);
@@ -75,7 +91,7 @@ export default function ProjectExplorer({
     <div ref={root} className="project-explorer">
       <div className="explorer-toolbar">
         <label htmlFor="city-filter">
-          <MapPin size={17} /> Explore by location{" "}
+          <MapPin size={17} /> {t("Explore by location", "按城市浏览")}{" "}
           <select
             id="city-filter"
             value={city}
@@ -85,49 +101,60 @@ export default function ProjectExplorer({
               setSelectedId("");
             }}
           >
-            <option>All locations</option>
+            <option value="All locations">
+              {t("All locations", "全部城市")}
+            </option>
             {cities.map((name) => (
-              <option key={name}>{name}</option>
+              <option key={name} value={name}>
+                {cityLabel(name, locale)}
+              </option>
             ))}
           </select>
         </label>
-        <span aria-live="polite">{filtered.length} projects</span>
-        <div className="view-switch" aria-label="Project view">
+        <span aria-live="polite">
+          {t(`${filtered.length} projects`, `${filtered.length} 个案例`)}
+        </span>
+        <div
+          className="view-switch"
+          aria-label={t("Project view", "案例显示方式")}
+        >
           <button
             type="button"
             aria-pressed={view === "map"}
             onClick={() => setView("map")}
           >
-            <MapIcon size={16} /> Map
+            <MapIcon size={16} /> {t("Map", "地图")}
           </button>
           <button
             type="button"
             aria-pressed={view === "list"}
             onClick={() => setView("list")}
           >
-            <List size={16} /> List
+            <List size={16} /> {t("List", "列表")}
           </button>
         </div>
       </div>
       <div className={`explorer-body view-${view}`}>
         <div className="explorer-map">
-          <MapBoundary>
+          <MapBoundary locale={locale}>
             {ready ? (
               <ProjectMap
                 projects={filtered}
+                locale={locale}
                 selectedId={selectedId || undefined}
                 onSelect={setSelectedId}
               />
             ) : (
               <div className="map-placeholder">
                 <MapIcon size={30} />
-                <span>Explore our neighbourhoods</span>
+                <span>{t("Explore our neighbourhoods", "探索身边的案例")}</span>
                 <button
                   type="button"
                   className="text-link"
                   onClick={() => setReady(true)}
                 >
-                  Load interactive map <ArrowUpRight size={16} />
+                  {t("Load interactive map", "加载互动地图")}{" "}
+                  <ArrowUpRight size={16} />
                 </button>
               </div>
             )}
@@ -135,20 +162,20 @@ export default function ProjectExplorer({
           {selected && (
             <Link
               className="mobile-map-card"
-              href={`/${selected.id}`}
+              href={href(`/${selected.id}`)}
               prefetch={false}
             >
               <Image
                 src={selected.cover.src}
-                alt={selected.cover.alt}
+                alt={photoAlt(selected.cover.alt, locale)}
                 width={96}
                 height={76}
                 sizes="96px"
               />
               <span>
-                <small>{selected.city}</small>
+                <small>{cityLabel(selected.city, locale)}</small>
                 <strong>{selected.title}</strong>
-                <span>View project ↗</span>
+                <span>{t("View project ↗", "查看案例 ↗")}</span>
               </span>
             </Link>
           )}
@@ -157,12 +184,15 @@ export default function ProjectExplorer({
           <div className="selected-project" aria-live="polite">
             {selected && (
               <>
-                <span className="eyebrow">ON THE MAP · {selected.city}</span>
-                <Link href={`/${selected.id}`} prefetch={false}>
+                <span className="eyebrow">
+                  {t("ON THE MAP", "地图中的案例")} ·{" "}
+                  {cityLabel(selected.city, locale)}
+                </span>
+                <Link href={href(`/${selected.id}`)} prefetch={false}>
                   <h3>
                     {selected.title} <ArrowUpRight size={20} />
                   </h3>
-                  <p>Explore this project</p>
+                  <p>{t("Explore this project", "了解这个案例")}</p>
                 </Link>
               </>
             )}
@@ -179,26 +209,29 @@ export default function ProjectExplorer({
               >
                 <Image
                   src={project.cover.src}
-                  alt={project.cover.alt}
+                  alt={photoAlt(project.cover.alt, locale)}
                   width={96}
                   height={80}
                   sizes="96px"
                   quality={65}
                 />
                 <div>
-                  <small>{project.city}</small>
-                  <Link href={`/${project.id}`} prefetch={false}>
+                  <small>{cityLabel(project.city, locale)}</small>
+                  <Link href={href(`/${project.id}`)} prefetch={false}>
                     {project.title} <ArrowUpRight size={13} />
                   </Link>
                   <button
                     type="button"
-                    aria-label={`Show ${project.title} on map`}
+                    aria-label={t(
+                      `Show ${project.title} on map`,
+                      `在地图上显示 ${project.title}`,
+                    )}
                     onClick={() => {
                       setSelectedId(project.id);
                       setView("map");
                     }}
                   >
-                    Show on map
+                    {t("Show on map", "在地图上查看")}
                   </button>
                 </div>
               </article>
@@ -209,14 +242,20 @@ export default function ProjectExplorer({
                 className="load-more"
                 onClick={() => setLimit(limit + 8)}
               >
-                Show more projects ({filtered.length - limit} more)
+                {t(
+                  `Show more projects (${filtered.length - limit} more)`,
+                  `查看更多案例（还有 ${filtered.length - limit} 个）`,
+                )}
               </button>
             )}
           </div>
         </div>
       </div>
       <p className="map-note">
-        Locations are approximate. Full property addresses are kept private.
+        {t(
+          "Locations are approximate. Full property addresses are kept private.",
+          "地图仅展示大致位置，完整房屋地址不公开。",
+        )}
       </p>
     </div>
   );

@@ -740,14 +740,44 @@ details p {
   gap: 7px;
   font-size: 13px;
 }
-.inquiry-contact small {
-  font-size: 10px;
-  color: var(--muted);
-  margin-left: 9px;
+/* Both language lines share the same typography and grid columns. */
+.phone-contacts {
+  display: grid;
+  gap: 12px;
+  width: max-content;
+  max-width: 100%;
 }
-.inquiry-contact > a:first-child {
-  font-family: var(--font-display), Georgia, serif;
-  font-size: 28px;
+.phone-contacts > a {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 4.5em;
+  align-items: baseline;
+  gap: 16px;
+}
+.phone-number {
+  font-family: var(--font-body), Arial, sans-serif;
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.phone-language {
+  font-family: var(--font-body), "Microsoft YaHei", sans-serif;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.inquiry-contact .phone-contacts {
+  font-size: clamp(19px, 2vw, 26px);
+}
+.inquiry-contact .phone-contacts > a {
+  grid-template-columns: minmax(0, 1fr) 52px;
+}
+.footer-main .phone-contacts {
+  font-size: 12px;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.footer-main .phone-language {
+  font-size: 10px;
 }
 .inquiry-contact > a:last-child {
   margin-top: 12px;
@@ -1532,5 +1562,120 @@ details p {
   .project-card a:hover img,
   .button:hover {
     transform: none;
+  }
+}
+
+/* Language selection stays visible beside the mobile menu. */
+.language-switch {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  font-size: 12px;
+  line-height: 1;
+  margin-left: 2px;
+}
+.language-switch > span {
+  display: flex;
+  align-items: center;
+}
+.language-switch a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 30px;
+  color: var(--muted);
+}
+.language-switch a[aria-current="true"] {
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.language-divider {
+  color: #a8ad9d;
+  margin-inline: 2px;
+}
+.header-inner {
+  gap: 24px;
+}
+.header-inner > .navigation {
+  margin-left: auto;
+}
+.not-found-language {
+  padding-bottom: 60px;
+}
+html[lang="zh-Hans"] body {
+  font-family: var(--font-body), "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+html[lang="zh-Hans"] h1,
+html[lang="zh-Hans"] h2,
+html[lang="zh-Hans"] h3 {
+  font-family: "Songti SC", "Noto Serif CJK SC", "SimSun", serif;
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+html[lang="zh-Hans"] em {
+  font-style: normal;
+}
+html[lang="zh-Hans"] .hero-content h1 {
+  font-size: clamp(40px, 5.6vw, 76px);
+  line-height: 1.4;
+}
+html[lang="zh-Hans"] h2 {
+  font-size: clamp(32px, 3.4vw, 48px);
+}
+html[lang="zh-Hans"] h3 {
+  font-size: 25px;
+}
+html[lang="zh-Hans"] .inquiry-intro h1 {
+  font-size: clamp(36px, 4.3vw, 58px);
+}
+@media (min-width: 801px) and (max-width: 1050px) {
+  .header-inner {
+    gap: 14px;
+  }
+  .navigation {
+    gap: 16px;
+    font-size: 11px;
+  }
+  .navigation .nav-quote {
+    margin-left: 0;
+    padding-inline: 12px;
+    gap: 10px;
+  }
+}
+@media (max-width: 800px) {
+  .header-inner {
+    gap: 10px;
+  }
+  .header-inner > .wordmark {
+    margin-right: auto;
+  }
+  .header-inner > .language-switch {
+    order: 2;
+  }
+  .header-inner > .menu-toggle {
+    order: 3;
+  }
+  .header-inner > .navigation {
+    margin-left: 0;
+  }
+}
+@media (max-width: 520px) {
+  .footer-main > div:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+  .footer-main .phone-contacts {
+    font-size: 14px;
+  }
+  html[lang="zh-Hans"] .hero-content h1 {
+    font-size: clamp(34px, 8.8vw, 45px);
+  }
+  html[lang="zh-Hans"] .inquiry-intro h2 {
+    font-size: 32px;
+  }
+  .form-success small {
+    overflow-wrap: anywhere;
   }
 }

@@ -27,6 +27,16 @@ npm run dev
 
 The main page contains the hero, services, six selected projects, the map/list explorer, the process, verified reviews when available, FAQs and the inquiry form. The map module mounts only as the explorer enters the viewport. Full-size gallery images are requested only when the viewer is opened. Photos retain existing watermarks and credits.
 
+## Languages
+
+English keeps the existing URLs (`/`, `/projects`, `/house38`, etc.); Simplified Chinese uses `/zh` (`/zh/projects`, `/zh/house38`, etc.). The header's **中 / EN** links switch the current page and preserve its query and anchor. Navigation within each language stays in that language. A bookmarked URL or refresh retains the language without requiring cookies or browser-side translation.
+
+Both versions are rendered as static HTML with the correct document language, localized metadata, reciprocal `hreflang` links and sitemap alternatives once `SITE_URL` is configured. The thin page wrappers live in `app/(en)` and `app/(zh)/zh`; shared page content lives in `components/pages`. `lib/page-copy.ts` contains editorial translations and Chinese project descriptions; interactive controls use `lib/i18n.ts` helpers. Street names and the official business name remain unchanged. Review quotations remain in their original wording.
+
+`components/PhoneContacts.tsx` keeps the English and Chinese phone lines equally prominent and aligned in the inquiry section and footer. Both use the same number formatting and typography. Chinese submissions receive a Chinese acknowledgement; the internal team notification records the website language. Old submissions without a locale still receive English acknowledgements.
+
+Separate root documents keep the HTML language correct without making pages dynamic. The `globalNotFound` option enables Next.js 15's shared 404 document for these layouts; unavailable projects still return 404. References: [Next.js internationalization](https://nextjs.org/docs/15/app/guides/internationalization) and [global not-found pages](https://nextjs.org/docs/15/app/api-reference/file-conventions/not-found).
+
 ## Production setup
 
 Set Vercel **Root Directory** to `next-app`, **Framework** to Next.js, **Build Command** to `npm run build`, and leave **Output Directory** at its default. A Pro plan is needed for the commercial site and the 15-minute retry cron in `vercel.json`.

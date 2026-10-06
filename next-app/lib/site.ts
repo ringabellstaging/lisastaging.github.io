@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { localizedPath, type Locale } from "./i18n";
+import { pageText } from "./page-copy";
 
 // Do not infer a canonical domain from a preview deployment or an expired domain.
 const configuredUrl = process.env.SITE_URL?.replace(/\/$/, "");
@@ -13,16 +15,29 @@ export function pageMetadata(
   description: string,
   path: string,
   image?: string,
+  locale: Locale = "en",
 ): Metadata {
   return {
     title,
     description,
-    ...(siteUrl ? { alternates: { canonical: `${siteUrl}${path}` } } : {}),
+    ...(siteUrl
+      ? {
+          alternates: {
+            canonical: `${siteUrl}${path}`,
+            languages: {
+              "en-CA": `${siteUrl}${localizedPath(path, "en")}`,
+              "zh-Hans": `${siteUrl}${localizedPath(path, "zh")}`,
+              "x-default": `${siteUrl}${localizedPath(path, "en")}`,
+            },
+          },
+        }
+      : {}),
     openGraph: {
       title: `${title} | Oaktime Staging`,
       description,
       type: "website",
-      locale: "en_CA",
+      locale: locale === "zh" ? "zh_CN" : "en_CA",
+      alternateLocale: locale === "zh" ? "en_CA" : "zh_CN",
       siteName: "Oaktime Staging",
       ...(siteUrl
         ? {
@@ -32,4 +47,20 @@ export function pageMetadata(
         : {}),
     },
   };
+}
+
+export function localizedMetadata(
+  locale: Locale,
+  title: string,
+  description: string,
+  path: string,
+  image?: string,
+) {
+  return pageMetadata(
+    pageText(locale, title),
+    pageText(locale, description),
+    localizedPath(path, locale),
+    image,
+    locale,
+  );
 }

@@ -3,15 +3,19 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ArrowLeft, ArrowRight, X } from "lucide-react";
 import type { ProjectImage } from "@/lib/projects";
+import { photoAlt, translator, type Locale } from "@/lib/i18n";
 
 export default function ProjectGallery({
   images,
   title,
+  locale = "en",
 }: {
   images: ProjectImage[];
   title: string;
+  locale?: Locale;
 }) {
   const [selected, setSelected] = useState<number | null>(null);
+  const t = translator(locale);
   const dialog = useRef<HTMLDialogElement>(null);
   const lastTrigger = useRef<HTMLButtonElement | null>(null);
   useEffect(() => {
@@ -41,7 +45,10 @@ export default function ProjectGallery({
             key={image.src}
             type="button"
             className="gallery-photo"
-            aria-label={`Enlarge ${image.alt}`}
+            aria-label={t(
+              `Enlarge ${image.alt}`,
+              `放大 ${photoAlt(image.alt, locale)}`,
+            )}
             onClick={(event) => {
               lastTrigger.current = event.currentTarget;
               setSelected(index);
@@ -49,7 +56,7 @@ export default function ProjectGallery({
           >
             <Image
               src={image.src}
-              alt={image.alt}
+              alt={photoAlt(image.alt, locale)}
               fill
               sizes={
                 index === 0
@@ -59,14 +66,14 @@ export default function ProjectGallery({
               priority={index === 0}
               quality={80}
             />
-            <span>View full image ↗</span>
+            <span>{t("View full image ↗", "查看大图 ↗")}</span>
           </button>
         ))}
       </div>
       <dialog
         ref={dialog}
         className="lightbox"
-        aria-label={`${title} photo gallery`}
+        aria-label={t(`${title} photo gallery`, `${title} 案例相册`)}
         onCancel={(event) => {
           event.preventDefault();
           close();
@@ -85,7 +92,7 @@ export default function ProjectGallery({
             <button
               type="button"
               onClick={close}
-              aria-label="Close photo gallery"
+              aria-label={t("Close photo gallery", "关闭相册")}
             >
               <X size={22} />
             </button>
@@ -95,7 +102,7 @@ export default function ProjectGallery({
               <div className="lightbox-image">
                 <Image
                   src={images[selected].src}
-                  alt={images[selected].alt}
+                  alt={photoAlt(images[selected].alt, locale)}
                   fill
                   sizes="95vw"
                   quality={90}
@@ -104,7 +111,7 @@ export default function ProjectGallery({
               <div className="lightbox-controls">
                 <button
                   type="button"
-                  aria-label="Previous photo"
+                  aria-label={t("Previous photo", "上一张照片")}
                   onClick={() => move(-1)}
                 >
                   <ArrowLeft size={20} />
@@ -114,7 +121,7 @@ export default function ProjectGallery({
                 </span>
                 <button
                   type="button"
-                  aria-label="Next photo"
+                  aria-label={t("Next photo", "下一张照片")}
                   onClick={() => move(1)}
                 >
                   <ArrowRight size={20} />

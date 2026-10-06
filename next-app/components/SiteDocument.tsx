@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans, Cormorant_Garamond } from "next/font/google";
-import "./globals.css";
+import "@/app/globals.css";
+import { htmlLanguage, translator, type Locale } from "@/lib/i18n";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { contactInfo } from "@/lib/contact";
@@ -17,18 +18,24 @@ const serif = Cormorant_Garamond({
   variable: "--font-display",
   display: "swap",
 });
-export const metadata: Metadata = {
+export const getSiteMetadata = (locale: Locale): Metadata => ({
   ...(siteUrl ? { metadataBase: new URL(siteUrl) } : {}),
   title: {
-    default: "Home Staging in Toronto & the GTA | Oaktime Staging",
+    default:
+      locale === "zh"
+        ? "多伦多及大多地区房屋布置 | Oaktime Staging"
+        : "Home Staging in Toronto & the GTA | Oaktime Staging",
     template: "%s | Oaktime Staging",
   },
   description:
-    "Thoughtful home staging for memorable first impressions. Explore our work across Toronto and the GTA and request a quote from Oaktime Staging.",
+    locale === "zh"
+      ? "Oaktime Staging 为多伦多及大多地区提供房屋布置服务。浏览案例，联系设计师获取报价。"
+      : "Thoughtful home staging for memorable first impressions. Explore our work across Toronto and the GTA and request a quote from Oaktime Staging.",
+  icons: { icon: "/icon.svg" },
   robots: isIndexable
     ? { index: true, follow: true }
     : { index: false, follow: true },
-};
+});
 const schema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
@@ -61,14 +68,19 @@ const schema = {
     },
   ],
 };
-export default function RootLayout({
+export default function SiteDocument({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+  locale,
+}: Readonly<{ children: React.ReactNode; locale: Locale }>) {
+  const t = translator(locale);
   return (
-    <html lang="en-CA" className={`${sans.variable} ${serif.variable}`}>
+    <html
+      lang={htmlLanguage(locale)}
+      className={`${sans.variable} ${serif.variable}`}
+    >
       <body id="top">
         <a className="skip-link" href="#main">
-          Skip to content
+          {t("Skip to content", "跳转到主要内容")}
         </a>
         <script
           type="application/ld+json"
@@ -76,9 +88,9 @@ export default function RootLayout({
             __html: JSON.stringify(schema).replace(/</g, "\\u003c"),
           }}
         />
-        <Header />
+        <Header locale={locale} />
         {children}
-        <Footer />
+        <Footer locale={locale} />
       </body>
     </html>
   );

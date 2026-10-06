@@ -14,6 +14,7 @@ export type Inquiry = {
   name: string;
   message: string;
   consent: true;
+  locale?: "en" | "zh";
 };
 export function isAllowedOrigin(
   origin: string | null,
@@ -49,6 +50,8 @@ export function validateInquiry(input: unknown): {
   if (!input || typeof input !== "object" || Array.isArray(input))
     return { error: "Please check your form details." };
   const body = input as Record<string, unknown>;
+  if (body.locale !== undefined && body.locale !== "en" && body.locale !== "zh")
+    return { error: "Please check your form details." };
   const string = (key: string, max: number) =>
     typeof body[key] === "string" && (body[key] as string).length <= max
       ? (body[key] as string).trim()
@@ -98,11 +101,16 @@ export function validateInquiry(input: unknown): {
       name,
       message,
       consent: true,
+      ...(body.locale === "en" || body.locale === "zh"
+        ? { locale: body.locale }
+        : {}),
     },
   };
 }
 export function buildEmails(data: Inquiry, from: string, teamEmail: string) {
   const reference = `OT-${data.requestId}`;
+  const t = (english: string, chinese: string) =>
+    data.locale === "zh" ? chinese : english;
   return {
     team: {
       from,
@@ -118,6 +126,7 @@ export function buildEmails(data: Inquiry, from: string, teamEmail: string) {
         `Name: ${data.name || "Not provided"}`,
         `Email: ${data.email}`,
         `Phone: ${data.phone}`,
+        `Website language: ${data.locale === "zh" ? "Simplified Chinese" : "English"}`,
         "",
         `Notes: ${data.message || "None"}`,
         "",
@@ -128,18 +137,28 @@ export function buildEmails(data: Inquiry, from: string, teamEmail: string) {
       from,
       to: [data.email],
       reply_to: teamEmail,
-      subject: "We’ve received your staging inquiry — Oaktime Staging",
+      subject: t(
+        "We’ve received your staging inquiry — Oaktime Staging",
+        "我们已收到您的房屋布置询价 — Oaktime Staging",
+      ),
       text: [
-        "Thank you for contacting Oaktime Staging.",
+        t(
+          "Thank you for contacting Oaktime Staging.",
+          "感谢您联系 Oaktime Staging。",
+        ),
         "",
-        "We’ve received your inquiry. A designer will review your property details and contact you as soon as possible to discuss your staging needs and provide a quote.",
+        t(
+          "We’ve received your inquiry. A designer will review your property details and contact you as soon as possible to discuss your staging needs and provide a quote.",
+          "我们已收到您的询价。设计师会查看您的房屋信息，尽快与您联系，沟通布置需求并提供报价。",
+        ),
         "",
-        `Your reference: ${reference}`,
+        t(`Your reference: ${reference}`, `询价编号：${reference}`),
         "",
-        "Warm regards,",
+        t("Warm regards,", "诚挚问候，"),
         "Oaktime Staging",
         "Oak Time Inc.",
-        "(416) 877-1878",
+        "English: (416) 877-1878",
+        "中文: (416) 939-3962",
         teamEmail,
       ].join("\n"),
     },

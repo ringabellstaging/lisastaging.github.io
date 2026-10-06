@@ -6,14 +6,18 @@ import ProjectExplorer from "@/components/ProjectExplorer";
 import InquirySection from "@/components/InquirySection";
 import Reviews from "@/components/Reviews";
 import { featuredProjects, projectSummaries } from "@/lib/projects";
-import { pageMetadata } from "@/lib/site";
+import { localizedMetadata } from "@/lib/site";
+import { localizedPath, type Locale } from "@/lib/i18n";
+import { pageText } from "@/lib/page-copy";
 
-export const metadata = pageMetadata(
-  "Home Staging in Toronto & the GTA",
-  "Thoughtful home staging for memorable first impressions. Explore our projects across Toronto and the GTA and request a quote.",
-  "/",
-  "/images/house38/img1.jpg",
-);
+export const getMetadata = (locale: Locale) =>
+  localizedMetadata(
+    locale,
+    "Home Staging in Toronto & the GTA",
+    "Thoughtful home staging for memorable first impressions. Explore our projects across Toronto and the GTA and request a quote.",
+    "/",
+    "/images/house38/img1.jpg",
+  );
 const services = [
   {
     number: "01",
@@ -31,13 +35,17 @@ const services = [
     text: "From the furniture plan to placement, our team brings the details together so you can focus on your next chapter.",
   },
 ];
-export default function Home() {
+export default function HomePage({ locale = "en" }: { locale?: Locale }) {
+  const t = (text: string) => pageText(locale, text);
+  const href = (path: string) => localizedPath(path, locale);
   return (
     <main id="main">
       <section className="hero-section" aria-labelledby="hero-heading">
         <Image
           src="/images/house38/img1.jpg"
-          alt="Oaktime-staged living room with soft seating, natural light and a stone fireplace"
+          alt={t(
+            "Oaktime-staged living room with soft seating, natural light and a stone fireplace",
+          )}
           fill
           priority
           sizes="100vw"
@@ -45,54 +53,57 @@ export default function Home() {
         />
         <div className="hero-shade" />
         <div className="hero-content wrap">
-          <p className="eyebrow">HOME STAGING · TORONTO & THE GTA</p>
+          <p className="eyebrow">{t("HOME STAGING · TORONTO & THE GTA")}</p>
           <h1 id="hero-heading">
-            Thoughtful spaces.
+            {t("Thoughtful spaces.")}
             <br />
-            <em>Lasting impressions.</em>
+            <em>{t("Lasting impressions.")}</em>
           </h1>
           <p>
-            Helping buyers feel at home,
+            {t("Helping buyers feel at home,")}
             <br />
-            before they even move in.
+            {t("before they even move in.")}
           </p>
           <div className="hero-actions">
             <Link href="#inquiry" className="button button-cream">
-              Request a quote <ArrowUpRight size={17} />
+              {t("Request a quote")}
+              <ArrowUpRight size={17} />
             </Link>
             <Link href="#selected-work" className="hero-work">
-              Explore our work <ArrowDown size={16} />
+              {t("Explore our work")}
+              <ArrowDown size={16} />
             </Link>
           </div>
         </div>
-        <Link href="/house38" className="hero-credit">
-          THE ARDMORE ROAD PROJECT <ArrowUpRight size={14} />
+        <Link href={href("/house38")} className="hero-credit">
+          {t("THE ARDMORE ROAD PROJECT")}
+          <ArrowUpRight size={14} />
         </Link>
       </section>
       <div className="intro-strip wrap">
-        <span>Considered design. Beautifully presented.</span>
-        <span>Based in Stouffville · Serving the GTA</span>
+        <span>{t("Considered design. Beautifully presented.")}</span>
+        <span>{t("Based in Stouffville · Serving the GTA")}</span>
       </div>
       <section id="services" className="section wrap services-section">
         <div className="section-heading">
-          <p className="eyebrow">THE OAKTIME APPROACH</p>
+          <p className="eyebrow">{t("THE OAKTIME APPROACH")}</p>
           <h2>
-            Every home has a story.
+            {t("Every home has a story.")}
             <br />
-            <em>Let’s bring yours to life.</em>
+            <em>{t("Let’s bring yours to life.")}</em>
           </h2>
           <p className="section-description">
-            We create spaces that feel warm, effortless and ready for their next
-            chapter. Through thoughtful staging, we help your property make an
-            impression that stays.
+            {t(
+              "We create spaces that feel warm, effortless and ready for their next chapter. Through thoughtful staging, we help your property make an impression that stays.",
+            )}
           </p>
         </div>
         <div className="services-grid">
           {services.map((service) => (
             <article key={service.number}>
               <span className="index-number">{service.number}</span>
-              <h3>{service.title}</h3>
-              <p>{service.text}</p>
+              <h3>{t(service.title)}</h3>
+              <p>{t(service.text)}</p>
             </article>
           ))}
         </div>
@@ -101,18 +112,21 @@ export default function Home() {
         <div className="wrap">
           <div className="section-top">
             <div>
-              <p className="eyebrow">SELECTED WORK</p>
+              <p className="eyebrow">{t("SELECTED WORK")}</p>
               <h2>
-                Spaces to <em>fall for.</em>
+                {t("Spaces to")}
+                {locale === "en" ? " " : null}
+                <em>{t("fall for.")}</em>
               </h2>
             </div>
-            <Link href="/projects" className="text-link">
-              View all projects <ArrowUpRight size={17} />
+            <Link href={href("/projects")} className="text-link">
+              {t("View all projects")}
+              <ArrowUpRight size={17} />
             </Link>
           </div>
           <div className="projects-grid">
             {featuredProjects.map((project) => (
-              <ProjectCard key={project.id} project={project} />
+              <ProjectCard key={project.id} project={project} locale={locale} />
             ))}
           </div>
         </div>
@@ -120,27 +134,32 @@ export default function Home() {
       <section id="project-map" className="section wrap map-section">
         <div className="section-top">
           <div>
-            <p className="eyebrow">IN YOUR NEIGHBOURHOOD</p>
+            <p className="eyebrow">{t("IN YOUR NEIGHBOURHOOD")}</p>
             <h2>
-              A little closer <em>to home.</em>
+              {t("A little closer")}
+              {locale === "en" ? " " : null}
+              <em>{t("to home.")}</em>
             </h2>
           </div>
           <p className="section-description">
-            Explore our staging projects across the GTA and beyond. Find a space
-            near you.
+            {t(
+              "Explore our staging projects across the GTA and beyond. Find a space near you.",
+            )}
           </p>
         </div>
-        <ProjectExplorer projects={projectSummaries} />
+        <ProjectExplorer projects={projectSummaries} locale={locale} />
       </section>
       <section id="process" className="process-section section">
         <div className="wrap">
           <div className="section-top">
             <div>
-              <p className="eyebrow">FROM FIRST HELLO TO FINAL TOUCH</p>
-              <h2>Beautifully simple.</h2>
+              <p className="eyebrow">{t("FROM FIRST HELLO TO FINAL TOUCH")}</p>
+              <h2>{t("Beautifully simple.")}</h2>
             </div>
             <p className="section-description">
-              A personal approach, with thoughtful attention at every step.
+              {t(
+                "A personal approach, with thoughtful attention at every step.",
+              )}
             </p>
           </div>
           <div className="process-grid">
@@ -158,24 +177,27 @@ export default function Home() {
                 text: "Once the plan is agreed, we coordinate the furniture, styling and finishing details.",
               },
             ].map((step, i) => (
-              <article key={step.title}>
+              <article key={t(step.title)}>
                 <span className="process-number">0{i + 1}</span>
-                <h3>{step.title}</h3>
-                <p>{step.text}</p>
+                <h3>{t(step.title)}</h3>
+                <p>{t(step.text)}</p>
               </article>
             ))}
           </div>
           <Link href="#inquiry" className="text-link">
-            Let’s start with your home <MoveRight size={19} />
+            {t("Let’s start with your home")}
+            <MoveRight size={19} />
           </Link>
         </div>
       </section>
-      <Reviews />
+      <Reviews locale={locale} />
       <section className="section wrap faq-section">
         <div>
-          <p className="eyebrow">A FEW THINGS TO KNOW</p>
+          <p className="eyebrow">{t("A FEW THINGS TO KNOW")}</p>
           <h2>
-            Before we <em>begin.</em>
+            {t("Before we")}
+            {locale === "en" ? " " : null}
+            <em>{t("begin.")}</em>
           </h2>
         </div>
         <div>
@@ -197,17 +219,17 @@ export default function Home() {
               a: "Yes. You can call our Mandarin line at 416-939-3962. For English, call (416) 877-1878.",
             },
           ].map((item) => (
-            <details key={item.q}>
+            <details key={t(item.q)}>
               <summary>
-                {item.q}
+                {t(item.q)}
                 <span aria-hidden="true">+</span>
               </summary>
-              <p>{item.a}</p>
+              <p>{t(item.a)}</p>
             </details>
           ))}
         </div>
       </section>
-      <InquirySection />
+      <InquirySection locale={locale} />
     </main>
   );
 }
