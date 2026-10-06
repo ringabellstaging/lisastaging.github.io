@@ -9,7 +9,7 @@ import {
 } from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import Link from "next/link";
+import ProjectLink from "./ProjectLink";
 import { ArrowUpRight, List, MapPin, Map as MapIcon } from "lucide-react";
 import type { ProjectSummary } from "@/lib/projects";
 import {
@@ -160,10 +160,10 @@ export default function ProjectExplorer({
             )}
           </MapBoundary>
           {selected && (
-            <Link
+            <ProjectLink
               className="mobile-map-card"
               href={href(`/${selected.id}`)}
-              prefetch={false}
+              prefetchOnView
             >
               <Image
                 src={selected.cover.src}
@@ -171,13 +171,14 @@ export default function ProjectExplorer({
                 width={96}
                 height={76}
                 sizes="96px"
+                quality={65}
               />
               <span>
                 <small>{cityLabel(selected.city, locale)}</small>
                 <strong>{selected.title}</strong>
                 <span>{t("View project ↗", "查看案例 ↗")}</span>
               </span>
-            </Link>
+            </ProjectLink>
           )}
         </div>
         <div className="explorer-list">
@@ -188,12 +189,12 @@ export default function ProjectExplorer({
                   {t("ON THE MAP", "地图中的案例")} ·{" "}
                   {cityLabel(selected.city, locale)}
                 </span>
-                <Link href={href(`/${selected.id}`)} prefetch={false}>
+                <ProjectLink href={href(`/${selected.id}`)} prefetchOnView>
                   <h3>
                     {selected.title} <ArrowUpRight size={20} />
                   </h3>
                   <p>{t("Explore this project", "了解这个案例")}</p>
-                </Link>
+                </ProjectLink>
               </>
             )}
           </div>
@@ -217,9 +218,9 @@ export default function ProjectExplorer({
                 />
                 <div>
                   <small>{cityLabel(project.city, locale)}</small>
-                  <Link href={href(`/${project.id}`)} prefetch={false}>
+                  <ProjectLink href={href(`/${project.id}`)}>
                     {project.title} <ArrowUpRight size={13} />
-                  </Link>
+                  </ProjectLink>
                   <button
                     type="button"
                     aria-label={t(

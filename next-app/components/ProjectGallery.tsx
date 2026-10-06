@@ -60,11 +60,11 @@ export default function ProjectGallery({
               fill
               sizes={
                 index === 0
-                  ? "(max-width: 800px) 95vw, 90vw"
-                  : "(max-width: 800px) 46vw, 43vw"
+                  ? "(max-width: 800px) calc(100vw - 40px), (max-width: 1100px) calc(100vw - 64px), (max-width: 1392px) calc(100vw - 112px), 1280px"
+                  : "(max-width: 520px) calc((100vw - 52px) / 2), (max-width: 800px) calc((100vw - 62px) / 2), (max-width: 1100px) calc((100vw - 86px) / 2), (max-width: 1392px) calc((100vw - 134px) / 2), 629px"
               }
               priority={index === 0}
-              quality={80}
+              quality={75}
             />
             <span>{t("View full image ↗", "查看大图 ↗")}</span>
           </button>

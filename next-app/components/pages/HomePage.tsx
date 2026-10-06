@@ -49,7 +49,7 @@ export default function HomePage({ locale = "en" }: { locale?: Locale }) {
           fill
           priority
           sizes="100vw"
-          quality={85}
+          quality={75}
         />
         <div className="hero-shade" />
         <div className="hero-content wrap">
@@ -126,7 +126,12 @@ export default function HomePage({ locale = "en" }: { locale?: Locale }) {
           </div>
           <div className="projects-grid">
             {featuredProjects.map((project) => (
-              <ProjectCard key={project.id} project={project} locale={locale} />
+              <ProjectCard
+                key={project.id}
+                project={project}
+                locale={locale}
+                prefetchOnView
+              />
             ))}
           </div>
         </div>

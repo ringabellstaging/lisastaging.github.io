@@ -17,6 +17,8 @@ npm run dev
 
 `npm run build` produces a normal Next.js deployment. `npm start` serves that build. Static export is no longer used: the site needs the image optimizer and inquiry API. Keep Vercel's output-directory setting at the Next.js default, not `out`.
 
+For a realistic local speed check, run `npm run build`, then `npm start -- --port 3102`, and browse `http://localhost:3102`. Rebuild to see subsequent edits. `npm run dev` uses Turbopack and compiles routes on demand, so first visits are not representative of deployed performance. Development writes to `.next-dev`; production uses `.next`, preventing concurrent dev/preview servers from overwriting one another's chunks.
+
 ## Content
 
 - `data/projects.json`: the single source for the 67 active projects, approximate map coordinates, covers and photo dimensions. Six projects are featured. City labels were migrated from the original content; review them when updating a project. Public coordinates are rounded to two decimal places and addresses contain street names only.
@@ -26,6 +28,17 @@ npm run dev
 - `scripts/migrate-projects.mjs`: one-time migration from legacy Markdown and map code. Do not rerun after editing the new JSON because it overwrites it. Original photo files are retained and served through `next/image`.
 
 The main page contains the hero, services, six selected projects, the map/list explorer, the process, verified reviews when available, FAQs and the inquiry form. The map module mounts only as the explorer enters the viewport. Full-size gallery images are requested only when the viewer is opened. Photos retain existing watermarks and credits.
+
+Homepage and portfolio cards show city names, including their accessible labels and photo descriptions. Individual project pages and the map keep their street references and approximate locations.
+
+## Image and navigation performance
+
+- Serve WebP through `next/image` to reduce first-request encoding latency. Cards, the hero and inline gallery images share quality 75; map thumbnails use 65 and the lightbox uses 90 only when opened. This avoids separately encoding the same photo at several nearly identical quality settings. Original files remain unchanged.
+- Responsive image sizes follow the actual grid breakpoints and maximum content width. Offscreen photos retain native lazy loading; only the hero or first project photo is prioritized.
+- Featured cards prefetch their routes when visible. Long project lists prefetch on hover, keyboard focus or touch, avoiding a burst of requests for every project. Map popup links use client navigation and prefetch when opened.
+- Measure a production build separately from dev compilation, and distinguish the first image request from a cached request. Recheck real mobile network performance on Vercel after deployment; local response times are not a production load-time guarantee.
+
+Implementation references: [Next.js image formats](https://nextjs.org/docs/15/app/api-reference/components/image#formats), [prefetching](https://nextjs.org/docs/15/app/guides/prefetching), and [production builds](https://nextjs.org/docs/15/app/api-reference/cli/next#next-build-options).
 
 ## Languages
 

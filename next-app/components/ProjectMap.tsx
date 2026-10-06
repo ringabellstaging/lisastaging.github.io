@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import L from "leaflet";
 import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import ProjectLink from "./ProjectLink";
 import type { ProjectSummary } from "@/lib/projects";
 import { localizedPath, translator, type Locale } from "@/lib/i18n";
 
@@ -127,9 +128,12 @@ export default function ProjectMap({
                     <button type="button" onClick={() => onSelect(project.id)}>
                       {project.title}
                     </button>
-                    <a href={localizedPath(`/${project.id}`, locale)}>
+                    <ProjectLink
+                      href={localizedPath(`/${project.id}`, locale)}
+                      prefetchOnView
+                    >
                       {t("View project ↗", "查看案例 ↗")}
-                    </a>
+                    </ProjectLink>
                   </div>
                 ))}
               </div>
