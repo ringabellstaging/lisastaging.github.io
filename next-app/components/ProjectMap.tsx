@@ -1,7 +1,14 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
 import L from "leaflet";
-import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
+import {
+  AttributionControl,
+  MapContainer,
+  Marker,
+  Popup,
+  TileLayer,
+  useMap,
+} from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import ProjectLink from "./ProjectLink";
 import type { ProjectSummary } from "@/lib/projects";
@@ -83,8 +90,11 @@ export default function ProjectMap({
         center={[43.9, -79.4]}
         zoom={9}
         scrollWheelZoom={false}
+        attributionControl={false}
         className="leaflet-project-map"
       >
+        {/* Omit the optional library branding; keep the tile provider's credit. */}
+        <AttributionControl position="bottomright" prefix={false} />
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
