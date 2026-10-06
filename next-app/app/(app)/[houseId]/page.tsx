@@ -1,51 +1,99 @@
-import fs from 'fs';
-import path from 'path';
-import { notFound } from 'next/navigation';
-import { Suspense } from 'react';
-import {HouseGallery, HouseGallerySkeleton} from '@/components/HouseCard/HouseGallery';
-import { getPostbyId, getAllPosts } from '@/lib/posts';
-// const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { ArrowUpRight } from "lucide-react";
+import ProjectGallery from "@/components/ProjectGallery";
+import { getProject, projects } from "@/lib/projects";
+import { pageMetadata, siteUrl } from "@/lib/site";
 
-export async function generateStaticParams() {
-  // Get all non-disabled posts
-  const posts = await getAllPosts();
-  return posts.map(post => ({
-    houseId: post.id
-  }));
+export const dynamicParams = false;
+export function generateStaticParams() {
+  return projects.map((project) => ({ houseId: project.id }));
 }
-
-export default async function HousePage({ params }: { params: Promise<{ houseId: string }> }) {
-  const {houseId} = await params;
-  
-  // Check if the post is disabled
-  try {
-    const post = await getPostbyId(houseId);
-    if (post.disabled === true) {
-      notFound();
-    }
-  } catch {
-    notFound();
-  }
-  
-  const filePath = path.join(process.cwd(), 'public', 'images', houseId, 'meta.json');
-
-  if (!fs.existsSync(filePath)) {
-    notFound();
-  }
-  const fileContent = fs.readFileSync(filePath, 'utf-8');
-  const { images } = JSON.parse(fileContent);
-
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ houseId: string }>;
+}) {
+  const project = getProject((await params).houseId);
+  if (!project) return {};
+  return pageMetadata(
+    `${project.title} — ${project.city} Home Staging`,
+    project.description,
+    `/${project.id}`,
+    project.cover.src,
+  );
+}
+export default async function ProjectPage({
+  params,
+}: {
+  params: Promise<{ houseId: string }>;
+}) {
+  const project = getProject((await params).houseId);
+  if (!project) notFound();
+  const images = [
+    project.cover,
+    ...project.images.filter((image) => image.src !== project.cover.src),
+  ];
+  const breadcrumb = siteUrl
+    ? {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Our work",
+            item: `${siteUrl}/projects`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: project.title,
+            item: `${siteUrl}/${project.id}`,
+          },
+        ],
+      }
+    : null;
   return (
-    <main>
-      <section className="mb-10 text-center sm:text-left">
-        <h1 className="text-3xl font-bold mb-2 capitalize">Explore Our Recent Staging Project</h1>
-        <p className="text-muted-foreground max-w-2xl mx-auto sm:mx-0">
-          A beautifully staged property showcasing thoughtful furniture placement, lighting, and accessories designed to inspire buyers and maximize appeal.
-        </p>
-      </section>
-      <Suspense fallback={<HouseGallerySkeleton/>}>
-          <HouseGallery images={images} houseId={houseId}/>
-      </Suspense>
+    <main id="main" className="section wrap">
+      {breadcrumb && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(breadcrumb).replace(/</g, "\\u003c"),
+          }}
+        />
+      )}
+      <nav aria-label="Breadcrumb" className="breadcrumbs">
+        <Link href="/">Home</Link>
+        <span>/</span>
+        <Link href="/projects">Our work</Link>
+        <span>/</span>
+        <span>{project.title}</span>
+      </nav>
+      <div className="project-heading">
+        <div>
+          <p className="eyebrow">{project.city} · HOME STAGING</p>
+          <h1>{project.title}</h1>
+        </div>
+        <p>{project.description}</p>
+      </div>
+      <ProjectGallery images={images} title={project.title} />
+      <p className="map-note">
+        Street name shown for reference. Full property address kept private.
+      </p>
+      <div className="project-cta">
+        <div>
+          <h2>
+            Imagine the possibilities <em>for your home.</em>
+          </h2>
+          <p>Let’s talk about the right approach for your space.</p>
+        </div>
+        <Link href="/#inquiry" className="button button-dark">
+          Request a quote <ArrowUpRight size={18} />
+        </Link>
+      </div>
     </main>
   );
 }

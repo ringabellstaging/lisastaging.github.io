@@ -1,0 +1,12 @@
+{
+  "name": "oaktime-staging-workspace",
+  "private": true,
+  "scripts": {
+    "setup": "npm --prefix next-app ci",
+    "dev": "npm --prefix next-app run dev --",
+    "build": "npm --prefix next-app run build --",
+    "start": "npm --prefix next-app run start --",
+    "lint": "npm --prefix next-app run lint --",
+    "test": "npm --prefix next-app run test --"
+  }
+}

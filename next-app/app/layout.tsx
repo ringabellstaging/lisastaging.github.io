@@ -1,40 +1,42 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { DM_Sans, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
-import "@/components/hero.scss";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Image from "next/image";
-import Link from "next/link";
 import { contactInfo } from "@/lib/contact";
+import { siteUrl, isIndexable } from "@/lib/site";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const sans = DM_Sans({
   subsets: ["latin"],
+  variable: "--font-body",
+  display: "swap",
 });
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const serif = Cormorant_Garamond({
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-display",
+  display: "swap",
 });
-
 export const metadata: Metadata = {
+  ...(siteUrl ? { metadataBase: new URL(siteUrl) } : {}),
   title: {
     default: "Home Staging in Toronto & the GTA | Oaktime Staging",
     template: "%s | Oaktime Staging",
   },
-  description: "Explore Oaktime Staging's home staging projects across Toronto and the GTA. Contact our Stouffville team to discuss your property and request a quote.",
+  description:
+    "Thoughtful home staging for memorable first impressions. Explore our work across Toronto and the GTA and request a quote from Oaktime Staging.",
+  robots: isIndexable
+    ? { index: true, follow: true }
+    : { index: false, follow: true },
 };
-
-// Domain-independent business information; add the canonical URL once a
-// production domain has been selected and verified.
-const businessSchema = {
+const schema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Oaktime Staging",
   legalName: "Oak Time Inc.",
-  description: "Home staging in Toronto and the Greater Toronto Area.",
+  ...(siteUrl ? { url: siteUrl } : {}),
   email: contactInfo.email,
-  telephone: contactInfo.englishPhoneHref.replace("tel:", ""),
+  telephone: "+14168771878",
   address: {
     "@type": "PostalAddress",
     streetAddress: "13036 McCowan Rd",
@@ -43,50 +45,40 @@ const businessSchema = {
     postalCode: "L4A3Y4",
     addressCountry: "CA",
   },
+  areaServed: ["Toronto", "Greater Toronto Area"],
   contactPoint: [
     {
       "@type": "ContactPoint",
       contactType: "customer service",
-      telephone: contactInfo.englishPhoneHref.replace("tel:", ""),
+      telephone: "+14168771878",
       availableLanguage: "English",
     },
     {
       "@type": "ContactPoint",
       contactType: "customer service",
-      telephone: contactInfo.mandarinPhoneHref.replace("tel:", ""),
+      telephone: "+14169393962",
       availableLanguage: "Mandarin",
     },
   ],
 };
-
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased items-center justify-items-center min-h-screen min-screen w-full max-w-screen w-screen"`}
-      >
+    <html lang="en-CA" className={`${sans.variable} ${serif.variable}`}>
+      <body id="top">
+        <a className="skip-link" href="#main">
+          Skip to content
+        </a>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema).replace(/</g, "\\u003c") }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schema).replace(/</g, "\\u003c"),
+          }}
         />
-        <header className="w-full border-b shadow-sm bg-white sticky top-0 z-90">
-          <nav className="flex items-center justify-between px-6 py-4 max-w-screen-xl mx-auto">
-            <Link href="/" className="flex items-center gap-2">
-              <Image src="/images/logo.png" alt="Oaktime Staging logo" width={32} height={32} />
-              <span className="font-semibold text-lg">Oaktime Staging</span>
-            </Link>
-            <div className="flex items-center gap-6">
-              <Link href="/about" className="hover:underline">About</Link>
-              <Link href="/contact" className="hover:underline">Contact</Link>
-            </div>
-          </nav>
-        </header>
+        <Header />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

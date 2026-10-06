@@ -1,20 +1,12 @@
 import type { NextConfig } from "next";
-const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig: NextConfig = {
-  output: 'export',
-  basePath: process.env.PAGES_BASE_PATH,
-  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx', 'server.ts'],
-  distDir: "out",
+  poweredByHeader: false,
   images: {
-    loader: "custom",
-    loaderFile: './imageLoader.js',
-    unoptimized: true,
+    formats: ["image/avif", "image/webp"],
+    deviceSizes: [640, 960, 1280, 1600, 1920],
+    imageSizes: [96, 160, 320, 480],
+    minimumCacheTTL: 86400,
   },
 };
-
-if (process.env.NEXT_OUTPUT === 'export') {
-  nextConfig.pageExtensions = ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx']
-}
-
 export default nextConfig;
