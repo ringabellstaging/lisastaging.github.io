@@ -18,7 +18,9 @@ export function pageMetadata(
   locale: Locale = "en",
 ): Metadata {
   return {
-    title,
+    // Home metadata shares its route segment with the root layout, so Next's
+    // inherited title template alone does not append the brand there.
+    title: { absolute: `${title} | Oaktime Staging` },
     description,
     ...(siteUrl
       ? {

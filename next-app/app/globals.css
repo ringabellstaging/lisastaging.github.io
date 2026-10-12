@@ -754,9 +754,12 @@ details p {
   gap: 16px;
 }
 .phone-number {
-  font-family: var(--font-body), Arial, sans-serif;
+  /* DM Sans does not provide tabular figures in the shipped font subset. */
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
-  font-variant-numeric: tabular-nums;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-kerning: none;
+  letter-spacing: 0;
   white-space: nowrap;
 }
 .phone-language {
@@ -817,6 +820,10 @@ details p {
 .form-field textarea {
   resize: vertical;
   min-height: 100px;
+}
+.form-field input,
+.form-field select {
+  height: 52px;
 }
 .form-field input::placeholder,
 .form-field textarea::placeholder {
@@ -1701,5 +1708,22 @@ html[lang="zh-Hant"] h3 {
   }
   .menu-toggle {
     padding: 8px;
+  }
+}
+
+/* Share heading rows so wrapped titles do not stagger the supporting copy. */
+@supports (grid-template-rows: subgrid) {
+  @media (min-width: 521px) {
+    .services-grid,
+    .process-grid {
+      grid-template-rows: auto auto 1fr;
+      row-gap: 0;
+    }
+    .services-grid article,
+    .process-grid article {
+      display: grid;
+      grid-row: span 3;
+      grid-template-rows: subgrid;
+    }
   }
 }
