@@ -1,0 +1,5084 @@
+[
+  {
+    "id": "house38",
+    "city": "Toronto",
+    "latitude": 43.71,
+    "longitude": -79.41,
+    "street": "Ardmore Rd",
+    "title": "Ardmore Rd",
+    "description": "Soft textures and a balanced furniture arrangement bring warmth to a bright living room with a striking stone fireplace.",
+    "featured": true,
+    "cover": {
+      "src": "/images/house38/img1.jpg",
+      "width": 1200,
+      "height": 900,
+      "alt": "Home staging at Ardmore Rd — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house38/img0.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Ardmore Rd — project photograph 1"
+      },
+      {
+        "src": "/images/house38/img1.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Ardmore Rd — project photograph 2"
+      },
+      {
+        "src": "/images/house38/img2.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Ardmore Rd — project photograph 3"
+      },
+      {
+        "src": "/images/house38/img3.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Ardmore Rd — project photograph 4"
+      },
+      {
+        "src": "/images/house38/img4.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Ardmore Rd — project photograph 5"
+      },
+      {
+        "src": "/images/house38/img5.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Ardmore Rd — project photograph 6"
+      },
+      {
+        "src": "/images/house38/img6.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Ardmore Rd — project photograph 7"
+      },
+      {
+        "src": "/images/house38/img7.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Ardmore Rd — project photograph 8"
+      },
+      {
+        "src": "/images/house38/img8.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Ardmore Rd — project photograph 9"
+      },
+      {
+        "src": "/images/house38/img9.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Ardmore Rd — project photograph 10"
+      },
+      {
+        "src": "/images/house38/img10.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Ardmore Rd — project photograph 11"
+      },
+      {
+        "src": "/images/house38/img11.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Ardmore Rd — project photograph 12"
+      },
+      {
+        "src": "/images/house38/img12.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Ardmore Rd — project photograph 13"
+      },
+      {
+        "src": "/images/house38/img13.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Ardmore Rd — project photograph 14"
+      },
+      {
+        "src": "/images/house38/img14.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Ardmore Rd — project photograph 15"
+      },
+      {
+        "src": "/images/house38/img15.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Ardmore Rd — project photograph 16"
+      },
+      {
+        "src": "/images/house38/img16.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Ardmore Rd — project photograph 17"
+      },
+      {
+        "src": "/images/house38/img17.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Ardmore Rd — project photograph 18"
+      },
+      {
+        "src": "/images/house38/img18.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Ardmore Rd — project photograph 19"
+      },
+      {
+        "src": "/images/house38/img19.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Ardmore Rd — project photograph 20"
+      },
+      {
+        "src": "/images/house38/img20.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Ardmore Rd — project photograph 21"
+      },
+      {
+        "src": "/images/house38/img21.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Ardmore Rd — project photograph 22"
+      },
+      {
+        "src": "/images/house38/img22.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Ardmore Rd — project photograph 23"
+      },
+      {
+        "src": "/images/house38/img23.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Ardmore Rd — project photograph 24"
+      },
+      {
+        "src": "/images/house38/img24.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Ardmore Rd — project photograph 25"
+      },
+      {
+        "src": "/images/house38/img25.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Ardmore Rd — project photograph 26"
+      },
+      {
+        "src": "/images/house38/img26.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Ardmore Rd — project photograph 27"
+      },
+      {
+        "src": "/images/house38/img27.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Ardmore Rd — project photograph 28"
+      }
+    ]
+  },
+  {
+    "id": "house36",
+    "city": "Toronto",
+    "latitude": 43.79,
+    "longitude": -79.43,
+    "street": "Pleasant Ave",
+    "title": "Pleasant Ave",
+    "description": "A considered mix of furniture and soft neutral tones connects the living and dining spaces in this light-filled home.",
+    "featured": true,
+    "cover": {
+      "src": "/images/house36/img1.jpg",
+      "width": 960,
+      "height": 640,
+      "alt": "Home staging at Pleasant Ave — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house36/img0.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Pleasant Ave — project photograph 1"
+      },
+      {
+        "src": "/images/house36/img1.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Pleasant Ave — project photograph 2"
+      },
+      {
+        "src": "/images/house36/img2.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Pleasant Ave — project photograph 3"
+      },
+      {
+        "src": "/images/house36/img3.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Pleasant Ave — project photograph 4"
+      },
+      {
+        "src": "/images/house36/img4.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Pleasant Ave — project photograph 5"
+      },
+      {
+        "src": "/images/house36/img5.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Pleasant Ave — project photograph 6"
+      },
+      {
+        "src": "/images/house36/img6.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Pleasant Ave — project photograph 7"
+      },
+      {
+        "src": "/images/house36/img7.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Pleasant Ave — project photograph 8"
+      },
+      {
+        "src": "/images/house36/img8.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Pleasant Ave — project photograph 9"
+      },
+      {
+        "src": "/images/house36/img9.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Pleasant Ave — project photograph 10"
+      },
+      {
+        "src": "/images/house36/img10.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Pleasant Ave — project photograph 11"
+      },
+      {
+        "src": "/images/house36/img11.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Pleasant Ave — project photograph 12"
+      },
+      {
+        "src": "/images/house36/img12.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Pleasant Ave — project photograph 13"
+      },
+      {
+        "src": "/images/house36/img13.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Pleasant Ave — project photograph 14"
+      }
+    ]
+  },
+  {
+    "id": "house68",
+    "city": "Mississauga",
+    "latitude": 43.57,
+    "longitude": -79.67,
+    "street": "Ironwood Ct",
+    "title": "Ironwood Ct",
+    "description": "A light palette, layered textiles and carefully placed seating make this living room feel open and welcoming.",
+    "featured": true,
+    "cover": {
+      "src": "/images/house68/img1.jpg",
+      "width": 960,
+      "height": 640,
+      "alt": "Home staging at Ironwood Ct — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house68/img0.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Ironwood Ct — project photograph 1"
+      },
+      {
+        "src": "/images/house68/img1.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Ironwood Ct — project photograph 2"
+      },
+      {
+        "src": "/images/house68/img2.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Ironwood Ct — project photograph 3"
+      },
+      {
+        "src": "/images/house68/img3.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Ironwood Ct — project photograph 4"
+      },
+      {
+        "src": "/images/house68/img4.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Ironwood Ct — project photograph 5"
+      },
+      {
+        "src": "/images/house68/img5.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Ironwood Ct — project photograph 6"
+      },
+      {
+        "src": "/images/house68/img6.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Ironwood Ct — project photograph 7"
+      },
+      {
+        "src": "/images/house68/img7.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Ironwood Ct — project photograph 8"
+      },
+      {
+        "src": "/images/house68/img8.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Ironwood Ct — project photograph 9"
+      },
+      {
+        "src": "/images/house68/img9.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Ironwood Ct — project photograph 10"
+      },
+      {
+        "src": "/images/house68/img10.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Ironwood Ct — project photograph 11"
+      },
+      {
+        "src": "/images/house68/img11.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Ironwood Ct — project photograph 12"
+      },
+      {
+        "src": "/images/house68/img12.jpg",
+        "width": 960,
+        "height": 639,
+        "alt": "Home staging at Ironwood Ct — project photograph 13"
+      },
+      {
+        "src": "/images/house68/img13.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Ironwood Ct — project photograph 14"
+      },
+      {
+        "src": "/images/house68/img14.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Ironwood Ct — project photograph 15"
+      },
+      {
+        "src": "/images/house68/img15.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Ironwood Ct — project photograph 16"
+      },
+      {
+        "src": "/images/house68/img16.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Ironwood Ct — project photograph 17"
+      },
+      {
+        "src": "/images/house68/img17.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Ironwood Ct — project photograph 18"
+      },
+      {
+        "src": "/images/house68/img18.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Ironwood Ct — project photograph 19"
+      },
+      {
+        "src": "/images/house68/img19.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Ironwood Ct — project photograph 20"
+      },
+      {
+        "src": "/images/house68/img20.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Ironwood Ct — project photograph 21"
+      }
+    ]
+  },
+  {
+    "id": "house35",
+    "city": "Thornhill",
+    "latitude": 43.81,
+    "longitude": -79.4,
+    "street": "Fairfield Pl",
+    "title": "Fairfield Pl",
+    "description": "Classic furniture and warm textures complement the wood panelling and architectural character of this home.",
+    "featured": true,
+    "cover": {
+      "src": "/images/house35/img1.jpg",
+      "width": 1085,
+      "height": 724,
+      "alt": "Home staging at Fairfield Pl — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house35/img0.jpg",
+        "width": 1085,
+        "height": 724,
+        "alt": "Home staging at Fairfield Pl — project photograph 1"
+      },
+      {
+        "src": "/images/house35/img1.jpg",
+        "width": 1085,
+        "height": 724,
+        "alt": "Home staging at Fairfield Pl — project photograph 2"
+      },
+      {
+        "src": "/images/house35/img2.jpg",
+        "width": 1085,
+        "height": 724,
+        "alt": "Home staging at Fairfield Pl — project photograph 3"
+      },
+      {
+        "src": "/images/house35/img3.jpg",
+        "width": 1085,
+        "height": 724,
+        "alt": "Home staging at Fairfield Pl — project photograph 4"
+      },
+      {
+        "src": "/images/house35/img4.jpg",
+        "width": 1085,
+        "height": 724,
+        "alt": "Home staging at Fairfield Pl — project photograph 5"
+      },
+      {
+        "src": "/images/house35/img5.jpg",
+        "width": 1085,
+        "height": 724,
+        "alt": "Home staging at Fairfield Pl — project photograph 6"
+      },
+      {
+        "src": "/images/house35/img6.jpg",
+        "width": 1085,
+        "height": 724,
+        "alt": "Home staging at Fairfield Pl — project photograph 7"
+      },
+      {
+        "src": "/images/house35/img7.jpg",
+        "width": 1085,
+        "height": 724,
+        "alt": "Home staging at Fairfield Pl — project photograph 8"
+      }
+    ]
+  },
+  {
+    "id": "house60",
+    "city": "Woodbridge",
+    "latitude": 43.8,
+    "longitude": -79.58,
+    "street": "Pine Ridge Ave",
+    "title": "Pine Ridge Ave",
+    "description": "Elegant seating and coordinated accents echo the traditional detailing of this warm and inviting living space.",
+    "featured": true,
+    "cover": {
+      "src": "/images/house60/img1.jpg",
+      "width": 960,
+      "height": 640,
+      "alt": "Home staging at Pine Ridge Ave — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house60/img0.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Pine Ridge Ave — project photograph 1"
+      },
+      {
+        "src": "/images/house60/img1.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Pine Ridge Ave — project photograph 2"
+      },
+      {
+        "src": "/images/house60/img2.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Pine Ridge Ave — project photograph 3"
+      },
+      {
+        "src": "/images/house60/img3.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Pine Ridge Ave — project photograph 4"
+      }
+    ]
+  },
+  {
+    "id": "house62",
+    "city": "Richmond Hill",
+    "latitude": 43.94,
+    "longitude": -79.47,
+    "street": "Grand Oak Dr",
+    "title": "Grand Oak Dr",
+    "description": "Thoughtful styling draws attention to the natural light and architectural details throughout this home.",
+    "featured": true,
+    "cover": {
+      "src": "/images/house62/img1.jpg",
+      "width": 960,
+      "height": 640,
+      "alt": "Home staging at Grand Oak Dr — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house62/img0.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Grand Oak Dr — project photograph 1"
+      },
+      {
+        "src": "/images/house62/img1.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Grand Oak Dr — project photograph 2"
+      },
+      {
+        "src": "/images/house62/img2.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Grand Oak Dr — project photograph 3"
+      },
+      {
+        "src": "/images/house62/img3.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Grand Oak Dr — project photograph 4"
+      },
+      {
+        "src": "/images/house62/img4.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Grand Oak Dr — project photograph 5"
+      },
+      {
+        "src": "/images/house62/img5.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Grand Oak Dr — project photograph 6"
+      },
+      {
+        "src": "/images/house62/img6.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Grand Oak Dr — project photograph 7"
+      },
+      {
+        "src": "/images/house62/img7.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Grand Oak Dr — project photograph 8"
+      },
+      {
+        "src": "/images/house62/img8.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Grand Oak Dr — project photograph 9"
+      },
+      {
+        "src": "/images/house62/img9.jpg",
+        "width": 720,
+        "height": 960,
+        "alt": "Home staging at Grand Oak Dr — project photograph 10"
+      }
+    ]
+  },
+  {
+    "id": "house73",
+    "city": "Scarborough",
+    "latitude": 43.85,
+    "longitude": -79.45,
+    "street": "Sanderson Crescent",
+    "title": "Sanderson Crescent",
+    "description": "Explore the staging details at our Sanderson Crescent project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house73/img1.jpg",
+      "width": 960,
+      "height": 539,
+      "alt": "Home staging at Sanderson Crescent — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house73/img0.jpg",
+        "width": 960,
+        "height": 539,
+        "alt": "Home staging at Sanderson Crescent — project photograph 1"
+      },
+      {
+        "src": "/images/house73/img1.jpg",
+        "width": 960,
+        "height": 539,
+        "alt": "Home staging at Sanderson Crescent — project photograph 2"
+      },
+      {
+        "src": "/images/house73/img2.jpg",
+        "width": 960,
+        "height": 540,
+        "alt": "Home staging at Sanderson Crescent — project photograph 3"
+      },
+      {
+        "src": "/images/house73/img3.jpg",
+        "width": 960,
+        "height": 540,
+        "alt": "Home staging at Sanderson Crescent — project photograph 4"
+      },
+      {
+        "src": "/images/house73/img4.jpg",
+        "width": 960,
+        "height": 540,
+        "alt": "Home staging at Sanderson Crescent — project photograph 5"
+      },
+      {
+        "src": "/images/house73/img5.jpg",
+        "width": 960,
+        "height": 540,
+        "alt": "Home staging at Sanderson Crescent — project photograph 6"
+      },
+      {
+        "src": "/images/house73/img6.jpg",
+        "width": 960,
+        "height": 539,
+        "alt": "Home staging at Sanderson Crescent — project photograph 7"
+      },
+      {
+        "src": "/images/house73/img7.jpg",
+        "width": 960,
+        "height": 540,
+        "alt": "Home staging at Sanderson Crescent — project photograph 8"
+      },
+      {
+        "src": "/images/house73/img8.jpg",
+        "width": 960,
+        "height": 540,
+        "alt": "Home staging at Sanderson Crescent — project photograph 9"
+      },
+      {
+        "src": "/images/house73/img9.jpg",
+        "width": 960,
+        "height": 540,
+        "alt": "Home staging at Sanderson Crescent — project photograph 10"
+      },
+      {
+        "src": "/images/house73/img10.jpg",
+        "width": 960,
+        "height": 539,
+        "alt": "Home staging at Sanderson Crescent — project photograph 11"
+      },
+      {
+        "src": "/images/house73/img11.jpg",
+        "width": 960,
+        "height": 539,
+        "alt": "Home staging at Sanderson Crescent — project photograph 12"
+      }
+    ]
+  },
+  {
+    "id": "house72",
+    "city": "Scarborough",
+    "latitude": 43.82,
+    "longitude": -79.32,
+    "street": "Belinda Square",
+    "title": "Belinda Square",
+    "description": "Explore the staging details at our Belinda Square project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house72/img1.jpg",
+      "width": 960,
+      "height": 640,
+      "alt": "Home staging at Belinda Square — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house72/img0.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Belinda Square — project photograph 1"
+      },
+      {
+        "src": "/images/house72/img1.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Belinda Square — project photograph 2"
+      },
+      {
+        "src": "/images/house72/img2.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Belinda Square — project photograph 3"
+      },
+      {
+        "src": "/images/house72/img3.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Belinda Square — project photograph 4"
+      },
+      {
+        "src": "/images/house72/img4.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Belinda Square — project photograph 5"
+      },
+      {
+        "src": "/images/house72/img5.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Belinda Square — project photograph 6"
+      },
+      {
+        "src": "/images/house72/img6.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Belinda Square — project photograph 7"
+      },
+      {
+        "src": "/images/house72/img7.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Belinda Square — project photograph 8"
+      },
+      {
+        "src": "/images/house72/img8.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Belinda Square — project photograph 9"
+      },
+      {
+        "src": "/images/house72/img9.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Belinda Square — project photograph 10"
+      },
+      {
+        "src": "/images/house72/img10.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Belinda Square — project photograph 11"
+      },
+      {
+        "src": "/images/house72/img11.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Belinda Square — project photograph 12"
+      },
+      {
+        "src": "/images/house72/img12.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Belinda Square — project photograph 13"
+      },
+      {
+        "src": "/images/house72/img13.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Belinda Square — project photograph 14"
+      },
+      {
+        "src": "/images/house72/img14.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Belinda Square — project photograph 15"
+      },
+      {
+        "src": "/images/house72/img15.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Belinda Square — project photograph 16"
+      },
+      {
+        "src": "/images/house72/img16.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Belinda Square — project photograph 17"
+      },
+      {
+        "src": "/images/house72/img17.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Belinda Square — project photograph 18"
+      },
+      {
+        "src": "/images/house72/img18.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Belinda Square — project photograph 19"
+      },
+      {
+        "src": "/images/house72/img19.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Belinda Square — project photograph 20"
+      },
+      {
+        "src": "/images/house72/img20.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Belinda Square — project photograph 21"
+      },
+      {
+        "src": "/images/house72/img21.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Belinda Square — project photograph 22"
+      },
+      {
+        "src": "/images/house72/img22.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Belinda Square — project photograph 23"
+      }
+    ]
+  },
+  {
+    "id": "house71",
+    "city": "Scarborough",
+    "latitude": 43.79,
+    "longitude": -79.24,
+    "street": "Plumbrook Crescent",
+    "title": "Plumbrook Crescent",
+    "description": "Explore the staging details at our Plumbrook Crescent project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house71/img1.jpg",
+      "width": 960,
+      "height": 640,
+      "alt": "Home staging at Plumbrook Crescent — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house71/img0.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Plumbrook Crescent — project photograph 1"
+      },
+      {
+        "src": "/images/house71/img1.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Plumbrook Crescent — project photograph 2"
+      },
+      {
+        "src": "/images/house71/img2.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Plumbrook Crescent — project photograph 3"
+      },
+      {
+        "src": "/images/house71/img3.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Plumbrook Crescent — project photograph 4"
+      },
+      {
+        "src": "/images/house71/img4.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Plumbrook Crescent — project photograph 5"
+      },
+      {
+        "src": "/images/house71/img5.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Plumbrook Crescent — project photograph 6"
+      },
+      {
+        "src": "/images/house71/img6.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Plumbrook Crescent — project photograph 7"
+      },
+      {
+        "src": "/images/house71/img7.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Plumbrook Crescent — project photograph 8"
+      },
+      {
+        "src": "/images/house71/img8.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Plumbrook Crescent — project photograph 9"
+      },
+      {
+        "src": "/images/house71/img9.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Plumbrook Crescent — project photograph 10"
+      },
+      {
+        "src": "/images/house71/img10.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Plumbrook Crescent — project photograph 11"
+      }
+    ]
+  },
+  {
+    "id": "house70",
+    "city": "Markham",
+    "latitude": 43.91,
+    "longitude": -79.27,
+    "street": "Chicago Ln",
+    "title": "Chicago Ln",
+    "description": "Explore the staging details at our Chicago Ln project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house70/img1.jpg",
+      "width": 960,
+      "height": 640,
+      "alt": "Home staging at Chicago Ln — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house70/img0.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Chicago Ln — project photograph 1"
+      },
+      {
+        "src": "/images/house70/img1.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Chicago Ln — project photograph 2"
+      },
+      {
+        "src": "/images/house70/img2.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Chicago Ln — project photograph 3"
+      },
+      {
+        "src": "/images/house70/img3.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Chicago Ln — project photograph 4"
+      },
+      {
+        "src": "/images/house70/img4.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Chicago Ln — project photograph 5"
+      },
+      {
+        "src": "/images/house70/img5.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Chicago Ln — project photograph 6"
+      },
+      {
+        "src": "/images/house70/img6.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Chicago Ln — project photograph 7"
+      },
+      {
+        "src": "/images/house70/img7.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Chicago Ln — project photograph 8"
+      },
+      {
+        "src": "/images/house70/img8.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Chicago Ln — project photograph 9"
+      },
+      {
+        "src": "/images/house70/img9.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Chicago Ln — project photograph 10"
+      },
+      {
+        "src": "/images/house70/img10.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Chicago Ln — project photograph 11"
+      },
+      {
+        "src": "/images/house70/img11.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Chicago Ln — project photograph 12"
+      },
+      {
+        "src": "/images/house70/img12.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Chicago Ln — project photograph 13"
+      },
+      {
+        "src": "/images/house70/img13.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Chicago Ln — project photograph 14"
+      },
+      {
+        "src": "/images/house70/img14.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Chicago Ln — project photograph 15"
+      },
+      {
+        "src": "/images/house70/img15.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Chicago Ln — project photograph 16"
+      },
+      {
+        "src": "/images/house70/img16.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Chicago Ln — project photograph 17"
+      },
+      {
+        "src": "/images/house70/img17.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Chicago Ln — project photograph 18"
+      },
+      {
+        "src": "/images/house70/img18.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Chicago Ln — project photograph 19"
+      },
+      {
+        "src": "/images/house70/img19.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Chicago Ln — project photograph 20"
+      },
+      {
+        "src": "/images/house70/img20.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Chicago Ln — project photograph 21"
+      },
+      {
+        "src": "/images/house70/img21.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Chicago Ln — project photograph 22"
+      },
+      {
+        "src": "/images/house70/img22.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Chicago Ln — project photograph 23"
+      },
+      {
+        "src": "/images/house70/img23.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Chicago Ln — project photograph 24"
+      },
+      {
+        "src": "/images/house70/img24.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Chicago Ln — project photograph 25"
+      }
+    ]
+  },
+  {
+    "id": "house69",
+    "city": "Thornhill",
+    "latitude": 43.83,
+    "longitude": -79.39,
+    "street": "Lang Rd",
+    "title": "Lang Rd",
+    "description": "Explore the staging details at our Lang Rd project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house69/img1.jpg",
+      "width": 960,
+      "height": 640,
+      "alt": "Home staging at Lang Rd — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house69/img0.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Lang Rd — project photograph 1"
+      },
+      {
+        "src": "/images/house69/img1.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Lang Rd — project photograph 2"
+      },
+      {
+        "src": "/images/house69/img2.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Lang Rd — project photograph 3"
+      },
+      {
+        "src": "/images/house69/img3.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Lang Rd — project photograph 4"
+      },
+      {
+        "src": "/images/house69/img4.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Lang Rd — project photograph 5"
+      },
+      {
+        "src": "/images/house69/img5.jpg",
+        "width": 640,
+        "height": 960,
+        "alt": "Home staging at Lang Rd — project photograph 6"
+      }
+    ]
+  },
+  {
+    "id": "house67",
+    "city": "Thornhill",
+    "latitude": 43.83,
+    "longitude": -79.37,
+    "street": "Atwood Ct",
+    "title": "Atwood Ct",
+    "description": "Explore the staging details at our Atwood Ct project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house67/img1.jpg",
+      "width": 960,
+      "height": 540,
+      "alt": "Home staging at Atwood Ct — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house67/img0.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Atwood Ct — project photograph 1"
+      },
+      {
+        "src": "/images/house67/img1.jpg",
+        "width": 960,
+        "height": 540,
+        "alt": "Home staging at Atwood Ct — project photograph 2"
+      },
+      {
+        "src": "/images/house67/img2.jpg",
+        "width": 960,
+        "height": 540,
+        "alt": "Home staging at Atwood Ct — project photograph 3"
+      },
+      {
+        "src": "/images/house67/img3.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Atwood Ct — project photograph 4"
+      },
+      {
+        "src": "/images/house67/img4.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Atwood Ct — project photograph 5"
+      },
+      {
+        "src": "/images/house67/img5.jpg",
+        "width": 960,
+        "height": 540,
+        "alt": "Home staging at Atwood Ct — project photograph 6"
+      },
+      {
+        "src": "/images/house67/img6.jpg",
+        "width": 960,
+        "height": 540,
+        "alt": "Home staging at Atwood Ct — project photograph 7"
+      },
+      {
+        "src": "/images/house67/img7.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Atwood Ct — project photograph 8"
+      },
+      {
+        "src": "/images/house67/img8.jpg",
+        "width": 960,
+        "height": 540,
+        "alt": "Home staging at Atwood Ct — project photograph 9"
+      }
+    ]
+  },
+  {
+    "id": "house66",
+    "city": "Markham",
+    "latitude": 43.85,
+    "longitude": -79.24,
+    "street": "Phillipsen Wy",
+    "title": "Phillipsen Wy",
+    "description": "Explore the staging details at our Phillipsen Wy project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house66/img1.jpg",
+      "width": 960,
+      "height": 640,
+      "alt": "Home staging at Phillipsen Wy — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house66/img0.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Phillipsen Wy — project photograph 1"
+      },
+      {
+        "src": "/images/house66/img1.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Phillipsen Wy — project photograph 2"
+      },
+      {
+        "src": "/images/house66/img2.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Phillipsen Wy — project photograph 3"
+      },
+      {
+        "src": "/images/house66/img3.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Phillipsen Wy — project photograph 4"
+      }
+    ]
+  },
+  {
+    "id": "house65",
+    "city": "Toronto",
+    "latitude": 43.66,
+    "longitude": -79.35,
+    "street": "Broadview Ave",
+    "title": "Broadview Ave",
+    "description": "Explore the staging details at our Broadview Ave project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house65/img1.jpg",
+      "width": 960,
+      "height": 636,
+      "alt": "Home staging at Broadview Ave — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house65/img0.jpg",
+        "width": 960,
+        "height": 636,
+        "alt": "Home staging at Broadview Ave — project photograph 1"
+      },
+      {
+        "src": "/images/house65/img1.jpg",
+        "width": 960,
+        "height": 636,
+        "alt": "Home staging at Broadview Ave — project photograph 2"
+      },
+      {
+        "src": "/images/house65/img2.jpg",
+        "width": 960,
+        "height": 639,
+        "alt": "Home staging at Broadview Ave — project photograph 3"
+      }
+    ]
+  },
+  {
+    "id": "house64",
+    "city": "North York",
+    "latitude": 43.78,
+    "longitude": -79.41,
+    "street": "Grandview Way",
+    "title": "Grandview Way",
+    "description": "Explore the staging details at our Grandview Way project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house64/img1.jpg",
+      "width": 960,
+      "height": 640,
+      "alt": "Home staging at Grandview Way — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house64/img0.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Grandview Way — project photograph 1"
+      },
+      {
+        "src": "/images/house64/img1.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Grandview Way — project photograph 2"
+      },
+      {
+        "src": "/images/house64/img2.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Grandview Way — project photograph 3"
+      },
+      {
+        "src": "/images/house64/img3.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Grandview Way — project photograph 4"
+      },
+      {
+        "src": "/images/house64/img4.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Grandview Way — project photograph 5"
+      },
+      {
+        "src": "/images/house64/img5.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Grandview Way — project photograph 6"
+      },
+      {
+        "src": "/images/house64/img6.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Grandview Way — project photograph 7"
+      }
+    ]
+  },
+  {
+    "id": "house63",
+    "city": "Markham",
+    "latitude": 43.89,
+    "longitude": -79.28,
+    "street": "Carole Bell Wy",
+    "title": "Carole Bell Wy",
+    "description": "Explore the staging details at our Carole Bell Wy project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house63/img1.jpg",
+      "width": 960,
+      "height": 640,
+      "alt": "Home staging at Carole Bell Wy — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house63/img0.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Carole Bell Wy — project photograph 1"
+      },
+      {
+        "src": "/images/house63/img1.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Carole Bell Wy — project photograph 2"
+      },
+      {
+        "src": "/images/house63/img2.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Carole Bell Wy — project photograph 3"
+      },
+      {
+        "src": "/images/house63/img3.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Carole Bell Wy — project photograph 4"
+      },
+      {
+        "src": "/images/house63/img4.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Carole Bell Wy — project photograph 5"
+      },
+      {
+        "src": "/images/house63/img5.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Carole Bell Wy — project photograph 6"
+      },
+      {
+        "src": "/images/house63/img6.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Carole Bell Wy — project photograph 7"
+      },
+      {
+        "src": "/images/house63/img7.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Carole Bell Wy — project photograph 8"
+      },
+      {
+        "src": "/images/house63/img8.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Carole Bell Wy — project photograph 9"
+      },
+      {
+        "src": "/images/house63/img9.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Carole Bell Wy — project photograph 10"
+      },
+      {
+        "src": "/images/house63/img10.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Carole Bell Wy — project photograph 11"
+      },
+      {
+        "src": "/images/house63/img11.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Carole Bell Wy — project photograph 12"
+      },
+      {
+        "src": "/images/house63/img12.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Carole Bell Wy — project photograph 13"
+      },
+      {
+        "src": "/images/house63/img13.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Carole Bell Wy — project photograph 14"
+      },
+      {
+        "src": "/images/house63/img14.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Carole Bell Wy — project photograph 15"
+      },
+      {
+        "src": "/images/house63/img15.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Carole Bell Wy — project photograph 16"
+      },
+      {
+        "src": "/images/house63/img16.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Carole Bell Wy — project photograph 17"
+      },
+      {
+        "src": "/images/house63/img17.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Carole Bell Wy — project photograph 18"
+      }
+    ]
+  },
+  {
+    "id": "house61",
+    "city": "Toronto",
+    "latitude": 43.79,
+    "longitude": -79.31,
+    "street": "Bridletowne Cir",
+    "title": "Bridletowne Cir",
+    "description": "Explore the staging details at our Bridletowne Cir project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house61/img1.jpg",
+      "width": 960,
+      "height": 640,
+      "alt": "Home staging at Bridletowne Cir — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house61/img0.jpg",
+        "width": 960,
+        "height": 540,
+        "alt": "Home staging at Bridletowne Cir — project photograph 1"
+      },
+      {
+        "src": "/images/house61/img1.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Bridletowne Cir — project photograph 2"
+      },
+      {
+        "src": "/images/house61/img2.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Bridletowne Cir — project photograph 3"
+      },
+      {
+        "src": "/images/house61/img3.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Bridletowne Cir — project photograph 4"
+      },
+      {
+        "src": "/images/house61/img4.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Bridletowne Cir — project photograph 5"
+      }
+    ]
+  },
+  {
+    "id": "house59",
+    "city": "Barrie",
+    "latitude": 44.41,
+    "longitude": -79.66,
+    "street": "Corbett Dr",
+    "title": "Corbett Dr",
+    "description": "Explore the staging details at our Corbett Dr project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house59/img1.jpg",
+      "width": 960,
+      "height": 720,
+      "alt": "Home staging at Corbett Dr — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house59/img0.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Corbett Dr — project photograph 1"
+      },
+      {
+        "src": "/images/house59/img1.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Corbett Dr — project photograph 2"
+      },
+      {
+        "src": "/images/house59/img2.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Corbett Dr — project photograph 3"
+      },
+      {
+        "src": "/images/house59/img3.jpg",
+        "width": 720,
+        "height": 960,
+        "alt": "Home staging at Corbett Dr — project photograph 4"
+      },
+      {
+        "src": "/images/house59/img4.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Corbett Dr — project photograph 5"
+      },
+      {
+        "src": "/images/house59/img5.jpg",
+        "width": 720,
+        "height": 960,
+        "alt": "Home staging at Corbett Dr — project photograph 6"
+      },
+      {
+        "src": "/images/house59/img6.jpg",
+        "width": 720,
+        "height": 960,
+        "alt": "Home staging at Corbett Dr — project photograph 7"
+      },
+      {
+        "src": "/images/house59/img7.jpg",
+        "width": 720,
+        "height": 960,
+        "alt": "Home staging at Corbett Dr — project photograph 8"
+      }
+    ]
+  },
+  {
+    "id": "house58",
+    "city": "Vaughan",
+    "latitude": 43.85,
+    "longitude": -79.5,
+    "street": "Barletta Dr",
+    "title": "Barletta Dr",
+    "description": "Explore the staging details at our Barletta Dr project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house58/img1.jpg",
+      "width": 960,
+      "height": 720,
+      "alt": "Home staging at Barletta Dr — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house58/img0.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Barletta Dr — project photograph 1"
+      },
+      {
+        "src": "/images/house58/img1.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Barletta Dr — project photograph 2"
+      },
+      {
+        "src": "/images/house58/img2.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Barletta Dr — project photograph 3"
+      },
+      {
+        "src": "/images/house58/img3.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Barletta Dr — project photograph 4"
+      },
+      {
+        "src": "/images/house58/img4.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Barletta Dr — project photograph 5"
+      }
+    ]
+  },
+  {
+    "id": "house57",
+    "city": "Georgina",
+    "latitude": 44.21,
+    "longitude": -79.47,
+    "street": "Bill Guy Dr",
+    "title": "Bill Guy Dr",
+    "description": "Explore the staging details at our Bill Guy Dr project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house57/img1.jpg",
+      "width": 960,
+      "height": 640,
+      "alt": "Home staging at Bill Guy Dr — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house57/img0.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Bill Guy Dr — project photograph 1"
+      },
+      {
+        "src": "/images/house57/img1.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Bill Guy Dr — project photograph 2"
+      },
+      {
+        "src": "/images/house57/img2.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Bill Guy Dr — project photograph 3"
+      },
+      {
+        "src": "/images/house57/img3.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Bill Guy Dr — project photograph 4"
+      }
+    ]
+  },
+  {
+    "id": "house56",
+    "city": "Markham",
+    "latitude": 43.88,
+    "longitude": -79.23,
+    "street": "Arthur Bonner Ave",
+    "title": "Arthur Bonner Ave",
+    "description": "Explore the staging details at our Arthur Bonner Ave project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house56/img1.jpg",
+      "width": 960,
+      "height": 720,
+      "alt": "Home staging at Arthur Bonner Ave — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house56/img0.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Arthur Bonner Ave — project photograph 1"
+      },
+      {
+        "src": "/images/house56/img1.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Arthur Bonner Ave — project photograph 2"
+      },
+      {
+        "src": "/images/house56/img2.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Arthur Bonner Ave — project photograph 3"
+      },
+      {
+        "src": "/images/house56/img3.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Arthur Bonner Ave — project photograph 4"
+      },
+      {
+        "src": "/images/house56/img4.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Arthur Bonner Ave — project photograph 5"
+      },
+      {
+        "src": "/images/house56/img5.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Arthur Bonner Ave — project photograph 6"
+      },
+      {
+        "src": "/images/house56/img6.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Arthur Bonner Ave — project photograph 7"
+      },
+      {
+        "src": "/images/house56/img7.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Arthur Bonner Ave — project photograph 8"
+      }
+    ]
+  },
+  {
+    "id": "house55",
+    "city": "Toronto",
+    "latitude": 43.7,
+    "longitude": -79.52,
+    "street": "Church St",
+    "title": "Church St",
+    "description": "Explore the staging details at our Church St project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house55/img1.jpg",
+      "width": 960,
+      "height": 639,
+      "alt": "Home staging at Church St — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house55/img0.jpg",
+        "width": 960,
+        "height": 543,
+        "alt": "Home staging at Church St — project photograph 1"
+      },
+      {
+        "src": "/images/house55/img1.jpg",
+        "width": 960,
+        "height": 639,
+        "alt": "Home staging at Church St — project photograph 2"
+      },
+      {
+        "src": "/images/house55/img2.jpg",
+        "width": 960,
+        "height": 639,
+        "alt": "Home staging at Church St — project photograph 3"
+      }
+    ]
+  },
+  {
+    "id": "house54",
+    "city": "Markham",
+    "latitude": 43.88,
+    "longitude": -79.23,
+    "street": "Arthur Bonner Ave",
+    "title": "Arthur Bonner Ave",
+    "description": "Explore the staging details at our Arthur Bonner Ave project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house54/img1.jpg",
+      "width": 960,
+      "height": 640,
+      "alt": "Home staging at Arthur Bonner Ave — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house54/img0.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Arthur Bonner Ave — project photograph 1"
+      },
+      {
+        "src": "/images/house54/img1.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Arthur Bonner Ave — project photograph 2"
+      },
+      {
+        "src": "/images/house54/img2.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Arthur Bonner Ave — project photograph 3"
+      },
+      {
+        "src": "/images/house54/img3.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Arthur Bonner Ave — project photograph 4"
+      },
+      {
+        "src": "/images/house54/img4.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Arthur Bonner Ave — project photograph 5"
+      },
+      {
+        "src": "/images/house54/img5.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Arthur Bonner Ave — project photograph 6"
+      },
+      {
+        "src": "/images/house54/img6.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Arthur Bonner Ave — project photograph 7"
+      },
+      {
+        "src": "/images/house54/img7.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Arthur Bonner Ave — project photograph 8"
+      },
+      {
+        "src": "/images/house54/img8.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Arthur Bonner Ave — project photograph 9"
+      }
+    ]
+  },
+  {
+    "id": "house53",
+    "city": "York",
+    "latitude": 43.7,
+    "longitude": -79.51,
+    "street": "Wadsworth Blvd",
+    "title": "Wadsworth Blvd",
+    "description": "Explore the staging details at our Wadsworth Blvd project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house53/img1.jpg",
+      "width": 960,
+      "height": 641,
+      "alt": "Home staging at Wadsworth Blvd — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house53/img0.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Wadsworth Blvd — project photograph 1"
+      },
+      {
+        "src": "/images/house53/img1.jpg",
+        "width": 960,
+        "height": 641,
+        "alt": "Home staging at Wadsworth Blvd — project photograph 2"
+      },
+      {
+        "src": "/images/house53/img2.jpg",
+        "width": 960,
+        "height": 641,
+        "alt": "Home staging at Wadsworth Blvd — project photograph 3"
+      }
+    ]
+  },
+  {
+    "id": "house52",
+    "city": "Toronto",
+    "latitude": 43.71,
+    "longitude": -79.45,
+    "street": "Lawrence Ave W",
+    "title": "Lawrence Ave W",
+    "description": "Explore the staging details at our Lawrence Ave W project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house52/img1.jpg",
+      "width": 960,
+      "height": 720,
+      "alt": "Home staging at Lawrence Ave W — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house52/img0.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Lawrence Ave W — project photograph 1"
+      },
+      {
+        "src": "/images/house52/img1.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Lawrence Ave W — project photograph 2"
+      },
+      {
+        "src": "/images/house52/img2.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Lawrence Ave W — project photograph 3"
+      },
+      {
+        "src": "/images/house52/img3.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Lawrence Ave W — project photograph 4"
+      },
+      {
+        "src": "/images/house52/img4.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Lawrence Ave W — project photograph 5"
+      }
+    ]
+  },
+  {
+    "id": "house51",
+    "city": "Scarborough",
+    "latitude": 43.77,
+    "longitude": -79.25,
+    "street": "Town Centre Court",
+    "title": "Town Centre Court",
+    "description": "Explore the staging details at our Town Centre Court project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house51/img1.jpg",
+      "width": 960,
+      "height": 640,
+      "alt": "Home staging at Town Centre Court — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house51/img0.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Town Centre Court — project photograph 1"
+      },
+      {
+        "src": "/images/house51/img1.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Town Centre Court — project photograph 2"
+      },
+      {
+        "src": "/images/house51/img2.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Town Centre Court — project photograph 3"
+      },
+      {
+        "src": "/images/house51/img3.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Town Centre Court — project photograph 4"
+      },
+      {
+        "src": "/images/house51/img4.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Town Centre Court — project photograph 5"
+      }
+    ]
+  },
+  {
+    "id": "house50",
+    "city": "Unionville",
+    "latitude": 43.88,
+    "longitude": -79.3,
+    "street": "Brooklyn Crescent",
+    "title": "Brooklyn Crescent",
+    "description": "Explore the staging details at our Brooklyn Crescent project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house50/img1.jpg",
+      "width": 960,
+      "height": 640,
+      "alt": "Home staging at Brooklyn Crescent — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house50/img0.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Brooklyn Crescent — project photograph 1"
+      },
+      {
+        "src": "/images/house50/img1.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Brooklyn Crescent — project photograph 2"
+      },
+      {
+        "src": "/images/house50/img2.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Brooklyn Crescent — project photograph 3"
+      },
+      {
+        "src": "/images/house50/img3.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Brooklyn Crescent — project photograph 4"
+      },
+      {
+        "src": "/images/house50/img4.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Brooklyn Crescent — project photograph 5"
+      },
+      {
+        "src": "/images/house50/img5.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Brooklyn Crescent — project photograph 6"
+      },
+      {
+        "src": "/images/house50/img6.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Brooklyn Crescent — project photograph 7"
+      }
+    ]
+  },
+  {
+    "id": "house49",
+    "city": "Aurora",
+    "latitude": 44,
+    "longitude": -79.44,
+    "street": "Milloy Pl",
+    "title": "Milloy Pl",
+    "description": "Explore the staging details at our Milloy Pl project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house49/img1.jpg",
+      "width": 960,
+      "height": 640,
+      "alt": "Home staging at Milloy Pl — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house49/img0.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Milloy Pl — project photograph 1"
+      },
+      {
+        "src": "/images/house49/img1.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Milloy Pl — project photograph 2"
+      },
+      {
+        "src": "/images/house49/img2.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Milloy Pl — project photograph 3"
+      },
+      {
+        "src": "/images/house49/img3.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Milloy Pl — project photograph 4"
+      },
+      {
+        "src": "/images/house49/img4.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Milloy Pl — project photograph 5"
+      },
+      {
+        "src": "/images/house49/img5.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Milloy Pl — project photograph 6"
+      },
+      {
+        "src": "/images/house49/img6.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Milloy Pl — project photograph 7"
+      },
+      {
+        "src": "/images/house49/img7.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Milloy Pl — project photograph 8"
+      }
+    ]
+  },
+  {
+    "id": "house48",
+    "city": "Aurora",
+    "latitude": 43.98,
+    "longitude": -79.45,
+    "street": "Match Point Ct",
+    "title": "Match Point Ct",
+    "description": "Explore the staging details at our Match Point Ct project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house48/img1.jpg",
+      "width": 960,
+      "height": 540,
+      "alt": "Home staging at Match Point Ct — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house48/img0.jpg",
+        "width": 960,
+        "height": 540,
+        "alt": "Home staging at Match Point Ct — project photograph 1"
+      },
+      {
+        "src": "/images/house48/img1.jpg",
+        "width": 960,
+        "height": 540,
+        "alt": "Home staging at Match Point Ct — project photograph 2"
+      },
+      {
+        "src": "/images/house48/img2.jpg",
+        "width": 960,
+        "height": 540,
+        "alt": "Home staging at Match Point Ct — project photograph 3"
+      },
+      {
+        "src": "/images/house48/img3.jpg",
+        "width": 960,
+        "height": 540,
+        "alt": "Home staging at Match Point Ct — project photograph 4"
+      },
+      {
+        "src": "/images/house48/img4.jpg",
+        "width": 960,
+        "height": 540,
+        "alt": "Home staging at Match Point Ct — project photograph 5"
+      },
+      {
+        "src": "/images/house48/img5.jpg",
+        "width": 960,
+        "height": 540,
+        "alt": "Home staging at Match Point Ct — project photograph 6"
+      },
+      {
+        "src": "/images/house48/img6.jpg",
+        "width": 960,
+        "height": 540,
+        "alt": "Home staging at Match Point Ct — project photograph 7"
+      },
+      {
+        "src": "/images/house48/img7.jpg",
+        "width": 960,
+        "height": 540,
+        "alt": "Home staging at Match Point Ct — project photograph 8"
+      }
+    ]
+  },
+  {
+    "id": "house47",
+    "city": "Oshawa",
+    "latitude": 43.91,
+    "longitude": -78.87,
+    "street": "Hillcroft St",
+    "title": "Hillcroft St",
+    "description": "Explore the staging details at our Hillcroft St project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house47/img1.jpg",
+      "width": 960,
+      "height": 640,
+      "alt": "Home staging at Hillcroft St — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house47/img0.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Hillcroft St — project photograph 1"
+      },
+      {
+        "src": "/images/house47/img1.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Hillcroft St — project photograph 2"
+      },
+      {
+        "src": "/images/house47/img2.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Hillcroft St — project photograph 3"
+      },
+      {
+        "src": "/images/house47/img3.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Hillcroft St — project photograph 4"
+      },
+      {
+        "src": "/images/house47/img4.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Hillcroft St — project photograph 5"
+      },
+      {
+        "src": "/images/house47/img5.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Hillcroft St — project photograph 6"
+      },
+      {
+        "src": "/images/house47/img6.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Hillcroft St — project photograph 7"
+      },
+      {
+        "src": "/images/house47/img7.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Hillcroft St — project photograph 8"
+      },
+      {
+        "src": "/images/house47/img8.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Hillcroft St — project photograph 9"
+      },
+      {
+        "src": "/images/house47/img9.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Hillcroft St — project photograph 10"
+      },
+      {
+        "src": "/images/house47/img10.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Hillcroft St — project photograph 11"
+      },
+      {
+        "src": "/images/house47/img11.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Hillcroft St — project photograph 12"
+      },
+      {
+        "src": "/images/house47/img12.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Hillcroft St — project photograph 13"
+      },
+      {
+        "src": "/images/house47/img13.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Hillcroft St — project photograph 14"
+      },
+      {
+        "src": "/images/house47/img14.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Hillcroft St — project photograph 15"
+      },
+      {
+        "src": "/images/house47/img15.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Hillcroft St — project photograph 16"
+      },
+      {
+        "src": "/images/house47/img16.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Hillcroft St — project photograph 17"
+      },
+      {
+        "src": "/images/house47/img17.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Hillcroft St — project photograph 18"
+      },
+      {
+        "src": "/images/house47/img18.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Hillcroft St — project photograph 19"
+      },
+      {
+        "src": "/images/house47/img19.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Hillcroft St — project photograph 20"
+      }
+    ]
+  },
+  {
+    "id": "house46",
+    "city": "Mississauga",
+    "latitude": 43.58,
+    "longitude": -79.68,
+    "street": "Vanrose St",
+    "title": "Vanrose St",
+    "description": "Explore the staging details at our Vanrose St project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house46/img1.jpg",
+      "width": 960,
+      "height": 640,
+      "alt": "Home staging at Vanrose St — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house46/img0.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Vanrose St — project photograph 1"
+      },
+      {
+        "src": "/images/house46/img1.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Vanrose St — project photograph 2"
+      },
+      {
+        "src": "/images/house46/img2.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Vanrose St — project photograph 3"
+      },
+      {
+        "src": "/images/house46/img3.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Vanrose St — project photograph 4"
+      },
+      {
+        "src": "/images/house46/img4.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Vanrose St — project photograph 5"
+      },
+      {
+        "src": "/images/house46/img5.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Vanrose St — project photograph 6"
+      },
+      {
+        "src": "/images/house46/img6.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Vanrose St — project photograph 7"
+      },
+      {
+        "src": "/images/house46/img7.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Vanrose St — project photograph 8"
+      },
+      {
+        "src": "/images/house46/img8.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Vanrose St — project photograph 9"
+      },
+      {
+        "src": "/images/house46/img9.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Vanrose St — project photograph 10"
+      },
+      {
+        "src": "/images/house46/img10.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Vanrose St — project photograph 11"
+      },
+      {
+        "src": "/images/house46/img11.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Vanrose St — project photograph 12"
+      },
+      {
+        "src": "/images/house46/img12.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Vanrose St — project photograph 13"
+      }
+    ]
+  },
+  {
+    "id": "house45",
+    "city": "Pickering",
+    "latitude": 43.82,
+    "longitude": -79.1,
+    "street": "Leaside St",
+    "title": "Leaside St",
+    "description": "Explore the staging details at our Leaside St project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house45/img1.jpg",
+      "width": 960,
+      "height": 720,
+      "alt": "Home staging at Leaside St — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house45/img0.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Leaside St — project photograph 1"
+      },
+      {
+        "src": "/images/house45/img1.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Leaside St — project photograph 2"
+      },
+      {
+        "src": "/images/house45/img2.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Leaside St — project photograph 3"
+      },
+      {
+        "src": "/images/house45/img3.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Leaside St — project photograph 4"
+      },
+      {
+        "src": "/images/house45/img4.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Leaside St — project photograph 5"
+      },
+      {
+        "src": "/images/house45/img5.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Leaside St — project photograph 6"
+      },
+      {
+        "src": "/images/house45/img6.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Leaside St — project photograph 7"
+      },
+      {
+        "src": "/images/house45/img7.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Leaside St — project photograph 8"
+      },
+      {
+        "src": "/images/house45/img8.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Leaside St — project photograph 9"
+      }
+    ]
+  },
+  {
+    "id": "house44",
+    "city": "Richmond Hill",
+    "latitude": 43.94,
+    "longitude": -79.43,
+    "street": "Dovetail Dr",
+    "title": "Dovetail Dr",
+    "description": "Explore the staging details at our Dovetail Dr project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house44/img1.jpg",
+      "width": 960,
+      "height": 640,
+      "alt": "Home staging at Dovetail Dr — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house44/img0.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Dovetail Dr — project photograph 1"
+      },
+      {
+        "src": "/images/house44/img1.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Dovetail Dr — project photograph 2"
+      },
+      {
+        "src": "/images/house44/img2.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Dovetail Dr — project photograph 3"
+      },
+      {
+        "src": "/images/house44/img3.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Dovetail Dr — project photograph 4"
+      },
+      {
+        "src": "/images/house44/img4.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Dovetail Dr — project photograph 5"
+      },
+      {
+        "src": "/images/house44/img5.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Dovetail Dr — project photograph 6"
+      },
+      {
+        "src": "/images/house44/img6.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Dovetail Dr — project photograph 7"
+      },
+      {
+        "src": "/images/house44/img7.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Dovetail Dr — project photograph 8"
+      },
+      {
+        "src": "/images/house44/img8.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Dovetail Dr — project photograph 9"
+      },
+      {
+        "src": "/images/house44/img9.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Dovetail Dr — project photograph 10"
+      },
+      {
+        "src": "/images/house44/img10.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Dovetail Dr — project photograph 11"
+      },
+      {
+        "src": "/images/house44/img11.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Dovetail Dr — project photograph 12"
+      },
+      {
+        "src": "/images/house44/img12.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Dovetail Dr — project photograph 13"
+      },
+      {
+        "src": "/images/house44/img13.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Dovetail Dr — project photograph 14"
+      },
+      {
+        "src": "/images/house44/img14.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Dovetail Dr — project photograph 15"
+      }
+    ]
+  },
+  {
+    "id": "house43",
+    "city": "Aurora",
+    "latitude": 44,
+    "longitude": -79.49,
+    "street": "Kemano Rd",
+    "title": "Kemano Rd",
+    "description": "Explore the staging details at our Kemano Rd project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house43/img1.jpg",
+      "width": 960,
+      "height": 640,
+      "alt": "Home staging at Kemano Rd — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house43/img0.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Kemano Rd — project photograph 1"
+      },
+      {
+        "src": "/images/house43/img1.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Kemano Rd — project photograph 2"
+      },
+      {
+        "src": "/images/house43/img2.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Kemano Rd — project photograph 3"
+      },
+      {
+        "src": "/images/house43/img3.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Kemano Rd — project photograph 4"
+      },
+      {
+        "src": "/images/house43/img4.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Kemano Rd — project photograph 5"
+      },
+      {
+        "src": "/images/house43/img5.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Kemano Rd — project photograph 6"
+      },
+      {
+        "src": "/images/house43/img6.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Kemano Rd — project photograph 7"
+      },
+      {
+        "src": "/images/house43/img7.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Kemano Rd — project photograph 8"
+      },
+      {
+        "src": "/images/house43/img8.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Kemano Rd — project photograph 9"
+      },
+      {
+        "src": "/images/house43/img9.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Kemano Rd — project photograph 10"
+      },
+      {
+        "src": "/images/house43/img10.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Kemano Rd — project photograph 11"
+      }
+    ]
+  },
+  {
+    "id": "house42",
+    "city": "Richmond Hill",
+    "latitude": 43.91,
+    "longitude": -79.39,
+    "street": "Boiton St",
+    "title": "Boiton St",
+    "description": "Explore the staging details at our Boiton St project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house42/img1.jpg",
+      "width": 960,
+      "height": 640,
+      "alt": "Home staging at Boiton St — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house42/img0.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Boiton St — project photograph 1"
+      },
+      {
+        "src": "/images/house42/img1.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Boiton St — project photograph 2"
+      },
+      {
+        "src": "/images/house42/img2.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Boiton St — project photograph 3"
+      },
+      {
+        "src": "/images/house42/img3.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Boiton St — project photograph 4"
+      },
+      {
+        "src": "/images/house42/img4.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Boiton St — project photograph 5"
+      },
+      {
+        "src": "/images/house42/img5.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Boiton St — project photograph 6"
+      },
+      {
+        "src": "/images/house42/img6.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Boiton St — project photograph 7"
+      },
+      {
+        "src": "/images/house42/img7.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Boiton St — project photograph 8"
+      },
+      {
+        "src": "/images/house42/img8.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Boiton St — project photograph 9"
+      },
+      {
+        "src": "/images/house42/img9.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Boiton St — project photograph 10"
+      },
+      {
+        "src": "/images/house42/img10.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Boiton St — project photograph 11"
+      },
+      {
+        "src": "/images/house42/img11.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Boiton St — project photograph 12"
+      },
+      {
+        "src": "/images/house42/img12.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Boiton St — project photograph 13"
+      }
+    ]
+  },
+  {
+    "id": "house41",
+    "city": "East Gwillimbury",
+    "latitude": 44.1,
+    "longitude": -79.48,
+    "street": "Silk Twist Dr",
+    "title": "Silk Twist Dr",
+    "description": "Explore the staging details at our Silk Twist Dr project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house41/img1.jpg",
+      "width": 960,
+      "height": 639,
+      "alt": "Home staging at Silk Twist Dr — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house41/img0.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Silk Twist Dr — project photograph 1"
+      },
+      {
+        "src": "/images/house41/img1.jpg",
+        "width": 960,
+        "height": 639,
+        "alt": "Home staging at Silk Twist Dr — project photograph 2"
+      },
+      {
+        "src": "/images/house41/img2.jpg",
+        "width": 960,
+        "height": 639,
+        "alt": "Home staging at Silk Twist Dr — project photograph 3"
+      },
+      {
+        "src": "/images/house41/img3.jpg",
+        "width": 960,
+        "height": 639,
+        "alt": "Home staging at Silk Twist Dr — project photograph 4"
+      },
+      {
+        "src": "/images/house41/img4.jpg",
+        "width": 960,
+        "height": 639,
+        "alt": "Home staging at Silk Twist Dr — project photograph 5"
+      },
+      {
+        "src": "/images/house41/img5.jpg",
+        "width": 960,
+        "height": 639,
+        "alt": "Home staging at Silk Twist Dr — project photograph 6"
+      },
+      {
+        "src": "/images/house41/img6.jpg",
+        "width": 960,
+        "height": 639,
+        "alt": "Home staging at Silk Twist Dr — project photograph 7"
+      },
+      {
+        "src": "/images/house41/img7.jpg",
+        "width": 960,
+        "height": 639,
+        "alt": "Home staging at Silk Twist Dr — project photograph 8"
+      },
+      {
+        "src": "/images/house41/img8.jpg",
+        "width": 960,
+        "height": 639,
+        "alt": "Home staging at Silk Twist Dr — project photograph 9"
+      },
+      {
+        "src": "/images/house41/img9.jpg",
+        "width": 960,
+        "height": 639,
+        "alt": "Home staging at Silk Twist Dr — project photograph 10"
+      },
+      {
+        "src": "/images/house41/img10.jpg",
+        "width": 960,
+        "height": 639,
+        "alt": "Home staging at Silk Twist Dr — project photograph 11"
+      },
+      {
+        "src": "/images/house41/img11.jpg",
+        "width": 960,
+        "height": 639,
+        "alt": "Home staging at Silk Twist Dr — project photograph 12"
+      },
+      {
+        "src": "/images/house41/img12.jpg",
+        "width": 960,
+        "height": 639,
+        "alt": "Home staging at Silk Twist Dr — project photograph 13"
+      },
+      {
+        "src": "/images/house41/img13.jpg",
+        "width": 960,
+        "height": 639,
+        "alt": "Home staging at Silk Twist Dr — project photograph 14"
+      },
+      {
+        "src": "/images/house41/img14.jpg",
+        "width": 960,
+        "height": 639,
+        "alt": "Home staging at Silk Twist Dr — project photograph 15"
+      },
+      {
+        "src": "/images/house41/img15.jpg",
+        "width": 960,
+        "height": 639,
+        "alt": "Home staging at Silk Twist Dr — project photograph 16"
+      },
+      {
+        "src": "/images/house41/img16.jpg",
+        "width": 960,
+        "height": 639,
+        "alt": "Home staging at Silk Twist Dr — project photograph 17"
+      },
+      {
+        "src": "/images/house41/img17.jpg",
+        "width": 960,
+        "height": 639,
+        "alt": "Home staging at Silk Twist Dr — project photograph 18"
+      }
+    ]
+  },
+  {
+    "id": "house40",
+    "city": "Mississauga",
+    "latitude": 43.58,
+    "longitude": -79.64,
+    "street": "Parmeer Dr",
+    "title": "Parmeer Dr",
+    "description": "Explore the staging details at our Parmeer Dr project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house40/img1.jpg",
+      "width": 1900,
+      "height": 1266,
+      "alt": "Home staging at Parmeer Dr — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house40/img0.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Parmeer Dr — project photograph 1"
+      },
+      {
+        "src": "/images/house40/img1.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Parmeer Dr — project photograph 2"
+      },
+      {
+        "src": "/images/house40/img2.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Parmeer Dr — project photograph 3"
+      },
+      {
+        "src": "/images/house40/img3.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Parmeer Dr — project photograph 4"
+      },
+      {
+        "src": "/images/house40/img4.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Parmeer Dr — project photograph 5"
+      },
+      {
+        "src": "/images/house40/img5.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Parmeer Dr — project photograph 6"
+      },
+      {
+        "src": "/images/house40/img6.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Parmeer Dr — project photograph 7"
+      },
+      {
+        "src": "/images/house40/img7.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Parmeer Dr — project photograph 8"
+      },
+      {
+        "src": "/images/house40/img8.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Parmeer Dr — project photograph 9"
+      },
+      {
+        "src": "/images/house40/img9.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Parmeer Dr — project photograph 10"
+      },
+      {
+        "src": "/images/house40/img10.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Parmeer Dr — project photograph 11"
+      }
+    ]
+  },
+  {
+    "id": "house39",
+    "city": "Toronto",
+    "latitude": 43.68,
+    "longitude": -79.4,
+    "street": "Bedford Rd",
+    "title": "Bedford Rd",
+    "description": "Explore the staging details at our Bedford Rd project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house39/img1.jpg",
+      "width": 2000,
+      "height": 1333,
+      "alt": "Home staging at Bedford Rd — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house39/img0.jpg",
+        "width": 2000,
+        "height": 1333,
+        "alt": "Home staging at Bedford Rd — project photograph 1"
+      },
+      {
+        "src": "/images/house39/img1.jpg",
+        "width": 2000,
+        "height": 1333,
+        "alt": "Home staging at Bedford Rd — project photograph 2"
+      },
+      {
+        "src": "/images/house39/img2.jpg",
+        "width": 2000,
+        "height": 1333,
+        "alt": "Home staging at Bedford Rd — project photograph 3"
+      },
+      {
+        "src": "/images/house39/img3.jpg",
+        "width": 2000,
+        "height": 1333,
+        "alt": "Home staging at Bedford Rd — project photograph 4"
+      },
+      {
+        "src": "/images/house39/img4.jpg",
+        "width": 2000,
+        "height": 1333,
+        "alt": "Home staging at Bedford Rd — project photograph 5"
+      },
+      {
+        "src": "/images/house39/img5.jpg",
+        "width": 2000,
+        "height": 1333,
+        "alt": "Home staging at Bedford Rd — project photograph 6"
+      },
+      {
+        "src": "/images/house39/img6.jpg",
+        "width": 2000,
+        "height": 1333,
+        "alt": "Home staging at Bedford Rd — project photograph 7"
+      },
+      {
+        "src": "/images/house39/img7.jpg",
+        "width": 2000,
+        "height": 1333,
+        "alt": "Home staging at Bedford Rd — project photograph 8"
+      }
+    ]
+  },
+  {
+    "id": "house32",
+    "city": "Toronto",
+    "latitude": 43.8,
+    "longitude": -79.24,
+    "street": "Malvern St",
+    "title": "Malvern St",
+    "description": "Explore the staging details at our Malvern St project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house32/img1.jpg",
+      "width": 960,
+      "height": 640,
+      "alt": "Home staging at Malvern St — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house32/img0.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Malvern St — project photograph 1"
+      },
+      {
+        "src": "/images/house32/img1.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Malvern St — project photograph 2"
+      },
+      {
+        "src": "/images/house32/img2.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Malvern St — project photograph 3"
+      },
+      {
+        "src": "/images/house32/img3.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Malvern St — project photograph 4"
+      },
+      {
+        "src": "/images/house32/img4.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Malvern St — project photograph 5"
+      },
+      {
+        "src": "/images/house32/img5.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Malvern St — project photograph 6"
+      },
+      {
+        "src": "/images/house32/img6.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Malvern St — project photograph 7"
+      },
+      {
+        "src": "/images/house32/img7.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Malvern St — project photograph 8"
+      },
+      {
+        "src": "/images/house32/img8.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Malvern St — project photograph 9"
+      }
+    ]
+  },
+  {
+    "id": "house31",
+    "city": "Scarborough",
+    "latitude": 43.82,
+    "longitude": -79.31,
+    "street": "Lapworth Crescent",
+    "title": "Lapworth Crescent",
+    "description": "Explore the staging details at our Lapworth Crescent project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house31/img1.jpg",
+      "width": 1900,
+      "height": 1266,
+      "alt": "Home staging at Lapworth Crescent — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house31/img0.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Lapworth Crescent — project photograph 1"
+      },
+      {
+        "src": "/images/house31/img1.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Lapworth Crescent — project photograph 2"
+      },
+      {
+        "src": "/images/house31/img2.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Lapworth Crescent — project photograph 3"
+      },
+      {
+        "src": "/images/house31/img3.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Lapworth Crescent — project photograph 4"
+      },
+      {
+        "src": "/images/house31/img4.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Lapworth Crescent — project photograph 5"
+      },
+      {
+        "src": "/images/house31/img5.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Lapworth Crescent — project photograph 6"
+      },
+      {
+        "src": "/images/house31/img6.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Lapworth Crescent — project photograph 7"
+      },
+      {
+        "src": "/images/house31/img7.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Lapworth Crescent — project photograph 8"
+      }
+    ]
+  },
+  {
+    "id": "house30",
+    "city": "Scarborough",
+    "latitude": 43.83,
+    "longitude": -79.27,
+    "street": "Major Oak Terrace",
+    "title": "Major Oak Terrace",
+    "description": "Explore the staging details at our Major Oak Terrace project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house30/img1.jpg",
+      "width": 1900,
+      "height": 1267,
+      "alt": "Home staging at Major Oak Terrace — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house30/img0.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Major Oak Terrace — project photograph 1"
+      },
+      {
+        "src": "/images/house30/img1.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Major Oak Terrace — project photograph 2"
+      },
+      {
+        "src": "/images/house30/img2.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Major Oak Terrace — project photograph 3"
+      },
+      {
+        "src": "/images/house30/img3.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Major Oak Terrace — project photograph 4"
+      },
+      {
+        "src": "/images/house30/img4.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Major Oak Terrace — project photograph 5"
+      },
+      {
+        "src": "/images/house30/img5.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Major Oak Terrace — project photograph 6"
+      },
+      {
+        "src": "/images/house30/img6.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Major Oak Terrace — project photograph 7"
+      },
+      {
+        "src": "/images/house30/img7.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Major Oak Terrace — project photograph 8"
+      },
+      {
+        "src": "/images/house30/img8.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Major Oak Terrace — project photograph 9"
+      },
+      {
+        "src": "/images/house30/img9.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Major Oak Terrace — project photograph 10"
+      }
+    ]
+  },
+  {
+    "id": "house29",
+    "city": "Markham",
+    "latitude": 43.85,
+    "longitude": -79.28,
+    "street": "Kyla Crescent",
+    "title": "Kyla Crescent",
+    "description": "Explore the staging details at our Kyla Crescent project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house29/img1.jpg",
+      "width": 1900,
+      "height": 1266,
+      "alt": "Home staging at Kyla Crescent — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house29/img0.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Kyla Crescent — project photograph 1"
+      },
+      {
+        "src": "/images/house29/img1.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Kyla Crescent — project photograph 2"
+      },
+      {
+        "src": "/images/house29/img2.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Kyla Crescent — project photograph 3"
+      },
+      {
+        "src": "/images/house29/img3.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Kyla Crescent — project photograph 4"
+      }
+    ]
+  },
+  {
+    "id": "house28",
+    "city": "Markham",
+    "latitude": 43.87,
+    "longitude": -79.34,
+    "street": "Baycliffe Rd",
+    "title": "Baycliffe Rd",
+    "description": "Explore the staging details at our Baycliffe Rd project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house28/img1.jpg",
+      "width": 1900,
+      "height": 1266,
+      "alt": "Home staging at Baycliffe Rd — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house28/img0.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Baycliffe Rd — project photograph 1"
+      },
+      {
+        "src": "/images/house28/img1.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Baycliffe Rd — project photograph 2"
+      },
+      {
+        "src": "/images/house28/img2.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Baycliffe Rd — project photograph 3"
+      },
+      {
+        "src": "/images/house28/img3.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Baycliffe Rd — project photograph 4"
+      },
+      {
+        "src": "/images/house28/img4.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Baycliffe Rd — project photograph 5"
+      },
+      {
+        "src": "/images/house28/img5.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Baycliffe Rd — project photograph 6"
+      },
+      {
+        "src": "/images/house28/img6.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Baycliffe Rd — project photograph 7"
+      },
+      {
+        "src": "/images/house28/img7.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Baycliffe Rd — project photograph 8"
+      },
+      {
+        "src": "/images/house28/img8.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Baycliffe Rd — project photograph 9"
+      }
+    ]
+  },
+  {
+    "id": "house27",
+    "city": "Unionville",
+    "latitude": 43.88,
+    "longitude": -79.31,
+    "street": "Redwood Ln",
+    "title": "Redwood Ln",
+    "description": "Explore the staging details at our Redwood Ln project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house27/img1.jpg",
+      "width": 1200,
+      "height": 900,
+      "alt": "Home staging at Redwood Ln — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house27/img0.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Redwood Ln — project photograph 1"
+      },
+      {
+        "src": "/images/house27/img1.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Redwood Ln — project photograph 2"
+      },
+      {
+        "src": "/images/house27/img2.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Redwood Ln — project photograph 3"
+      },
+      {
+        "src": "/images/house27/img3.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Redwood Ln — project photograph 4"
+      },
+      {
+        "src": "/images/house27/img4.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Redwood Ln — project photograph 5"
+      },
+      {
+        "src": "/images/house27/img5.jpg",
+        "width": 1440,
+        "height": 1080,
+        "alt": "Home staging at Redwood Ln — project photograph 6"
+      },
+      {
+        "src": "/images/house27/img6.jpg",
+        "width": 1440,
+        "height": 1080,
+        "alt": "Home staging at Redwood Ln — project photograph 7"
+      },
+      {
+        "src": "/images/house27/img7.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Redwood Ln — project photograph 8"
+      },
+      {
+        "src": "/images/house27/img8.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Redwood Ln — project photograph 9"
+      },
+      {
+        "src": "/images/house27/img9.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Home staging at Redwood Ln — project photograph 10"
+      }
+    ]
+  },
+  {
+    "id": "house26",
+    "city": "Unionville",
+    "latitude": 43.88,
+    "longitude": -79.29,
+    "street": "Delancey Crescent",
+    "title": "Delancey Crescent",
+    "description": "Explore the staging details at our Delancey Crescent project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house26/img1.jpg",
+      "width": 1900,
+      "height": 1266,
+      "alt": "Home staging at Delancey Crescent — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house26/img0.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Delancey Crescent — project photograph 1"
+      },
+      {
+        "src": "/images/house26/img1.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Delancey Crescent — project photograph 2"
+      },
+      {
+        "src": "/images/house26/img2.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Delancey Crescent — project photograph 3"
+      },
+      {
+        "src": "/images/house26/img3.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Delancey Crescent — project photograph 4"
+      },
+      {
+        "src": "/images/house26/img4.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Delancey Crescent — project photograph 5"
+      },
+      {
+        "src": "/images/house26/img5.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Delancey Crescent — project photograph 6"
+      },
+      {
+        "src": "/images/house26/img6.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Delancey Crescent — project photograph 7"
+      }
+    ]
+  },
+  {
+    "id": "house25",
+    "city": "Markham",
+    "latitude": 43.89,
+    "longitude": -79.26,
+    "street": "Bishop Crescent",
+    "title": "Bishop Crescent",
+    "description": "Explore the staging details at our Bishop Crescent project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house25/img1.jpg",
+      "width": 1900,
+      "height": 1266,
+      "alt": "Home staging at Bishop Crescent — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house25/img0.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Bishop Crescent — project photograph 1"
+      },
+      {
+        "src": "/images/house25/img1.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Bishop Crescent — project photograph 2"
+      },
+      {
+        "src": "/images/house25/img2.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Bishop Crescent — project photograph 3"
+      },
+      {
+        "src": "/images/house25/img3.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Bishop Crescent — project photograph 4"
+      },
+      {
+        "src": "/images/house25/img4.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Bishop Crescent — project photograph 5"
+      }
+    ]
+  },
+  {
+    "id": "house24",
+    "city": "Markham",
+    "latitude": 43.89,
+    "longitude": -79.31,
+    "street": "Henry Bauer Ave",
+    "title": "Henry Bauer Ave",
+    "description": "Explore the staging details at our Henry Bauer Ave project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house24/img1.jpg",
+      "width": 2000,
+      "height": 1331,
+      "alt": "Home staging at Henry Bauer Ave — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house24/img0.jpg",
+        "width": 1999,
+        "height": 1333,
+        "alt": "Home staging at Henry Bauer Ave — project photograph 1"
+      },
+      {
+        "src": "/images/house24/img1.jpg",
+        "width": 2000,
+        "height": 1331,
+        "alt": "Home staging at Henry Bauer Ave — project photograph 2"
+      },
+      {
+        "src": "/images/house24/img2.jpg",
+        "width": 2000,
+        "height": 1332,
+        "alt": "Home staging at Henry Bauer Ave — project photograph 3"
+      },
+      {
+        "src": "/images/house24/img3.jpg",
+        "width": 2000,
+        "height": 1331,
+        "alt": "Home staging at Henry Bauer Ave — project photograph 4"
+      },
+      {
+        "src": "/images/house24/img4.jpg",
+        "width": 2000,
+        "height": 1330,
+        "alt": "Home staging at Henry Bauer Ave — project photograph 5"
+      }
+    ]
+  },
+  {
+    "id": "house23",
+    "city": "Markham",
+    "latitude": 43.91,
+    "longitude": -79.27,
+    "street": "Beer Ln",
+    "title": "Beer Ln",
+    "description": "Explore the staging details at our Beer Ln project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house23/img1.jpg",
+      "width": 1900,
+      "height": 1267,
+      "alt": "Home staging at Beer Ln — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house23/img0.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Beer Ln — project photograph 1"
+      },
+      {
+        "src": "/images/house23/img1.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Beer Ln — project photograph 2"
+      },
+      {
+        "src": "/images/house23/img2.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Beer Ln — project photograph 3"
+      },
+      {
+        "src": "/images/house23/img3.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Beer Ln — project photograph 4"
+      },
+      {
+        "src": "/images/house23/img4.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Beer Ln — project photograph 5"
+      },
+      {
+        "src": "/images/house23/img5.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Beer Ln — project photograph 6"
+      },
+      {
+        "src": "/images/house23/img6.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Beer Ln — project photograph 7"
+      }
+    ]
+  },
+  {
+    "id": "house22",
+    "city": "Markham",
+    "latitude": 43.92,
+    "longitude": -79.37,
+    "street": "Isabella Peach Dr",
+    "title": "Isabella Peach Dr",
+    "description": "Explore the staging details at our Isabella Peach Dr project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house22/img1.jpg",
+      "width": 828,
+      "height": 547,
+      "alt": "Home staging at Isabella Peach Dr — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house22/img0.jpg",
+        "width": 828,
+        "height": 552,
+        "alt": "Home staging at Isabella Peach Dr — project photograph 1"
+      },
+      {
+        "src": "/images/house22/img1.jpg",
+        "width": 828,
+        "height": 547,
+        "alt": "Home staging at Isabella Peach Dr — project photograph 2"
+      },
+      {
+        "src": "/images/house22/img2.jpg",
+        "width": 828,
+        "height": 547,
+        "alt": "Home staging at Isabella Peach Dr — project photograph 3"
+      },
+      {
+        "src": "/images/house22/img3.jpg",
+        "width": 828,
+        "height": 547,
+        "alt": "Home staging at Isabella Peach Dr — project photograph 4"
+      }
+    ]
+  },
+  {
+    "id": "house21",
+    "city": "Maple",
+    "latitude": 43.86,
+    "longitude": -79.54,
+    "street": "Treasure Rd",
+    "title": "Treasure Rd",
+    "description": "Explore the staging details at our Treasure Rd project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house21/img1.jpg",
+      "width": 1900,
+      "height": 1267,
+      "alt": "Home staging at Treasure Rd — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house21/img0.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Treasure Rd — project photograph 1"
+      },
+      {
+        "src": "/images/house21/img1.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Treasure Rd — project photograph 2"
+      },
+      {
+        "src": "/images/house21/img2.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Treasure Rd — project photograph 3"
+      },
+      {
+        "src": "/images/house21/img3.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Treasure Rd — project photograph 4"
+      },
+      {
+        "src": "/images/house21/img4.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Treasure Rd — project photograph 5"
+      },
+      {
+        "src": "/images/house21/img5.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Treasure Rd — project photograph 6"
+      }
+    ]
+  },
+  {
+    "id": "house20",
+    "city": "Richmond Hill",
+    "latitude": 43.86,
+    "longitude": -79.43,
+    "street": "Northern Heights Dr",
+    "title": "Northern Heights Dr",
+    "description": "Explore the staging details at our Northern Heights Dr project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house20/img1.jpg",
+      "width": 960,
+      "height": 640,
+      "alt": "Home staging at Northern Heights Dr — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house20/img0.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Northern Heights Dr — project photograph 1"
+      },
+      {
+        "src": "/images/house20/img1.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Northern Heights Dr — project photograph 2"
+      },
+      {
+        "src": "/images/house20/img2.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Northern Heights Dr — project photograph 3"
+      },
+      {
+        "src": "/images/house20/img3.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Northern Heights Dr — project photograph 4"
+      },
+      {
+        "src": "/images/house20/img4.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Northern Heights Dr — project photograph 5"
+      },
+      {
+        "src": "/images/house20/img5.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Northern Heights Dr — project photograph 6"
+      },
+      {
+        "src": "/images/house20/img6.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Northern Heights Dr — project photograph 7"
+      },
+      {
+        "src": "/images/house20/img7.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Northern Heights Dr — project photograph 8"
+      },
+      {
+        "src": "/images/house20/img8.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Northern Heights Dr — project photograph 9"
+      },
+      {
+        "src": "/images/house20/img9.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Northern Heights Dr — project photograph 10"
+      }
+    ]
+  },
+  {
+    "id": "house19",
+    "city": "Richmond Hill",
+    "latitude": 43.86,
+    "longitude": -79.44,
+    "street": "Baif Blvd",
+    "title": "Baif Blvd",
+    "description": "Explore the staging details at our Baif Blvd project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house19/img1.jpg",
+      "width": 960,
+      "height": 640,
+      "alt": "Home staging at Baif Blvd — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house19/img0.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Baif Blvd — project photograph 1"
+      },
+      {
+        "src": "/images/house19/img1.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Baif Blvd — project photograph 2"
+      },
+      {
+        "src": "/images/house19/img2.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Baif Blvd — project photograph 3"
+      },
+      {
+        "src": "/images/house19/img3.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Baif Blvd — project photograph 4"
+      },
+      {
+        "src": "/images/house19/img4.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Baif Blvd — project photograph 5"
+      },
+      {
+        "src": "/images/house19/img5.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Baif Blvd — project photograph 6"
+      },
+      {
+        "src": "/images/house19/img6.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Baif Blvd — project photograph 7"
+      },
+      {
+        "src": "/images/house19/img7.jpg",
+        "width": 960,
+        "height": 640,
+        "alt": "Home staging at Baif Blvd — project photograph 8"
+      }
+    ]
+  },
+  {
+    "id": "house18",
+    "city": "Richmond Hill",
+    "latitude": 43.87,
+    "longitude": -79.43,
+    "street": "Canterbury Ct",
+    "title": "Canterbury Ct",
+    "description": "Explore the staging details at our Canterbury Ct project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house18/img1.jpg",
+      "width": 1900,
+      "height": 1267,
+      "alt": "Home staging at Canterbury Ct — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house18/img0.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Canterbury Ct — project photograph 1"
+      },
+      {
+        "src": "/images/house18/img1.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Canterbury Ct — project photograph 2"
+      },
+      {
+        "src": "/images/house18/img2.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Canterbury Ct — project photograph 3"
+      },
+      {
+        "src": "/images/house18/img3.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Canterbury Ct — project photograph 4"
+      },
+      {
+        "src": "/images/house18/img4.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Canterbury Ct — project photograph 5"
+      },
+      {
+        "src": "/images/house18/img5.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Canterbury Ct — project photograph 6"
+      },
+      {
+        "src": "/images/house18/img6.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Canterbury Ct — project photograph 7"
+      },
+      {
+        "src": "/images/house18/img7.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Canterbury Ct — project photograph 8"
+      },
+      {
+        "src": "/images/house18/img8.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Canterbury Ct — project photograph 9"
+      },
+      {
+        "src": "/images/house18/img9.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Canterbury Ct — project photograph 10"
+      },
+      {
+        "src": "/images/house18/img10.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Canterbury Ct — project photograph 11"
+      },
+      {
+        "src": "/images/house18/img11.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Canterbury Ct — project photograph 12"
+      },
+      {
+        "src": "/images/house18/img12.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Canterbury Ct — project photograph 13"
+      },
+      {
+        "src": "/images/house18/img13.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Canterbury Ct — project photograph 14"
+      },
+      {
+        "src": "/images/house18/img14.jpg",
+        "width": 1900,
+        "height": 1267,
+        "alt": "Home staging at Canterbury Ct — project photograph 15"
+      }
+    ]
+  },
+  {
+    "id": "house17",
+    "city": "Richmond Hill",
+    "latitude": 43.88,
+    "longitude": -79.42,
+    "street": "Rockport Crescent",
+    "title": "Rockport Crescent",
+    "description": "Explore the staging details at our Rockport Crescent project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house17/img1.jpg",
+      "width": 1600,
+      "height": 1067,
+      "alt": "Home staging at Rockport Crescent — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house17/img0.jpg",
+        "width": 1600,
+        "height": 1067,
+        "alt": "Home staging at Rockport Crescent — project photograph 1"
+      },
+      {
+        "src": "/images/house17/img1.jpg",
+        "width": 1600,
+        "height": 1067,
+        "alt": "Home staging at Rockport Crescent — project photograph 2"
+      },
+      {
+        "src": "/images/house17/img2.jpg",
+        "width": 1600,
+        "height": 1067,
+        "alt": "Home staging at Rockport Crescent — project photograph 3"
+      },
+      {
+        "src": "/images/house17/img3.jpg",
+        "width": 1600,
+        "height": 1067,
+        "alt": "Home staging at Rockport Crescent — project photograph 4"
+      },
+      {
+        "src": "/images/house17/img4.jpg",
+        "width": 1600,
+        "height": 1067,
+        "alt": "Home staging at Rockport Crescent — project photograph 5"
+      },
+      {
+        "src": "/images/house17/img5.jpg",
+        "width": 1600,
+        "height": 1067,
+        "alt": "Home staging at Rockport Crescent — project photograph 6"
+      },
+      {
+        "src": "/images/house17/img6.jpg",
+        "width": 1600,
+        "height": 1067,
+        "alt": "Home staging at Rockport Crescent — project photograph 7"
+      },
+      {
+        "src": "/images/house17/img7.jpg",
+        "width": 1600,
+        "height": 1067,
+        "alt": "Home staging at Rockport Crescent — project photograph 8"
+      },
+      {
+        "src": "/images/house17/img8.jpg",
+        "width": 1600,
+        "height": 1067,
+        "alt": "Home staging at Rockport Crescent — project photograph 9"
+      },
+      {
+        "src": "/images/house17/img9.jpg",
+        "width": 1600,
+        "height": 1067,
+        "alt": "Home staging at Rockport Crescent — project photograph 10"
+      },
+      {
+        "src": "/images/house17/img10.jpg",
+        "width": 1600,
+        "height": 1067,
+        "alt": "Home staging at Rockport Crescent — project photograph 11"
+      },
+      {
+        "src": "/images/house17/img11.jpg",
+        "width": 1600,
+        "height": 1067,
+        "alt": "Home staging at Rockport Crescent — project photograph 12"
+      },
+      {
+        "src": "/images/house17/img12.jpg",
+        "width": 1600,
+        "height": 1067,
+        "alt": "Home staging at Rockport Crescent — project photograph 13"
+      }
+    ]
+  },
+  {
+    "id": "house16",
+    "city": "Richmond Hill",
+    "latitude": 43.9,
+    "longitude": -79.41,
+    "street": "Shirley Dr",
+    "title": "Shirley Dr",
+    "description": "Explore the staging details at our Shirley Dr project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house16/img1.jpg",
+      "width": 2000,
+      "height": 1333,
+      "alt": "Home staging at Shirley Dr — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house16/img0.jpg",
+        "width": 2000,
+        "height": 1333,
+        "alt": "Home staging at Shirley Dr — project photograph 1"
+      },
+      {
+        "src": "/images/house16/img1.jpg",
+        "width": 2000,
+        "height": 1333,
+        "alt": "Home staging at Shirley Dr — project photograph 2"
+      },
+      {
+        "src": "/images/house16/img2.jpg",
+        "width": 2000,
+        "height": 1333,
+        "alt": "Home staging at Shirley Dr — project photograph 3"
+      }
+    ]
+  },
+  {
+    "id": "house15",
+    "city": "Richmond Hill",
+    "latitude": 43.9,
+    "longitude": -79.46,
+    "street": "Aztec Ct",
+    "title": "Aztec Ct",
+    "description": "Explore the staging details at our Aztec Ct project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house15/img1.jpg",
+      "width": 1900,
+      "height": 1266,
+      "alt": "Home staging at Aztec Ct — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house15/img0.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Aztec Ct — project photograph 1"
+      },
+      {
+        "src": "/images/house15/img1.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Aztec Ct — project photograph 2"
+      },
+      {
+        "src": "/images/house15/img2.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Aztec Ct — project photograph 3"
+      },
+      {
+        "src": "/images/house15/img3.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Aztec Ct — project photograph 4"
+      },
+      {
+        "src": "/images/house15/img4.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Aztec Ct — project photograph 5"
+      },
+      {
+        "src": "/images/house15/img5.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Aztec Ct — project photograph 6"
+      },
+      {
+        "src": "/images/house15/img6.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Aztec Ct — project photograph 7"
+      },
+      {
+        "src": "/images/house15/img7.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Aztec Ct — project photograph 8"
+      },
+      {
+        "src": "/images/house15/img8.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Aztec Ct — project photograph 9"
+      },
+      {
+        "src": "/images/house15/img9.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Aztec Ct — project photograph 10"
+      },
+      {
+        "src": "/images/house15/img10.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Aztec Ct — project photograph 11"
+      },
+      {
+        "src": "/images/house15/img11.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Aztec Ct — project photograph 12"
+      },
+      {
+        "src": "/images/house15/img12.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Aztec Ct — project photograph 13"
+      },
+      {
+        "src": "/images/house15/img13.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Aztec Ct — project photograph 14"
+      },
+      {
+        "src": "/images/house15/img14.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Aztec Ct — project photograph 15"
+      }
+    ]
+  },
+  {
+    "id": "house14",
+    "city": "Richmond Hill",
+    "latitude": 43.92,
+    "longitude": -79.45,
+    "street": "Greenbank Dr",
+    "title": "Greenbank Dr",
+    "description": "Explore the staging details at our Greenbank Dr project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house14/img1.jpg",
+      "width": 1900,
+      "height": 1266,
+      "alt": "Home staging at Greenbank Dr — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house14/img0.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Greenbank Dr — project photograph 1"
+      },
+      {
+        "src": "/images/house14/img1.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Greenbank Dr — project photograph 2"
+      },
+      {
+        "src": "/images/house14/img2.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Greenbank Dr — project photograph 3"
+      },
+      {
+        "src": "/images/house14/img3.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Greenbank Dr — project photograph 4"
+      },
+      {
+        "src": "/images/house14/img4.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Greenbank Dr — project photograph 5"
+      },
+      {
+        "src": "/images/house14/img5.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Greenbank Dr — project photograph 6"
+      },
+      {
+        "src": "/images/house14/img6.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Greenbank Dr — project photograph 7"
+      },
+      {
+        "src": "/images/house14/img7.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Greenbank Dr — project photograph 8"
+      },
+      {
+        "src": "/images/house14/img8.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Greenbank Dr — project photograph 9"
+      },
+      {
+        "src": "/images/house14/img9.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Greenbank Dr — project photograph 10"
+      },
+      {
+        "src": "/images/house14/img10.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Greenbank Dr — project photograph 11"
+      },
+      {
+        "src": "/images/house14/img11.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Greenbank Dr — project photograph 12"
+      },
+      {
+        "src": "/images/house14/img12.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Greenbank Dr — project photograph 13"
+      },
+      {
+        "src": "/images/house14/img13.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Greenbank Dr — project photograph 14"
+      },
+      {
+        "src": "/images/house14/img14.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Greenbank Dr — project photograph 15"
+      },
+      {
+        "src": "/images/house14/img15.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Greenbank Dr — project photograph 16"
+      },
+      {
+        "src": "/images/house14/img16.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Greenbank Dr — project photograph 17"
+      },
+      {
+        "src": "/images/house14/img17.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Greenbank Dr — project photograph 18"
+      }
+    ]
+  },
+  {
+    "id": "house13",
+    "city": "Richmond Hill",
+    "latitude": 43.94,
+    "longitude": -79.48,
+    "street": "Heron Hollow Ave",
+    "title": "Heron Hollow Ave",
+    "description": "Explore the staging details at our Heron Hollow Ave project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house13/img1.jpg",
+      "width": 1900,
+      "height": 1266,
+      "alt": "Home staging at Heron Hollow Ave — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house13/img0.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Heron Hollow Ave — project photograph 1"
+      },
+      {
+        "src": "/images/house13/img1.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Heron Hollow Ave — project photograph 2"
+      },
+      {
+        "src": "/images/house13/img2.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Heron Hollow Ave — project photograph 3"
+      },
+      {
+        "src": "/images/house13/img3.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Heron Hollow Ave — project photograph 4"
+      },
+      {
+        "src": "/images/house13/img4.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Heron Hollow Ave — project photograph 5"
+      },
+      {
+        "src": "/images/house13/img5.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Heron Hollow Ave — project photograph 6"
+      },
+      {
+        "src": "/images/house13/img6.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Heron Hollow Ave — project photograph 7"
+      },
+      {
+        "src": "/images/house13/img7.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Heron Hollow Ave — project photograph 8"
+      }
+    ]
+  },
+  {
+    "id": "house12",
+    "city": "Richmond Hill",
+    "latitude": 43.95,
+    "longitude": -79.43,
+    "street": "Sandbanks Dr",
+    "title": "Sandbanks Dr",
+    "description": "Explore the staging details at our Sandbanks Dr project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house12/img1.jpg",
+      "width": 1920,
+      "height": 1280,
+      "alt": "Home staging at Sandbanks Dr — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house12/img0.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Home staging at Sandbanks Dr — project photograph 1"
+      },
+      {
+        "src": "/images/house12/img1.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Home staging at Sandbanks Dr — project photograph 2"
+      },
+      {
+        "src": "/images/house12/img2.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Home staging at Sandbanks Dr — project photograph 3"
+      },
+      {
+        "src": "/images/house12/img3.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Home staging at Sandbanks Dr — project photograph 4"
+      },
+      {
+        "src": "/images/house12/img4.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Home staging at Sandbanks Dr — project photograph 5"
+      },
+      {
+        "src": "/images/house12/img5.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Home staging at Sandbanks Dr — project photograph 6"
+      },
+      {
+        "src": "/images/house12/img6.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Home staging at Sandbanks Dr — project photograph 7"
+      },
+      {
+        "src": "/images/house12/img7.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Home staging at Sandbanks Dr — project photograph 8"
+      },
+      {
+        "src": "/images/house12/img8.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Home staging at Sandbanks Dr — project photograph 9"
+      },
+      {
+        "src": "/images/house12/img9.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Home staging at Sandbanks Dr — project photograph 10"
+      },
+      {
+        "src": "/images/house12/img10.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Home staging at Sandbanks Dr — project photograph 11"
+      },
+      {
+        "src": "/images/house12/img11.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Home staging at Sandbanks Dr — project photograph 12"
+      },
+      {
+        "src": "/images/house12/img12.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Home staging at Sandbanks Dr — project photograph 13"
+      },
+      {
+        "src": "/images/house12/img13.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Home staging at Sandbanks Dr — project photograph 14"
+      },
+      {
+        "src": "/images/house12/img14.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Home staging at Sandbanks Dr — project photograph 15"
+      },
+      {
+        "src": "/images/house12/img15.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Home staging at Sandbanks Dr — project photograph 16"
+      },
+      {
+        "src": "/images/house12/img16.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Home staging at Sandbanks Dr — project photograph 17"
+      }
+    ]
+  },
+  {
+    "id": "house11",
+    "city": "Aurora",
+    "latitude": 44.03,
+    "longitude": -79.45,
+    "street": "Winn Pl",
+    "title": "Winn Pl",
+    "description": "Explore the staging details at our Winn Pl project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house11/img1.jpg",
+      "width": 960,
+      "height": 720,
+      "alt": "Home staging at Winn Pl — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house11/img0.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Winn Pl — project photograph 1"
+      },
+      {
+        "src": "/images/house11/img1.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Winn Pl — project photograph 2"
+      },
+      {
+        "src": "/images/house11/img2.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Winn Pl — project photograph 3"
+      },
+      {
+        "src": "/images/house11/img3.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Winn Pl — project photograph 4"
+      },
+      {
+        "src": "/images/house11/img4.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Winn Pl — project photograph 5"
+      },
+      {
+        "src": "/images/house11/img5.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Winn Pl — project photograph 6"
+      },
+      {
+        "src": "/images/house11/img6.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Winn Pl — project photograph 7"
+      },
+      {
+        "src": "/images/house11/img7.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Winn Pl — project photograph 8"
+      },
+      {
+        "src": "/images/house11/img8.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Winn Pl — project photograph 9"
+      }
+    ]
+  },
+  {
+    "id": "house9",
+    "city": "Georgina",
+    "latitude": 44.21,
+    "longitude": -79.46,
+    "street": "Faimira Ave",
+    "title": "Faimira Ave",
+    "description": "Explore the staging details at our Faimira Ave project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house9/img1.jpg",
+      "width": 2000,
+      "height": 1333,
+      "alt": "Home staging at Faimira Ave — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house9/img0.jpg",
+        "width": 2000,
+        "height": 1333,
+        "alt": "Home staging at Faimira Ave — project photograph 1"
+      },
+      {
+        "src": "/images/house9/img1.jpg",
+        "width": 2000,
+        "height": 1333,
+        "alt": "Home staging at Faimira Ave — project photograph 2"
+      },
+      {
+        "src": "/images/house9/img2.jpg",
+        "width": 2000,
+        "height": 1333,
+        "alt": "Home staging at Faimira Ave — project photograph 3"
+      },
+      {
+        "src": "/images/house9/img3.jpg",
+        "width": 2000,
+        "height": 1333,
+        "alt": "Home staging at Faimira Ave — project photograph 4"
+      },
+      {
+        "src": "/images/house9/img4.jpg",
+        "width": 2000,
+        "height": 1333,
+        "alt": "Home staging at Faimira Ave — project photograph 5"
+      },
+      {
+        "src": "/images/house9/img5.jpg",
+        "width": 2000,
+        "height": 1333,
+        "alt": "Home staging at Faimira Ave — project photograph 6"
+      }
+    ]
+  },
+  {
+    "id": "house7",
+    "city": "Barrie",
+    "latitude": 44.34,
+    "longitude": -79.73,
+    "street": "Logan Ct",
+    "title": "Logan Ct",
+    "description": "Explore the staging details at our Logan Ct project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house7/img1.jpg",
+      "width": 1900,
+      "height": 1266,
+      "alt": "Home staging at Logan Ct — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house7/img0.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Logan Ct — project photograph 1"
+      },
+      {
+        "src": "/images/house7/img1.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Logan Ct — project photograph 2"
+      },
+      {
+        "src": "/images/house7/img2.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Logan Ct — project photograph 3"
+      },
+      {
+        "src": "/images/house7/img3.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Logan Ct — project photograph 4"
+      },
+      {
+        "src": "/images/house7/img4.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Logan Ct — project photograph 5"
+      },
+      {
+        "src": "/images/house7/img5.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Logan Ct — project photograph 6"
+      },
+      {
+        "src": "/images/house7/img6.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Logan Ct — project photograph 7"
+      },
+      {
+        "src": "/images/house7/img7.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Logan Ct — project photograph 8"
+      },
+      {
+        "src": "/images/house7/img8.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Logan Ct — project photograph 9"
+      },
+      {
+        "src": "/images/house7/img9.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Logan Ct — project photograph 10"
+      }
+    ]
+  },
+  {
+    "id": "house5",
+    "city": "Whitby",
+    "latitude": 43.91,
+    "longitude": -78.98,
+    "street": "Ogston Cres",
+    "title": "Ogston Cres",
+    "description": "Explore the staging details at our Ogston Cres project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house5/img1.jpg",
+      "width": 2000,
+      "height": 1332,
+      "alt": "Home staging at Ogston Cres — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house5/img0.jpg",
+        "width": 2000,
+        "height": 1332,
+        "alt": "Home staging at Ogston Cres — project photograph 1"
+      },
+      {
+        "src": "/images/house5/img1.jpg",
+        "width": 2000,
+        "height": 1332,
+        "alt": "Home staging at Ogston Cres — project photograph 2"
+      },
+      {
+        "src": "/images/house5/img2.jpg",
+        "width": 2000,
+        "height": 1333,
+        "alt": "Home staging at Ogston Cres — project photograph 3"
+      },
+      {
+        "src": "/images/house5/img3.jpg",
+        "width": 2000,
+        "height": 1333,
+        "alt": "Home staging at Ogston Cres — project photograph 4"
+      },
+      {
+        "src": "/images/house5/img4.jpg",
+        "width": 2000,
+        "height": 1331,
+        "alt": "Home staging at Ogston Cres — project photograph 5"
+      },
+      {
+        "src": "/images/house5/img5.jpg",
+        "width": 2000,
+        "height": 1332,
+        "alt": "Home staging at Ogston Cres — project photograph 6"
+      },
+      {
+        "src": "/images/house5/img6.jpg",
+        "width": 2000,
+        "height": 1330,
+        "alt": "Home staging at Ogston Cres — project photograph 7"
+      }
+    ]
+  },
+  {
+    "id": "house4",
+    "city": "Whitby",
+    "latitude": 43.92,
+    "longitude": -78.97,
+    "street": "Medland Ave",
+    "title": "Medland Ave",
+    "description": "Explore the staging details at our Medland Ave project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house4/img1.jpg",
+      "width": 1900,
+      "height": 1266,
+      "alt": "Home staging at Medland Ave — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house4/img0.jpg",
+        "width": 1900,
+        "height": 1265,
+        "alt": "Home staging at Medland Ave — project photograph 1"
+      },
+      {
+        "src": "/images/house4/img1.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Medland Ave — project photograph 2"
+      },
+      {
+        "src": "/images/house4/img2.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Medland Ave — project photograph 3"
+      },
+      {
+        "src": "/images/house4/img3.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Medland Ave — project photograph 4"
+      },
+      {
+        "src": "/images/house4/img4.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Medland Ave — project photograph 5"
+      },
+      {
+        "src": "/images/house4/img5.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Medland Ave — project photograph 6"
+      },
+      {
+        "src": "/images/house4/img6.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Medland Ave — project photograph 7"
+      }
+    ]
+  },
+  {
+    "id": "house3",
+    "city": "Oshawa",
+    "latitude": 43.9,
+    "longitude": -78.88,
+    "street": "Madison Ave",
+    "title": "Madison Ave",
+    "description": "Explore the staging details at our Madison Ave project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house3/img1.jpg",
+      "width": 828,
+      "height": 551,
+      "alt": "Home staging at Madison Ave — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house3/img0.jpg",
+        "width": 1900,
+        "height": 1266,
+        "alt": "Home staging at Madison Ave — project photograph 1"
+      },
+      {
+        "src": "/images/house3/img1.jpg",
+        "width": 828,
+        "height": 551,
+        "alt": "Home staging at Madison Ave — project photograph 2"
+      },
+      {
+        "src": "/images/house3/img2.jpg",
+        "width": 828,
+        "height": 551,
+        "alt": "Home staging at Madison Ave — project photograph 3"
+      },
+      {
+        "src": "/images/house3/img3.jpg",
+        "width": 828,
+        "height": 551,
+        "alt": "Home staging at Madison Ave — project photograph 4"
+      },
+      {
+        "src": "/images/house3/img4.jpg",
+        "width": 828,
+        "height": 551,
+        "alt": "Home staging at Madison Ave — project photograph 5"
+      }
+    ]
+  },
+  {
+    "id": "house2",
+    "city": "Oshawa",
+    "latitude": 43.93,
+    "longitude": -78.85,
+    "street": "Bennett Crescent",
+    "title": "Bennett Crescent",
+    "description": "Explore the staging details at our Bennett Crescent project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house2/img1.jpg",
+      "width": 1900,
+      "height": 1425,
+      "alt": "Home staging at Bennett Crescent — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house2/img0.jpg",
+        "width": 1900,
+        "height": 1425,
+        "alt": "Home staging at Bennett Crescent — project photograph 1"
+      },
+      {
+        "src": "/images/house2/img1.jpg",
+        "width": 1900,
+        "height": 1425,
+        "alt": "Home staging at Bennett Crescent — project photograph 2"
+      },
+      {
+        "src": "/images/house2/img2.jpg",
+        "width": 1900,
+        "height": 1425,
+        "alt": "Home staging at Bennett Crescent — project photograph 3"
+      },
+      {
+        "src": "/images/house2/img3.jpg",
+        "width": 1900,
+        "height": 1425,
+        "alt": "Home staging at Bennett Crescent — project photograph 4"
+      },
+      {
+        "src": "/images/house2/img4.jpg",
+        "width": 1900,
+        "height": 1425,
+        "alt": "Home staging at Bennett Crescent — project photograph 5"
+      },
+      {
+        "src": "/images/house2/img5.jpg",
+        "width": 1900,
+        "height": 1425,
+        "alt": "Home staging at Bennett Crescent — project photograph 6"
+      },
+      {
+        "src": "/images/house2/img6.jpg",
+        "width": 1900,
+        "height": 1425,
+        "alt": "Home staging at Bennett Crescent — project photograph 7"
+      },
+      {
+        "src": "/images/house2/img7.jpg",
+        "width": 1900,
+        "height": 1425,
+        "alt": "Home staging at Bennett Crescent — project photograph 8"
+      },
+      {
+        "src": "/images/house2/img8.jpg",
+        "width": 1900,
+        "height": 1425,
+        "alt": "Home staging at Bennett Crescent — project photograph 9"
+      }
+    ]
+  },
+  {
+    "id": "house1",
+    "city": "Barrie",
+    "latitude": 44.41,
+    "longitude": -79.66,
+    "street": "Corbett Dr",
+    "title": "Corbett Dr",
+    "description": "Explore the staging details at our Corbett Dr project, from furniture placement to the finishing touches.",
+    "featured": false,
+    "cover": {
+      "src": "/images/house1/img1.jpg",
+      "width": 960,
+      "height": 720,
+      "alt": "Home staging at Corbett Dr — project photograph 2"
+    },
+    "images": [
+      {
+        "src": "/images/house1/img0.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Corbett Dr — project photograph 1"
+      },
+      {
+        "src": "/images/house1/img1.jpg",
+        "width": 960,
+        "height": 720,
+        "alt": "Home staging at Corbett Dr — project photograph 2"
+      },
+      {
+        "src": "/images/house1/img2.jpg",
+        "width": 720,
+        "height": 960,
+        "alt": "Home staging at Corbett Dr — project photograph 3"
+      }
+    ]
+  }
+]
