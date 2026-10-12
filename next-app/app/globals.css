@@ -1605,30 +1605,30 @@ details p {
 .not-found-language {
   padding-bottom: 60px;
 }
-html[lang="zh-Hans"] body {
+html[lang^="zh-"] body {
   font-family: var(--font-body), "PingFang SC", "Microsoft YaHei", sans-serif;
 }
-html[lang="zh-Hans"] h1,
-html[lang="zh-Hans"] h2,
-html[lang="zh-Hans"] h3 {
+html[lang^="zh-"] h1,
+html[lang^="zh-"] h2,
+html[lang^="zh-"] h3 {
   font-family: "Songti SC", "Noto Serif CJK SC", "SimSun", serif;
   line-height: 1.35;
   letter-spacing: 0;
 }
-html[lang="zh-Hans"] em {
+html[lang^="zh-"] em {
   font-style: normal;
 }
-html[lang="zh-Hans"] .hero-content h1 {
+html[lang^="zh-"] .hero-content h1 {
   font-size: clamp(40px, 5.6vw, 76px);
   line-height: 1.4;
 }
-html[lang="zh-Hans"] h2 {
+html[lang^="zh-"] h2 {
   font-size: clamp(32px, 3.4vw, 48px);
 }
-html[lang="zh-Hans"] h3 {
+html[lang^="zh-"] h3 {
   font-size: 25px;
 }
-html[lang="zh-Hans"] .inquiry-intro h1 {
+html[lang^="zh-"] .inquiry-intro h1 {
   font-size: clamp(36px, 4.3vw, 58px);
 }
 @media (min-width: 801px) and (max-width: 1050px) {
@@ -1669,13 +1669,37 @@ html[lang="zh-Hans"] .inquiry-intro h1 {
   .footer-main .phone-contacts {
     font-size: 14px;
   }
-  html[lang="zh-Hans"] .hero-content h1 {
+  html[lang^="zh-"] .hero-content h1 {
     font-size: clamp(34px, 8.8vw, 45px);
   }
-  html[lang="zh-Hans"] .inquiry-intro h2 {
+  html[lang^="zh-"] .inquiry-intro h2 {
     font-size: 32px;
   }
   .form-success small {
     overflow-wrap: anywhere;
+  }
+}
+
+html[lang="zh-Hant"] body {
+  font-family:
+    var(--font-body), "PingFang TC", "Microsoft JhengHei", sans-serif;
+}
+html[lang="zh-Hant"] h1,
+html[lang="zh-Hant"] h2,
+html[lang="zh-Hant"] h3 {
+  font-family: "Songti TC", "Noto Serif CJK TC", "PMingLiU", serif;
+}
+@media (max-width: 380px) {
+  .header-inner {
+    gap: 6px;
+  }
+  .wordmark {
+    font-size: 32px;
+  }
+  .language-switch a {
+    min-width: 24px;
+  }
+  .menu-toggle {
+    padding: 8px;
   }
 }

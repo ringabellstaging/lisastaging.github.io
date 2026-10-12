@@ -42,6 +42,7 @@ class MapBoundary extends Component<
         {translator(this.props.locale)(
           "The map is unavailable. You can still explore every project in the list.",
           "地图暂时不可用，您仍可通过列表浏览全部案例。",
+          "地圖暫時不可用，您仍可通過列表瀏覽全部案例。",
         )}
       </div>
     ) : (
@@ -91,7 +92,8 @@ export default function ProjectExplorer({
     <div ref={root} className="project-explorer">
       <div className="explorer-toolbar">
         <label htmlFor="city-filter">
-          <MapPin size={17} /> {t("Explore by location", "按城市浏览")}{" "}
+          <MapPin size={17} />{" "}
+          {t("Explore by location", "按城市浏览", "按城市瀏覽")}{" "}
           <select
             id="city-filter"
             value={city}
@@ -102,7 +104,7 @@ export default function ProjectExplorer({
             }}
           >
             <option value="All locations">
-              {t("All locations", "全部城市")}
+              {t("All locations", "全部城市", "全部城市")}
             </option>
             {cities.map((name) => (
               <option key={name} value={name}>
@@ -112,25 +114,29 @@ export default function ProjectExplorer({
           </select>
         </label>
         <span aria-live="polite">
-          {t(`${filtered.length} projects`, `${filtered.length} 个案例`)}
+          {t(
+            `${filtered.length} projects`,
+            `${filtered.length} 个案例`,
+            `${filtered.length} 個案例`,
+          )}
         </span>
         <div
           className="view-switch"
-          aria-label={t("Project view", "案例显示方式")}
+          aria-label={t("Project view", "案例显示方式", "案例顯示方式")}
         >
           <button
             type="button"
             aria-pressed={view === "map"}
             onClick={() => setView("map")}
           >
-            <MapIcon size={16} /> {t("Map", "地图")}
+            <MapIcon size={16} /> {t("Map", "地图", "地圖")}
           </button>
           <button
             type="button"
             aria-pressed={view === "list"}
             onClick={() => setView("list")}
           >
-            <List size={16} /> {t("List", "列表")}
+            <List size={16} /> {t("List", "列表", "列表")}
           </button>
         </div>
       </div>
@@ -147,13 +153,19 @@ export default function ProjectExplorer({
             ) : (
               <div className="map-placeholder">
                 <MapIcon size={30} />
-                <span>{t("Explore our neighbourhoods", "探索身边的案例")}</span>
+                <span>
+                  {t(
+                    "Explore our neighbourhoods",
+                    "探索身边的案例",
+                    "探索身邊的案例",
+                  )}
+                </span>
                 <button
                   type="button"
                   className="text-link"
                   onClick={() => setReady(true)}
                 >
-                  {t("Load interactive map", "加载互动地图")}{" "}
+                  {t("Load interactive map", "加载互动地图", "加載互動地圖")}{" "}
                   <ArrowUpRight size={16} />
                 </button>
               </div>
@@ -176,7 +188,7 @@ export default function ProjectExplorer({
               <span>
                 <small>{cityLabel(selected.city, locale)}</small>
                 <strong>{selected.title}</strong>
-                <span>{t("View project ↗", "查看案例 ↗")}</span>
+                <span>{t("View project ↗", "查看案例 ↗", "查看案例 ↗")}</span>
               </span>
             </ProjectLink>
           )}
@@ -186,14 +198,16 @@ export default function ProjectExplorer({
             {selected && (
               <>
                 <span className="eyebrow">
-                  {t("ON THE MAP", "地图中的案例")} ·{" "}
+                  {t("ON THE MAP", "地图中的案例", "地圖中的案例")} ·{" "}
                   {cityLabel(selected.city, locale)}
                 </span>
                 <ProjectLink href={href(`/${selected.id}`)} prefetchOnView>
                   <h3>
                     {selected.title} <ArrowUpRight size={20} />
                   </h3>
-                  <p>{t("Explore this project", "了解这个案例")}</p>
+                  <p>
+                    {t("Explore this project", "了解这个案例", "瞭解這個案例")}
+                  </p>
                 </ProjectLink>
               </>
             )}
@@ -226,13 +240,14 @@ export default function ProjectExplorer({
                     aria-label={t(
                       `Show ${project.title} on map`,
                       `在地图上显示 ${project.title}`,
+                      `在地圖上顯示 ${project.title}`,
                     )}
                     onClick={() => {
                       setSelectedId(project.id);
                       setView("map");
                     }}
                   >
-                    {t("Show on map", "在地图上查看")}
+                    {t("Show on map", "在地图上查看", "在地圖上查看")}
                   </button>
                 </div>
               </article>
@@ -246,6 +261,7 @@ export default function ProjectExplorer({
                 {t(
                   `Show more projects (${filtered.length - limit} more)`,
                   `查看更多案例（还有 ${filtered.length - limit} 个）`,
+                  `查看更多案例（還有 ${filtered.length - limit} 個）`,
                 )}
               </button>
             )}
@@ -256,6 +272,7 @@ export default function ProjectExplorer({
         {t(
           "Locations are approximate. Full property addresses are kept private.",
           "地图仅展示大致位置，完整房屋地址不公开。",
+          "地圖僅展示大致位置，完整房屋地址不公開。",
         )}
       </p>
     </div>

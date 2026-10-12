@@ -27,6 +27,7 @@ export function pageMetadata(
             languages: {
               "en-CA": `${siteUrl}${localizedPath(path, "en")}`,
               "zh-Hans": `${siteUrl}${localizedPath(path, "zh")}`,
+              "zh-Hant": `${siteUrl}${localizedPath(path, "zh-hant")}`,
               "x-default": `${siteUrl}${localizedPath(path, "en")}`,
             },
           },
@@ -36,8 +37,11 @@ export function pageMetadata(
       title: `${title} | Oaktime Staging`,
       description,
       type: "website",
-      locale: locale === "zh" ? "zh_CN" : "en_CA",
-      alternateLocale: locale === "zh" ? "en_CA" : "zh_CN",
+      locale: { en: "en_CA", zh: "zh_CN", "zh-hant": "zh_TW" }[locale],
+      alternateLocale: ["en_CA", "zh_CN", "zh_TW"].filter(
+        (value) =>
+          value !== { en: "en_CA", zh: "zh_CN", "zh-hant": "zh_TW" }[locale],
+      ),
       siteName: "Oaktime Staging",
       ...(siteUrl
         ? {

@@ -15,6 +15,12 @@ export default function GlobalNotFound() {
           浏览中文案例 ↗
         </Link>
       </div>
+      <div className="wrap not-found-language" lang="zh-Hant">
+        <p>頁面不存在。您可以繼續瀏覽我們的房屋布置案例。</p>
+        <Link href="/zh-hant/projects" className="text-link">
+          瀏覽繁體中文案例 ↗
+        </Link>
+      </div>
     </SiteDocument>
   );
 }

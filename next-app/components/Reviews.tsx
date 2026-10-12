@@ -12,9 +12,9 @@ export default function Reviews({ locale = "en" }: { locale?: Locale }) {
   if (!verified.length) return null;
   return (
     <section className="section wrap" aria-labelledby="reviews-heading">
-      <p className="eyebrow">{t("In their words", "客户评价")}</p>
+      <p className="eyebrow">{t("In their words", "客户评价", "客戶評價")}</p>
       <h2 id="reviews-heading">
-        {t("A thoughtful experience.", "用心服务的体验。")}
+        {t("A thoughtful experience.", "用心服务的体验。", "用心服務的體驗。")}
       </h2>
       <div className="reviews-grid">
         {verified.map((review) => (

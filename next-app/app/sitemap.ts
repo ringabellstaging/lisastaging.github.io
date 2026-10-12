@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         languages: {
           "en-CA": `${siteUrl}${localizedPath(path, "en")}`,
           "zh-Hans": `${siteUrl}${localizedPath(path, "zh")}`,
+          "zh-Hant": `${siteUrl}${localizedPath(path, "zh-hant")}`,
         },
       },
     })),

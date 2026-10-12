@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import ProjectGallery from "@/components/ProjectGallery";
 import { getProject } from "@/lib/projects";
 import { pageMetadata, siteUrl } from "@/lib/site";
-import { cityLabel, localizedPath, type Locale } from "@/lib/i18n";
+import { cityLabel, localizedPath, translator, type Locale } from "@/lib/i18n";
 import { pageText, projectDescription } from "@/lib/page-copy";
 
 export async function getMetadata(
@@ -18,7 +18,7 @@ export async function getMetadata(
   const project = getProject((await params).houseId);
   if (!project) return {};
   return pageMetadata(
-    locale === "zh"
+    locale !== "en"
       ? `${project.title} — ${cityLabel(project.city, locale)}房屋布置`
       : `${project.title} — ${project.city} Home Staging`,
     projectDescription(project, locale),
@@ -79,7 +79,7 @@ export default async function ProjectPage({
         />
       )}
       <nav
-        aria-label={locale === "zh" ? "页面位置" : "Breadcrumb"}
+        aria-label={translator(locale)("Breadcrumb", "页面位置", "頁面位置")}
         className="breadcrumbs"
       >
         <Link href={href("/")}>{t("Home")}</Link>

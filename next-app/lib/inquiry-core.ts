@@ -1,3 +1,5 @@
+import { translator, languageNames, type Locale } from "./i18n.ts";
+
 export const budgetLabels: Record<string, string> = {
   "under-2000": "Under CAD $2,000",
   "2000-4000": "CAD $2,000–$4,000",
@@ -14,7 +16,7 @@ export type Inquiry = {
   name: string;
   message: string;
   consent: true;
-  locale?: "en" | "zh";
+  locale?: Locale;
 };
 export function isAllowedOrigin(
   origin: string | null,
@@ -50,7 +52,12 @@ export function validateInquiry(input: unknown): {
   if (!input || typeof input !== "object" || Array.isArray(input))
     return { error: "Please check your form details." };
   const body = input as Record<string, unknown>;
-  if (body.locale !== undefined && body.locale !== "en" && body.locale !== "zh")
+  if (
+    body.locale !== undefined &&
+    body.locale !== "en" &&
+    body.locale !== "zh" &&
+    body.locale !== "zh-hant"
+  )
     return { error: "Please check your form details." };
   const string = (key: string, max: number) =>
     typeof body[key] === "string" && (body[key] as string).length <= max
@@ -101,7 +108,9 @@ export function validateInquiry(input: unknown): {
       name,
       message,
       consent: true,
-      ...(body.locale === "en" || body.locale === "zh"
+      ...(body.locale === "en" ||
+      body.locale === "zh" ||
+      body.locale === "zh-hant"
         ? { locale: body.locale }
         : {}),
     },
@@ -109,8 +118,7 @@ export function validateInquiry(input: unknown): {
 }
 export function buildEmails(data: Inquiry, from: string, teamEmail: string) {
   const reference = `OT-${data.requestId}`;
-  const t = (english: string, chinese: string) =>
-    data.locale === "zh" ? chinese : english;
+  const t = translator(data.locale ?? "en");
   return {
     team: {
       from,
@@ -126,7 +134,7 @@ export function buildEmails(data: Inquiry, from: string, teamEmail: string) {
         `Name: ${data.name || "Not provided"}`,
         `Email: ${data.email}`,
         `Phone: ${data.phone}`,
-        `Website language: ${data.locale === "zh" ? "Simplified Chinese" : "English"}`,
+        `Website language: ${languageNames[data.locale ?? "en"]}`,
         "",
         `Notes: ${data.message || "None"}`,
         "",
@@ -140,21 +148,28 @@ export function buildEmails(data: Inquiry, from: string, teamEmail: string) {
       subject: t(
         "We’ve received your staging inquiry — Oaktime Staging",
         "我们已收到您的房屋布置询价 — Oaktime Staging",
+        "我們已收到您的房屋佈置詢價 — Oaktime Staging",
       ),
       text: [
         t(
           "Thank you for contacting Oaktime Staging.",
           "感谢您联系 Oaktime Staging。",
+          "感謝您聯繫 Oaktime Staging。",
         ),
         "",
         t(
           "We’ve received your inquiry. A designer will review your property details and contact you as soon as possible to discuss your staging needs and provide a quote.",
           "我们已收到您的询价。设计师会查看您的房屋信息，尽快与您联系，沟通布置需求并提供报价。",
+          "我們已收到您的詢價。設計師會查看您的房屋信息，儘快與您聯繫，溝通佈置需求並提供報價。",
         ),
         "",
-        t(`Your reference: ${reference}`, `询价编号：${reference}`),
+        t(
+          `Your reference: ${reference}`,
+          `询价编号：${reference}`,
+          `詢價編號：${reference}`,
+        ),
         "",
-        t("Warm regards,", "诚挚问候，"),
+        t("Warm regards,", "诚挚问候，", "誠摯問候，"),
         "Oaktime Staging",
         "Oak Time Inc.",
         "English: (416) 877-1878",

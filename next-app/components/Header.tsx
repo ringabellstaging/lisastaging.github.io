@@ -2,7 +2,12 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { localizedPath, translator, type Locale } from "@/lib/i18n";
+import {
+  htmlLanguage,
+  localizedPath,
+  translator,
+  type Locale,
+} from "@/lib/i18n";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 
 export default function Header({ locale = "en" }: { locale?: Locale }) {
@@ -16,7 +21,11 @@ export default function Header({ locale = "en" }: { locale?: Locale }) {
         <Link
           href={href("/")}
           className="wordmark"
-          aria-label={t("Oaktime Staging home", "Oaktime Staging 首页")}
+          aria-label={t(
+            "Oaktime Staging home",
+            "Oaktime Staging 首页",
+            "Oaktime Staging 首頁",
+          )}
           onClick={() => setOpen(false)}
         >
           oaktime<span>STAGING & STYLING</span>
@@ -24,7 +33,9 @@ export default function Header({ locale = "en" }: { locale?: Locale }) {
         <button
           className="menu-toggle"
           aria-label={
-            open ? t("Close menu", "关闭菜单") : t("Open menu", "打开菜单")
+            open
+              ? t("Close menu", "关闭菜单", "關閉菜單")
+              : t("Open menu", "打开菜单", "打開菜單")
           }
           aria-expanded={open}
           aria-controls="main-navigation"
@@ -34,30 +45,35 @@ export default function Header({ locale = "en" }: { locale?: Locale }) {
         </button>
         <nav
           id="main-navigation"
-          aria-label={t("Main navigation", "主导航")}
+          aria-label={t("Main navigation", "主导航", "主導航")}
           className={open ? "navigation is-open" : "navigation"}
           onClick={() => setOpen(false)}
         >
           <Link href={href("/#services")}>
-            {t("Our services", "我们的服务")}
+            {t("Our services", "我们的服务", "我們的服務")}
           </Link>
-          <Link href={href("/projects")}>{t("Our work", "案例作品")}</Link>
+          <Link href={href("/projects")}>
+            {t("Our work", "案例作品", "案例作品")}
+          </Link>
           <Link href={href("/#project-map")}>
-            {t("Project map", "案例地图")}
+            {t("Project map", "案例地图", "案例地圖")}
           </Link>
-          <Link href={href("/about")}>{t("About us", "关于我们")}</Link>
+          <Link href={href("/about")}>
+            {t("About us", "关于我们", "關於我們")}
+          </Link>
           <Link
             href={href("/#inquiry")}
             className="button button-dark nav-quote"
           >
-            {t("Request a quote", "获取报价")} <ArrowUpRight size={16} />
+            {t("Request a quote", "获取报价", "獲取報價")}{" "}
+            <ArrowUpRight size={16} />
           </Link>
         </nav>
         <nav
           className="language-switch"
-          aria-label={t("Website language", "网站语言")}
+          aria-label={t("Website language", "网站语言", "網站語言")}
         >
-          {(["zh", "en"] as const).map((target, index) => (
+          {(["zh", "zh-hant", "en"] as const).map((target, index) => (
             <span key={target}>
               {index > 0 && (
                 <span className="language-divider" aria-hidden="true">
@@ -66,10 +82,14 @@ export default function Header({ locale = "en" }: { locale?: Locale }) {
               )}
               <a
                 href={localizedPath(pathname, target)}
-                hrefLang={target === "zh" ? "zh-Hans" : "en-CA"}
-                lang={target === "zh" ? "zh-Hans" : "en"}
+                hrefLang={htmlLanguage(target)}
+                lang={htmlLanguage(target)}
                 aria-label={
-                  target === "zh" ? "切换到中文" : "Switch to English"
+                  target === "zh-hant"
+                    ? "切換至繁體中文"
+                    : target === "zh"
+                      ? "切换到简体中文"
+                      : "Switch to English"
                 }
                 aria-current={locale === target ? "true" : undefined}
                 onClick={(event) => {
@@ -83,7 +103,7 @@ export default function Header({ locale = "en" }: { locale?: Locale }) {
                   setOpen(false);
                 }}
               >
-                {target === "zh" ? "中" : "EN"}
+                {target === "zh-hant" ? "繁" : target === "zh" ? "简" : "EN"}
               </a>
             </span>
           ))}

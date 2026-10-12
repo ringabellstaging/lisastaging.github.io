@@ -1,0 +1,4 @@
+import NotFound from "@/components/NotFound";
+export default function Page() {
+  return <NotFound locale="zh-hant" />;
+}

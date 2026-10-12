@@ -20,14 +20,14 @@ export default function Portfolio({
     <>
       <div className="portfolio-filter">
         <label htmlFor="portfolio-city">
-          {t("Explore by location", "按城市浏览")}{" "}
+          {t("Explore by location", "按城市浏览", "按城市瀏覽")}{" "}
           <select
             id="portfolio-city"
             value={city}
             onChange={(event) => setCity(event.target.value)}
           >
             <option value="All locations">
-              {t("All locations", "全部城市")}
+              {t("All locations", "全部城市", "全部城市")}
             </option>
             {[...new Set(projects.map((p) => p.city))].sort().map((name) => (
               <option key={name} value={name}>
@@ -37,7 +37,11 @@ export default function Portfolio({
           </select>
         </label>
         <span aria-live="polite">
-          {t(`${filtered.length} projects`, `${filtered.length} 个案例`)}
+          {t(
+            `${filtered.length} projects`,
+            `${filtered.length} 个案例`,
+            `${filtered.length} 個案例`,
+          )}
         </span>
       </div>
       <div className="projects-grid">

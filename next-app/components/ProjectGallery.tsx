@@ -48,6 +48,7 @@ export default function ProjectGallery({
             aria-label={t(
               `Enlarge ${image.alt}`,
               `放大 ${photoAlt(image.alt, locale)}`,
+              `放大 ${photoAlt(image.alt, locale)}`,
             )}
             onClick={(event) => {
               lastTrigger.current = event.currentTarget;
@@ -66,14 +67,18 @@ export default function ProjectGallery({
               priority={index === 0}
               quality={75}
             />
-            <span>{t("View full image ↗", "查看大图 ↗")}</span>
+            <span>{t("View full image ↗", "查看大图 ↗", "查看大圖 ↗")}</span>
           </button>
         ))}
       </div>
       <dialog
         ref={dialog}
         className="lightbox"
-        aria-label={t(`${title} photo gallery`, `${title} 案例相册`)}
+        aria-label={t(
+          `${title} photo gallery`,
+          `${title} 案例相册`,
+          `${title} 案例相冊`,
+        )}
         onCancel={(event) => {
           event.preventDefault();
           close();
@@ -92,7 +97,7 @@ export default function ProjectGallery({
             <button
               type="button"
               onClick={close}
-              aria-label={t("Close photo gallery", "关闭相册")}
+              aria-label={t("Close photo gallery", "关闭相册", "關閉相冊")}
             >
               <X size={22} />
             </button>
@@ -111,7 +116,7 @@ export default function ProjectGallery({
               <div className="lightbox-controls">
                 <button
                   type="button"
-                  aria-label={t("Previous photo", "上一张照片")}
+                  aria-label={t("Previous photo", "上一张照片", "上一張照片")}
                   onClick={() => move(-1)}
                 >
                   <ArrowLeft size={20} />
@@ -121,7 +126,7 @@ export default function ProjectGallery({
                 </span>
                 <button
                   type="button"
-                  aria-label={t("Next photo", "下一张照片")}
+                  aria-label={t("Next photo", "下一张照片", "下一張照片")}
                   onClick={() => move(1)}
                 >
                   <ArrowRight size={20} />

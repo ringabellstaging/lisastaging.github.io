@@ -27,8 +27,8 @@ function MapViewport({
   useEffect(() => {
     const t = translator(locale);
     for (const [selector, label] of [
-      [".leaflet-control-zoom-in", t("Zoom in", "放大地图")],
-      [".leaflet-control-zoom-out", t("Zoom out", "缩小地图")],
+      [".leaflet-control-zoom-in", t("Zoom in", "放大地图", "放大地圖")],
+      [".leaflet-control-zoom-out", t("Zoom out", "缩小地图", "縮小地圖")],
     ] as const) {
       map
         .getContainer()
@@ -75,6 +75,7 @@ export default function ProjectMap({
     t(
       `Explore ${group.length} staging project${group.length > 1 ? "s" : ""} near ${group[0].street}`,
       `查看 ${group[0].street} 附近的 ${group.length} 个布置案例`,
+      `查看 ${group[0].street} 附近的 ${group.length} 個佈置案例`,
     );
   const groups = useMemo(() => {
     const grouped = new Map<string, ProjectSummary[]>();
@@ -132,7 +133,13 @@ export default function ProjectMap({
           >
             <Popup>
               <div className="project-popup">
-                <small>{t("STAGED BY OAKTIME", "OAKTIME 布置案例")}</small>
+                <small>
+                  {t(
+                    "STAGED BY OAKTIME",
+                    "OAKTIME 布置案例",
+                    "OAKTIME 佈置案例",
+                  )}
+                </small>
                 {group.map((project) => (
                   <div key={project.id}>
                     <button type="button" onClick={() => onSelect(project.id)}>
@@ -142,7 +149,7 @@ export default function ProjectMap({
                       href={localizedPath(`/${project.id}`, locale)}
                       prefetchOnView
                     >
-                      {t("View project ↗", "查看案例 ↗")}
+                      {t("View project ↗", "查看案例 ↗", "查看案例 ↗")}
                     </ProjectLink>
                   </div>
                 ))}
@@ -156,6 +163,7 @@ export default function ProjectMap({
           {t(
             "Map tiles are unavailable. Browse the project list to explore our work.",
             "地图暂时无法加载，请通过案例列表浏览我们的作品。",
+            "地圖暫時無法加載，請通過案例列表瀏覽我們的作品。",
           )}
         </p>
       )}
