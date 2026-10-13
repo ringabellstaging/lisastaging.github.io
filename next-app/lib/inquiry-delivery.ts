@@ -7,10 +7,13 @@ import {
   saveJob,
   unlockJob,
 } from "./inquiry-store.ts";
-import { contactInfo } from "./contact.ts";
 
 export function emailConfigured() {
-  return Boolean(process.env.RESEND_API_KEY && process.env.INQUIRY_FROM);
+  return Boolean(
+    process.env.RESEND_API_KEY &&
+      process.env.INQUIRY_FROM &&
+      process.env.INQUIRY_TO,
+  );
 }
 async function send(
   email: ReturnType<typeof buildEmails>["team"],
@@ -37,7 +40,7 @@ export async function deliverInquiry(id: string) {
       await completeJob(id);
       return false;
     }
-    if (job.teamSent && job.customerSent) {
+    if (job.teamSent && (!job.confirmationRequested || job.customerSent)) {
       await completeJob(id);
       return true;
     }
@@ -56,7 +59,7 @@ export async function deliverInquiry(id: string) {
     const messages = buildEmails(
       job.data,
       process.env.INQUIRY_FROM!,
-      contactInfo.email,
+      process.env.INQUIRY_TO!,
     );
     try {
       if (!job.teamSent) {
@@ -64,7 +67,7 @@ export async function deliverInquiry(id: string) {
         job.teamSent = true;
         await saveJob(job);
       }
-      if (!job.customerSent) {
+      if (job.confirmationRequested && !job.customerSent) {
         await send(messages.customer, `oaktime-customer-${id}`);
         job.customerSent = true;
         await saveJob(job);

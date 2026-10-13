@@ -5,7 +5,8 @@ import {
   buildEmails,
   isAllowedOrigin,
 } from "../lib/inquiry-core.ts";
-import { deliverInquiry } from "../lib/inquiry-delivery.ts";
+import { deliverInquiry, emailConfigured } from "../lib/inquiry-delivery.ts";
+import { createJob } from "../lib/inquiry-store.ts";
 
 const valid = {
   requestId: "a05eec14-4515-4d19-8d08-e5aab8396b1d",
@@ -135,6 +136,7 @@ test("delivery persists partial success, retries only the missing email, and ded
     "UPSTASH_REDIS_REST_TOKEN",
     "RESEND_API_KEY",
     "INQUIRY_FROM",
+    "INQUIRY_TO",
   ];
   const oldEnv = Object.fromEntries(
     envNames.map((key) => [key, process.env[key]]),
@@ -144,12 +146,14 @@ test("delivery persists partial success, retries only the missing email, and ded
     UPSTASH_REDIS_REST_TOKEN: "test",
     RESEND_API_KEY: "test",
     INQUIRY_FROM: "Oaktime <hello@example.test>",
+    INQUIRY_TO: "info@oaktime.ca",
   });
   const job = {
     data: validateInquiry(valid).data,
     digest: "test",
     createdAt: Date.now(),
     teamSent: false,
+    confirmationRequested: true,
     customerSent: false,
     attempts: 0,
   };
@@ -198,6 +202,110 @@ test("delivery persists partial success, retries only the missing email, and ded
     for (const key of envNames) {
       if (oldEnv[key] === undefined) delete process.env[key];
       else process.env[key] = oldEnv[key];
+    }
+  }
+});
+
+test("forwarding only requires configured recipients, retries safely and never emails the customer", async () => {
+  const oldFetch = globalThis.fetch;
+  const configured = {
+    UPSTASH_REDIS_REST_URL: "https://storage.example.test",
+    UPSTASH_REDIS_REST_TOKEN: "test",
+    RESEND_API_KEY: "test",
+    INQUIRY_FROM: "Oaktime Staging <inquiries@example.test>",
+    INQUIRY_TO: "info@oaktime.ca",
+    INQUIRY_SEND_CONFIRMATION: "false",
+  };
+  const oldEnv = Object.fromEntries(
+    Object.keys(configured).map((key) => [key, process.env[key]]),
+  );
+  const values = new Map();
+  const sends = [];
+  const queued = new Set();
+  let failSend = true;
+  Object.assign(process.env, configured);
+  globalThis.fetch = async (url, options) => {
+    if (url === "https://api.resend.com/emails") {
+      sends.push({
+        data: JSON.parse(options.body),
+        key: options.headers["Idempotency-Key"],
+      });
+      return new Response("{}", { status: failSend ? 503 : 200 });
+    }
+    assert.equal(url, configured.UPSTASH_REDIS_REST_URL);
+    const [command, ...args] = JSON.parse(options.body);
+    let result = 1;
+    if (command === "GET") result = values.get(args[0]) || null;
+    else if (command === "SET") {
+      if (args.includes("NX") && values.has(args[0])) result = null;
+      else {
+        values.set(args[0], args[1]);
+        result = "OK";
+      }
+    } else if (command === "EVAL" && args[0].includes("EXISTS")) {
+      values.set(args[2], args[4]);
+      queued.add(args[7]);
+    } else if (command === "EVAL" && args[0].includes("DEL")) {
+      if (values.get(args[2]) === args[3]) values.delete(args[2]);
+    } else if (command === "ZREM") queued.delete(args[1]);
+    else if (command === "ZADD") queued.add(args[2]);
+    else assert.fail(`Unexpected Redis command: ${command}`);
+    return Response.json({ result });
+  };
+  try {
+    assert.equal(emailConfigured(), true);
+    delete process.env.INQUIRY_TO;
+    assert.equal(emailConfigured(), false);
+    process.env.INQUIRY_TO = configured.INQUIRY_TO;
+
+    // Missing or false confirmation settings both mean team-only forwarding.
+    delete process.env.INQUIRY_SEND_CONFIRMATION;
+    const job = await createJob(validateInquiry(valid).data);
+    assert.equal(job.confirmationRequested, false);
+    assert.equal(queued.has(valid.requestId), true);
+
+    assert.equal(await deliverInquiry(valid.requestId), false);
+    assert.equal(queued.has(valid.requestId), true);
+    assert.equal(
+      JSON.parse(values.get(`oaktime:inquiry:${valid.requestId}`)).teamSent,
+      false,
+    );
+
+    // Changing the default does not send an acknowledgement for an existing job.
+    process.env.INQUIRY_SEND_CONFIRMATION = "true";
+    failSend = false;
+    assert.equal(await deliverInquiry(valid.requestId), true);
+    assert.equal(await deliverInquiry(valid.requestId), true);
+    assert.equal(queued.has(valid.requestId), false);
+    assert.equal(sends.length, 2);
+    assert.equal(sends[0].key, sends[1].key);
+    for (const { data } of sends) {
+      assert.deepEqual(data.to, ["info@oaktime.ca"]);
+      assert.equal(data.from, configured.INQUIRY_FROM);
+      assert.equal(data.reply_to, valid.email);
+      assert.ok(data.text.includes(valid.address));
+      assert.ok(data.text.includes(valid.phone));
+    }
+    const stored = JSON.parse(values.get(`oaktime:inquiry:${valid.requestId}`));
+    assert.equal(stored.teamSent, true);
+    assert.equal(stored.customerSent, false);
+
+    // Older records without the flag must not unexpectedly send customer mail.
+    delete stored.confirmationRequested;
+    values.set(`oaktime:inquiry:${valid.requestId}`, JSON.stringify(stored));
+    assert.equal(await deliverInquiry(valid.requestId), true);
+    assert.equal(sends.length, 2);
+
+    const enabled = await createJob({
+      ...validateInquiry(valid).data,
+      requestId: "e6ec019d-d28b-4498-aedb-090693e023f3",
+    });
+    assert.equal(enabled.confirmationRequested, true);
+  } finally {
+    globalThis.fetch = oldFetch;
+    for (const [key, value] of Object.entries(oldEnv)) {
+      if (value === undefined) delete process.env[key];
+      else process.env[key] = value;
     }
   }
 });

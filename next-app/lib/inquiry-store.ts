@@ -9,6 +9,7 @@ export type InquiryJob = {
   digest: string;
   createdAt: number;
   teamSent: boolean;
+  confirmationRequested: boolean;
   customerSent: boolean;
   attempts: number;
 };
@@ -57,6 +58,9 @@ export async function createJob(data: Inquiry) {
     digest,
     createdAt: Date.now(),
     teamSent: false,
+    // Freeze this choice per inquiry so a later settings change cannot send
+    // unexpected acknowledgements when an older job is retried.
+    confirmationRequested: process.env.INQUIRY_SEND_CONFIRMATION === "true",
     customerSent: false,
     attempts: 0,
   };

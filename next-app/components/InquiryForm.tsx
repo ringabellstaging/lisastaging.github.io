@@ -12,6 +12,7 @@ export default function InquiryForm({ locale = "en" }: { locale?: Locale }) {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState<{
     id: string;
+    confirmationRequested: boolean;
     confirmationSent: boolean;
   } | null>(null);
   const requestRef = useRef<{ fingerprint: string; id: string } | null>(null);
@@ -41,6 +42,7 @@ export default function InquiryForm({ locale = "en" }: { locale?: Locale }) {
       if (!response.ok) throw new Error(inquiryError(result.error, locale));
       setSuccess({
         id: result.reference,
+        confirmationRequested: result.confirmationRequested,
         confirmationSent: result.confirmationSent,
       });
     } catch (err) {
@@ -84,19 +86,21 @@ export default function InquiryForm({ locale = "en" }: { locale?: Locale }) {
             "設計師會查看您的房屋信息，並儘快與您聯繫，溝通佈置需求和準備報價。",
           )}
         </p>
-        <p>
-          {success.confirmationSent
-            ? t(
-                "Your confirmation email is on its way. Please check your spam folder if it doesn’t arrive.",
-                "确认邮件已发送。如未收到，请查看垃圾邮件文件夹。",
-                "確認郵件已發送。如未收到，請查看垃圾郵件文件夾。",
-              )
-            : t(
-                "Your inquiry is safely recorded. Your email confirmation is still being processed.",
-                "您的询价已保存，确认邮件仍在处理中。",
-                "您的詢價已保存，確認郵件仍在處理中。",
-              )}
-        </p>
+        {success.confirmationRequested && (
+          <p>
+            {success.confirmationSent
+              ? t(
+                  "Your confirmation email is on its way. Please check your spam folder if it doesn’t arrive.",
+                  "确认邮件已发送。如未收到，请查看垃圾邮件文件夹。",
+                  "確認郵件已發送。如未收到，請查看垃圾郵件文件夾。",
+                )
+              : t(
+                  "Your inquiry is safely recorded. Your email confirmation is still being processed.",
+                  "您的询价已保存，确认邮件仍在处理中。",
+                  "您的詢價已保存，確認郵件仍在處理中。",
+                )}
+          </p>
+        )}
         <small>
           {t("Reference:", "询价编号：", "詢價編號：")} {success.id}
         </small>
