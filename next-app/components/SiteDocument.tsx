@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { contactInfo } from "@/lib/contact";
 import { siteUrl, isIndexable } from "@/lib/site";
+import { serviceAreas } from "@/lib/service-areas";
 
 const sans = DM_Sans({
   subsets: ["latin"],
@@ -35,7 +36,11 @@ export const getSiteMetadata = (locale: Locale): Metadata => ({
   ),
   icons: { icon: "/icon.svg" },
   robots: isIndexable
-    ? { index: true, follow: true }
+    ? {
+        index: true,
+        follow: true,
+        googleBot: { index: true, follow: true, "max-image-preview": "large" },
+      }
     : { index: false, follow: true },
 });
 const schema = {
@@ -43,7 +48,15 @@ const schema = {
   "@type": "LocalBusiness",
   name: "Oaktime Staging",
   legalName: "Oak Time Inc.",
-  ...(siteUrl ? { url: siteUrl } : {}),
+  ...(siteUrl
+    ? {
+        "@id": `${siteUrl}/#business`,
+        url: siteUrl,
+        image: `${siteUrl}/images/house38/img1.jpg`,
+      }
+    : {}),
+  description:
+    "Home staging and property styling based in Stouffville, serving Toronto and the Greater Toronto Area.",
   email: contactInfo.email,
   telephone: "+14168771878",
   address: {
@@ -54,7 +67,10 @@ const schema = {
     postalCode: "L4A3Y4",
     addressCountry: "CA",
   },
-  areaServed: ["Toronto", "Greater Toronto Area"],
+  areaServed: serviceAreas.map((area) => ({
+    "@type": "AdministrativeArea",
+    name: area.name[0],
+  })),
   contactPoint: [
     {
       "@type": "ContactPoint",
@@ -70,6 +86,17 @@ const schema = {
     },
   ],
 };
+const websiteSchema = siteUrl
+  ? {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: siteUrl,
+      name: "Oaktime Staging",
+      publisher: { "@id": `${siteUrl}/#business` },
+      inLanguage: ["en-CA", "zh-Hans", "zh-Hant"],
+    }
+  : null;
 export default function SiteDocument({
   children,
   locale,
@@ -87,7 +114,9 @@ export default function SiteDocument({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(schema).replace(/</g, "\\u003c"),
+            __html: JSON.stringify(
+              websiteSchema ? [schema, websiteSchema] : schema,
+            ).replace(/</g, "\\u003c"),
           }}
         />
         <Header locale={locale} />

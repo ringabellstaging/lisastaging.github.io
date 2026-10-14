@@ -6,6 +6,7 @@ import { getProject } from "@/lib/projects";
 import { pageMetadata, siteUrl } from "@/lib/site";
 import { cityLabel, localizedPath, translator, type Locale } from "@/lib/i18n";
 import { pageText, projectDescription } from "@/lib/page-copy";
+import { gtaPath, serviceAreaForCity } from "@/lib/service-areas";
 
 export async function getMetadata(
   {
@@ -38,6 +39,7 @@ export default async function ProjectPage({
   const href = (path: string) => localizedPath(path, locale);
   const project = getProject((await params).houseId);
   if (!project) notFound();
+  const area = serviceAreaForCity(project.city);
   const images = [
     project.cover,
     ...project.images.filter((image) => image.src !== project.cover.src),
@@ -103,6 +105,17 @@ export default async function ProjectPage({
           "Street name shown for reference. Full property address kept private.",
         )}
       </p>
+      <Link
+        href={href(`${gtaPath}${area ? `#${area.id}` : ""}`)}
+        className="text-link"
+      >
+        {translator(locale)(
+          "Explore home staging services across the GTA",
+          "了解大多地区房屋布置服务",
+          "瞭解大多地區房屋佈置服務",
+        )}
+        <ArrowUpRight size={17} />
+      </Link>
       <div className="project-cta">
         <div>
           <h2>

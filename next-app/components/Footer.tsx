@@ -32,6 +32,9 @@ export default function Footer({ locale = "en" }: { locale?: Locale }) {
           <Link href={href("/projects")}>
             {t("Our work", "案例作品", "案例作品")}
           </Link>
+          <Link href={href("/home-staging-gta")}>
+            {t("GTA service areas", "GTA 服务区域", "GTA 服務區域")}
+          </Link>
           <Link href={href("/about")}>
             {t("Our story", "关于我们", "關於我們")}
           </Link>

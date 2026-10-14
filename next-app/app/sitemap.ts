@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     "/",
     "/projects",
+    "/home-staging-gta",
     "/about",
     "/contact",
     "/privacy",
@@ -19,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
           "en-CA": `${siteUrl}${localizedPath(path, "en")}`,
           "zh-Hans": `${siteUrl}${localizedPath(path, "zh")}`,
           "zh-Hant": `${siteUrl}${localizedPath(path, "zh-hant")}`,
+          "x-default": `${siteUrl}${localizedPath(path, "en")}`,
         },
       },
     })),
