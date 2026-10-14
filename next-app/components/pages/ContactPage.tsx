@@ -10,8 +10,8 @@ export const getMetadata = (locale: Locale) =>
     "Contact Us for a Home Staging Quote",
     translator(locale)(
       `Request a home staging quote from Oaktime Staging. Call ${contactInfo.englishPhone} or email ${contactInfo.email}. Based in Stouffville, serving Toronto and the GTA.`,
-      `联系 Oaktime Staging 获取房屋布置报价。中文电话 ${contactInfo.mandarinPhone}，英文电话 ${contactInfo.englishPhone}，邮箱 ${contactInfo.email}。服务多伦多及大多地区。`,
-      `聯繫 Oaktime Staging 獲取房屋佈置報價。中文電話 ${contactInfo.mandarinPhone}，英文電話 ${contactInfo.englishPhone}，郵箱 ${contactInfo.email}。服務多倫多及大多地區。`,
+      `联系 Oaktime Staging 咨询多伦多及 GTA 房屋布置报价。中文服务（普通话／国语）请拨打 ${contactInfo.mandarinPhone}，英文电话 ${contactInfo.englishPhone}，邮箱 ${contactInfo.email}。`,
+      `聯繫 Oaktime Staging 諮詢多倫多及 GTA 房屋佈置報價。中文服務（普通話／國語）請撥打 ${contactInfo.mandarinPhone}，英文電話 ${contactInfo.englishPhone}，郵箱 ${contactInfo.email}。`,
     ),
     "/contact",
   );

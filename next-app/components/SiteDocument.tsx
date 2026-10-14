@@ -24,15 +24,15 @@ export const getSiteMetadata = (locale: Locale): Metadata => ({
   title: {
     default: translator(locale)(
       "Home Staging in Toronto & the GTA | Oaktime Staging",
-      "多伦多及大多地区房屋布置 | Oaktime Staging",
-      "多倫多及大多地區房屋佈置 | Oaktime Staging",
+      "多伦多 GTA 华人 Home Staging · 中文服务 | Oaktime Staging",
+      "多倫多 GTA 華人 Home Staging · 中文服務 | Oaktime Staging",
     ),
     template: "%s | Oaktime Staging",
   },
   description: translator(locale)(
     "Thoughtful home staging for memorable first impressions. Explore our work across Toronto and the GTA and request a quote from Oaktime Staging.",
-    "Oaktime Staging 为多伦多及大多地区提供房屋布置服务。浏览案例，联系设计师获取报价。",
-    "Oaktime Staging 為多倫多及大多地區提供房屋佈置服務。瀏覽案例，聯繫設計師獲取報價。",
+    "Oaktime Staging 为多伦多及 GTA 提供售前房屋布置，支持中文服务（普通话／国语）及英语沟通。浏览案例，联系设计师获取报价。",
+    "Oaktime Staging 為多倫多及 GTA 提供售前房屋佈置，支援中文服務（普通話／國語）及英語溝通。瀏覽案例，聯繫設計師獲取報價。",
   ),
   icons: { icon: "/icon.svg" },
   robots: isIndexable
