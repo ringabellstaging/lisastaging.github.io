@@ -11,13 +11,13 @@ export function getMetadata(locale: Locale) {
   return pageMetadata(
     t(
       "GTA Home Staging Services & Areas",
-      "大多伦多 GTA 房屋布置服务与地区",
-      "大多倫多 GTA 房屋佈置服務與地區",
+      "GTA 华人 Home Staging 服务区域 · 中文咨询",
+      "GTA 華人 Home Staging 服務區域 · 中文諮詢",
     ),
     t(
       "Home staging across Toronto, Stouffville, Markham, Richmond Hill and the GTA. Explore local projects, service areas and answers before requesting a quote.",
-      "Oaktime Staging 服务多伦多、史托维尔、万锦、列治文山及 GTA 周边城镇。浏览当地案例、服务区域和布置须知，联系设计师获取报价。",
-      "Oaktime Staging 服務多倫多、史托維爾、萬錦、列治文山及 GTA 周邊城鎮。瀏覽當地案例、服務區域和佈置須知，聯繫設計師獲取報價。",
+      "寻找多伦多、万锦、列治文山、史托维尔及 GTA 周边的华人 Home Staging 服务？Oaktime Staging 提供中文服务（普通话／国语），浏览当地案例、确认服务区域并咨询报价。",
+      "尋找多倫多、萬錦、列治文山、史托維爾及 GTA 周邊的華人 Home Staging 服務？Oaktime Staging 提供中文服務（普通話／國語），瀏覽當地案例、確認服務區域並諮詢報價。",
     ),
     localizedPath(gtaPath, locale),
     "/images/house62/img1.jpg",
@@ -117,8 +117,8 @@ export default function ServiceAreasPage({
         <p>
           {t(
             "Oaktime Staging helps homeowners and real estate agents prepare homes for listing photos and viewings. From our Stouffville base, we plan furniture, layout and finishing details for properties across the Greater Toronto Area, with support in English and Mandarin.",
-            "Oaktime Staging 为屋主及地产经纪布置即将拍摄和展示的房屋。团队位于史托维尔，为大多伦多地区规划家具、布局与软装细节，提供英语及普通话服务。",
-            "Oaktime Staging 為屋主及地產經紀佈置即將拍攝和展示的房屋。團隊位於史托維爾，為大多倫多地區規劃傢俱、布局與軟裝細節，提供英語及普通話服務。",
+            "寻找多伦多及 GTA 的华人 Home Staging 服务？Oaktime Staging 位于史托维尔，为屋主及地产经纪规划家具、布局与软装细节，为房屋拍摄和看房做好准备。我们提供中文服务（普通话／国语）及英文服务，方便您沟通布置需求与报价。",
+            "尋找多倫多及 GTA 的華人 Home Staging 服務？Oaktime Staging 位於史托維爾，為屋主及地產經紀規劃傢俱、布局與軟裝細節，為房屋拍攝和看房做好準備。我們提供中文服務（普通話／國語）及英文服務，方便您溝通佈置需求與報價。",
           )}
         </p>
         <Link href={href("/contact")} className="button button-dark">

@@ -3,10 +3,10 @@ import type { Locale } from "./i18n";
 // Editorial copy is translated on the server, before the page reaches the browser.
 const chinese: Record<string, string> = {
   "Home staging for Toronto, Stouffville, Markham, Richmond Hill and the GTA. Explore Oaktime’s local projects and request a quote in English or Mandarin.":
-    "为多伦多、史托维尔、万锦、列治文山及大多地区提供售前房屋布置。浏览 Oaktime 当地案例，通过英语或普通话联系设计师获取报价。",
+    "Oaktime Staging 为多伦多、万锦、列治文山、史托维尔及 GTA 提供售前房屋布置，支持中文服务（普通话／国语）及英语沟通。浏览当地案例，联系设计师获取报价。",
   "Based in Stouffville, Oaktime Staging helps homeowners and real estate agents prepare properties for sale across Toronto and the Greater Toronto Area. We bring furniture, layout and finishing details together for listing photos and viewings.":
-    "Oaktime Staging 位于史托维尔，为多伦多及大多地区的屋主和地产经纪提供售前房屋布置。我们通过家具、布局及软装细节，为房屋拍摄和看房做好准备。",
-  "Home Staging in Toronto & the GTA": "多伦多及大多地区房屋布置",
+    "Oaktime Staging 位于史托维尔，为多伦多及大多地区的屋主和地产经纪提供售前房屋布置。我们支持中文服务（普通话／国语）及英语沟通，通过家具、布局与软装细节，为房屋拍摄和看房做好准备。",
+  "Home Staging in Toronto & the GTA": "多伦多 GTA 华人 Home Staging · 中文服务",
   "Thoughtful home staging for memorable first impressions. Explore our projects across Toronto and the GTA and request a quote.":
     "用心布置每个空间，留下美好的第一印象。浏览我们在多伦多及大多地区的案例，联系设计师获取报价。",
   "HOME STAGING · TORONTO & THE GTA": "房屋布置 · 多伦多及大多地区",
@@ -70,9 +70,9 @@ const chinese: Record<string, string> = {
   "What happens after I request a quote?": "提交询价后会发生什么？",
   "Your inquiry goes to our team. A designer will review your details and get in touch to discuss your needs and prepare a quote.":
     "您的询价会发送给我们的团队。设计师会查看您提供的信息，尽快与您联系，沟通需求并准备报价。",
-  "Can I speak with the team in Chinese?": "可以用中文沟通吗？",
+  "Can I speak with the team in Chinese?": "可以用普通话或国语沟通吗？",
   "Yes. You can call our Mandarin line at 416-939-3962. For English, call (416) 877-1878.":
-    "可以。中文服务请拨打 (416) 939-3962，英文服务请拨打 (416) 877-1878。",
+    "可以。我们提供中文服务（普通话／国语），中文咨询请拨打 (416) 939-3962，英文咨询请拨打 (416) 877-1878。",
   "Our Home Staging Projects": "房屋布置案例",
   "Browse Oaktime Staging projects across Toronto and the GTA. Explore our work by location and discover thoughtful furniture arrangements and styling.":
     "浏览 Oaktime Staging 在多伦多及大多地区的房屋布置案例，按地区查找作品，发现家具与软装搭配灵感。",
@@ -83,7 +83,7 @@ const chinese: Record<string, string> = {
     "用心呈现每一套房屋，为您的下一个生活篇章寻找灵感。",
   "About Our Home Staging Team": "关于我们的房屋布置团队",
   "Meet Oaktime Staging, a Stouffville-based team bringing thoughtful property styling, furniture placement and staging to homes across Toronto and the GTA.":
-    "认识 Oaktime Staging：位于史托维尔的房屋布置团队，为多伦多及大多地区提供软装搭配、家具摆放与售前布置服务。",
+    "认识 Oaktime Staging：位于史托维尔的房屋布置团队，为多伦多及 GTA 提供软装搭配、家具摆放与售前布置，支持中文服务（普通话／国语）及英语沟通。",
   "A bright open-plan home staged by the Oaktime team":
     "由 Oaktime 团队布置的明亮开放式居住空间",
   "THE PEOPLE BEHIND THE SPACES": "空间背后的团队",
@@ -94,8 +94,8 @@ const chinese: Record<string, string> = {
   "Based in Stouffville, our team works with homeowners and real estate professionals across Toronto and the GTA. From the first conversation to furniture placement and the finishing touches, we take a considered approach to every home.":
     "团队位于史托维尔，为多伦多及大多地区的屋主和地产专业人士提供服务。从初次沟通到家具摆放和最后的细节，我们认真对待每一套房屋。",
   "Oaktime Staging is operated by Oak Time Inc. Our team can help you in English and Mandarin.":
-    "Oaktime Staging 由 Oak Time Inc. 运营，提供中文及英文服务。",
-  "Contact Us for a Home Staging Quote": "联系团队获取房屋布置报价",
+    "Oaktime Staging 由 Oak Time Inc. 运营，提供中文服务（普通话／国语）及英文服务。",
+  "Contact Us for a Home Staging Quote": "中文 Home Staging 询价 · 普通话／国语服务",
   "GET IN TOUCH": "联系我们",
   "Let’s start a": "让我们开始",
   "conversation.": "一次沟通。",
@@ -149,10 +149,10 @@ const chinese: Record<string, string> = {
 
 const traditional: Record<string, string> = {
   "Home staging for Toronto, Stouffville, Markham, Richmond Hill and the GTA. Explore Oaktime’s local projects and request a quote in English or Mandarin.":
-    "為多倫多、史托維爾、萬錦、列治文山及大多地區提供售前房屋佈置。瀏覽 Oaktime 當地案例，通過英語或普通話聯繫設計師獲取報價。",
+    "Oaktime Staging 為多倫多、萬錦、列治文山、史托維爾及 GTA 提供售前房屋佈置，支援中文服務（普通話／國語）及英語溝通。瀏覽當地案例，聯繫設計師獲取報價。",
   "Based in Stouffville, Oaktime Staging helps homeowners and real estate agents prepare properties for sale across Toronto and the Greater Toronto Area. We bring furniture, layout and finishing details together for listing photos and viewings.":
-    "Oaktime Staging 位於史托維爾，為多倫多及大多地區的屋主和地產經紀提供售前房屋佈置。我們通過傢俱、布局及軟裝細節，為房屋拍攝和看房做好準備。",
-  "Home Staging in Toronto & the GTA": "多倫多及大多地區房屋佈置",
+    "Oaktime Staging 位於史托維爾，為多倫多及大多地區的屋主和地產經紀提供售前房屋佈置。我們支援中文服務（普通話／國語）及英語溝通，通過傢俱、布局與軟裝細節，為房屋拍攝和看房做好準備。",
+  "Home Staging in Toronto & the GTA": "多倫多 GTA 華人 Home Staging · 中文服務",
   "Thoughtful home staging for memorable first impressions. Explore our projects across Toronto and the GTA and request a quote.":
     "用心佈置每個空間，留下美好的第一印象。瀏覽我們在多倫多及大多地區的案例，聯繫設計師獲取報價。",
   "HOME STAGING · TORONTO & THE GTA": "房屋佈置 · 多倫多及大多地區",
@@ -216,9 +216,9 @@ const traditional: Record<string, string> = {
   "What happens after I request a quote?": "提交詢價後會發生什麼？",
   "Your inquiry goes to our team. A designer will review your details and get in touch to discuss your needs and prepare a quote.":
     "您的詢價會發送給我們的團隊。設計師會查看您提供的信息，儘快與您聯繫，溝通需求並準備報價。",
-  "Can I speak with the team in Chinese?": "可以用中文溝通嗎？",
+  "Can I speak with the team in Chinese?": "可以用普通話或國語溝通嗎？",
   "Yes. You can call our Mandarin line at 416-939-3962. For English, call (416) 877-1878.":
-    "可以。中文服務請撥打 (416) 939-3962，英文服務請撥打 (416) 877-1878。",
+    "可以。我們提供中文服務（普通話／國語），中文諮詢請撥打 (416) 939-3962，英文諮詢請撥打 (416) 877-1878。",
   "Our Home Staging Projects": "房屋佈置案例",
   "Browse Oaktime Staging projects across Toronto and the GTA. Explore our work by location and discover thoughtful furniture arrangements and styling.":
     "瀏覽 Oaktime Staging 在多倫多及大多地區的房屋佈置案例，按地區查找作品，發現傢俱與軟裝搭配靈感。",
@@ -229,7 +229,7 @@ const traditional: Record<string, string> = {
     "用心呈現每一套房屋，為您的下一個生活篇章尋找靈感。",
   "About Our Home Staging Team": "關於我們的房屋佈置團隊",
   "Meet Oaktime Staging, a Stouffville-based team bringing thoughtful property styling, furniture placement and staging to homes across Toronto and the GTA.":
-    "認識 Oaktime Staging：位於史托維爾的房屋佈置團隊，為多倫多及大多地區提供軟裝搭配、傢俱擺放與售前佈置服務。",
+    "認識 Oaktime Staging：位於史托維爾的房屋佈置團隊，為多倫多及 GTA 提供軟裝搭配、傢俱擺放與售前佈置，支援中文服務（普通話／國語）及英語溝通。",
   "A bright open-plan home staged by the Oaktime team":
     "由 Oaktime 團隊佈置的明亮開放式居住空間",
   "THE PEOPLE BEHIND THE SPACES": "空間背後的團隊",
@@ -240,8 +240,8 @@ const traditional: Record<string, string> = {
   "Based in Stouffville, our team works with homeowners and real estate professionals across Toronto and the GTA. From the first conversation to furniture placement and the finishing touches, we take a considered approach to every home.":
     "團隊位於史托維爾，為多倫多及大多地區的屋主和地產專業人士提供服務。從初次溝通到傢俱擺放和最後的細節，我們認真對待每一套房屋。",
   "Oaktime Staging is operated by Oak Time Inc. Our team can help you in English and Mandarin.":
-    "Oaktime Staging 由 Oak Time Inc. 運營，提供中文及英文服務。",
-  "Contact Us for a Home Staging Quote": "聯繫團隊獲取房屋佈置報價",
+    "Oaktime Staging 由 Oak Time Inc. 運營，提供中文服務（普通話／國語）及英文服務。",
+  "Contact Us for a Home Staging Quote": "中文 Home Staging 詢價 · 普通話／國語服務",
   "GET IN TOUCH": "聯繫我們",
   "Let’s start a": "讓我們開始",
   "conversation.": "一次溝通。",
