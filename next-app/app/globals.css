@@ -791,6 +791,32 @@ details p {
   grid-template-columns: 1fr 1fr;
   gap: 21px 22px;
 }
+.form-intro {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+.form-hint {
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0;
+}
+.inquiry-extra {
+  border-block: 1px solid var(--line);
+  padding: 0;
+}
+.inquiry-extra summary {
+  padding: 12px 0;
+  font-family: var(--font-body), Arial, sans-serif;
+  font-size: 12px;
+  gap: 12px;
+}
+.inquiry-extra-fields {
+  display: grid;
+  gap: 18px;
+  padding: 6px 0 20px;
+}
 .form-field {
   display: flex;
   flex-direction: column;

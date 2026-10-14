@@ -8,6 +8,7 @@ import {
 import { deliverInquiry, emailConfigured } from "../lib/inquiry-delivery.ts";
 import { createJob, getJob } from "../lib/inquiry-store.ts";
 import { encryptRecord } from "../lib/inquiry-crypto.ts";
+import { inquiryPropertyFields } from "../lib/inquiry-property.ts";
 import {
   MARKETING_CONSENT_VERSION,
   marketingConsentText,
@@ -100,6 +101,71 @@ test("malformed JSON values cannot crash validation or pass as contact details",
     { ...valid, message: "x".repeat(2001) },
   ])
     assert.ok(validateInquiry(body).error);
+});
+test("short inquiries can skip property choices and budget without changing legacy payloads", () => {
+  const legacy = validateInquiry(valid).data;
+  const skipped = validateInquiry({
+    ...valid,
+    propertyType: "",
+    occupancy: "",
+    floorArea: "",
+  }).data;
+  assert.equal(JSON.stringify(skipped), JSON.stringify(legacy));
+  for (const budget of [undefined, "", "unsure"]) {
+    const { data, error } = validateInquiry({
+      ...valid,
+      budget,
+      name: "",
+      message: "",
+    });
+    assert.equal(error, undefined);
+    assert.equal(data.budget, "unsure");
+  }
+  const email = buildEmails(
+    legacy,
+    "from@example.test",
+    "team@example.test",
+  ).team;
+  assert.ok(!email.text.includes("Property type:"));
+  assert.ok(!email.text.includes("Current condition:"));
+  assert.ok(!email.text.includes("Approx. size"));
+});
+test("property dropdowns accept only known values and render readable team email details", () => {
+  for (const [field, definition] of Object.entries(inquiryPropertyFields)) {
+    for (const [value, labels] of Object.entries(definition.options)) {
+      const { data, error } = validateInquiry({ ...valid, [field]: value });
+      assert.equal(error, undefined);
+      assert.equal(data[field], value);
+      const email = buildEmails(
+        data,
+        "from@example.test",
+        "team@example.test",
+      ).team;
+      assert.ok(email.text.includes(`${definition.label[0]}: ${labels[0]}`));
+      if (field === "floorArea")
+        assert.match(email.text, /sq ft \(excluding balcony and basement\)/);
+      assert.equal(labels.length, 3);
+      assert.ok(
+        labels.every((label) => typeof label === "string" && label.length > 0),
+      );
+    }
+    for (const value of [
+      null,
+      false,
+      2000,
+      [],
+      {},
+      "__proto__",
+      "constructor",
+      "invalid",
+      "condo\r\nBcc: other@example.test",
+    ]) {
+      assert.equal(
+        validateInquiry({ ...valid, [field]: value }).error,
+        "Please check the property details.",
+      );
+    }
+  }
 });
 test("marketing consent is optional, explicit and tied to the displayed wording", () => {
   const legacy = validateInquiry(valid).data;
@@ -364,6 +430,9 @@ test("forwarding only requires configured recipients, retries safely and never e
     const data = validateInquiry({
       ...valid,
       locale: "zh-hant",
+      propertyType: "condo",
+      occupancy: "vacant",
+      floorArea: "700-999",
       marketingConsent: true,
       marketingConsentVersion: MARKETING_CONSENT_VERSION,
     }).data;
@@ -407,11 +476,17 @@ test("forwarding only requires configured recipients, retries safely and never e
       assert.equal(data.reply_to, valid.email);
       assert.ok(data.text.includes(valid.address));
       assert.ok(data.text.includes(valid.phone));
+      assert.match(data.text, /Property type: Condo \/ apartment/);
+      assert.match(data.text, /Current condition: Empty \/ unfurnished/);
+      assert.match(data.text, /Approx. size \(sq ft\): 700–999/);
     }
     const stored = await getJob(valid.requestId);
     assert.equal(stored.teamSent, true);
     assert.equal(stored.customerSent, false);
     assert.deepEqual(stored.marketingPreference, job.marketingPreference);
+    assert.equal(stored.data.propertyType, "condo");
+    assert.equal(stored.data.occupancy, "vacant");
+    assert.equal(stored.data.floorArea, "700-999");
 
     // Older records without the flag must not unexpectedly send customer mail.
     delete stored.confirmationRequested;

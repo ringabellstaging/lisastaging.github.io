@@ -82,6 +82,8 @@ Until all email, storage and retry credentials are configured, the form returns 
 
 ## Inquiry delivery
 
+The short, single-page form requires only property address, email, phone and inquiry-contact consent. Property type, occupancy and approximate floor area are optional dropdowns; budget defaults to “Not sure yet.” Name and notes are in a closed optional disclosure. Area ranges exclude balcony and basement; the address prompt includes the unit number if applicable. No room inventory, uploads or AI lookups are required. These choices and their three-language labels share `lib/inquiry-property.ts` with server validation and the team email. Missing/blank property choices are omitted so older submissions and pending email payloads remain compatible. All supplied details use the existing encrypted storage and forwarding flow.
+
 1. Validate types, lengths, budget, address, email, phone, consent, honeypot and exact request origin. Payloads are capped at 12 KB.
 2. Shared Redis limits: eight requests per IP per ten minutes, three new inquiries per email per day and forty total new inquiries per day. The global cap leaves headroom for two emails per inquiry; review against the account's actual Resend quota, especially if sharing it with the drone business.
 3. Encrypt the entire inquiry record with AES-256-GCM before atomically saving and enqueueing it. Each write uses a fresh random 12-byte nonce and a 16-byte authentication tag; the Redis record key is authenticated to prevent swapping records. A UUID plus keyed payload digest protects retries and prevents reusing an ID with changed data. IP/email rate-limit keys use HMAC rather than public hashes. Records expire after 30 days. Do not write customer details into application logs.

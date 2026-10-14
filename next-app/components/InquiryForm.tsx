@@ -1,10 +1,11 @@
 "use client";
-import { useRef, useState, type FormEvent } from "react";
+import { useId, useRef, useState, type FormEvent } from "react";
 import Link from "next/link";
 import { ArrowUpRight, Check } from "lucide-react";
 import { contactInfo } from "@/lib/contact";
 import { localizedPath, translator, type Locale } from "@/lib/i18n";
 import { inquiryError } from "@/lib/inquiry-messages";
+import { inquiryPropertyFields } from "@/lib/inquiry-property";
 import {
   MARKETING_CONSENT_VERSION,
   marketingConsentText,
@@ -13,6 +14,7 @@ import {
 
 export default function InquiryForm({ locale = "en" }: { locale?: Locale }) {
   const t = translator(locale);
+  const areaHelpId = useId();
   const [pending, setPending] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState<{
@@ -123,6 +125,13 @@ export default function InquiryForm({ locale = "en" }: { locale?: Locale }) {
         "房屋佈置詢價表單",
       )}
     >
+      <p className="form-intro span-full">
+        {t(
+          "Start with your address and contact details. Skip anything you’re unsure about.",
+          "先留下房屋地址和联系方式。不确定的选项可以跳过。",
+          "先留下房屋地址和聯繫方式。不確定的選項可以跳過。",
+        )}
+      </p>
       <label className="form-field span-full">
         <span>{t("Property address *", "房屋地址 *", "房屋地址 *")}</span>
         <input
@@ -131,35 +140,51 @@ export default function InquiryForm({ locale = "en" }: { locale?: Locale }) {
           autoComplete="street-address"
           maxLength={300}
           placeholder={t(
-            "Street address, city and postal code",
-            "门牌地址、城市及邮编",
-            "門牌地址、城市及郵編",
+            "Street address, unit (if any), city and postal code",
+            "门牌地址、单元号（如有）、城市及邮编",
+            "門牌地址、單元號（如有）、城市及郵編",
           )}
         />
       </label>
+      {Object.entries(inquiryPropertyFields).map(([name, field]) => (
+        <label className="form-field mobile-full" key={name}>
+          <span>
+            {t(field.label[0], field.label[1], field.label[2])}{" "}
+            <small>{t("optional", "选填", "選填")}</small>
+          </span>
+          <select
+            name={name}
+            defaultValue=""
+            aria-describedby={name === "floorArea" ? areaHelpId : undefined}
+          >
+            <option value="">
+              {t("Not sure yet", "暂不确定", "暫不確定")}
+            </option>
+            {Object.entries(field.options).map(([value, labels]) => (
+              <option key={value} value={value}>
+                {t(labels[0], labels[1], labels[2])}
+              </option>
+            ))}
+          </select>
+          {name === "floorArea" && (
+            <small className="form-hint" id={areaHelpId}>
+              {t(
+                "Exclude balcony and basement.",
+                "不含阳台和地下室。",
+                "不含陽台和地下室。",
+              )}
+            </small>
+          )}
+        </label>
+      ))}
       <label className="form-field mobile-full">
         <span>
-          {t("Your name", "您的姓名", "您的姓名")}{" "}
+          {t("Staging budget (CAD)", "布置预算（加元）", "佈置預算（加元）")}{" "}
           <small>{t("optional", "选填", "選填")}</small>
         </span>
-        <input
-          name="name"
-          autoComplete="name"
-          maxLength={100}
-          placeholder={t("Full name", "姓名", "姓名")}
-        />
-      </label>
-      <label className="form-field mobile-full">
-        <span>
-          {t(
-            "Staging budget (CAD) *",
-            "布置预算（加元）*",
-            "佈置預算（加元）*",
-          )}
-        </span>
-        <select required name="budget" defaultValue="">
-          <option value="" disabled>
-            {t("Select a range", "请选择预算范围", "請選擇預算範圍")}
+        <select name="budget" defaultValue="unsure">
+          <option value="unsure">
+            {t("Not sure yet", "暂不确定", "暫不確定")}
           </option>
           <option value="under-2000">
             {t("Under $2,000", "$2,000 以下", "$2,000 以下")}
@@ -168,9 +193,6 @@ export default function InquiryForm({ locale = "en" }: { locale?: Locale }) {
           <option value="4000-7000">$4,000–$7,000</option>
           <option value="7000-plus">
             {t("$7,000+", "$7,000 以上", "$7,000 以上")}
-          </option>
-          <option value="unsure">
-            {t("Not sure yet", "暂不确定", "暫不確定")}
           </option>
         </select>
       </label>
@@ -197,26 +219,47 @@ export default function InquiryForm({ locale = "en" }: { locale?: Locale }) {
           placeholder="(416) 555-0123"
         />
       </label>
-      <label className="form-field span-full">
-        <span>
+      <details className="inquiry-extra span-full">
+        <summary>
           {t(
-            "Anything else we should know?",
-            "还有什么想告诉我们？",
-            "還有什麼想告訴我們？",
-          )}{" "}
-          <small>{t("optional", "选填", "選填")}</small>
-        </span>
-        <textarea
-          name="message"
-          rows={3}
-          maxLength={2000}
-          placeholder={t(
-            "Your timeline, the rooms you’d like staged, or any questions…",
-            "您的时间安排、需要布置的房间，或其他问题……",
-            "您的時間安排、需要佈置的房間，或其他問題……",
+            "Add a name or notes (optional)",
+            "补充姓名或备注（选填）",
+            "補充姓名或備註（選填）",
           )}
-        />
-      </label>
+          <span aria-hidden="true">+</span>
+        </summary>
+        <div className="inquiry-extra-fields">
+          <label className="form-field">
+            <span>{t("Your name", "您的姓名", "您的姓名")}</span>
+            <input
+              name="name"
+              autoComplete="name"
+              maxLength={100}
+              placeholder={t("Full name", "姓名", "姓名")}
+            />
+          </label>
+          <label className="form-field">
+            <span>
+              {t(
+                "Anything else we should know?",
+                "还有什么想告诉我们？",
+                "還有什麼想告訴我們？",
+              )}{" "}
+              <small>{t("optional", "选填", "選填")}</small>
+            </span>
+            <textarea
+              name="message"
+              rows={3}
+              maxLength={2000}
+              placeholder={t(
+                "Your timeline, the rooms you’d like staged, or any questions…",
+                "您的时间安排、需要布置的房间，或其他问题……",
+                "您的時間安排、需要佈置的房間，或其他問題……",
+              )}
+            />
+          </label>
+        </div>
+      </details>
       <label className="honey-field" aria-hidden="true">
         Website
         <input name="website" tabIndex={-1} autoComplete="off" />
