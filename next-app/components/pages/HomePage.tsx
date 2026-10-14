@@ -217,7 +217,7 @@ export default function HomePage({ locale = "en" }: { locale?: Locale }) {
             },
             {
               q: "What happens after I request a quote?",
-              a: "We’ll acknowledge your inquiry by email. A designer will review your details and get in touch to discuss your needs and prepare a quote.",
+              a: "Your inquiry goes to our team. A designer will review your details and get in touch to discuss your needs and prepare a quote.",
             },
             {
               q: "Can I speak with the team in Chinese?",

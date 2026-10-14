@@ -1,0 +1,50 @@
+Oaktime Staging — 在 Porkbun 配置 Resend 发信
+整理日期：2026-10-13。这些是公开 DNS 记录，不是 API 密钥。
+
+Resend 域名页面：
+https://resend.com/domains/4f7a3bf6-60d8-4de2-9e7a-d5406260388b
+
+在 Porkbun 打开 oaktime.ca 的 DNS 设置，添加以下 3 条必填记录。
+Host 只填写下列主机名，不需要重复填写 .oaktime.ca。
+TTL 使用默认值。Answer 原样粘贴，不加引号。
+
+1. Type: TXT
+   Host: resend._domainkey
+   Answer:
+p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDAwHUSwk4MJGeEV6dxEh+qKyKHh0aAO9hUHL1WxuInaDhA1h3oTmUSqkfWHEsba5zQAPcuKNcrw7tFvAMhA/WCr+lADNgZ58ABCfVsJSQYQFNzMlf9Dlfpe1qOFWCKjZdUNJ1/ze8HJISBKGAoLqxOX/GD+rH4v0QsRrTTsLq/rwIDAQAB
+
+2. Type: CNAME
+   Host: rsend
+   Answer: rsend.forge.rmta.net
+
+3. Type: CNAME
+   Host: send
+   Answer: send.forge.rmta.net
+
+以上内容来自本次 Resend 后台为 oaktime.ca 生成的实际记录。
+不要用旧教程中的通用 MX/SPF 示例替换这些值。
+
+保留现有收信记录：
+  MX @ priority 10 -> fwd1.porkbun.com
+  MX @ priority 20 -> fwd2.porkbun.com
+  TXT @ -> v=spf1 include:_spf.porkbun.com ~all
+保留 info@oaktime.ca 现有的邮件转发规则。
+Resend 的 Enable Receiving 保持关闭，以免影响 Porkbun 收信转发。
+
+可选 DMARC：仅在没有现有 _dmarc 记录时添加，避免重复。
+  Type: TXT
+  Host: _dmarc
+  Answer: v=DMARC1; p=none;
+这是观察模式，不会要求收件服务器拒收邮件。
+
+保存后：
+1. 回到上方 Resend 域名页面，点击 Verify DNS Records。
+2. 等待发信域名状态变为 Verified。
+3. 后续由网站配置完成：创建仅限 oaktime.ca 的 Sending access 密钥，
+   保存到本网站 Vercel Production 的 RESEND_API_KEY Secret 中。
+   不要授予 Resend 账号内其他域名的权限。
+4. 完成询价存储与自动重试配置、重新部署，并测试团队通知和客户回执。
+   团队通知需要确认最终收件邮箱收到，而不只是 Porkbun 接受了转发邮件。
+
+全部配置和实际收件检查完成前，询价功能尚未正式启用。
+缺少必要凭据时，表单会明确提示暂时不可用，不会假装提交成功。

@@ -1,5 +1,11 @@
-import { createHash, randomUUID } from "node:crypto";
+import { randomUUID } from "node:crypto";
 import type { Inquiry } from "./inquiry-core";
+import {
+  decryptRecord,
+  encryptRecord,
+  encryptionConfigured,
+  inquiryHash,
+} from "./inquiry-crypto.ts";
 
 // Server-side REST access. Durable state and rate limiting are shared across Vercel instances.
 const RETENTION = 30 * 24 * 60 * 60;
@@ -9,23 +15,43 @@ export type InquiryJob = {
   digest: string;
   createdAt: number;
   teamSent: boolean;
+  confirmationRequested: boolean;
   customerSent: boolean;
   attempts: number;
 };
 export function storageConfigured() {
   return Boolean(
-    process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN,
+    secureStorageUrl() && storageToken() && encryptionConfigured(),
   );
 }
+function secureStorageUrl() {
+  try {
+    const url = new URL(
+      process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL || "",
+    );
+    return url.protocol === "https:" && !url.username && !url.password
+      ? url.href
+      : null;
+  } catch {
+    return null;
+  }
+}
+function storageToken() {
+  return process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN;
+}
 export async function redis<T>(...command: (string | number)[]): Promise<T> {
-  const response = await fetch(process.env.UPSTASH_REDIS_REST_URL!, {
+  const url = secureStorageUrl();
+  const token = storageToken();
+  if (!url || !token) throw new Error("Inquiry storage is not configured");
+  const response = await fetch(url, {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${process.env.UPSTASH_REDIS_REST_TOKEN}`,
+      Authorization: `Bearer ${token}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify(command),
     cache: "no-store",
+    redirect: "error",
     signal: AbortSignal.timeout(5000),
   });
   if (!response.ok) throw new Error("Inquiry storage unavailable");
@@ -33,12 +59,11 @@ export async function redis<T>(...command: (string | number)[]): Promise<T> {
   if (result.error) throw new Error("Inquiry storage rejected request");
   return result.result as T;
 }
-export const hash = (value: string) =>
-  createHash("sha256").update(value).digest("hex");
+export const hash = inquiryHash;
 export const jobKey = (id: string) => `oaktime:inquiry:${id}`;
 export async function getJob(id: string): Promise<InquiryJob | null> {
   const value = await redis<string | null>("GET", jobKey(id));
-  return value ? JSON.parse(value) : null;
+  return value ? decryptRecord<InquiryJob>(jobKey(id), value) : null;
 }
 export async function rateLimit(key: string, maximum: number, seconds: number) {
   const count = await redis<number>(
@@ -57,6 +82,9 @@ export async function createJob(data: Inquiry) {
     digest,
     createdAt: Date.now(),
     teamSent: false,
+    // Freeze this choice per inquiry so a later settings change cannot send
+    // unexpected acknowledgements when an older job is retried.
+    confirmationRequested: process.env.INQUIRY_SEND_CONFIRMATION === "true",
     customerSent: false,
     attempts: 0,
   };
@@ -67,7 +95,7 @@ export async function createJob(data: Inquiry) {
     2,
     jobKey(data.requestId),
     JOBS,
-    JSON.stringify(job),
+    encryptRecord(jobKey(data.requestId), job),
     RETENTION,
     Date.now(),
     data.requestId,
@@ -82,7 +110,7 @@ export async function saveJob(job: InquiryJob) {
   await redis(
     "SET",
     jobKey(job.data.requestId),
-    JSON.stringify(job),
+    encryptRecord(jobKey(job.data.requestId), job),
     "EX",
     ttl,
   );

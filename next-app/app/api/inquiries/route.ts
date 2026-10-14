@@ -103,14 +103,15 @@ export async function POST(request: Request) {
       return reply({ error: "Please reload the page and submit again." }, 409);
     let confirmationSent = job.customerSent;
     try {
-      confirmationSent =
-        (await deliverInquiry(data.requestId)) || confirmationSent;
+      const delivered = await deliverInquiry(data.requestId);
+      confirmationSent ||= Boolean(job.confirmationRequested && delivered);
     } catch {
       console.error("[inquiry] delivery pending", { id: data.requestId });
     }
     return reply({
       ok: true,
       reference: `OT-${data.requestId}`,
+      confirmationRequested: Boolean(job.confirmationRequested),
       confirmationSent,
     });
   } catch {

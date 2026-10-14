@@ -64,8 +64,8 @@ const chinese: Record<string, string> = {
   "Every property is different. Your quote depends on the space, the furnishings required and the scope of work. Send us your address and budget to start the conversation.":
     "每套房屋的需求都不同，报价取决于空间、所需家具及服务范围。请发送您的地址和预算，方便我们进一步沟通。",
   "What happens after I request a quote?": "提交询价后会发生什么？",
-  "We’ll acknowledge your inquiry by email. A designer will review your details and get in touch to discuss your needs and prepare a quote.":
-    "您会收到一封确认邮件。设计师会查看您提供的信息，尽快与您联系，沟通需求并准备报价。",
+  "Your inquiry goes to our team. A designer will review your details and get in touch to discuss your needs and prepare a quote.":
+    "您的询价会发送给我们的团队。设计师会查看您提供的信息，尽快与您联系，沟通需求并准备报价。",
   "Can I speak with the team in Chinese?": "可以用中文沟通吗？",
   "Yes. You can call our Mandarin line at 416-939-3962. For English, call (416) 877-1878.":
     "可以。中文服务请拨打 (416) 939-3962，英文服务请拨打 (416) 877-1878。",
@@ -199,8 +199,8 @@ const traditional: Record<string, string> = {
   "Every property is different. Your quote depends on the space, the furnishings required and the scope of work. Send us your address and budget to start the conversation.":
     "每套房屋的需求都不同，報價取決於空間、所需傢俱及服務範圍。請發送您的地址和預算，方便我們進一步溝通。",
   "What happens after I request a quote?": "提交詢價後會發生什麼？",
-  "We’ll acknowledge your inquiry by email. A designer will review your details and get in touch to discuss your needs and prepare a quote.":
-    "您會收到一封確認郵件。設計師會查看您提供的信息，儘快與您聯繫，溝通需求並準備報價。",
+  "Your inquiry goes to our team. A designer will review your details and get in touch to discuss your needs and prepare a quote.":
+    "您的詢價會發送給我們的團隊。設計師會查看您提供的信息，儘快與您聯繫，溝通需求並準備報價。",
   "Can I speak with the team in Chinese?": "可以用中文溝通嗎？",
   "Yes. You can call our Mandarin line at 416-939-3962. For English, call (416) 877-1878.":
     "可以。中文服務請撥打 (416) 939-3962，英文服務請撥打 (416) 877-1878。",
