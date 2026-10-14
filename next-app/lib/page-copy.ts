@@ -105,8 +105,8 @@ const chinese: Record<string, string> = {
     "了解 Oaktime Staging 如何使用您在询价时提供的个人信息。",
   "Your inquiry.": "您的询价，",
   "Your information.": "您的信息。",
-  "When you request a quote, we collect your property address, budget, email address and phone number, along with any name or notes you choose to share.":
-    "当您提交询价时，我们会收集房屋地址、预算、电子邮箱和电话号码，以及您自愿填写的姓名和备注。",
+  "When you request a quote, we collect your property address, email address and phone number, along with any property type, occupancy, approximate floor area, budget, name or notes you choose to share.":
+    "当您提交询价时，我们会收集房屋地址、电子邮箱和电话号码，以及您自愿提供的房屋类型、居住状态、大约面积、预算、姓名和备注。",
   "How we use it": "信息用途",
   "We use these details to acknowledge your inquiry, review your staging needs, prepare a quote and contact you about your request. Submitting an inquiry does not automatically subscribe you to marketing emails.":
     "我们使用这些信息确认收到询价、了解布置需求、准备报价，并就您的请求与您联系。提交询价不会自动订阅营销邮件。",
@@ -247,8 +247,8 @@ const traditional: Record<string, string> = {
     "瞭解 Oaktime Staging 如何使用您在詢價時提供的個人信息。",
   "Your inquiry.": "您的詢價，",
   "Your information.": "您的信息。",
-  "When you request a quote, we collect your property address, budget, email address and phone number, along with any name or notes you choose to share.":
-    "當您提交詢價時，我們會收集房屋地址、預算、電子郵箱和電話號碼，以及您自願填寫的姓名和備註。",
+  "When you request a quote, we collect your property address, email address and phone number, along with any property type, occupancy, approximate floor area, budget, name or notes you choose to share.":
+    "當您提交詢價時，我們會收集房屋地址、電子郵箱和電話號碼，以及您自願提供的房屋類型、居住狀態、大約面積、預算、姓名和備註。",
   "How we use it": "信息用途",
   "We use these details to acknowledge your inquiry, review your staging needs, prepare a quote and contact you about your request. Submitting an inquiry does not automatically subscribe you to marketing emails.":
     "我們使用這些信息確認收到詢價、瞭解佈置需求、準備報價，並就您的請求與您聯繫。提交詢價不會自動訂閱營銷郵件。",

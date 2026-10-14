@@ -22,7 +22,7 @@ export default function PrivacyPage({ locale = "en" }: { locale?: Locale }) {
       </h1>
       <p>
         {t(
-          "When you request a quote, we collect your property address, budget, email address and phone number, along with any name or notes you choose to share.",
+          "When you request a quote, we collect your property address, email address and phone number, along with any property type, occupancy, approximate floor area, budget, name or notes you choose to share.",
         )}
       </p>
       <h2>{t("How we use it")}</h2>

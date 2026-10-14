@@ -3,6 +3,12 @@ import {
   MARKETING_CONSENT_VERSION,
   type MarketingPreference,
 } from "./marketing-consent.ts";
+import {
+  inquiryPropertyFields,
+  propertyEmailLines,
+  type InquiryPropertyDetails,
+  type InquiryPropertyField,
+} from "./inquiry-property.ts";
 
 export const budgetLabels: Record<string, string> = {
   "under-2000": "Under CAD $2,000",
@@ -11,7 +17,7 @@ export const budgetLabels: Record<string, string> = {
   "7000-plus": "CAD $7,000+",
   unsure: "Not sure yet",
 };
-export type Inquiry = {
+export type Inquiry = InquiryPropertyDetails & {
   requestId: string;
   address: string;
   budget: string;
@@ -71,7 +77,10 @@ export function validateInquiry(input: unknown): {
       : null;
   const requestId = string("requestId", 36);
   const address = string("address", 300),
-    budget = string("budget", 30),
+    budget =
+      body.budget === undefined || body.budget === ""
+        ? "unsure"
+        : string("budget", 30),
     email = string("email", 254)?.toLowerCase(),
     phone = string("phone", 40);
   const name = string("name", 100),
@@ -104,6 +113,14 @@ export function validateInquiry(input: unknown): {
     return { error: "Please check the name and notes fields." };
   if (body.consent !== true)
     return { error: "Please agree to be contacted about this inquiry." };
+  const propertyDetails: InquiryPropertyDetails = {};
+  for (const [field, definition] of Object.entries(inquiryPropertyFields)) {
+    const value = body[field];
+    if (value === undefined || value === "") continue;
+    if (typeof value !== "string" || !Object.hasOwn(definition.options, value))
+      return { error: "Please check the property details." };
+    propertyDetails[field as InquiryPropertyField] = value;
+  }
   if (
     (body.marketingConsent !== undefined &&
       (typeof body.marketingConsent !== "boolean" ||
@@ -134,6 +151,7 @@ export function validateInquiry(input: unknown): {
             marketingConsentVersion: MARKETING_CONSENT_VERSION,
           }
         : {}),
+      ...propertyDetails,
     },
   };
 }
@@ -156,6 +174,7 @@ export function buildEmails(
         `Reference: ${reference}`,
         "",
         `Property: ${data.address}`,
+        ...propertyEmailLines(data),
         `Budget: ${budgetLabels[data.budget]}`,
         `Name: ${data.name || "Not provided"}`,
         `Email: ${data.email}`,
