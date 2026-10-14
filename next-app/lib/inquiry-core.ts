@@ -1,4 +1,8 @@
 import { translator, languageNames, type Locale } from "./i18n.ts";
+import {
+  MARKETING_CONSENT_VERSION,
+  type MarketingPreference,
+} from "./marketing-consent.ts";
 
 export const budgetLabels: Record<string, string> = {
   "under-2000": "Under CAD $2,000",
@@ -17,6 +21,8 @@ export type Inquiry = {
   message: string;
   consent: true;
   locale?: Locale;
+  marketingConsent?: boolean;
+  marketingConsentVersion?: string;
 };
 export function isAllowedOrigin(
   origin: string | null,
@@ -98,6 +104,14 @@ export function validateInquiry(input: unknown): {
     return { error: "Please check the name and notes fields." };
   if (body.consent !== true)
     return { error: "Please agree to be contacted about this inquiry." };
+  if (
+    (body.marketingConsent !== undefined &&
+      (typeof body.marketingConsent !== "boolean" ||
+        body.marketingConsentVersion !== MARKETING_CONSENT_VERSION)) ||
+    (body.marketingConsent === undefined &&
+      body.marketingConsentVersion !== undefined)
+  )
+    return { error: "Please reload the page and try again." };
   return {
     data: {
       requestId,
@@ -113,10 +127,22 @@ export function validateInquiry(input: unknown): {
       body.locale === "zh-hant"
         ? { locale: body.locale }
         : {}),
+      // Keep older submissions byte-for-byte compatible with stored digests.
+      ...(typeof body.marketingConsent === "boolean"
+        ? {
+            marketingConsent: body.marketingConsent,
+            marketingConsentVersion: MARKETING_CONSENT_VERSION,
+          }
+        : {}),
     },
   };
 }
-export function buildEmails(data: Inquiry, from: string, teamEmail: string) {
+export function buildEmails(
+  data: Inquiry,
+  from: string,
+  teamEmail: string,
+  marketingPreference?: MarketingPreference,
+) {
   const reference = `OT-${data.requestId}`;
   const t = translator(data.locale ?? "en");
   return {
@@ -139,6 +165,19 @@ export function buildEmails(data: Inquiry, from: string, teamEmail: string) {
         `Notes: ${data.message || "None"}`,
         "",
         "The customer agreed to be contacted about this inquiry. Reply to this email to reach them.",
+        ...(marketingPreference
+          ? [
+              "",
+              `Marketing email opt-in: ${marketingPreference.optedIn ? "YES — customer checked the optional box" : "NO — no marketing permission granted by this inquiry"}`,
+              `Recorded at (UTC): ${marketingPreference.recordedAt}`,
+              `Consent wording version: ${marketingPreference.version}`,
+              `Consent language: ${languageNames[marketingPreference.locale]}`,
+              `Source: ${marketingPreference.source}`,
+              `Displayed statement: ${marketingPreference.statement}`,
+              `Displayed business contact: ${marketingPreference.contact}`,
+              "Keep this record with any mailing list entry. Check for later withdrawals before sending promotions. An unchecked box is not an unsubscribe request for an existing subscription.",
+            ]
+          : []),
       ].join("\n"),
     },
     customer: {

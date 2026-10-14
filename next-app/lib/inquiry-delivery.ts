@@ -11,8 +11,8 @@ import {
 export function emailConfigured() {
   return Boolean(
     process.env.RESEND_API_KEY &&
-      process.env.INQUIRY_FROM &&
-      process.env.INQUIRY_TO,
+    process.env.INQUIRY_FROM &&
+    process.env.INQUIRY_TO,
   );
 }
 async function send(
@@ -60,6 +60,7 @@ export async function deliverInquiry(id: string) {
       job.data,
       process.env.INQUIRY_FROM!,
       process.env.INQUIRY_TO!,
+      job.marketingPreference,
     );
     try {
       if (!job.teamSent) {

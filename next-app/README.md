@@ -93,6 +93,16 @@ An API success means the inquiry is durably recorded. The response separately re
 
 The Upstash connection requires HTTPS and refuses redirects. The encryption key stays outside Redis, in Vercel Production; HKDF derives separate encryption and fingerprint keys. Missing/invalid keys fail closed, and plaintext legacy records are not accepted. Keep this key stable and backed up in an approved secret manager: replacing or losing it makes existing inquiry records unreadable. Rotation requires an explicit migration before changing the active key. Application encryption protects stored record contents if database credentials are exposed, but cannot protect a compromised application server or mailbox. Queue IDs, timestamps, TTLs and usage counters remain visible to the storage provider. Disable database eviction and automatic paid upgrades; do not share production credentials with preview deployments.
 
+## Optional mailing list consent
+
+The inquiry form has a separate, initially unchecked email marketing checkbox in English, Simplified Chinese and Traditional Chinese. Declining it never prevents a quote request; it does not consent to SMS or phone marketing. New submissions must supply a boolean choice and the displayed wording version. Older submissions without the field remain valid and grant no marketing permission.
+
+At first acceptance, the server freezes the choice, UTC timestamp, language, source, version, displayed statement and business contact in the encrypted 30-day inquiry record. Retries reuse that evidence. The team notification also includes it, so **retain those notification emails as consent evidence** when building a mailing list; the website database is not a permanent subscriber registry. No new environment variables or DNS changes are needed. Old pending jobs keep their original email content and idempotency behavior.
+
+This collects permission only: it does not add Resend Contacts, schedule campaigns or send promotions. Before sending a campaign, use a mailing list tool with an unsubscribe mechanism, retain the original consent evidence, and apply any later withdrawals/suppression list. The current withdrawal contact is `info@oaktime.ca`; monitor that forwarding inbox and action requests within 10 business days. An unchecked box in a later inquiry is not itself an unsubscribe request. Do not import all inquiry senders as subscribers. Keep the existing Resend key scoped to transactional sending.
+
+Consent wording is versioned in `lib/marketing-consent.ts`; change the version when changing that disclosure. If old forms must remain accepted across a future wording change, retain a versioned copy lookup rather than silently attributing new wording to an older form. See [CRTC consent guidance](https://crtc.gc.ca/eng/archive/2012/2012-548.htm) and [CASL FAQ](https://crtc.gc.ca/eng/com500/faq500.htm).
+
 ## SEO and launch checks
 
 With no `SITE_URL`, or on a Vercel preview, pages are `noindex` and sitemap output is empty. `robots.txt` permits page crawling so crawlers can read the noindex instruction. After choosing the production domain, set `SITE_URL` and rebuild: canonical URLs, sitemap and social images will use that origin. Do not add an expired domain or preview URL as the canonical. Confirm production HTML is indexable before submitting its sitemap to Search Console.
