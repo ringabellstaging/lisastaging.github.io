@@ -108,9 +108,16 @@ const chinese: Record<string, string> = {
   "When you request a quote, we collect your property address, budget, email address and phone number, along with any name or notes you choose to share.":
     "当您提交询价时，我们会收集房屋地址、预算、电子邮箱和电话号码，以及您自愿填写的姓名和备注。",
   "How we use it": "信息用途",
-  "We use these details to acknowledge your inquiry, review your staging needs, prepare a quote and contact you about your request. Submitting an inquiry does not subscribe you to marketing emails.":
+  "We use these details to acknowledge your inquiry, review your staging needs, prepare a quote and contact you about your request. Submitting an inquiry does not automatically subscribe you to marketing emails.":
     "我们使用这些信息确认收到询价、了解布置需求、准备报价，并就您的请求与您联系。提交询价不会自动订阅营销邮件。",
   "How it is processed": "信息处理与保存",
+  "Optional marketing emails": "可选推广邮件",
+  "If you separately tick the optional mailing list box, Oaktime Staging (Oak Time Inc.) may email you occasional staging tips, project inspiration and offers. Leaving it unchecked does not affect your quote request. This permission covers email only, not text messages or phone promotions.":
+    "如果您单独勾选可选的邮件订阅选项，Oaktime Staging（Oak Time Inc.）可以偶尔通过电子邮件向您发送布置建议、案例灵感和优惠。不勾选不会影响询价。此授权仅适用于电子邮件，不包括短信或电话推广。",
+  "We record your choice, the time, language, source and wording of the consent request with your inquiry. The website record expires after 30 days. A copy is sent to our business mailbox, where we retain the consent evidence for as long as we rely on it to send marketing emails. To withdraw your consent at any time, email":
+    "我们随询价记录保存您的选择、时间、语言、来源和当时展示的同意文案。网站记录在 30 天后到期；副本会发送至公司邮箱，在我们依据此同意发送推广邮件期间保留，作为授权凭证。如需随时撤回同意，请发邮件至",
+  "We will stop marketing emails within 10 business days of your request.":
+    "我们会在收到请求后的 10 个工作日内停止向您发送推广邮件。",
   "Our website hosting, secure inquiry storage and email delivery providers process this information to help us respond. The website’s inquiry record is retained for up to 30 days; correspondence sent to our business mailbox may be retained for follow-up. Please avoid including financial account details or other sensitive information in the notes.":
     "网站托管、询价存储和邮件服务提供商会处理相关信息，协助我们回复。网站中的询价记录最多保存 30 天；发送至公司邮箱的往来邮件可能会保留，以便后续跟进。请不要在备注中填写银行账户或其他敏感信息。",
   "Project locations and maps": "案例位置与地图",
@@ -243,9 +250,16 @@ const traditional: Record<string, string> = {
   "When you request a quote, we collect your property address, budget, email address and phone number, along with any name or notes you choose to share.":
     "當您提交詢價時，我們會收集房屋地址、預算、電子郵箱和電話號碼，以及您自願填寫的姓名和備註。",
   "How we use it": "信息用途",
-  "We use these details to acknowledge your inquiry, review your staging needs, prepare a quote and contact you about your request. Submitting an inquiry does not subscribe you to marketing emails.":
+  "We use these details to acknowledge your inquiry, review your staging needs, prepare a quote and contact you about your request. Submitting an inquiry does not automatically subscribe you to marketing emails.":
     "我們使用這些信息確認收到詢價、瞭解佈置需求、準備報價，並就您的請求與您聯繫。提交詢價不會自動訂閱營銷郵件。",
   "How it is processed": "信息處理與保存",
+  "Optional marketing emails": "可選推廣郵件",
+  "If you separately tick the optional mailing list box, Oaktime Staging (Oak Time Inc.) may email you occasional staging tips, project inspiration and offers. Leaving it unchecked does not affect your quote request. This permission covers email only, not text messages or phone promotions.":
+    "如果您單獨勾選可選的郵件訂閱選項，Oaktime Staging（Oak Time Inc.）可以偶爾透過電子郵件向您發送佈置建議、案例靈感和優惠。不勾選不會影響詢價。此授權僅適用於電子郵件，不包括簡訊或電話推廣。",
+  "We record your choice, the time, language, source and wording of the consent request with your inquiry. The website record expires after 30 days. A copy is sent to our business mailbox, where we retain the consent evidence for as long as we rely on it to send marketing emails. To withdraw your consent at any time, email":
+    "我們隨詢價記錄保存您的選擇、時間、語言、來源和當時展示的同意文案。網站記錄在 30 天後到期；副本會發送至公司郵箱，在我們依據此同意發送推廣郵件期間保留，作為授權憑證。如需隨時撤回同意，請發郵件至",
+  "We will stop marketing emails within 10 business days of your request.":
+    "我們會在收到請求後的 10 個工作日內停止向您發送推廣郵件。",
   "Our website hosting, secure inquiry storage and email delivery providers process this information to help us respond. The website’s inquiry record is retained for up to 30 days; correspondence sent to our business mailbox may be retained for follow-up. Please avoid including financial account details or other sensitive information in the notes.":
     "網站託管、詢價存儲和郵件服務提供商會處理相關信息，協助我們回覆。網站中的詢價記錄最多保存 30 天；發送至公司郵箱的往來郵件可能會保留，以便後續跟進。請不要在備註中填寫銀行賬戶或其他敏感信息。",
   "Project locations and maps": "案例位置與地圖",

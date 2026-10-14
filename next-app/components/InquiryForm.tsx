@@ -5,6 +5,11 @@ import { ArrowUpRight, Check } from "lucide-react";
 import { contactInfo } from "@/lib/contact";
 import { localizedPath, translator, type Locale } from "@/lib/i18n";
 import { inquiryError } from "@/lib/inquiry-messages";
+import {
+  MARKETING_CONSENT_VERSION,
+  marketingConsentText,
+  marketingContact,
+} from "@/lib/marketing-consent";
 
 export default function InquiryForm({ locale = "en" }: { locale?: Locale }) {
   const t = translator(locale);
@@ -34,6 +39,8 @@ export default function InquiryForm({ locale = "en" }: { locale?: Locale }) {
           ...values,
           locale,
           consent: form.get("consent") === "on",
+          marketingConsent: form.get("marketingConsent") === "on",
+          marketingConsentVersion: MARKETING_CONSENT_VERSION,
           requestId: requestRef.current.id,
         }),
         signal: AbortSignal.timeout(25000),
@@ -228,6 +235,25 @@ export default function InquiryForm({ locale = "en" }: { locale?: Locale }) {
           {t(".", "。", "。")}
         </span>
       </label>
+      <div className="marketing-consent span-full">
+        <label className="consent">
+          <input type="checkbox" name="marketingConsent" />
+          <span>
+            <strong className="marketing-consent-title">
+              {t("Join our mailing list", "订阅我们的邮件", "訂閱我們的郵件")}{" "}
+              <small>{t("(optional)", "（可选）", "（可選）")}</small>
+            </strong>
+            {marketingConsentText(locale)}
+          </span>
+        </label>
+        <p className="marketing-consent-contact">
+          {marketingContact.address}
+          <br />
+          <a href={`mailto:${marketingContact.email}`}>
+            {marketingContact.email}
+          </a>
+        </p>
+      </div>
       {error && (
         <p className="form-error span-full" role="alert">
           {error}{" "}

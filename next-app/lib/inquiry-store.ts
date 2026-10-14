@@ -1,6 +1,10 @@
 import { randomUUID } from "node:crypto";
 import type { Inquiry } from "./inquiry-core";
 import {
+  recordMarketingPreference,
+  type MarketingPreference,
+} from "./marketing-consent.ts";
+import {
   decryptRecord,
   encryptRecord,
   encryptionConfigured,
@@ -18,6 +22,7 @@ export type InquiryJob = {
   confirmationRequested: boolean;
   customerSent: boolean;
   attempts: number;
+  marketingPreference?: MarketingPreference;
 };
 export function storageConfigured() {
   return Boolean(
@@ -77,16 +82,27 @@ export async function rateLimit(key: string, maximum: number, seconds: number) {
 }
 export async function createJob(data: Inquiry) {
   const digest = hash(JSON.stringify(data));
+  const createdAt = Date.now();
   const job: InquiryJob = {
     data,
     digest,
-    createdAt: Date.now(),
+    createdAt,
     teamSent: false,
     // Freeze this choice per inquiry so a later settings change cannot send
     // unexpected acknowledgements when an older job is retried.
     confirmationRequested: process.env.INQUIRY_SEND_CONFIRMATION === "true",
     customerSent: false,
     attempts: 0,
+    // Freeze the timestamp and exact disclosure before delivery/retries.
+    ...(typeof data.marketingConsent === "boolean"
+      ? {
+          marketingPreference: recordMarketingPreference(
+            data.marketingConsent,
+            data.locale ?? "en",
+            createdAt,
+          ),
+        }
+      : {}),
   };
   // Save the record and enqueue it atomically so an interrupted request can be retried.
   const created = await redis<number>(

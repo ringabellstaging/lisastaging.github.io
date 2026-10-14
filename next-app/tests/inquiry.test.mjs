@@ -8,6 +8,11 @@ import {
 import { deliverInquiry, emailConfigured } from "../lib/inquiry-delivery.ts";
 import { createJob, getJob } from "../lib/inquiry-store.ts";
 import { encryptRecord } from "../lib/inquiry-crypto.ts";
+import {
+  MARKETING_CONSENT_VERSION,
+  marketingConsentText,
+  recordMarketingPreference,
+} from "../lib/marketing-consent.ts";
 
 const testEncryptionKey = Buffer.alloc(32, 7).toString("base64");
 
@@ -95,6 +100,87 @@ test("malformed JSON values cannot crash validation or pass as contact details",
     { ...valid, message: "x".repeat(2001) },
   ])
     assert.ok(validateInquiry(body).error);
+});
+test("marketing consent is optional, explicit and tied to the displayed wording", () => {
+  const legacy = validateInquiry(valid).data;
+  assert.equal(Object.hasOwn(legacy, "marketingConsent"), false);
+  assert.equal(Object.hasOwn(legacy, "marketingConsentVersion"), false);
+  for (const marketingConsent of [true, false]) {
+    const result = validateInquiry({
+      ...valid,
+      marketingConsent,
+      marketingConsentVersion: MARKETING_CONSENT_VERSION,
+      marketingPreference: { optedIn: true, recordedAt: "1999-01-01" },
+    });
+    assert.equal(result.error, undefined);
+    assert.equal(result.data.marketingConsent, marketingConsent);
+    assert.equal(Object.hasOwn(result.data, "marketingPreference"), false);
+    assert.ok(validateInquiry({ ...result.data, consent: false }).error);
+  }
+  for (const marketingConsent of ["true", "false", "on", 1, null, [], {}])
+    assert.ok(
+      validateInquiry({
+        ...valid,
+        marketingConsent,
+        marketingConsentVersion: MARKETING_CONSENT_VERSION,
+      }).error,
+    );
+  for (const marketingConsentVersion of [undefined, "old-version", 20261013])
+    assert.ok(
+      validateInquiry({
+        ...valid,
+        marketingConsent: true,
+        marketingConsentVersion,
+      }).error,
+    );
+  assert.ok(
+    validateInquiry({
+      ...valid,
+      marketingConsentVersion: MARKETING_CONSENT_VERSION,
+    }).error,
+  );
+});
+test("team emails preserve translated consent evidence and never infer opt-in from inquiry consent", () => {
+  const timestamp = Date.parse("2026-10-13T14:00:00.000Z");
+  for (const locale of ["en", "zh", "zh-hant"]) {
+    for (const optedIn of [true, false]) {
+      const data = validateInquiry({
+        ...valid,
+        locale,
+        marketingConsent: optedIn,
+        marketingConsentVersion: MARKETING_CONSENT_VERSION,
+      }).data;
+      const preference = recordMarketingPreference(optedIn, locale, timestamp);
+      const emails = buildEmails(
+        data,
+        "from@example.test",
+        "team@example.test",
+        preference,
+      );
+      assert.match(
+        emails.team.text,
+        optedIn ? /Marketing email opt-in: YES/ : /Marketing email opt-in: NO/,
+      );
+      assert.ok(emails.team.text.includes(marketingConsentText(locale)));
+      assert.ok(emails.team.text.includes("2026-10-13T14:00:00.000Z"));
+      assert.ok(emails.team.text.includes(MARKETING_CONSENT_VERSION));
+      assert.ok(emails.team.text.includes("13036 McCowan Rd"));
+      // A transactional receipt never becomes a marketing message.
+      assert.ok(!emails.customer.text.includes(marketingConsentText(locale)));
+    }
+  }
+  assert.notEqual(marketingConsentText("zh"), marketingConsentText("zh-hant"));
+  const legacy = buildEmails(
+    validateInquiry(valid).data,
+    "from@example.test",
+    "team@example.test",
+  );
+  assert.ok(!legacy.team.text.includes("Marketing email opt-in:"));
+  assert.ok(
+    legacy.team.text.endsWith(
+      "The customer agreed to be contacted about this inquiry. Reply to this email to reach them.",
+    ),
+  );
 });
 test("consent, email, phone, size limits and bot trap are enforced", () => {
   for (const update of [
@@ -202,6 +288,12 @@ test("delivery persists partial success, retries only the missing email, and ded
     assert.equal(sends.filter((s) => s.data.to[0] !== valid.email).length, 1);
     assert.equal(sends.filter((s) => s.data.to[0] === valid.email).length, 2);
     assert.equal(sends[1].key, sends[2].key);
+    assert.deepEqual(sends[1].data, sends[2].data);
+    assert.deepEqual(
+      sends[0].data,
+      buildEmails(job.data, process.env.INQUIRY_FROM, process.env.INQUIRY_TO)
+        .team,
+    );
   } finally {
     globalThis.fetch = oldFetch;
     for (const key of envNames) {
@@ -249,8 +341,11 @@ test("forwarding only requires configured recipients, retries safely and never e
         result = "OK";
       }
     } else if (command === "EVAL" && args[0].includes("EXISTS")) {
-      values.set(args[2], args[4]);
-      queued.add(args[7]);
+      if (values.has(args[2])) result = 0;
+      else {
+        values.set(args[2], args[4]);
+        queued.add(args[7]);
+      }
     } else if (command === "EVAL" && args[0].includes("DEL")) {
       if (values.get(args[2]) === args[3]) values.delete(args[2]);
     } else if (command === "ZREM") queued.delete(args[1]);
@@ -266,7 +361,26 @@ test("forwarding only requires configured recipients, retries safely and never e
 
     // Missing or false confirmation settings both mean team-only forwarding.
     delete process.env.INQUIRY_SEND_CONFIRMATION;
-    const job = await createJob(validateInquiry(valid).data);
+    const data = validateInquiry({
+      ...valid,
+      locale: "zh-hant",
+      marketingConsent: true,
+      marketingConsentVersion: MARKETING_CONSENT_VERSION,
+    }).data;
+    const before = Date.now();
+    const job = await createJob(data);
+    assert.equal(job.marketingPreference.optedIn, true);
+    assert.equal(
+      job.marketingPreference.recordedAt,
+      new Date(job.createdAt).toISOString(),
+    );
+    assert.ok(job.createdAt >= before && job.createdAt <= Date.now());
+    assert.equal(
+      job.marketingPreference.statement,
+      marketingConsentText("zh-hant"),
+    );
+    const duplicate = await createJob(data);
+    assert.deepEqual(duplicate.marketingPreference, job.marketingPreference);
     assert.equal(job.confirmationRequested, false);
     assert.equal(queued.has(valid.requestId), true);
     const encrypted = values.get(`oaktime:inquiry:${valid.requestId}`);
@@ -285,6 +399,8 @@ test("forwarding only requires configured recipients, retries safely and never e
     assert.equal(queued.has(valid.requestId), false);
     assert.equal(sends.length, 2);
     assert.equal(sends[0].key, sends[1].key);
+    assert.deepEqual(sends[0].data, sends[1].data);
+    assert.match(sends[0].data.text, /Marketing email opt-in: YES/);
     for (const { data } of sends) {
       assert.deepEqual(data.to, ["info@oaktime.ca"]);
       assert.equal(data.from, configured.INQUIRY_FROM);
@@ -295,6 +411,7 @@ test("forwarding only requires configured recipients, retries safely and never e
     const stored = await getJob(valid.requestId);
     assert.equal(stored.teamSent, true);
     assert.equal(stored.customerSent, false);
+    assert.deepEqual(stored.marketingPreference, job.marketingPreference);
 
     // Older records without the flag must not unexpectedly send customer mail.
     delete stored.confirmationRequested;
@@ -310,6 +427,7 @@ test("forwarding only requires configured recipients, retries safely and never e
       requestId: "e6ec019d-d28b-4498-aedb-090693e023f3",
     });
     assert.equal(enabled.confirmationRequested, true);
+    assert.equal(enabled.marketingPreference, undefined);
   } finally {
     globalThis.fetch = oldFetch;
     for (const [key, value] of Object.entries(oldEnv)) {
