@@ -6,7 +6,10 @@ import {
   isAllowedOrigin,
 } from "../lib/inquiry-core.ts";
 import { deliverInquiry, emailConfigured } from "../lib/inquiry-delivery.ts";
-import { createJob } from "../lib/inquiry-store.ts";
+import { createJob, getJob } from "../lib/inquiry-store.ts";
+import { encryptRecord } from "../lib/inquiry-crypto.ts";
+
+const testEncryptionKey = Buffer.alloc(32, 7).toString("base64");
 
 const valid = {
   requestId: "a05eec14-4515-4d19-8d08-e5aab8396b1d",
@@ -137,16 +140,18 @@ test("delivery persists partial success, retries only the missing email, and ded
     "RESEND_API_KEY",
     "INQUIRY_FROM",
     "INQUIRY_TO",
+    "INQUIRY_ENCRYPTION_KEY",
   ];
   const oldEnv = Object.fromEntries(
     envNames.map((key) => [key, process.env[key]]),
   );
   Object.assign(process.env, {
-    UPSTASH_REDIS_REST_URL: "https://storage.example.test",
+    UPSTASH_REDIS_REST_URL: "https://storage.example.test/",
     UPSTASH_REDIS_REST_TOKEN: "test",
     RESEND_API_KEY: "test",
     INQUIRY_FROM: "Oaktime <hello@example.test>",
     INQUIRY_TO: "info@oaktime.ca",
+    INQUIRY_ENCRYPTION_KEY: testEncryptionKey,
   });
   const job = {
     data: validateInquiry(valid).data,
@@ -158,7 +163,10 @@ test("delivery persists partial success, retries only the missing email, and ded
     attempts: 0,
   };
   const values = new Map([
-    [`oaktime:inquiry:${valid.requestId}`, JSON.stringify(job)],
+    [
+      `oaktime:inquiry:${valid.requestId}`,
+      encryptRecord(`oaktime:inquiry:${valid.requestId}`, job),
+    ],
   ]);
   const sends = [];
   let failCustomer = true;
@@ -173,7 +181,7 @@ test("delivery persists partial success, retries only the missing email, and ded
           failCustomer && sends.at(-1).data.to[0] === valid.email ? 503 : 200,
       });
     }
-    assert.equal(url, "https://storage.example.test");
+    assert.equal(url, "https://storage.example.test/");
     const [command, ...args] = JSON.parse(options.body);
     let result = 1;
     if (command === "GET") result = values.get(args[0]) || null;
@@ -187,10 +195,7 @@ test("delivery persists partial success, retries only the missing email, and ded
   };
   try {
     assert.equal(await deliverInquiry(valid.requestId), false);
-    assert.equal(
-      JSON.parse(values.get(`oaktime:inquiry:${valid.requestId}`)).teamSent,
-      true,
-    );
+    assert.equal((await getJob(valid.requestId)).teamSent, true);
     failCustomer = false;
     assert.equal(await deliverInquiry(valid.requestId), true);
     assert.equal(await deliverInquiry(valid.requestId), true);
@@ -209,12 +214,13 @@ test("delivery persists partial success, retries only the missing email, and ded
 test("forwarding only requires configured recipients, retries safely and never emails the customer", async () => {
   const oldFetch = globalThis.fetch;
   const configured = {
-    UPSTASH_REDIS_REST_URL: "https://storage.example.test",
+    UPSTASH_REDIS_REST_URL: "https://storage.example.test/",
     UPSTASH_REDIS_REST_TOKEN: "test",
     RESEND_API_KEY: "test",
     INQUIRY_FROM: "Oaktime Staging <inquiries@example.test>",
     INQUIRY_TO: "info@oaktime.ca",
     INQUIRY_SEND_CONFIRMATION: "false",
+    INQUIRY_ENCRYPTION_KEY: testEncryptionKey,
   };
   const oldEnv = Object.fromEntries(
     Object.keys(configured).map((key) => [key, process.env[key]]),
@@ -263,13 +269,13 @@ test("forwarding only requires configured recipients, retries safely and never e
     const job = await createJob(validateInquiry(valid).data);
     assert.equal(job.confirmationRequested, false);
     assert.equal(queued.has(valid.requestId), true);
+    const encrypted = values.get(`oaktime:inquiry:${valid.requestId}`);
+    for (const privateValue of [valid.address, valid.email, valid.phone])
+      assert.equal(encrypted.includes(privateValue), false);
 
     assert.equal(await deliverInquiry(valid.requestId), false);
     assert.equal(queued.has(valid.requestId), true);
-    assert.equal(
-      JSON.parse(values.get(`oaktime:inquiry:${valid.requestId}`)).teamSent,
-      false,
-    );
+    assert.equal((await getJob(valid.requestId)).teamSent, false);
 
     // Changing the default does not send an acknowledgement for an existing job.
     process.env.INQUIRY_SEND_CONFIRMATION = "true";
@@ -286,13 +292,16 @@ test("forwarding only requires configured recipients, retries safely and never e
       assert.ok(data.text.includes(valid.address));
       assert.ok(data.text.includes(valid.phone));
     }
-    const stored = JSON.parse(values.get(`oaktime:inquiry:${valid.requestId}`));
+    const stored = await getJob(valid.requestId);
     assert.equal(stored.teamSent, true);
     assert.equal(stored.customerSent, false);
 
     // Older records without the flag must not unexpectedly send customer mail.
     delete stored.confirmationRequested;
-    values.set(`oaktime:inquiry:${valid.requestId}`, JSON.stringify(stored));
+    values.set(
+      `oaktime:inquiry:${valid.requestId}`,
+      encryptRecord(`oaktime:inquiry:${valid.requestId}`, stored),
+    );
     assert.equal(await deliverInquiry(valid.requestId), true);
     assert.equal(sends.length, 2);
 
