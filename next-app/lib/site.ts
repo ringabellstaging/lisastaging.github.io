@@ -48,8 +48,18 @@ export function pageMetadata(
       ...(siteUrl
         ? {
             url: `${siteUrl}${path}`,
-            images: image ? [{ url: `${siteUrl}${image}` }] : undefined,
+            images: [
+              { url: `${siteUrl}${image || "/images/house38/img1.jpg"}` },
+            ],
           }
+        : {}),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | Oaktime Staging`,
+      description,
+      ...(siteUrl
+        ? { images: [`${siteUrl}${image || "/images/house38/img1.jpg"}`] }
         : {}),
     },
   };

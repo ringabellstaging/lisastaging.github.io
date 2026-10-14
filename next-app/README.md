@@ -111,12 +111,33 @@ With no `SITE_URL`, or on a Vercel preview, pages are `noindex` and sitemap outp
 
 Page titles/descriptions, LocalBusiness data and project breadcrumbs are implemented. No invented ratings or opening hours are included. Verify actual city labels and public business details, then update Google Business Profile separately. Recover an old domain before attempting old-domain redirects.
 
+### GTA search focus (13 October 2026)
+
+The primary intent is **home staging in Toronto and the Greater Toronto Area**, with Stouffville as the business location. `/home-staging-gta` (also `/zh/home-staging-gta` and `/zh-hant/home-staging-gta`) groups Toronto, York, Peel, Durham and Halton with service information and links to actual projects. Barrie is explicitly outside the GTA. Availability is confirmed by address; the page does not imply an office or a completed project in every listed town. `lib/service-areas.ts` owns the region/case mappings. Do not create dozens of near-identical city pages; expand only when there is useful original local work to show.
+
+Google searches were inspected in Chrome for `home staging Toronto` and `GTA home staging`, with Canadian/local results. These are an observation of a personalized search session, not permanent or universal rankings. Ads, map results and directories were distinguished from company organic results. Reviewed company pages:
+
+- [Last Detail](https://lastdetail.ca/): property categories, individual portfolios, review source links and inquiry entry points.
+- [Astra](https://www.astrastaging.com/): explicit Toronto/GTA positioning, vacant versus occupied explanations, location links and cost/process questions.
+- [Kelly Allan Design](https://www.kellyallandesign.com/): prominent service/location heading, property-specific service descriptions and a clear path from examples to an estimate.
+- [GTA Staging](https://gtastaging.com/) and [GR Home Staging](https://grhomestaging.com/): property-type organization, project examples and local service language.
+
+The implementation uses original Oaktime text and existing project photographs. Competitor reviews, awards, sale-speed statistics, prices and service guarantees were not reused. Existing ratings remain absent until verified sources are supplied. Images on the new region page are lazy-loaded, and it adds no map library or new client-side dependency.
+
+Production canonical: `https://www.oaktime.ca`. The Google Search Console HTML verification file in `public/google06bc8259bbb1d8f0.html` must stay published to retain verification. Use the `https://www.oaktime.ca/` URL-prefix property and submit `https://www.oaktime.ca/sitemap.xml`. This covers the canonical site and all three language paths without changing DNS; it is not a DNS-verified Domain property. Indexing requests are not indexing or ranking guarantees.
+
+After launch, review Search Console indexing, queries and pages for Toronto/GTA and individual cities. Keep Google Business Profile's real name, website, phones, address/service-area settings consistent; collect genuine customer reviews through its official review link. Publish new case notes only from confirmed information (property type, work performed, approved photos); continue withholding full client addresses. Do not add unverifiable ratings, promises of sale outcomes or fictitious local branches.
+
+References: [Google SEO Starter Guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide), [LocalBusiness structured data](https://developers.google.com/search/docs/appearance/structured-data/local-business), [ownership verification](https://support.google.com/webmasters/answer/9008080), [requesting a recrawl](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl).
+
 ## Validation
 
 ```sh
 npm test
 npm run lint
 npm run build
+# After a production build with SITE_URL=https://www.oaktime.ca:
+node scripts/check-seo.mjs
 ```
 
 Tests cover malformed submissions, consent, email recipients, partial email failure/retry, deduplication, image references, approximate coordinates and disabled projects. Delivery tests mock every network call. For browser checks, test desktop and narrow mobile layouts, city filters, marker popups, map/list switching, gallery keyboard controls, required-field errors and the unconfigured-service response. Before publishing, use an explicitly approved test submission to verify both real emails and the scheduled retry in the configured environment.

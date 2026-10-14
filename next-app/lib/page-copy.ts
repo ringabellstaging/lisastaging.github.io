@@ -2,6 +2,10 @@ import type { Locale } from "./i18n";
 
 // Editorial copy is translated on the server, before the page reaches the browser.
 const chinese: Record<string, string> = {
+  "Home staging for Toronto, Stouffville, Markham, Richmond Hill and the GTA. Explore Oaktime’s local projects and request a quote in English or Mandarin.":
+    "为多伦多、史托维尔、万锦、列治文山及大多地区提供售前房屋布置。浏览 Oaktime 当地案例，通过英语或普通话联系设计师获取报价。",
+  "Based in Stouffville, Oaktime Staging helps homeowners and real estate agents prepare properties for sale across Toronto and the Greater Toronto Area. We bring furniture, layout and finishing details together for listing photos and viewings.":
+    "Oaktime Staging 位于史托维尔，为多伦多及大多地区的屋主和地产经纪提供售前房屋布置。我们通过家具、布局及软装细节，为房屋拍摄和看房做好准备。",
   "Home Staging in Toronto & the GTA": "多伦多及大多地区房屋布置",
   "Thoughtful home staging for memorable first impressions. Explore our projects across Toronto and the GTA and request a quote.":
     "用心布置每个空间，留下美好的第一印象。浏览我们在多伦多及大多地区的案例，联系设计师获取报价。",
@@ -144,6 +148,10 @@ const chinese: Record<string, string> = {
 };
 
 const traditional: Record<string, string> = {
+  "Home staging for Toronto, Stouffville, Markham, Richmond Hill and the GTA. Explore Oaktime’s local projects and request a quote in English or Mandarin.":
+    "為多倫多、史托維爾、萬錦、列治文山及大多地區提供售前房屋佈置。瀏覽 Oaktime 當地案例，通過英語或普通話聯繫設計師獲取報價。",
+  "Based in Stouffville, Oaktime Staging helps homeowners and real estate agents prepare properties for sale across Toronto and the Greater Toronto Area. We bring furniture, layout and finishing details together for listing photos and viewings.":
+    "Oaktime Staging 位於史托維爾，為多倫多及大多地區的屋主和地產經紀提供售前房屋佈置。我們通過傢俱、布局及軟裝細節，為房屋拍攝和看房做好準備。",
   "Home Staging in Toronto & the GTA": "多倫多及大多地區房屋佈置",
   "Thoughtful home staging for memorable first impressions. Explore our projects across Toronto and the GTA and request a quote.":
     "用心佈置每個空間，留下美好的第一印象。瀏覽我們在多倫多及大多地區的案例，聯繫設計師獲取報價。",

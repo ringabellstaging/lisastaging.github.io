@@ -7,14 +7,15 @@ import InquirySection from "@/components/InquirySection";
 import Reviews from "@/components/Reviews";
 import { featuredProjects, projectSummaries } from "@/lib/projects";
 import { localizedMetadata } from "@/lib/site";
-import { localizedPath, type Locale } from "@/lib/i18n";
+import { localizedPath, translator, type Locale } from "@/lib/i18n";
+import { gtaPath } from "@/lib/service-areas";
 import { pageText } from "@/lib/page-copy";
 
 export const getMetadata = (locale: Locale) =>
   localizedMetadata(
     locale,
     "Home Staging in Toronto & the GTA",
-    "Thoughtful home staging for memorable first impressions. Explore our projects across Toronto and the GTA and request a quote.",
+    "Home staging for Toronto, Stouffville, Markham, Richmond Hill and the GTA. Explore Oaktime’s local projects and request a quote in English or Mandarin.",
     "/",
     "/images/house38/img1.jpg",
   );
@@ -37,6 +38,7 @@ const services = [
 ];
 export default function HomePage({ locale = "en" }: { locale?: Locale }) {
   const t = (text: string) => pageText(locale, text);
+  const tr = translator(locale);
   const href = (path: string) => localizedPath(path, locale);
   return (
     <main id="main">
@@ -55,14 +57,22 @@ export default function HomePage({ locale = "en" }: { locale?: Locale }) {
         <div className="hero-content wrap">
           <p className="eyebrow">{t("HOME STAGING · TORONTO & THE GTA")}</p>
           <h1 id="hero-heading">
-            {t("Thoughtful spaces.")}
+            {tr("Home staging.", "用心布置房屋，", "用心佈置房屋，")}
             <br />
             <em>{t("Lasting impressions.")}</em>
           </h1>
           <p>
-            {t("Helping buyers feel at home,")}
+            {tr(
+              "For homes across Toronto & the GTA.",
+              "服务多伦多及大多地区的房屋。",
+              "服務多倫多及大多地區的房屋。",
+            )}
             <br />
-            {t("before they even move in.")}
+            {tr(
+              "Helping buyers feel at home, before they move in.",
+              "让买家在入住之前，就感受到家的温度。",
+              "讓買家在入住之前，就感受到家的溫度。",
+            )}
           </p>
           <div className="hero-actions">
             <Link href="#inquiry" className="button button-cream">
@@ -94,7 +104,7 @@ export default function HomePage({ locale = "en" }: { locale?: Locale }) {
           </h2>
           <p className="section-description">
             {t(
-              "We create spaces that feel warm, effortless and ready for their next chapter. Through thoughtful staging, we help your property make an impression that stays.",
+              "Based in Stouffville, Oaktime Staging helps homeowners and real estate agents prepare properties for sale across Toronto and the Greater Toronto Area. We bring furniture, layout and finishing details together for listing photos and viewings.",
             )}
           </p>
         </div>
@@ -106,6 +116,23 @@ export default function HomePage({ locale = "en" }: { locale?: Locale }) {
               <p>{t(service.text)}</p>
             </article>
           ))}
+        </div>
+        <div className="service-area-intro">
+          <p>
+            {tr(
+              "From Toronto to Markham, Richmond Hill, Vaughan, Mississauga and Durham, explore our local work and find out about staging in your area.",
+              "从多伦多到万锦、列治文山、旺市、密西沙加及杜兰区，浏览当地案例，了解您所在区域的布置服务。",
+              "從多倫多到萬錦、列治文山、旺市、密西沙加及杜蘭區，瀏覽當地案例，瞭解您所在區域的佈置服務。",
+            )}
+          </p>
+          <Link href={href(gtaPath)} className="text-link">
+            {tr(
+              "Explore GTA staging services & areas",
+              "了解 GTA 布置服务与地区",
+              "瞭解 GTA 佈置服務與地區",
+            )}
+            <ArrowUpRight size={17} />
+          </Link>
         </div>
       </section>
       <section id="selected-work" className="section work-section">

@@ -346,6 +346,64 @@ address {
   max-width: 350px;
   line-height: 1.9;
 }
+.service-area-intro {
+  display: grid;
+  gap: 18px;
+  justify-items: start;
+  max-width: 740px;
+  margin-top: 44px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.area-page .page-heading {
+  max-width: 1000px;
+}
+.area-page .page-heading > p:not(.eyebrow) {
+  max-width: 740px;
+}
+.area-page .page-heading .button {
+  margin-top: 26px;
+}
+.area-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 38px;
+}
+.area-navigation a {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 18px;
+  border: 1px solid var(--line);
+  font-size: 13px;
+}
+.area-navigation a:hover {
+  background: var(--sand);
+}
+.area-note {
+  max-width: 760px;
+  margin-block: 22px;
+  color: var(--muted);
+}
+.area-region {
+  padding-block: 56px;
+  border-bottom: 1px solid var(--line);
+}
+.area-region .section-top {
+  gap: 28px;
+  margin-bottom: 22px;
+}
+.area-region .section-description {
+  max-width: 600px;
+}
+.area-cities {
+  max-width: 900px;
+  margin-bottom: 30px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 2;
+}
 .work-section {
   background: var(--sand);
 }
