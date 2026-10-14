@@ -52,6 +52,8 @@ Separate root documents keep the HTML language correct without making pages dyna
 
 ## Production setup
 
+For ongoing operations, see the Chinese [Upstash and inquiry maintenance guide](docs/inquiry-maintenance.md): daily checks, encrypted storage and retention, retry behavior, read-only troubleshooting, key rotation, backup/recovery and known operational limitations.
+
 Set Vercel **Root Directory** to `next-app`, **Framework** to Next.js, **Build Command** to `npm run build`, and leave **Output Directory** at its default. A Pro plan is needed for the commercial site and the 15-minute retry cron in `vercel.json`.
 
 Copy `.env.example` to `.env.local` for local configuration; never commit credentials. Required environment variables:
