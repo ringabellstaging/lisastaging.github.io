@@ -9,6 +9,10 @@ import {
   type Locale,
 } from "@/lib/i18n";
 import { ArrowUpRight, Menu, X } from "lucide-react";
+import {
+  languageCookieMaxAge,
+  languageCookieName,
+} from "@/lib/language-preference";
 
 export default function Header({ locale = "en" }: { locale?: Locale }) {
   const [open, setOpen] = useState(false);
@@ -93,7 +97,13 @@ export default function Header({ locale = "en" }: { locale?: Locale }) {
                 }
                 aria-current={locale === target ? "true" : undefined}
                 onClick={(event) => {
-                  // The URL is the language preference; ordinary links remain usable without JS.
+                  // Manual choices override browser language on the next homepage visit.
+                  // Keep the language links usable even when cookies are blocked.
+                  try {
+                    document.cookie = `${languageCookieName}=${target}; Path=/; Max-Age=${languageCookieMaxAge}; SameSite=Lax${window.location.protocol === "https:" ? "; Secure" : ""}`;
+                  } catch {
+                    // The destination URL still determines this page's language.
+                  }
                   event.currentTarget.href = localizedPath(
                     window.location.pathname +
                       window.location.search +
