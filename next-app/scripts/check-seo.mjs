@@ -15,6 +15,14 @@ const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(
 assert.ok(urls.length > 200, "Build must have an indexable production sitemap");
 assert.equal(new Set(urls).size, urls.length, "Duplicate sitemap URLs");
 const pages = new Map();
+const projects = JSON.parse(
+  await readFile(resolve(root, "data/projects.json"), "utf8"),
+);
+assert.equal(
+  urls.length,
+  (projects.length + 6) * 3,
+  "All public language routes must be in the sitemap",
+);
 for (const url of urls) {
   assert.equal(new URL(url).origin, origin, `Unexpected origin: ${url}`);
   const pathname = new URL(url).pathname;
@@ -59,6 +67,28 @@ for (const url of urls) {
   }
 }
 for (const prefix of ["", "/zh", "/zh-hant"]) {
+  const portfolio = pages.get(`${prefix}/projects`);
+  assert.ok(portfolio, `Missing portfolio: ${prefix}`);
+  for (const project of projects) {
+    const path = `${prefix}/${project.id}`;
+    assert.ok(pages.has(path), `Project missing from sitemap: ${path}`);
+    assert.ok(
+      portfolio.includes(`href="${path}"`),
+      `Project link missing from server-rendered portfolio: ${path}`,
+    );
+  }
+  for (const id of [
+    "house6",
+    "house8",
+    "house10",
+    "house33",
+    "house34",
+    "house37",
+  ])
+    assert.ok(
+      !pages.has(`${prefix}/${id}`),
+      `Disabled project is indexable: ${id}`,
+    );
   const html = pages.get(`${prefix}/home-staging-gta`);
   assert.ok(html, `Missing service area route: ${prefix}`);
   assert.ok(html.includes('"@type":"Service"'), "Missing Service entity");
