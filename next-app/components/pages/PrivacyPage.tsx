@@ -57,6 +57,14 @@ export default function PrivacyPage({ locale = "en" }: { locale?: Locale }) {
         )}
       </p>
       <p>Oak Time Inc. · {marketingContact.address}</p>
+      <h2>{tr("Language preference", "语言偏好", "語言偏好")}</h2>
+      <p>
+        {tr(
+          "When you visit our main homepage, we use your browser's language preferences to choose English, Simplified Chinese or Traditional Chinese. We remember the selected language in a first-party cookie for up to one year. Choosing a language in the header updates this preference. This cookie contains only a language code and is not used for advertising. Clearing it restores browser-based selection on your next homepage visit. Links to specific pages keep their language.",
+          "访问网站主首页时，我们会根据浏览器的语言偏好选择英文、简体或繁体中文，并通过本网站的 Cookie 记住所选语言，最长一年。您可在页眉切换语言来更新偏好。此 Cookie 只包含语言代码，不用于广告；清除后，下次访问主首页将重新按浏览器语言选择。指定页面的链接保留其语言。",
+          "瀏覽網站主首頁時，我們會根據瀏覽器的語言偏好選擇英文、簡體或繁體中文，並透過本網站的 Cookie 記住所選語言，最長一年。您可在頁首切換語言來更新偏好。此 Cookie 只包含語言代碼，不用於廣告；清除後，下次瀏覽主首頁將重新按瀏覽器語言選擇。指定頁面的連結保留其語言。",
+        )}
+      </p>
       <h2>{tr("Website analytics", "网站访问统计", "網站瀏覽統計")}</h2>
       <p>
         {tr(
