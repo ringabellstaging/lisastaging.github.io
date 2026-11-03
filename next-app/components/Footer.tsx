@@ -32,6 +32,9 @@ export default function Footer({ locale = "en" }: { locale?: Locale }) {
           <Link href={href("/projects")}>
             {t("Our work", "案例作品", "案例作品")}
           </Link>
+          <Link href={href("/furniture")}>
+            {t("Furniture sales & rentals", "家具出售与租赁", "傢俱出售與租賃")}
+          </Link>
           <Link href={href("/home-staging-gta")}>
             {t("GTA service areas", "GTA 服务区域", "GTA 服務區域")}
           </Link>
@@ -47,6 +50,12 @@ export default function Footer({ locale = "en" }: { locale?: Locale }) {
           <p className="eyebrow">{t("Let’s talk", "联系团队", "聯繫團隊")}</p>
           <PhoneContacts />
           <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
+          <Link href={href("/contact#social")} className="footer-social">
+            {t("WeChat", "微信", "微信")} · {contactInfo.wechatId}
+          </Link>
+          <Link href={href("/contact#social")} className="footer-social">
+            {t("Xiaohongshu", "小红书", "小紅書")} · {contactInfo.xiaohongshuId}
+          </Link>
         </div>
         <div>
           <p className="eyebrow">

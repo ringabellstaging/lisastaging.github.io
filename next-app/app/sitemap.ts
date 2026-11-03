@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/",
     "/projects",
     "/home-staging-gta",
+    "/furniture",
     "/about",
     "/contact",
     "/privacy",

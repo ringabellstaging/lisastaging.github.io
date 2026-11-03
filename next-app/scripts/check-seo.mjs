@@ -14,8 +14,8 @@ const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(
 );
 assert.equal(
   urls.length,
-  18,
-  "Only the six main pages in three languages belong in the sitemap",
+  21,
+  "Only the seven main pages in three languages belong in the sitemap",
 );
 assert.equal(new Set(urls).size, urls.length, "Duplicate sitemap URLs");
 const pages = new Map();
@@ -98,6 +98,7 @@ for (const prefix of ["", "/zh", "/zh-hant"]) {
     "",
     "/projects",
     "/home-staging-gta",
+    "/furniture",
     "/about",
     "/contact",
     "/privacy",
@@ -107,6 +108,23 @@ for (const prefix of ["", "/zh", "/zh-hant"]) {
   }
   const portfolio = pages.get(`${prefix}/projects`);
   assert.ok(portfolio, `Missing portfolio: ${prefix}`);
+  const furniture = pages.get(`${prefix}/furniture`);
+  assert.ok(
+    furniture.includes('"@type":"Service"'),
+    "Furniture page needs Service schema",
+  );
+  assert.ok(
+    furniture.includes('src="/images/brand/wechat-lisa.jpg"'),
+    "Furniture page needs the local original WeChat QR image",
+  );
+  assert.ok(
+    furniture.includes("lisa4169393962"),
+    "Missing furniture WeChat ID",
+  );
+  assert.ok(
+    pages.get(prefix || "/").includes(`href="${prefix}/furniture"`),
+    "Furniture page needs an ordinary homepage link",
+  );
   for (const project of projects) {
     const path = `${prefix}/${project.id}`;
     await checkPage(`${origin}${path}`, false);
@@ -131,6 +149,10 @@ for (const prefix of ["", "/zh", "/zh-hant"]) {
   assert.ok(html, `Missing service area route: ${prefix}`);
   assert.ok(html.includes('"@type":"Service"'), "Missing Service entity");
   assert.ok(html.includes('"@type":"BreadcrumbList"'), "Missing breadcrumbs");
+  assert.ok(
+    html.includes('id="service-coverage"'),
+    "Service areas should share one coverage section",
+  );
   for (const match of html.matchAll(/href="([^"]*\/house\d+)"/g)) {
     assert.ok(pages.has(match[1]), `Broken project link: ${match[1]}`);
     assert.ok(

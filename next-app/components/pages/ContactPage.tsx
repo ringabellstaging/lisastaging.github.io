@@ -1,5 +1,5 @@
-import Image from "next/image";
 import InquirySection from "@/components/InquirySection";
+import SocialContacts from "@/components/SocialContacts";
 import { contactInfo } from "@/lib/contact";
 import { localizedMetadata } from "@/lib/site";
 import { translator, type Locale } from "@/lib/i18n";
@@ -20,7 +20,7 @@ export default function ContactPage({ locale = "en" }: { locale?: Locale }) {
   return (
     <main id="main">
       <InquirySection standalone locale={locale} />
-      <section className="section wrap">
+      <section id="social" className="section wrap">
         <div className="section-top">
           <div>
             <p className="eyebrow">{t("GET IN TOUCH")}</p>
@@ -35,15 +35,9 @@ export default function ContactPage({ locale = "en" }: { locale?: Locale }) {
               <p>{t("Please contact us to arrange a consultation.")}</p>
             </div>
           </div>
-          <div>
+          <div className="contact-social">
             <p className="eyebrow">{t("CONNECT ON WECHAT")}</p>
-            <Image
-              src="/images/LisaWechatQR.jpg"
-              alt={t("Scan to contact our Mandarin-speaking team on WeChat")}
-              width={144}
-              height={144}
-              style={{ marginTop: 18 }}
-            />
+            <SocialContacts locale={locale} />
           </div>
         </div>
       </section>

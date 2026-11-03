@@ -4,7 +4,13 @@ import { publicPageView } from "../lib/analytics.ts";
 
 test("traffic statistics keep language and public page paths without URL secrets", () => {
   for (const prefix of ["", "/zh", "/zh-hant"]) {
-    for (const path of ["", "/contact", "/home-staging-gta", "/house38"]) {
+    for (const path of [
+      "",
+      "/contact",
+      "/home-staging-gta",
+      "/furniture",
+      "/house38",
+    ]) {
       const clean = `https://www.oaktime.ca${prefix}${path || (prefix ? "" : "/")}`;
       assert.deepEqual(
         publicPageView({

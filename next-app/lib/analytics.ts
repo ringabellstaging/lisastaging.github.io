@@ -9,7 +9,7 @@ export function publicPageView(event: BeforeSendEvent): BeforeSendEvent | null {
     const path = url.pathname.replace(/^\/(zh-hant|zh)(?=\/|$)/, "") || "/";
     if (
       !["https:", "http:"].includes(url.protocol) ||
-      !/^(\/|\/projects|\/home-staging-gta|\/about|\/contact|\/privacy|\/house\d+)$/.test(
+      !/^(\/|\/projects|\/home-staging-gta|\/furniture|\/about|\/contact|\/privacy|\/house\d+)$/.test(
         path,
       )
     )

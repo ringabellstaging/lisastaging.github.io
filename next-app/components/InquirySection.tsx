@@ -1,6 +1,7 @@
 import InquiryForm from "./InquiryForm";
 import { contactInfo } from "@/lib/contact";
 import PhoneContacts from "./PhoneContacts";
+import SocialContacts from "./SocialContacts";
 import { translator, type Locale } from "@/lib/i18n";
 export default function InquirySection({
   standalone = false,
@@ -40,6 +41,7 @@ export default function InquirySection({
             <PhoneContacts />
             <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
           </div>
+          {!standalone && <SocialContacts locale={locale} compact />}
         </div>
         <InquiryForm locale={locale} />
       </div>
