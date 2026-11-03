@@ -5,6 +5,8 @@ import ProjectCard from "@/components/ProjectCard";
 import ProjectExplorer from "@/components/ProjectExplorer";
 import InquirySection from "@/components/InquirySection";
 import Reviews from "@/components/Reviews";
+import FirstCollaborationOffer from "@/components/FirstCollaborationOffer";
+import FurniturePreview from "@/components/FurniturePreview";
 import { featuredProjects, projectSummaries } from "@/lib/projects";
 import { localizedMetadata } from "@/lib/site";
 import { localizedPath, translator, type Locale } from "@/lib/i18n";
@@ -94,6 +96,7 @@ export default function HomePage({ locale = "en" }: { locale?: Locale }) {
         <span>{t("Considered design. Beautifully presented.")}</span>
         <span>{t("Based in Stouffville · Serving the GTA")}</span>
       </div>
+      <FirstCollaborationOffer locale={locale} />
       <section id="services" className="section wrap services-section">
         <div className="section-heading">
           <p className="eyebrow">{t("THE OAKTIME APPROACH")}</p>
@@ -103,8 +106,10 @@ export default function HomePage({ locale = "en" }: { locale?: Locale }) {
             <em>{t("Let’s bring yours to life.")}</em>
           </h2>
           <p className="section-description">
-            {t(
-              "Based in Stouffville, Oaktime Staging helps homeowners and real estate agents prepare properties for sale across Toronto and the Greater Toronto Area. We bring furniture, layout and finishing details together for listing photos and viewings.",
+            {tr(
+              "With 10 years of home staging experience, we select high-end furniture and accessories for each home’s layout, colours and style. We pay attention to proportion, materials and details, creating natural, layered spaces that keep the warmth and authenticity of a home.",
+              "我们拥有 10 年 Home Staging 经验，精选高端家具与软装饰品，根据每一套房屋的户型结构、色彩与整体风格进行设计。注重比例、材质与细节呈现，让空间自然、有层次，在提升品质感的同时，保留家的温度与真实生活感。",
+              "我們擁有 10 年 Home Staging 經驗，精選高端傢俱與軟裝飾品，根據每一套房屋的戶型結構、色彩與整體風格進行設計。注重比例、材質與細節呈現，讓空間自然、有層次，在提升品質感的同時，保留家的溫度與真實生活感。",
             )}
           </p>
         </div>
@@ -135,6 +140,7 @@ export default function HomePage({ locale = "en" }: { locale?: Locale }) {
           </Link>
         </div>
       </section>
+      <FurniturePreview locale={locale} />
       <section id="selected-work" className="section work-section">
         <div className="wrap">
           <div className="section-top">

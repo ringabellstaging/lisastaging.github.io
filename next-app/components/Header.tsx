@@ -59,6 +59,9 @@ export default function Header({ locale = "en" }: { locale?: Locale }) {
           <Link href={href("/projects")}>
             {t("Our work", "案例作品", "案例作品")}
           </Link>
+          <Link href={href("/furniture")}>
+            {t("Furniture", "家具租售", "傢俱租售")}
+          </Link>
           <Link href={href("/#project-map")}>
             {t("Project map", "案例地图", "案例地圖")}
           </Link>

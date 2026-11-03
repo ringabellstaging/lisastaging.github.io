@@ -1,7 +1,5 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import ProjectCard from "@/components/ProjectCard";
-import { projectSummaries } from "@/lib/projects";
 import { localizedPath, translator, type Locale } from "@/lib/i18n";
 import { pageMetadata, siteUrl } from "@/lib/site";
 import { areaText, gtaPath, serviceAreas } from "@/lib/service-areas";
@@ -126,87 +124,52 @@ export default function ServiceAreasPage({
           <ArrowUpRight size={18} />
         </Link>
       </div>
-      <nav
-        className="area-navigation"
-        aria-label={t("Browse GTA regions", "浏览 GTA 区域", "瀏覽 GTA 區域")}
+      <section
+        id="service-coverage"
+        className="area-region service-coverage"
+        aria-labelledby="coverage-heading"
       >
-        {serviceAreas.map((area) => (
-          <a key={area.id} href={`#${area.id}`}>
-            {areaText(locale, area.name)}
-            <ArrowUpRight size={15} />
-          </a>
-        ))}
-      </nav>
-      <p className="area-note">
-        {t(
-          "The GTA includes Toronto and the regions of York, Peel, Durham and Halton. Availability and travel are confirmed for your property address and intended staging date.",
-          "GTA 包括多伦多及约克、皮尔、杜兰和荷顿四个区域。具体服务及交通安排会根据房屋地址与预期布置日期确认。",
-          "GTA 包括多倫多及約克、皮爾、杜蘭和荷頓四個區域。具體服務及交通安排會根據房屋地址與預期佈置日期確認。",
-        )}
-      </p>
-      {serviceAreas.map((area) => (
-        <section
-          id={area.id}
-          key={area.id}
-          className="area-region"
-          aria-labelledby={`${area.id}-heading`}
-        >
-          <div className="section-top">
-            <div>
-              <p className="eyebrow">
-                {t("HOME STAGING", "售前房屋布置", "售前房屋佈置")}
-              </p>
-              <h2 id={`${area.id}-heading`}>{areaText(locale, area.name)}</h2>
-            </div>
-            <p className="section-description">
-              {areaText(locale, area.description)}
-            </p>
-          </div>
-          <p className="area-cities">{area.cities.join(" · ")}</p>
-          {area.projects.length > 0 ? (
-            <div className="projects-grid">
-              {area.projects.map((id) => {
-                const project = projectSummaries.find((item) => item.id === id);
-                return project ? (
-                  <ProjectCard key={id} project={project} locale={locale} />
-                ) : null;
-              })}
-            </div>
-          ) : (
-            <Link href={href("/contact")} className="text-link">
-              {t(
-                "Ask about your location",
-                "咨询您的房屋位置",
-                "諮詢您的房屋位置",
-              )}
-              <ArrowUpRight size={17} />
-            </Link>
-          )}
-        </section>
-      ))}
-      <section className="area-region">
         <p className="eyebrow">
-          {t("BEYOND THE GTA", "GTA 以外地区", "GTA 以外地區")}
+          {t("OUR SERVICE AREA", "服务区域", "服務區域")}
         </p>
-        <h2>
+        <h2 id="coverage-heading">
           {t(
-            "A little further afield.",
-            "更远一些，也可以聊聊。",
-            "更遠一些，也可以聊聊。",
+            "Across the GTA & nearby.",
+            "覆盖 GTA 及周边地区。",
+            "覆蓋 GTA 及周邊地區。",
           )}
         </h2>
         <p className="area-note">
           {t(
-            "Our portfolio also includes projects in Barrie, outside the GTA. For locations beyond our main service area, contact us to discuss availability.",
-            "我们的案例也包括 GTA 以外的巴里。其他服务区域以外的房屋，请联系我们确认是否可以安排。",
-            "我們的案例也包括 GTA 以外的巴里。其他服務區域以外的房屋，請聯繫我們確認是否可以安排。",
+            "We serve Toronto and communities across the GTA and surrounding areas, including:",
+            "我们为多伦多及大多地区、周边城镇提供服务，包括：",
+            "我們為多倫多及大多地區、周邊城鎮提供服務，包括：",
           )}
         </p>
-        <Link href={href("/house59")} className="text-link">
+        <ul className="coverage-list">
+          {serviceAreas.map((area) => (
+            <li id={area.id} key={area.id}>
+              <h3>{areaText(locale, area.name)}</h3>
+              <p>{area.cities.join(" · ")}</p>
+            </li>
+          ))}
+          <li>
+            <h3>{t("Nearby communities", "周边地区", "周邊地區")}</h3>
+            <p>Barrie · Innisfil · Bradford</p>
+          </li>
+        </ul>
+        <p className="coverage-further">
           {t(
-            "View a Barrie staging project",
-            "查看巴里布置案例",
-            "查看巴里佈置案例",
+            "Further away? We can help there too. Send an inquiry with your property address and we’ll work with you on travel, scheduling and the right staging plan.",
+            "更远的地区也可以安排服务。欢迎发 inquiry 告诉我们您的房屋地址，我们会与您沟通交通、档期及合适的布置方案。",
+            "更遠的地區也可以安排服務。歡迎發 inquiry 告訴我們您的房屋地址，我們會與您溝通交通、檔期及合適的佈置方案。",
+          )}
+        </p>
+        <Link href={href("/contact")} className="text-link">
+          {t(
+            "Inquire about your location",
+            "联系我们咨询服务",
+            "聯繫我們諮詢服務",
           )}
           <ArrowUpRight size={17} />
         </Link>
