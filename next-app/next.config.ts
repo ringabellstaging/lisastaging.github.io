@@ -7,6 +7,17 @@ const nextConfig = (phase: string): NextConfig => ({
   distDir: phase === PHASE_DEVELOPMENT_SERVER ? ".next-dev" : ".next",
   // Each language has its own static root document with the correct HTML lang.
   experimental: { globalNotFound: true },
+  async headers() {
+    // Keep HTML and HTTP indexing instructions consistent in all languages.
+    return [
+      "/:houseId(house\\d+)",
+      "/zh/:houseId(house\\d+)",
+      "/zh-hant/:houseId(house\\d+)",
+    ].map((source) => ({
+      source,
+      headers: [{ key: "X-Robots-Tag", value: "noindex, follow" }],
+    }));
+  },
   images: {
     // WebP avoids AVIF's slower first-request encoding on the project library.
     formats: ["image/webp"],

@@ -18,15 +18,23 @@ export async function getMetadata(
 ) {
   const project = getProject((await params).houseId);
   if (!project) return {};
-  return pageMetadata(
-    locale !== "en"
-      ? `${project.title} — ${cityLabel(project.city, locale)}房屋布置`
-      : `${project.title} — ${project.city} Home Staging`,
-    projectDescription(project, locale),
-    localizedPath(`/${project.id}`, locale),
-    project.cover.src,
-    locale,
-  );
+  return {
+    ...pageMetadata(
+      locale !== "en"
+        ? `${project.title} — ${cityLabel(project.city, locale)}房屋布置`
+        : `${project.title} — ${project.city} Home Staging`,
+      projectDescription(project, locale),
+      localizedPath(`/${project.id}`, locale),
+      project.cover.src,
+      locale,
+    ),
+    // Portfolio details are for browsing within the site, not search results.
+    robots: {
+      index: false,
+      follow: true,
+      googleBot: { index: false, follow: true },
+    },
+  };
 }
 export default async function ProjectPage({
   params,

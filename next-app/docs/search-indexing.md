@@ -1,27 +1,39 @@
 # 搜索收录维护
 
-核对日期：2026-11-02（多伦多时间）。正式域名：`https://www.oaktime.ca`。
+核对日期：2026-11-03（多伦多时间）。正式域名：`https://www.oaktime.ca`。
 
 ## 哪些页面需要收录
 
-所有已发布的有效案例都保留索引资格，不因流量少、项目较旧或 Google 尚未抓取而隐藏。当前 `data/projects.json` 有 67 个公开案例，图片引用有效，没有重复 ID、空图库或完全相同的图库（按图片文件内容比对）。
+只收录网站主要页面。按网站所有者确认，所有案例详情都是站内浏览页面，不应出现在搜索结果中；该政策适用于现有及以后新增案例的全部语言版本。
 
 | 页面                           | 英文／简体／繁体合计 |
 | ------------------------------ | -------------------: |
-| 67 个案例详情                  |                  201 |
 | 首页                           |                    3 |
 | 案例列表 `/projects`           |                    3 |
 | GTA 服务页 `/home-staging-gta` |                    3 |
 | 关于 `/about`                  |                    3 |
 | 联系 `/contact`                |                    3 |
 | 隐私说明 `/privacy`            |                    3 |
-| 合计                           |                  219 |
+| 可收录合计                     |                   18 |
 
-不同语言页面各自有规范网址，并以 hreflang 相互关联，不能把所有中文页面的 canonical 都改到英文首页。虽然隐私页不是获客重点，仍保持公开且可索引，不为凑数字增删页面。
+不同语言主要页面各自有规范网址，并以 hreflang 相互关联，不能把所有中文页面的 canonical 都改到英文首页。案例列表 `/projects` 仍是公开、可收录的作品入口；案例详情的收录政策单独处理。
+
+## 所有案例详情禁止收录
+
+当前 `data/projects.json` 有 67 个有效案例，共 201 个详情网址：`/houseN`、`/zh/houseN`、`/zh-hant/houseN`。这些网址：
+
+- 返回 200，保留列表、地图、图片、普通链接及语言切换，方便网站访客浏览和分享。
+- 在 HTML 的 `robots` 和 `googlebot` 元标签中输出 `noindex, follow`，覆盖根布局原本的 index 设置。
+- 在 HTTP 响应头中输出 `X-Robots-Tag: noindex, follow`；`next.config.ts` 的规则覆盖三个语言路径，也覆盖以后新增的数字案例 ID。
+- 不写入站点地图，也不向 Google 请求编入索引。
+
+不要在 robots.txt 中 Disallow 案例路径。搜索引擎必须能抓取页面才能读取 noindex 并将已收录的页面移除。已有搜索结果需要等待重新抓取后消失，删除 sitemap 条目本身不是移除指令。
+
+这里的“站内页面”是公开可访问但不参加搜索收录，不是登录保护。noindex 不会隐藏链接、原始图片或阻止别人分享网址。客户完整地址仍按既有方式保密。
 
 ## 哪些案例保持排除
 
-旧站以下文件本来已经标记 `disabled: true`。它们没有迁入公开案例数据，详情返回 404，不在上述 219 个网址中：
+旧站以下文件本来已经标记 `disabled: true`。它们没有迁入当前 67 个案例，详情继续返回 404，不应恢复为公开页面：
 
 | ID        | 旧文件中的城市   |
 | --------- | ---------------- |
@@ -36,25 +48,25 @@
 
 API、错误页和 Vercel Preview 不作为搜索页面；不要向 Google 提交这些网址。Preview 的 noindex 应继续保留。
 
-## 为什么发现了网址仍未收录
+## 维护顺序
 
-站点地图被成功读取，只说明 Google 已获得网址列表，不等于全部抓取或收录。索引汇总报告也有更新时间，单个页面的最新状态优先通过“网址检查”核对。
+站点地图被成功读取，只说明 Google 已获得主要页面的网址列表，不等于全部抓取或收录。索引汇总报告有更新时间，单个页面的最新状态优先通过“网址检查”核对。案例详情显示“被 noindex 排除”是预期结果，不应当作待修复的 SEO 错误。
 
-维护顺序：
+1. 对 18 个主要页面检查 200、index、canonical、hreflang 和站点地图覆盖；不要让案例的 noindex 响应头误伤首页、服务页或案例列表。
+2. 对全部案例检查 200、HTML 与 HTTP 两处 noindex，以及 sitemap 中没有案例网址。确认 `/projects` 初始 HTML 仍有所有普通案例链接，地图和语言切换仍可浏览详情。
+3. 发布后向 Search Console 重新提交 `/sitemap.xml`，确认读取成功且只发现 18 个主要网址。Google 的历史报告可能暂时仍列出旧案例网址。
+4. 如需检查案例是否移除，使用网址检查查看抓取后是否识别 noindex；不要对案例点击“请求编入索引”。只有主要页面才需要提交收录请求。
+5. 持续补充真实业务资料并复查主要页面的收录变化。不得编造房间数、成交数据、评价或客户完整地址来增加文字。
 
-1. 确认正式网址返回 200，页面 HTML 有内容、普通链接和正确的 canonical，且没有 noindex 或 robots 阻挡。
-2. 确认站点地图仍包含所有有效页面；确认 `/projects` 的初始 HTML 已有全部 67 个案例链接，而非只把链接放在地图交互或按钮后面。
-3. 对少量重要的新页面使用网址检查和“请求编入索引”，记录 Google 接受请求的结果；不要把“可编入索引”当作“已收录”。
-4. 其余有效页面由站点地图和内部链接发现。Google 没有为普通案例网页提供可强制批量收录的提交方式，不使用只适用于特定内容的 Indexing API 来提交案例，也不反复提交同一网址。
-5. 持续补充真实案例信息和有来源的业务资料，复查收录变化。不得编造房间数、成交数据、评价或客户完整地址来增加文字。
+## 历史记录
 
-2026-11-02 的站点地图核对：Google 后台显示 `/sitemap.xml` 成功读取了 219 个网址，上次读取为 2026-10-26。索引汇总当时更新至 2026-10-22，显示 4 页收录、215 页已发现但未收录；该数字不是实时值。随后逐页检查中，简体 GTA 服务页已经显示“网址已收录到 Google”，因此不能继续用旧汇总认定它未收录。
+2026-11-02 的旧配置曾将全部 219 页提交到站点地图，Google 显示成功读取。旧索引汇总当时更新至 2026-10-22，显示 4 页收录、215 页已发现但未收录；该数字不是实时值。随后单页检查确认简体 GTA 服务页已收录，繁体 GTA 服务页通过实际抓取但尚未收录。
 
-同日重新提交站点地图后，Google 显示“已成功提交站点地图”，提交和读取日期均更新为 2026-11-02，状态成功，发现 219 页。繁体 GTA 服务页当时仍未收录，单页手动请求因 Google 无法连接 reCAPTCHA 服务而失败，不能记为已接受请求；该页已包含在成功读取的站点地图中。没有发现网站禁止该页抓取或收录，最终抓取与收录仍由 Google 决定。
+2026-11-03 网站所有者明确要求所有案例详情不参加搜索收录，现行政策因此改为 18 个主要页面可收录、201 个案例语言页面 noindex。旧的“全部 219 页需要收录”不再适用。
 
 ## 代码与发布检查
 
-来源是 `lib/projects.ts` 与 `data/projects.json`；`app/sitemap.ts` 为每个公开页面生成三个语言版本。不要直接编辑生产 sitemap.xml，也不要删除 Google 所有权验证文件。
+案例来源是 `lib/projects.ts` 与 `data/projects.json`；`components/pages/ProjectPage.tsx` 为三个语言版本共用的详情页提供 noindex，`next.config.ts` 提供对应 HTTP 响应头。`app/sitemap.ts` 只生成六类主要页面的三个语言版本。不要直接编辑生产 sitemap.xml，也不要删除 Google 所有权验证文件。
 
 ```powershell
 # 在 next-app 目录，完成正式模式构建后运行
@@ -64,6 +76,6 @@ npm run build
 node scripts/check-seo.mjs
 ```
 
-`check-seo.mjs` 检查所有公开页面的 canonical、index、语言关联和页面结构，并确认所有案例在站点地图及服务器渲染的案例列表中都有链接，停用案例没有重新出现。检查通过表示网站提供了正确的索引条件，不是 Google 的收录保证。
+`check-seo.mjs` 检查 18 个可收录主要页面，以及全部案例详情的 canonical、noindex、Googlebot 指令、HTTP 响应头规则、语言关联和页面结构；确认所有案例从站点地图排除，但在服务器渲染的案例列表中仍有链接，停用案例没有重新出现。检查通过表示网站提供了正确指令，不表示 Google 已经完成收录或移除。
 
-官方参考：[索引报告](https://support.google.com/webmasters/answer/7440203)、[请求重新抓取](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl)、[本地化版本](https://developers.google.com/search/docs/specialty/international/localized-versions)。
+官方参考：[noindex 阻止收录](https://developers.google.com/search/docs/crawling-indexing/block-indexing)、[robots.txt 的用途与限制](https://developers.google.com/search/docs/crawling-indexing/robots/intro)、[索引报告](https://support.google.com/webmasters/answer/7440203)、[本地化版本](https://developers.google.com/search/docs/specialty/international/localized-versions)。
