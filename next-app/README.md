@@ -109,6 +109,8 @@ Consent wording is versioned in `lib/marketing-consent.ts`; change the version w
 
 ## SEO and launch checks
 
+Indexing policy and the public/disabled project inventory are documented in [Search indexing maintenance](docs/search-indexing.md). All 67 published projects and their three language versions remain eligible for indexing. The build check verifies that every project has an ordinary link in the server-rendered portfolio as well as a sitemap entry.
+
 With no `SITE_URL`, or on a Vercel preview, pages are `noindex` and sitemap output is empty. `robots.txt` permits page crawling so crawlers can read the noindex instruction. After choosing the production domain, set `SITE_URL` and rebuild: canonical URLs, sitemap and social images will use that origin. Do not add an expired domain or preview URL as the canonical. Confirm production HTML is indexable before submitting its sitemap to Search Console.
 
 Page titles/descriptions, LocalBusiness data and project breadcrumbs are implemented. No invented ratings or opening hours are included. Verify actual city labels and public business details, then update Google Business Profile separately. Recover an old domain before attempting old-domain redirects.
@@ -131,6 +133,14 @@ Production canonical: `https://www.oaktime.ca`. The Google Search Console HTML v
 After launch, review Search Console indexing, queries and pages for Toronto/GTA and individual cities. Keep Google Business Profile's real name, website, phones, address/service-area settings consistent; collect genuine customer reviews through its official review link. Publish new case notes only from confirmed information (property type, work performed, approved photos); continue withholding full client addresses. Do not add unverifiable ratings, promises of sale outcomes or fictitious local branches.
 
 References: [Google SEO Starter Guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide), [LocalBusiness structured data](https://developers.google.com/search/docs/appearance/structured-data/local-business), [ownership verification](https://support.google.com/webmasters/answer/9008080), [requesting a recrawl](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl).
+
+## Web Analytics
+
+The shared `SiteDocument` includes `@vercel/analytics/next` through `WebsiteAnalytics` only for an indexable Vercel Production build. Enable Web Analytics for `lisastaging-github-io` in Vercel and deploy this code to begin collecting real traffic; historical visits cannot be reconstructed. Preview and local builds do not mount it. No new secret or database is needed.
+
+`lib/analytics.ts` accepts public page views only, removes query strings and fragments from page URLs, and drops custom events and nonpublic paths. Do not add inquiry fields or customer information to analytics. The privacy page describes this in all three languages. Tracking can be affected by ad blockers and does not establish whether a visit is a prospective customer.
+
+Check the current [Vercel pricing](https://vercel.com/docs/analytics/limits-and-pricing) before enabling or upgrading. At implementation time, standard Pro analytics is metered at USD $0.03 per 1,000 events, subject to the team's monthly usage credit; the USD $10/month Plus add-on is separate and not required. Team usage is shared across projects. Enabling tracking is not an SEO ranking change; use Search Console for Google impressions, clicks and indexing.
 
 ## Validation
 

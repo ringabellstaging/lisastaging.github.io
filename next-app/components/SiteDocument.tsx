@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import { contactInfo } from "@/lib/contact";
 import { siteUrl, isIndexable } from "@/lib/site";
 import { serviceAreas } from "@/lib/service-areas";
+import WebsiteAnalytics from "@/components/WebsiteAnalytics";
 
 const sans = DM_Sans({
   subsets: ["latin"],
@@ -122,6 +123,9 @@ export default function SiteDocument({
         <Header locale={locale} />
         {children}
         <Footer locale={locale} />
+        {isIndexable && process.env.VERCEL_ENV === "production" && (
+          <WebsiteAnalytics />
+        )}
       </body>
     </html>
   );
