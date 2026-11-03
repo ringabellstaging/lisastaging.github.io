@@ -12,18 +12,30 @@ const sitemap = await readFile(resolve(built, "sitemap.xml.body"), "utf8");
 const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(
   (match) => match[1],
 );
-assert.ok(urls.length > 200, "Build must have an indexable production sitemap");
+assert.equal(
+  urls.length,
+  18,
+  "Only the six main pages in three languages belong in the sitemap",
+);
 assert.equal(new Set(urls).size, urls.length, "Duplicate sitemap URLs");
 const pages = new Map();
 const projects = JSON.parse(
   await readFile(resolve(root, "data/projects.json"), "utf8"),
 );
-assert.equal(
-  urls.length,
-  (projects.length + 6) * 3,
-  "All public language routes must be in the sitemap",
+const { headers: headerRules } = JSON.parse(
+  await readFile(resolve(root, ".next/routes-manifest.json"), "utf8"),
 );
-for (const url of urls) {
+const hasNoindexHeader = (pathname) =>
+  headerRules.some(
+    (rule) =>
+      new RegExp(rule.regex).test(pathname) &&
+      rule.headers.some(
+        (header) =>
+          header.key.toLowerCase() === "x-robots-tag" &&
+          /\bnoindex\b/i.test(header.value),
+      ),
+  );
+async function checkPage(url, indexable) {
   assert.equal(new URL(url).origin, origin, `Unexpected origin: ${url}`);
   const pathname = new URL(url).pathname;
   const html = await readFile(
@@ -34,9 +46,23 @@ for (const url of urls) {
   const canonical = html.match(/<link rel="canonical" href="([^"]+)"/)?.[1];
   assert.equal(canonical && new URL(canonical).href, url, `Canonical: ${url}`);
   assert.ok(
-    html.includes('<meta name="robots" content="index, follow"'),
+    html.includes(
+      `<meta name="robots" content="${indexable ? "index" : "noindex"}, follow"`,
+    ),
     `Robots: ${url}`,
   );
+  assert.equal(
+    hasNoindexHeader(pathname),
+    !indexable,
+    `HTTP indexing rule: ${url}`,
+  );
+  if (!indexable) {
+    assert.ok(
+      html.includes('<meta name="googlebot" content="noindex, follow"'),
+      `Googlebot must not inherit index from the layout: ${url}`,
+    );
+    assert.ok(!urls.includes(url), `Internal project in sitemap: ${url}`);
+  }
   assert.equal([...html.matchAll(/<h1(?:\s|>)/g)].length, 1, `One H1: ${url}`);
   assert.match(html, /<title>[^<]+Oaktime Staging<\/title>/, `Title: ${url}`);
   assert.match(
@@ -66,12 +92,24 @@ for (const url of urls) {
     JSON.parse(match[1]);
   }
 }
+for (const url of urls) await checkPage(url, true);
 for (const prefix of ["", "/zh", "/zh-hant"]) {
+  for (const path of [
+    "",
+    "/projects",
+    "/home-staging-gta",
+    "/about",
+    "/contact",
+    "/privacy",
+  ]) {
+    const pathname = `${prefix}${path}` || "/";
+    assert.ok(pages.has(pathname), `Missing indexable page: ${pathname}`);
+  }
   const portfolio = pages.get(`${prefix}/projects`);
   assert.ok(portfolio, `Missing portfolio: ${prefix}`);
   for (const project of projects) {
     const path = `${prefix}/${project.id}`;
-    assert.ok(pages.has(path), `Project missing from sitemap: ${path}`);
+    await checkPage(`${origin}${path}`, false);
     assert.ok(
       portfolio.includes(`href="${path}"`),
       `Project link missing from server-rendered portfolio: ${path}`,
@@ -121,6 +159,15 @@ assert.ok(
     `Sitemap: ${origin}/sitemap.xml`,
   ),
 );
+assert.deepEqual(
+  [
+    ...(await readFile(resolve(built, "robots.txt.body"), "utf8")).matchAll(
+      /^Disallow:\s*(\S+)/gm,
+    ),
+  ].map((match) => match[1]),
+  ["/api/"],
+  "Do not block crawlers from reading project noindex rules",
+);
 assert.equal(
   (
     await readFile(resolve(root, "public/google06bc8259bbb1d8f0.html"), "utf8")
@@ -128,5 +175,5 @@ assert.equal(
   "google-site-verification: google06bc8259bbb1d8f0.html",
 );
 console.log(
-  `SEO build checks passed for ${urls.length} canonical URLs, three languages, region links, schema and lazy images.`,
+  `SEO build checks passed: ${urls.length} indexable URLs, ${projects.length * 3} noindex project pages, three languages, HTTP headers, region links, schema and lazy images.`,
 );

@@ -1,5 +1,4 @@
 import type { MetadataRoute } from "next";
-import { projects } from "@/lib/projects";
 import { siteUrl, isIndexable } from "@/lib/site";
 import { locales, localizedPath } from "@/lib/i18n";
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -11,7 +10,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/about",
     "/contact",
     "/privacy",
-    ...projects.map((project) => `/${project.id}`),
   ].flatMap((path) =>
     locales.map((locale) => ({
       url: `${siteUrl}${localizedPath(path, locale)}`,
