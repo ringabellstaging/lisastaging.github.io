@@ -13,13 +13,13 @@
 
 ## 微信与小红书
 
-`lib/contact.ts` 为账号信息的统一来源：微信 `lisa4169393962`，小红书 `Oaktime`。`SocialContacts` 与 `CopyContact` 提供二维码、可复制账号及复制成功／不可用提示；页脚链接到联系页。
+`lib/contact.ts` 为联系信息的统一来源。按所有者要求，微信只展示二维码，不显示微信号或微信号复制按钮；首页询价区、联系页、家具页和页脚均提供二维码。小红书 ID `Oaktime` 保留展示与复制功能，`CopyContact` 仅用于小红书。
 
 微信二维码原图来自所有者提供的地址：
 
 `https://storage.51yun.ca/yellow-page-wechat-qrcode/555c3612-bbd1-454d-87e7-a083442fee55.329x329.jpg`
 
-图片保存为 `public/images/brand/wechat-lisa.jpg`（329 × 329），由本站提供，不依赖访客访问 51 图片服务器。二维码使用 `next/image` 的 unoptimized，避免重新压缩；替换二维码时保留清晰度、四周留白和可读的备用微信号。
+图片保存为 `public/images/brand/wechat-lisa.jpg`（329 × 329），由本站提供，不依赖访客访问 51 图片服务器。二维码使用 `next/image` 的 unoptimized，避免重新压缩；替换二维码时保留清晰度与四周留白。手机访客可保存图片后在微信中识别，点击图片可打开大图。
 
 小红书目前只有账号名，没有经确认的个人主页链接，因此展示 ID 和复制入口，不拼接或猜测主页 URL。不嵌入微信或小红书 SDK。
 

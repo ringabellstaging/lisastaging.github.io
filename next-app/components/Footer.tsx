@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { contactInfo } from "@/lib/contact";
 import PhoneContacts from "./PhoneContacts";
@@ -50,9 +51,32 @@ export default function Footer({ locale = "en" }: { locale?: Locale }) {
           <p className="eyebrow">{t("Let’s talk", "联系团队", "聯繫團隊")}</p>
           <PhoneContacts />
           <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
-          <Link href={href("/contact#social")} className="footer-social">
-            {t("WeChat", "微信", "微信")} · {contactInfo.wechatId}
-          </Link>
+          <a
+            href={contactInfo.wechatQr}
+            className="footer-wechat"
+            target="_blank"
+            rel="noopener"
+            aria-label={t(
+              "Open the WeChat QR code",
+              "打开微信二维码大图",
+              "開啟微信二維碼大圖",
+            )}
+          >
+            <Image
+              src={contactInfo.wechatQr}
+              alt={t(
+                "Scan to add us on WeChat",
+                "扫码添加微信",
+                "掃碼加入微信",
+              )}
+              width={329}
+              height={329}
+              unoptimized
+            />
+            <span>
+              {t("Scan to add us on WeChat", "扫码添加微信", "掃碼加入微信")}
+            </span>
+          </a>
           <Link href={href("/contact#social")} className="footer-social">
             {t("Xiaohongshu", "小红书", "小紅書")} · {contactInfo.xiaohongshuId}
           </Link>

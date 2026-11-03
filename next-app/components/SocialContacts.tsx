@@ -41,11 +41,9 @@ export default function SocialContacts({
         <p>{t("Lisa Li · Mandarin", "Lisa Li · 国语", "Lisa Li · 國語")}</p>
       </div>
       <div className="social-accounts">
-        <CopyContact
-          label={t("WeChat ID", "微信号", "微信號")}
-          value={contactInfo.wechatId}
-          locale={locale}
-        />
+        <p className="social-qr-instruction">
+          {t("Scan to add us on WeChat", "扫码添加微信", "掃碼加入微信")}
+        </p>
         <CopyContact
           label={t("Xiaohongshu / REDnote", "小红书 ID", "小紅書 ID")}
           value={contactInfo.xiaohongshuId}
@@ -54,9 +52,9 @@ export default function SocialContacts({
         {!compact && (
           <p className="social-help">
             {t(
-              "On your phone, save the QR image or copy the WeChat ID to add us. Search Oaktime on Xiaohongshu for more inspiration.",
-              "手机浏览时，可长按保存二维码，或复制微信号添加我们。小红书搜索 Oaktime，获取更多搭配灵感。",
-              "手機瀏覽時，可長按儲存二維碼，或複製微信號加入我們。小紅書搜尋 Oaktime，獲取更多搭配靈感。",
+              "Scan the QR code, or save it on your phone and open it in WeChat to add us. Search Oaktime on Xiaohongshu for more inspiration.",
+              "扫码添加微信。手机浏览时，可长按保存二维码，再在微信中识别。小红书搜索 Oaktime，获取更多搭配灵感。",
+              "掃碼加入微信。手機瀏覽時，可長按儲存二維碼，再於微信中辨識。小紅書搜尋 Oaktime，獲取更多搭配靈感。",
             )}
           </p>
         )}

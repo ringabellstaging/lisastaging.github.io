@@ -43,6 +43,10 @@ async function checkPage(url, indexable) {
     "utf8",
   );
   pages.set(pathname, html);
+  assert.ok(
+    !html.includes("lisa4169393962"),
+    `Only the WeChat QR should be published: ${url}`,
+  );
   const canonical = html.match(/<link rel="canonical" href="([^"]+)"/)?.[1];
   assert.equal(canonical && new URL(canonical).href, url, `Canonical: ${url}`);
   assert.ok(
@@ -116,10 +120,6 @@ for (const prefix of ["", "/zh", "/zh-hant"]) {
   assert.ok(
     furniture.includes('src="/images/brand/wechat-lisa.jpg"'),
     "Furniture page needs the local original WeChat QR image",
-  );
-  assert.ok(
-    furniture.includes("lisa4169393962"),
-    "Missing furniture WeChat ID",
   );
   assert.ok(
     pages.get(prefix || "/").includes(`href="${prefix}/furniture"`),
